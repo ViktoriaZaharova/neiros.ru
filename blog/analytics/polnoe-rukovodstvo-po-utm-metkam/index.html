@@ -1,0 +1,2021 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>UTM-метки — что это такое и как добавить в ссылку | отследить переходы UTM-разметки: utm_source</title>
+    <meta name="description" content="Что такое UTM-метки, кому и зачем они нужны. Принцип работы UTM-системы, разметка ссылок, основные статические и динамические метки для разных платформ.">
+    <meta name="keywords" content="UTM-метки">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/analytics/polnoe-rukovodstvo-po-utm-metkam#cao",
+     "url": "https://neiros.ru/blog/analytics/polnoe-rukovodstvo-po-utm-metkam#cao",
+     "headline":"UTM-метки — что это такое и как добавить в ссылку | отследить переходы UTM-разметки: utm_source",
+
+     "datePublished": "2020-05-01 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "Аналитика"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Полное руководство по UTM-меткам</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Аналитика</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/2a129957c1b0cf8484e37283bed42d4f.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 20.04.2022</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Когда речь идет о привлечении трафика на сайт, важно сделать акцент именно на тех маркетинговых каналах и кампаниях, которые дают наилучшие результаты, ведь от этого зависят расходы на рекламу. На сегодняшний день интернет-аналитика предлагает ряд инструментов, которые позволяют оценить эффективность каждого канала и понять, какие кампании действительно хорошо работают, а на какие бюджет тратится впустую. Один из таких инструментов – система UTM-меток. С их помощью можно посмотреть эффективность каждой отдельно взятой кампании вплоть до отдельной ссылки или ключевого слова на странице сайта или публикации. По результатам анализа можно оперативно перераспределить бюджет на рекламу или внести изменения на сайте, если это необходимо.</p>
+<p><img alt="utm-метки" class="img-responsive sert-img" src="../../../img/utm/izobrajeniye-utm.png" loading="lazy" /></p>
+<p>Мы собрали полное руководство по UTM-меткам с примерами, в т. ч. как их создать вручную/автоматически и отслеживать результаты в разных системах веб-аналитики.</p>
+<section id="p1">
+<p><a id="p1" name="p1"> </a></p>
+<h2>Что такое UTM-метки</h2>
+<p>Получение развернутой информации о трафике возможно только при условии правильного использования списка UTM-меток. Для этого нужно понимать, что это и точнее знать их структуру.</p>
+<p>Аббревиатура UTM расшифровывается как Urchin Tracking Module, где “Urchin” – наименование американской компании-создателя меток. Именно она первой стала размечать ссылки для получения более детальных данных по кликам. В 2005 году корпорация Google выкупила компанию Urchin и разработала собственную систему аналитики на ее основе, которая получила название Google Analytics. Впоследствии универсальные и удобные метки появились и в других системах для стандартизации, глубокой аналитики трафика и других целей.</p>
+<p><img alt="Urchin Tracking Module" class="img-responsive sert-img" src="../../../img/utm/utm-urchin-tracking-module.jpg" loading="lazy" /></p>
+<p>Простыми словами, UTM-метки – это переменные get-параметры, которыми дополняют конкретный URL для получения данных о переходах по данной ссылке. Вставлять их стоит при размещении рекламных URL на сторонних ресурсах, включая полезные рассылки, соцсети, сайты партнеры и даже QR-код.</p>
+<p>UTM-метки добавляются в ссылку, после чего последняя приобретает сравнительно громоздкий, непонятный для большинства пользователей вид:</p>
+
+<p><em>https://neiros.ru</em> – простой URL-адрес;</p>
+
+<p><em>https://neiros.ru?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}&utm_term={keyword}</em> – URL-адрес с меткой, которая прописана после знака «?». Состоит UTM-метка из нескольких параметров и позволяет узнать следующие данные:</p>
+
+<ul>
+	<li>utm_source=yandex – <a href="../../marketing/kak-vybrat-vygodnye-istochniki-trafika-i-sehkonomit-na-reklame/index.html">источник трафика</a>;</li>
+	<li>utm_medium=cpc – модель оплаты объявления за клик;</li>
+	<li>utm_campaign={campaign_id} – уникальный номер кампании;</li>
+	<li>utm_term={keyword} – ключевая фраза (слово), по которой объявление было показано.</li>
+</ul>
+
+<p>Параметры в UTM-метке разделены символом «&». Каждый из них содержит ключ и его значение, разделенные знаком «=», в частности:</p>
+
+<ul>
+	<li>utm_source, utm_medium, utm_campaign, utm_term – параметры;</li>
+	<li>yandex, cpc, {campaign_id}, {keyword} – значения.</li>
+</ul>
+
+<p><a data-fancybox="gallery" href="../../../img/utm/utm-metki-s-poyasneniyami.jpg"><img alt="UTM-метки с пояснениями" class="img-responsive sert-img" src="../../../img/utm/utm-metki-s-poyasneniyami.jpg" loading="lazy" /> </a></p>
+
+<p>Если предстоит использовать UTM-метки вручную, нужно писать их на английском языке. С помощью разметки удается отсортировать и сгруппировать информацию в аналитике. Значения, наоборот, можно изменять в зависимости от того, какую дополнительную информацию о трафике требуется отследить.</p>
+</section>
+<section id="p1-1">
+<p><a id="p1-1" name="p1-1"> </a></p>
+<h2>Зачем нужны UTM-метки</h2>
+<p>Применение UTM-разметки позволяет решать ряд важных задач.</p>
+<p><a data-fancybox="gallery" href="../../../img/utm/zachem-nuzhny-utm-metki.png"><img alt="Зачем нужны UTM-метки" class="img-responsive sert-img" src="../../../img/utm/zachem-nuzhny-utm-metki.png" loading="lazy" /> </a></p>	
+<p>Например:</p>
+<ol>
+<li>Выбирать кампании и маркетинговые мероприятия, которые положительно влияют на приток клиентов.</li>
+<li>Оценивать эффективность контента, размещаемого на рекламных площадках, в соцсетях и СМИ.</li>
+<li>Отслеживать окупаемость рекламных каналов.</li>
+</ol>
+<p>Тегирование используется для отслеживания, оценки и анализа следующих видов рекламы:</p>
+<ul>
+<li>контекстная;</li>
+<li><a href="../../ads/targeting-osobennosti-principy-raboty-plyusy-i-minusy-rekomendacii-po-nastrojke-i-ispolzovaniyu/index.html">таргетированная</a>;</li>
+<li>тизерная и медийная;</li>
+<li>оффлайн-реклама.</li>
+</ul>
+<p>Если кампания рассчитана на единственную систему и оценка ее показателей тоже будет проводиться в одном сервисе аналитики, разметка не обязательна.</p>
+</section>
+<section id="p2">
+<p><a id="p2" name="p2"> </a></p>
+<h2>Принцип работы</h2>
+<p>Чтобы правильно поставить UTM-метки, нужно понимать, как они работают в совокупности с системами аналитики и <a href="../../automation/chto-takoe-crm-sistema-i-nuzhna-li-ona-vam/index.html">CRM</a>. Покажем пошагово на примере контекстно-медийной сети.</p>
+<ol>
+	<li>Пользователь вводит в поиске Яндекса «купить слона», ему показывается релевантная поисковая выдача.
+	<img alt="Пользователь вводит в поиске Яндекса запрос" class="img-responsive sert-img" src="../../../img/utm/1-polzovatel-vvodit-v-poiske-yandeksa-zapros.jpg" loading="lazy" /></li>
+	<li>Кликает на ссылку привычного вида, которая на самом деле размечена UTM-метками.
+	<img alt="ссылка размечена UTM-метками" class="img-responsive sert-img" src="../../../img/utm/2-ssylka-razmechena-utm-metkami.jpg" loading="lazy" /></li>
+	<li><a href="../../ads/yandeks-direkt-krupneyshaya-reklamnaya-platforma-v-runete/index.html">Яндекс Директ</a> фиксирует переход по рекламному блоку и списывает стоимость клика (СРС).
+	<img alt="Пользователь попадает на сайт рекламодателя" class="img-responsive sert-img" src="../../../img/utm/3-polzovatel-popadaet-na-sayt-reklamodatelya.jpg" loading="lazy" /></li>
+	<li>Пользователь попадает на сайт.</li>
+	<li>Визит пользователя фиксируется сервисом аналитики, который по меткам считывает подробную информацию о клике. Все сервисы аналитики действуют по единому принципу, будь то <a href="../kak-polzovatsya-yandeks-metrikoj-podrobnaya-instrukciya-dlya-novichkov/index.html">Яндекс Метрика</a>, <a href="../polnyj-gajd-po-google-analytics/index.html">Google Analytics</a> или другой платный инструмент.</li>
+	<li>Если посетитель делает целевое действие на сайте (оформил заказ, подписался, заказал обратный звонок, решил указать свои данные и отправить форму, и т. д.), информация об этом передается в систему аналитики.
+	<img alt="пользователь делает целевое действие" class="img-responsive sert-img" src="../../../img/utm/6-polzovatel-delaet-tselevoe-deystvie.jpg" loading="lazy" /></li>
+	<li>Сведенья о продажах и расходах рекламодателя (владельца бизнеса) передаются в сервис аналитики и доступны ему в виде сводного отчета.
+	<img alt="Данные о продажах и расходах передаются в сервис аналитики" class="img-responsive sert-img" src="../../../img/utm/7-dannye-o-prodazhakh-i-raskhodakh-peredayutsya-v-servis-analitiki.jpg" loading="lazy" /></li>
+	<li>Владелец бизнеса анализирует информацию, корректирует стратегии и работу с рекламой: какие-то кампании отключает или корректирует, на кампании, которые подтолкнули к достижению целевых действий, увеличивает бюджет.
+	<img alt="Владелец бизнеса анализирует информацию из отчетов" class="img-responsive sert-img" src="../../../img/utm/8-vladelets-biznesa-analiziruet-informatsiyu-iz-otchetov.jpg" loading="lazy" /></li>
+</ol>
+</section>
+<section id="p3">
+<p><a id="p3" name="p3"> </a></p>
+<h2>Пример URL c utm-метками</h2>
+<p>После дополнения URL-адреса обязательными и дополнительными метками ссылка для контекстной рекламы получит следующий код:</p>
+<p><em>https://neiros.ru/?utm_source=yandex&utm_medium=cpc&utm_campaign=telefon-samsung-galaxy&utm_term=samsung-galaxy-s20-ultra</em>, где:</p>
+<ul>
+	<li>utm_source=yandex – интернет-ресурс (сайт, приложение, поисковик), где пользователь увидел рекламу и кликнул по ней;</li>
+	<li>utm_medium=cpc – объявление было размещено с оплатой за клик;</li>
+	<li>utm_campaign=telefon-samsung-galaxy – название товара (услуги), заданного произвольно, который рекламируется;</li>
+	<li>utm_term=samsung-galaxy-s20-ultra – ключевое слово, по которому пользователь вышел на рекламу.</li>
+</ul>
+<p><a data-fancybox="gallery" href="../../../img/utm/utm-parametry.jpg"><img alt="UTM-параметры" class="img-responsive sert-img" src="../../../img/utm/utm-parametry.jpg" loading="lazy" /> </a></p>
+<blockquote class="blockquote-v1">
+<p>Важно! Реклама в Яндекс Директ предполагает размещение UTM-меток строго последовательно: utm_source → utm_medium → utm_campaign → utm_content → utm_term. Google распознает в любом порядке.</p>
+</blockquote>
+</section>
+<section id="p4">
+<p><a id="p4" name="p4"> </a></p>
+<h2>Пять основных параметров UTM-меток</h2>
+<p>В интернет-аналитике используют 5 параметров UTM, которые можно использовать для разметки любых веб-адресов. Они доступны для распознавания Яндекс Метрикой, Google Analytics и, конечно же, сервисом Neiros.</p>
+<p><a data-fancybox="gallery" href="../../../img/utm/obyazatelnye-i-neobyazatelnye-parametry.jpg"><img alt="Пять основных параметров UTM-меток" class="img-responsive sert-img" src="../../../img/utm/obyazatelnye-i-neobyazatelnye-parametry.jpg" loading="lazy" /> </a></p>
+<p>Среди 5 универсальных меток выделяют обязательные и необязательные параметры. Расскажем об этих типах подробнее.</p>
+<h3>Обязательные параметры</h3>
+<p>Обязательные UTM-метки всегда должны быть включены в URL. Всего их три. Рассмотрим каждую с примерами значений.</p>
+<h4>utm_source</h4>
+<p>Source показывает источник переходов, например, сайта с размещенной ссылкой:</p>
+
+<ul>
+	<li>google;</li>
+	<li>yandex;</li>
+	<li>telegram;</li>
+	<li>my.target;</li>
+	<li>youtube;</li>
+	<li>facebook и др.</li>
+</ul>
+<p>Пример: <em>utm_source=google</em></p>
+<h4>utm_medium</h4>
+<p>Medium отражает тип трафика:</p>
+<ul>
+	<li>email – из электронных рассылок;</li>
+	<li>banner, display – с баннеров;</li>
+	<li>cpc (Cost Per Click) – из объявлений с оплатой за клик;</li>
+	<li><a href="../cpm-v-reklame-i-internet-marketinge/index.html">cpm</a> (Cost Per Mile) – из объявлений с оплатой за показы;</li>
+	<li><a href="../../marketing/cpa-model-v-marketinge-chto-ehto-takoe-i-kak-s-nej-rabotat/index.html">cpa</a> (Cost Per Action)– из объявлений с оплатой за действие;</li>
+	<li><a href="../../marketing/cpv-kak-model-oplaty-reklamy/index.html">cpv</a> (Cost Per Visitor)– с оплатой за визиты;</li>
+	<li>social – из соцсетей;</li>
+	<li>organic – из поисковых систем;</li>	
+	<li>referral – со сторонних ресурсов;</li>
+	<li>retargeting – с ретаргетинговых кампаний и т. д.</li>
+</ul>
+<p>Пример: <em>utm_medium=cpc</em></p>
+<h4>utm_campaign</h4>
+<p>Campaign - название кампании, к которой относится ссылка. Обычно, это транслитерация полного наименования. Иногда может быть динамическое значение, например, когда речь идет о таргетированной рекламе в соцсетях.</p>
+<p>Пример: <em>utm_campaign=iphone</em></p>
+<h3>Необязательные параметры</h3>
+<p>Опционально, если хотите, можно заполнить в ссылку еще две UTM-метки.</p>
+<h4>utm_term</h4>
+<p>Чаще указывает на ключевой запрос, по которому пользователи выходили на объявление. Разметка особенно актуальна для кампаний в Google и Яндекс, но может использоваться и для отображения другой информации.</p>
+<p>Пример: <em>utm_term=keyword</em></p>
+<h4>utm_content</h4>
+<p>Content служит для идентификации объявлений с одинаковыми дополнительными параметрами. Например, когда нужно отследить данные по двум рекламным URL в одном тексте, utm_content покажет, какая именно ссылка привела пользователя.</p>
+<p>Пример: <em>utm_content=link</em></p>
+<blockquote class="blockquote-v2">
+<p>Однако маркетологи могут использовать необязательные параметры не только для рекламного трафика, но и для передачи важной информации в системы аналитики.</p>
+</blockquote>
+<h3>Опциональные параметры</h3>
+<p>Кроме перечисленных параметров, могут использоваться и другие дополнительные метки.</p>
+<h4>utm_nooverride</h4>
+<p>Помогает идентифицировать первый источник перехода на сайт и позволяет игнорировать последующие. Может потребоваться, когда потенциальный клиент несколько раз пришел на сайт из разных источников в рамках одного сеанса, чтобы отличить, первоначальный источник.</p>
+<p>Например. Клиент попал на сайт, кликнув по рекламе на поиске Яндекса. В процессе оформления заказа в интернет-магазине посетителю нужно подтвердить email, перейдя по ссылке в письме. При этом сервис аналитики по умолчанию посчитает источником трафика email, хотя изначально им была контекстная реклама в поисковике. Чтобы откорректировать это и избежать ошибок, рекомендуется использовать для таких email-рассылок utm_nooverride, где вы укажете значение «1». В этом случае система аналитики зачтет <a href="../konversiya-chto-eto-i-pochemu-vazhno-ee-znaty/index.html">конверсию</a> за предыдущим источником перехода, т. е. за рекламой в поиск.</p>
+<h4>utm_referrer</h4>
+<p>Учитывает переходы и корректно отслеживает при наличии редиректов на JavaScript. Метку можно использовать только для Яндекс.Метрики.</p>
+<p>Параметры меток могут быть статические и динамические. Первый тип задается вручную, второй сервис аналитики подставляет самостоятельно, опираясь на соответствие собственной базы.</p>
+</section>
+<section id="p5">
+<p><a id="p5" name="p5"> </a></p>
+<h2>Динамические параметры</h2>
+<p>Динамические UTM-метки формируются автоматически и помогают получить более развернутую информацию о кликах, например, они помогут определить:</p>
+<p><a data-fancybox="gallery" href="../../../img/utm/dinamicheskie-parametry-pomogut-uznat.png"><img alt="Динамические параметры" class="img-responsive sert-img" src="../../../img/utm/dinamicheskie-parametry-pomogut-uznat.png" loading="lazy" /> </a></p>
+<ul>
+	<li>Ключевое слово, по которому пользователю было показано продвигаемое объявление;</li>
+	<li>позиция объявления в поисковой выдаче, когда пользователь кликнул по нему;</li>
+	<li>регион показа в момент клика;</li>
+	<li>тип размещения объявления и прочие типы данных.</li>
+</ul>
+<p>Различать динамические UTM-метки в теле метки можно по фигурным скобкам.</p>
+<p>Каждая система имеет свои значения UTM-разметки. Для вашего удобства мы разобрали 5 наиболее популярных в рунете рекламных площадки.</p>
+<h3>Яндекс Директ</h3>
+<p>Контекстная система Яндекс.Директ – наиболее масштабная русскоязычная площадка для интернет-маркетинга. На момент написания этой статьи в Директе используется 25 динамических параметров utm разметки, отдельные из которых приводим ниже.</p>
+<table width="100%">
+	<tbody>
+		<tr>
+			<td width="179">
+			<p>Параметр</p>
+			</td>
+			<td width="444">
+			<p>Значение</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{ad_id} или {banner_id}</p>
+			</td>
+			<td width="444">
+			<p>Идентификатор объявления</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{campaign_id}</p>
+			</td>
+			<td width="444">
+			<p>Идентификатор кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{campaign_name}</p>
+			</td>
+			<td width="444">
+			<p>Название кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{campaign_type}</p>
+			</td>
+			<td width="444">
+			<p>Тип кампании, например, показ текстово-графического объявления, смарт-баннера, объявления в блоке на поиске и др.: type1 – текстово-графические объявление, type2 – реклама мобильных приложений, type3 – динамические объявления, type4 – смарт-баннеры</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{keyword}</p>
+			</td>
+			<td width="444">
+			<p>Ключевой запрос, по которому была показана реклама, без минус-слов</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{position}</p>
+			</td>
+			<td width="444">
+			<p>Точная позиция объявления</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{position_type}</p>
+			</td>
+			<td width="444">
+			<p>Тип блока в результатах поиска. Premium — премиум-показы (спецразмещение), other — блок справа или внизу, none — показ объявления в РСЯ и других сетях</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{source}</p>
+			</td>
+			<td width="444">
+			<p>Название площадки, на которой было показано объявление</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{source_type}</p>
+			</td>
+			<td width="444">
+			<p>Тип площадки, на которой произошел показ объявления. search — поиск, context — сети</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{region_name}</p>
+			</td>
+			<td width="444">
+			<p>Регион показа рекламы</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{region_id}</p>
+			</td>
+			<td width="444">
+			<p>Идентификатор региона</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{creative_id}</p>
+			</td>
+			<td width="444">
+			<p>Идентификатор изображения из конструктора</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{adtarget_name}</p>
+			</td>
+			<td width="444">
+			<p>Условие нацеливания, по которому было отображено объявление</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{phrase_id}</p>
+			</td>
+			<td width="444">
+			<p>ID ключевой фразы</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{retargeting_id}</p>
+			</td>
+			<td width="444">
+			<p>ID условия нацеливания на аудиторию</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{gbid}</p>
+			</td>
+			<td width="444">
+			<p>ID группы</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{addphrases}</p>
+			</td>
+			<td width="444">
+			<p>ID показа по дополнительной релевантной фразе: yes, no.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{addphrasestext}</p>
+			</td>
+			<td width="444">
+			<p>Текст фразы при показе по дополнительной релевантной фразе</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{device_type}</p>
+			</td>
+			<td width="444">
+			<p>Тип устройства, на котором отобразился показ: mobile, desktop, tablet</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="179">
+			<p>{coef_goal_context_id}</p>
+			</td>
+			<td width="444">
+			<p>ID корректировки ставок для условия подбора аудитории</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>Яндекс.Директ также предлагает динамическую разметку {param1} и {param2}, которые существенно расширяют возможности аналитики трафика. Однако задавать их не так просто, как обычные динамические переменные. Это можно сделать только через АРI, Директ Коммандер или в файле XLS/XLSX.</p>
+<p>Более развернутую информацию про динамические UTM-метки и их расшифровку дает <a href="https://yandex.ru/support/direct/statistics/url-tags.html" rel="nofollow" target="blank">Яндекс Справка</a>.</p>
+<h3>Google Adwords</h3>
+<p>Масштабы рекламной системы Google настолько велики, что UTM параметры для отслеживания объявлений были выделены в целую категорию – ValueTrack. Они дают возможность глубоко проанализировать данные об источнике трафика, вплоть до информации об устройствах пользователей (мобильные, десктопные и т.д.) и их месторасположении при клике по рекламе.</p>
+
+<p>Google поддерживает десятки динамических параметров для разметки. Все они с описанием доступны в <a href="https://support.google.com/google-ads/answer/6305348" rel="nofollow" target="blank">Справке Google Рекламы</a>, а некоторые приводим отдельно.</p>
+
+<table width="100%">
+	<tbody>
+		<tr>
+			<td width="151">
+			<p>Параметр</p>
+			</td>
+			<td width="472">
+			<p>Значение</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{creative}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор объявления</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{campaignid}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{device}</p>
+			</td>
+			<td width="472">
+			<p>Тип устройства, с которого был показ и совершен клик по объявлению</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{devicemodel}</p>
+			</td>
+			<td width="472">
+			<p>Производитель и модель устройства, с которого был совершен переход на сайт</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{adtype}</p>
+			</td>
+			<td width="472">
+			<p>Тип рекламного блока (метка для рекламы с таргетингом на товары)</p>
+			</td>
+		</tr>
+				<tr>
+			<td width="151">
+			<p>{target}</p>
+			</td>
+			<td width="472">
+			<p>Тип места размещения (параметр для таргетинга на места размещения)</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{keyword}</p>
+			</td>
+			<td width="472">
+			<p>Ключевое слово из аккаунта, соответствующее запросу пользователя или содержанию сайта</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{placement}</p>
+			</td>
+			<td width="472">
+			<p>Интернет-ресурс, на котором был показ и пользователь кликнул по объявлению</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{adposition}</p>
+			</td>
+			<td width="472">
+			<p>Расположение (позиции) объявления на странице. Например, 1t2 (1 - страница, t - позиция сверху (top), 2 – место), none – для КМС</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{network}</p>
+			</td>
+			<td width="472">
+			<p>Сеть из который был осуществлен переход</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{adgroupid}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор группы объявлений</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{feeditemid}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор расширения, которым воспользовался посетитель</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{loc_interest_ms}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор местоположения из поисковой фразы</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{loc_physical_ms}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор географического нахождения полученного перехода</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{merchant_id}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор аккаунта Google Merchant Center, к которому имеет отношение объявление</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{product_partition_id}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор группы продукции, к которой относится объявление</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{product_id}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор товара</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{adwords_producttargetid}</p>
+			</td>
+			<td width="472">
+			<p>Идентификатор целевого продукта</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{matchtype}</p>
+			</td>
+			<td width="472">
+			<p>Соответствие ключевых фраз (буквы e - точное, p - фразовое, b - широкое)</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="151">
+			<p>{targetid}</p>
+			</td>
+			<td width="472">
+			<p>ID <a href="../../marketing/segmentaciya-rynka-ee-celi-raznovidnosti-kriterii-i-vazhnost-dlya-vashego-biznesa/index.html">сегмента товара</a> (pla), который вызывает показ; ID ключевого слова (kwd), по которому инициирован показ, ID динамического поискового объявления (dsa);
+ID цели списка ремаркетинга (aud), вызывающий показ объявления
+</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h3>Вконтакте</h3>
+<p>Маркетинг предполагает использование в рекламной системе соцсети Вконтакте для таргетированной рекламы 5 динамических параметров UTM-меток. Рассмотрим каждый такой динамический тег в таблице.</p>
+
+<table width="100%">
+	<tbody>
+		<tr>
+			<td width="141">
+			<p>Параметр</p>
+			</td>
+			<td width="482">
+			<p>Значение</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="141">
+			<p>{ad_id}</p>
+			</td>
+			<td width="482">
+			<p>Идентификатор объявления для его идентификации</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="141">
+			<p>{campaign_id}</p>
+			</td>
+			<td width="482">
+			<p>Идентификатор кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="141">
+			<p>{client_id}</p>
+			</td>
+			<td width="482">
+			<p>Идентификатор клиента</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="141">
+			<p>{random}</p>
+			</td>
+			<td width="482">
+			<p>Случайное число, позволяет отследить другие факторы</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="141">
+			<p>{campaign_name}</p>
+			</td>
+			<td width="482">
+			<p>Название рекламной кампании из личного кабинета. Актуально при показе «Рекламы сайта», «Карусели» и «Рекламной записи с кнопкой»</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="141">
+			<p>{platform}</p>
+			</td>
+			<td width="482">
+			<p>Платформа, с которой посетитель кликнул по рекламе. Работает для «Карусели», «Рекламной записи с кнопкой»</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>Пример с разметкой и динамическими параметрами для рекламы Вконтакте:</p>
+<p><em>https://neiros.ru/?utm_source=vk&utm_medium=promo&utm_campaign={campaign_id}&utm_content={ad_id}</em></p>
+<p>Также в рекламной системе ВК применяются два динамических параметра для ретаргетинга: {product_id} и {price_list_id}. Узнать подробнее о каждом параметре Вконтакте можно в <a href="https://vk.com/faq11846" rel="nofollow" target="blank">справке</a> сайта.</p>
+<h3>Facebook</h3>
+<p>Одна из крупнейших соцсетей с мировым охватом Facebook также предлагает бизнес-аккаунтам воспользоваться своей рекламной площадкой. При этом предусмотрены динамические параметры, которые помогают не только отследить переходы по UTM-меткам, но и получить следующие данные о том, насколько эффективна кампания:</p>
+<ul>
+	<li>охват;</li>
+	<li>просмотры;</li>
+	<li>конверсии;</li>
+	<li>посещаемость;</li>
+	<li>узнаваемость бренда;</li>
+	<li>продажи по каталогу;</li>
+	<li>вовлеченность и др.</li>
+</ul>
+<p>Площадка Facebook предлагает пользователям набор эффективных динамических параметров для разметки, которые отображены далее.</p>
+<table width="100%">
+	<tbody>
+		<tr>
+			<td width="160">
+			<p>Параметр</p>
+			</td>
+			<td width="463">
+			<p>Значение</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{ad.id}}</p>
+			</td>
+			<td width="463">
+			<p>Идентификатор объявления</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{adset.id}}</p>
+			</td>
+			<td width="463">
+			<p>Идентификатор группы объявлений</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{campaign.id}}</p>
+			</td>
+			<td width="463">
+			<p>Идентификатор кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{ad.name}}</p>
+			</td>
+			<td width="463">
+			<p>Самое первое название объявления</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{adset.name}}</p>
+			</td>
+			<td width="463">
+			<p>Самое первое название группы объявлений</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{campaign.name}}</p>
+			</td>
+			<td width="463">
+			<p>Самое первое название кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{site_source_name}}</p>
+			</td>
+			<td width="463">
+			<p>Показ источника, например, fb – Facebook, msg – Messenger, ig - Instagram и др.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{placement}}</p>
+			</td>
+			<td width="463">
+			<p>Название плейсмента</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>Читайте более подробные сведения о характеристиках главных и новых динамических UTM параметров рекламного сервиса в <a href="https://www.facebook.com/business/help/2360940870872492" rel="nofollow" target="blank">Справочном центре Facebook Business</a>.</p>
+<h3>MyTarget</h3>
+<p>Площадка MyTarget использует собственные значения UTM-меток для ручной разметки объявлений. Здесь можно отслеживать целый ряд данных, основные типы из которых отображены в таблице.</p>
+<table width="100%">
+	<tbody>
+		<tr>
+			<td width="160">
+			<p>Параметр</p>
+			</td>
+			<td width="463">
+			<p>Значение</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{advertiser_id}}</p>
+			</td>
+			<td width="463">
+			<p>Идентификатор рекламодателя</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{campaign_id}}</p>
+			</td>
+			<td width="463">
+			<p>Идентификатор кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{campaign_name}}</p>
+			</td>
+			<td width="463">
+			<p>Название кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{banner_id}}</p>
+			</td>
+			<td width="463">
+			<p>Идентификатор баннера</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{geo}}</p>
+			</td>
+			<td width="463">
+			<p>Идентификатор региона, из которого было показано объявление и выполнен переход</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{search_phrase}}</p>
+			</td>
+			<td width="463">
+			<p>Поисковый запрос пользователя, по которому было показано объявление</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{{gender}}</p>
+			</td>
+			<td width="463">
+			<p>Пол пользователя</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>Также метки позволяют получить данные о поле, возрасте пользователя, дне недели и времени суток, когда был выполнен переход. Подробную информацию можно получить в разделе <a href="https://target.my.com/help/advertisers/utm/ru" rel="nofollow" target="blank">Помощь пользователям</a> MyTarget.</p>
+<h3>Bing Ads</h3>
+<p>У Bing Ads тоже есть своя система UTM-меток. Основные отобразим ниже.</p>
+<table width="100%">
+	<tbody>
+		<tr>
+			<td width="160">
+			<p>Параметр</p>
+			</td>
+			<td width="463">
+			<p>Значение</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{campaign}</p>
+			</td>
+			<td width="463">
+			<p>ID кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{adgroup}</p>
+			</td>
+			<td width="463">
+			<p>ID группы</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{matchtype}</p>
+			</td>
+			<td width="463">
+			<p>Тип соответствия ключевого слова (е – точное, p – фразовое, b – широкое)</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{network}</p>
+			</td>
+			<td width="463">
+			<p>Рекламная сеть (o – Bing и A0L, s – партнеры)</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{device}</p>
+			</td>
+			<td width="463">
+			<p>Устройство, с которого совершен переход (m – мобильное, t – планшет, c – ПК)</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{adid}</p>
+			</td>
+			<td width="463">
+			<p>ID объявления</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{ouerystring}</p>
+			</td>
+			<td width="463">
+			<p>Поисковый запрос</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Avito.Контекст</h3>
+<p>Для сбора данных об эффективности контекстной рекламы на площадке Авито предусмотрены свои UTM-метки.</p>
+<table width="100%">
+	<tbody>
+		<tr>
+			<td width="160">
+			<p>Параметр</p>
+			</td>
+			<td width="463">
+			<p>Значение</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{id}</p>
+			</td>
+			<td width="463">
+			<p>ID объявления</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{campaign_id}</p>
+			</td>
+			<td width="463">
+			<p>ID кампании</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{platform}</p>
+			</td>
+			<td width="463">
+			<p>Тип платформы, на которой было показано объявление: приложение, мобильная версия, ПК</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="160">
+			<p>{pos}</p>
+			</td>
+			<td width="463">
+			<p>Позиция в выдаче</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<section id="p6">
+<p><a id="p6" name="p6"> </a></p>
+<h2>Примеры добавления UTM-меток в рекламные кампании</h2>
+<p>Рассмотрим, как добавить UTM-метку в рамках самых распространенных кампаний.</p>
+<h3>Реклама в Google</h3>
+<p>Основные данные, которые можно получить при аудите медийной рекламы в Google, – это платформа, канал трафика, id объявления и кампании, ключевой запрос. При UTM-метках удобно использовать доступные системе динамические параметры, чтобы не прописывать статические вручную для каждого объявления.</p>
+<p>Если предполагается отслеживание только в рамках Google Ads → Google Analytics, использовать разметку не обязательно. Достаточно объединить аккаунты этих систем и включить в Google Ads автоматическую пометку. Если же нужно получать статистику и в каких-то других системах аналитики, добавлять UTM-метки придется.</p>
+<p><a data-fancybox="gallery" href="../../../img/utm/adwords-analytics.gif"><img alt="Разметка UTM Google ads" class="img-responsive sert-img" src="../../../img/utm/adwords-analytics.gif" loading="lazy" /> </a></p>
+<p>Ссылка с UTM-метками для Google Рекламы будет выглядеть так:</p>
+<p><em>https://neiros.ru/?utm_source=google&utm_medium={network}&utm_campaign={campaignid}&utm_content={creative}&utm_term={keyword}</em></p>
+<h3>Реклама в Яндекс</h3>
+<p>Ссылка размечается аналогично с использованием значений параметров, которые распознает Яндекс.Директ:</p>
+<p><em>https://neiros.ru/?utm_source=yandex&utm_medium={source_type}&utm_campaign={campaign_id}&utm_content={ad_id}&utm_term={keyword}</em></p>
+<h3>Таргетированная реклама Вконтакте</h3>
+<p>Разметка для SMM не менее важна. Чтобы оптимизировать рекламную кампанию в VK, следует использовать UTM с читаемыми статическими и динамическими значениями:</p>
+<p><em>https://neiros.ru/?utm_source=vkontakte&utm_medium=cpc&utm_campaign={campaign_id}&utm_content={ad_id}&utm_term={platform}</em></p>
+<h3>Рекламная ссылка в статье</h3>
+<p>В гостевых статьях для аудита актуальна информация о типе трафика, интеграции, домен площадки и название контента.</p>
+<p>UTM-метка будет иметь вид:</p>
+<p><em>https://neiros.ru/?utm_source=external_paid&utm_medium=guest_publication&utm_campaign=blog_ob_auto &utm_content=article1&utm_term=medium</em></p>
+<h3>В email-рассылке</h3>
+<p>Электронная рассылка – отдельный формат рекламы. Эффективность email-рассылки также нужно отслеживать. Конечный URL выглядит таким образом:</p>
+<p><em>https://neiros.ru/?utm_source=newsletter&utm_medium=email&utm_campaign=winter_sale_01_01_2020&utm_content=button</em></p>
+<h3>Для QR-кода</h3>
+<p>Речь идет преимущественно об оффлайн-рекламе: использовании листовок, плакатов, бумажных баннеров, рекламы в журналах и газетах. Эта рекламная категория также позволяет запустить отслеживание источников переходов на сайт. Начать анализировать эффективность переходов можно, разместив в объявлении QR-код. Пользователь отсканирует его и попадет на сайт, а вы узнаете, какой именно рекламный материал подтолкнул клиента к этому действию.</p>
+<p><em>https://neiros.ru/?utm_source=qr&utm_medium=offline&utm_campaign=vizitka</em></p>
+<h3>Для публикации постов в социальных сетях</h3>
+<p>При публикации материалов в соцсети отслеживают тип трафика и интеграции, название рекламной площадки и контента. В некоторых случаях есть смысл получать дополнительные данные, например, о размере площадки.</p>
+<p><em>https://neiros.ru/?utm_source=site.ru&utm_medium=social&utm_campaign=public_iphone&utm_content=post_podborka</em></p>
+</section>
+<section id="p7">
+<p><a id="p7" name="p7"> </a></p>
+<h2>Как автоматизировать создание UTM-меток</h2>
+<p>Интернет-маркетолог часто ставит себе задачу разметить рекламные ссылки UTM-метками, как правило, речь идет не о паре ссылок, а о десятках или даже сотнях. Кроме того, важно придерживаться единообразия, чтобы затем было проще анализировать статистику. Вручную проставлять теги достаточно сложно и долго, поэтому мы разработали специальный генератор, который способен работать с большими массивами. Также выручает старый-добрый MS Exсel с его возможностью проводить обработку огромных баз данных. Рассмотрим эти возможности более подробно.</p>
+<h3>C помощью Excel</h3>
+<p>Работая в Excel-файле или Google Sheets, легко привести все данные массива к стандартной форме, что принципиально для разметки. Единый формат исключает получение некорректных данных и последующие трудности с их анализом. Помогают при формировании разметки формулы.</p>
+<p>Мы подготовили готовый шаблон в Excel, который автоматически генерирует ссылки для любых кампаний. По сути, вы запускаете тот же компоновщик (генератор) ссылок, но с некоторыми преимуществами:</p>
+<ul>
+	<li>доступен единый формат данных при мониторинге трафика;</li>
+	<li>установлена база значений для UTM-меток, которые хранятся в одном месте;</li>
+	<li>нет необходимости вникать в принципы формирования разметки, достаточно скопировать и выполнить подстановку данных в готовый шаблон в файле.</li>
+</ul>
+<p>При необходимости можно найти и настроить шаблон для решения узких задач.</p>
+<p>Скачать шаблон можно <a href="https://neiros.ru/lp/nlp1" target="_blank">по ссылке</a>.</p>
+<h3>Генератор UTM-меток</h3>
+<p>Чтобы автоматизировать процесс разметки ссылок было удобнее, мы предлагаем специальный <a href="../../../tools/utm-generator/index.html">UTM-генератор</a>. Он работает онлайн и помогает за секунды через браузер добавлять UTM-метки к любым URL-адресам.</p>
+<p>Инструмент для генерации достаточно простой с интуитивно понятным функционалом. Использовать его можно даже новичкам. Для разметки нужно:</p>
+<ul>
+	<li>ввести ссылку целевой страницы;</li>
+	<li>выбрать источник трафика из предложенных;</li>
+	<li>ввести значения обязательных и необязательных параметров.</li>
+</ul>
+<p>В полях результата будут сгенерированы полная и сокращенная ссылки, доступные для копирования.</p>
+<p><a data-fancybox="gallery" href="../../../img/utm/utm-generator.gif"><img alt="генератор UTM-меток" class="img-responsive sert-img" src="../../../img/utm/utm-generator.gif" loading="lazy" /> </a></p>
+<p><a href="../../../tools/utm-generator/index.html">Онлайн-генератор UTM-меток</a> рассчитан на использование новичками, поэтому автоматически выполняет следующие действия:</p>
+<ul>
+	<li>при вводе значений на кириллице транслитерирует текст на латиницу;</li>
+	<li>переводит метки в нижний регистр;</li>
+	<li>ставит амперсанд в начале каждого параметра;</li>
+	<li>ставит знак «?» между URL и UTM-меткой;</li>
+	<li>меняет пробелы на нижнее подчеркивание.</li>
+</ul>
+<p>Генератор незаменим, если требуется быстро разметить небольшое количество ссылок. Также для автоматического создания utm-разметки сайта можно использовать другие генераторы, например, Tilda, Yagla, Utmurl, Campaign URL Builder.
+</p>
+</section>
+<section id="p8">
+<p><a id="p8" name="p8"> </a></p>
+<h2>Как отследить переходы по UTM-меткам?</h2>
+<p>Поскольку использовать UTM-метки изначально предполагалось для стандартизации данных, их поддерживают любые системы аналитики. Мы взяли наиболее популярные: Яндекс.Метрику и Google Analytics. Эти универсальные сервисы интернет-мониторинга предоставляют развернутый стандартизированный отчет о переходах, что значительно упрощает работу с результатами.</p>
+<h3>В Яндекс Метрике</h3>
+<p>Отслеживать UTM-метки в Метрике Яндекса можно с помощью специально сформированного отчета. В нем доступна статистика по каждому параметру.</p>
+<p><a data-fancybox="gallery" href="../../../img/utm/metrika-utm.gif"><img alt="Отчет UTM-метки в яндекс метрике" class="img-responsive sert-img" src="../../../img/utm/metrika-utm.gif" loading="lazy" /> </a></p>
+<p>Чтобы сформировать отчет, нужно в личном кабинете Метрики выбрать категорию Стандартные отчеты → Источники → Метки UTM и отметить параметры, по которым нужны данные для статистики.</p>
+<h3>В Google Analytics</h3>
+<p>Отследить статистику UTM-метки в Google Analytics можно также, используя системный отчет. Для этого в категории Отчеты необходимо выбрать вкладку Источники трафика → Весь трафик → Источник/канал.</p>
+<p><a data-fancybox="gallery" href="../../../img/utm/analytics-utm.gif"><img alt="Отчет UTM-метки в Google Analytics" class="img-responsive sert-img" src="../../../img/utm/analytics-utm.gif" loading="lazy" /> </a></p>
+<p>Будет сформирована таблица с данными. 1-й столбец – Источник или канал – показывает значения, разделенные знаком «/», где первое значение – utm_source, второе – utm_medium.</p>
+<p>Кроме этого, в отчете доступна выборка по кампаниям, содержанию объявления, ключевым словам. Для этого нужно лишь отметить необходимый параметр вверху таблицы.</p>
+</section>
+<section id="p9">
+<p><a id="p9" name="p9"> </a></p>
+<h2>Альтернативы UTM для отслеживания трафика</h2>
+<p>Несмотря на универсальность UTM, эта разметка не единственная, которая помогает вести статистику и отслеживать трафик с рекламы. Существует еще как минимум 4 типа альтернативы, которые можно использовать в отдельных случаях и даже вместе друг с другом.</p>
+<h3>yclid</h3>
+<p>Автоматическая разметка, созданная для трекинга трафика исключительно в рамках Яндекс Директ. Другие системы не распознают теги yclid, но могут включать аналогичные собственные метки, например: ymclid у Яндекс.Маркета, fbclid у Facebook Рекламы и т. д. Все они «работают» только на «родной» платформе.</p>
+<h3>gclid</h3>
+<p>Собственная автоматическая разметка рекламных ссылок есть и у Google Рекламы. Она также актуальна только для этой платформы и совместима Аналитикой. Если объявления будут размещены в других сервисах, для их отслеживания придется использовать дополнительную разметку.</p>
+<h3>from</h3>
+<p>Метка для идентификации источника перехода по ссылке. В отличие от UTM-метки с пятью параметрами, from передает только одно значение. Актуальна для Яндекс.Метрики, о которой писали выше.</p>
+<h3>Openstat</h3>
+<p>Ныне полноценный комплекс меток, который изначально создавался для совместной работы со счетчиком Яндекс.Директ. Работает только на этой рекламной платформе. Кодирует значения параметров, что защищает их от просмотра конкурентами. Позволяет отслеживать трафик по ID кампании, ключевым запросам, ID объявления, происхождению трафика и другим критериям.</p>
+</section>
+<section id="p10">
+<p><a id="p10" name="p10"> </a></p>
+<h2>10 рекомендаций по работе с UTM-метками</h2>
+<p>Получение развернутых сведений о каждом рекламном объявлении возможно лишь в том случае, если выполнена оптимальная настройка UTM-меток, и все URL работают корректно. Мы выделили 10 нюансов, на которые стоит обратить внимание при использовании UTM на сайте.</p>
+<h3>Проверяйте URL с метками</h3>
+<p>Когда UTM-метка добавлена, не забудьте проверить, что ссылка корректно открывается и не отдает ошибку 404. Это особенно важно если URL размечены вручную, когда есть риск допустить любую ошибку в синтаксисе.</p>
+<h3>Используйте только латиницу, нижний регистр и нижнее подчеркивание</h3>
+<p><a data-fancybox="gallery" href="../../../img/utm/pravilnoe-i-nepravilnoe-ispolzovanie.jpg"><img alt="синтаксис в UTM разметке" class="img-responsive sert-img" src="../../../img/utm/pravilnoe-i-nepravilnoe-ispolzovanie.jpg" loading="lazy" /> </a></p>
+<p>Правильная работа UTM-меток и наиболее полный сбор статистики возможны только при соблюдении синтаксиса. При вводе значений параметров кириллицей данные могут отображаться некорректно. Рекомендуется пользоваться латиницей вместо кириллицы.</p>
+<p>Системы аналитики чувствительны к регистру. Мы советуем все метки прописывать нижним регистром и принять это как незыблемое правило. В противном случае одно и то же слово с прописной и заглавной буквы будет восприниматься системой как разные значения.</p>
+<p>Пробелы в метках недопустимы. Их принято заменять знаком подчеркивания «_» или дефисом «-».</p>
+<h3>Сокращайте ссылки</h3>
+<p><a data-fancybox="gallery" href="../../../img/utm/sokrashchateli-ssylok.jpg"><img alt="Сокращение ссылок" class="img-responsive sert-img" src="../../../img/utm/sokrashchateli-ssylok.jpg" loading="lazy" /> </a></p>
+<p>Адрес страницы сайта с разметкой выглядит громоздко и непонятно. Чтобы не пугать пользователей ссылками длиной в несколько строк, желательно сокращать их известными способами. Для этого предусмотрены специальные сервисы с функцией сокращения, в том числе бесплатные. Некоторые генераторы UTM-меток выдают сразу сокращенную ссылку, что очень удобно.</p>
+<h3>Прописывайте якоря после UTM-метки</h3>
+<p>Если на интернет-странице сайта есть якорь #, то метку необходимо вставлять перед ним, вынося # в самый конец.</p>
+<p>Пример.</p>
+<p>Исходный:</p>
+<p><em>https://neiros.ru/#more</em></p>
+<p>Размеченный:</p>
+<p><em>https://neiros.ru/?utm_source=google&utm_medium=cpc&utm_campaign=blog#more</em></p>
+<p><a data-fancybox="gallery" href="../../../img/utm/peremeshchenie-yakorya-v-konec-url.jpg"><img alt="сслыка с якорем при utm-метке" class="img-responsive sert-img" src="../../../img/utm/peremeshchenie-yakorya-v-konec-url.jpg" loading="lazy" /> </a></p>
+<h3>Следите за общедоступной информацией</h3>
+<p>Просматривать ссылку с UTM-метками может каждый. Пишите в метках такие значения параметров, которые могли бы косвенно передавать важную информацию конкурентам.</p>
+<p><a data-fancybox="gallery" href="../../../img/utm/obshchedostupnaya-ssylka.png"><img alt="Общедоступные ссылки" class="img-responsive sert-img" src="../../../img/utm/obshchedostupnaya-ssylka.png" loading="lazy" /> </a></p>
+<h3>Закрывайте от индексации страницы с UTM-метками</h3>
+<p>Если вы сливаете трафик не на лендинг, а на полноценный сайт и используете seo продвижение, не допускайте индексации страниц с UTM-метками. Закрыть отдельные ссылки от поискового робота можно в файле robots.txt, прописав команду Disallow: /*utm=. В противном случае они будут восприняты как дубли.</p>
+<h3>Используйте директиву Clean-param</h3>
+<p>Это касается всех страниц с метками. Поисковый робот Яндекса не будет многократно перезагружать повторяющуюся информацию, что снизит нагрузку на сервер и повысит эффективность обхода сайта.</p>
+<p>Директива Clean-param: utm_campaign&utm_medium&utm_source&utm_term&utm_content / прописывается в robots.txt.</p>
+<h3>Стандартизируйте разметку</h3>
+<p>Заранее рекомендуем продумать структуру данных и значения параметров, составить инструкцию по всем меткам и их назначению. Даже если вы работаете в одиночку, такая схема существенно упростит задачу и исключит вопросы. Если же над рекламной кампанией трудится целая команда, стандартизация жизненно необходима.</p>
+<h3>Используйте дату для маркировки</h3>
+<p>Нередко бывает, что данные из разных источников дублируются или объединяются при сведении статистики. Чтобы этого не случалось, советуем присваивать тегам текущую дату. Прописать их можно в параметрах utm_campaign или utm_term.</p>
+<h3>Не ставьте UTM-метки на внутренние URL сайта</h3>
+<p>При разметке UTM-меток на внутренние страницы интернет-магазина (внутренние баннеры, слайдеры домашней страницы и т. д.) есть риск исказить статистику. При клике на такой URL будет прерван текущий сеанс, из-за этого потеряется первоначальный источник внешнего трафика.</p>
+</section>
+<section id="p11">
+<p><a id="p11" name="p11"> </a></p>
+<h2>Ошибки и их решение</h2>
+<ul>
+<li><b>Используются только статические параметры.</b> Отказ от динамических меток усложняет работу и ограничивает объем получаемых данных. Например, вы тестируете 30 объявлений с целью выявить самые эффективные. Если использовать только статистические метки, к каждому объявлении придется вручную прописывать ID или название каждого объявления в метке utm_content. Если же применить динамические параметры, прописать пришлось бы всего один тег: {creative} для Google или {ad_id} для Яндекса.</li>
+<li><b>Отсутствие кодировки UTF-8.</b> Если на сайте не используется кодировка UTF-8, есть риск, что метки будут распознаваться некорректно.</li>
+<li><b>Метки не разделены знаком «&».</b> В таком случае система аналитики не сможет распознать окончание одной метки и начало другой. Это станет причиной формирования статистики с некорректными данными.</li>
+<li><b>Перед 1-й меткой нет знака «?».</b> При отсутствии знака вопроса перед первой UTM-меткой браузер не распознает размеченную ссылку и будет пытаться открыть страницу с несуществующим URL.</li>
+<li><b>Больше одного знака «?».</b> В размеченном URL лишние знаки вопроса в браузере будут автоматически заменены спец. символами, из-за этого статистика будет собираться некорректно.</li>
+</ul>
+</section>
+<section id="p12">
+<p><a id="p12" name="p12"> </a></p>
+<h2>Часто задаваемые вопросы</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="heading1"><a aria-controls="collapse1" aria-expanded="false" class="btn-link collapsed" data-target="#collapse1" data-toggle="collapse" href="index.html#">Когда стоит использовать UTM-метки?</a></div>
+<div aria-labelledby="heading1" class="collapse" data-parent="#faqAccordion" id="collapse1" style="">
+<div class="card-body">
+<p>Любые ссылки на сайт, публикуемые на внешних ресурсах, стоит размечать. Это может понадобиться, если вы хотите больше узнать о том, откуда приходят пользователи, запускаете рекламную кампанию в соцсетях, Яндексе или Google, а также делаете email-рассылки с целью привлечения клиентов.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading2"><a aria-controls="collapse2" aria-expanded="false" class="btn-link collapsed" data-target="#collapse2" data-toggle="collapse" href="index.html#">Как поставить UTM-метки на сайт?</a></div>
+<div aria-labelledby="heading2" class="collapse" data-parent="#faqAccordion" id="collapse2">
+<div class="card-body">
+<p>Сгенерированные UTM-метки можно вручную присвоить любой странице. Это позволяют сделать почти все популярные CMS с помощью функции «пользовательский URL». Достаточно скопировать сетку в поле с таким или подобным названием.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading3"><a aria-controls="collapse3" aria-expanded="false" class="btn-link collapsed" data-target="#collapse3" data-toggle="collapse" href="index.html#">В каких случаях эти метки не нужны и даже вредят?</a></div>
+<div aria-labelledby="heading3" class="collapse" data-parent="#faqAccordion" id="collapse3">
+<div class="card-body">
+<p>Если добавить UTM-разметку на внутренние ссылки, это приведет к ситуации, когда переход засчитывается как новый визит, и статистика собирается некорректно. Поддомены тоже не нужно размечать с помощью UTM.</p>
+<p>UTM-ссылки, попавшие в поисковый индекс, могут вовсе испортить аналитику, т. к. трафик будет присваиваться только одной РК. В случае, если размеченные URL не закрыть от поисковых роботов, они будут восприниматься ПС как дубли.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading4"><a aria-controls="collapse4" aria-expanded="false" class="btn-link collapsed" data-target="#collapse4" data-toggle="collapse" href="index.html#">Создавать свои метки или использовать общепринятые стандарты?</a></div>
+<div aria-labelledby="heading4" class="collapse" data-parent="#faqAccordion" id="collapse4">
+<div class="card-body">
+<p>Если не предполагается передача данных во внешние системы можно создавать и использоваться собственные метки. Если же требуется <a href="../skvoznaya-analitika-ot-vnedreniya-do-realnyh-kejsov/index.html">сквозная аналитика</a> или взаимодействие с любой другой внешней системой, луче пользоваться общепринятыми UTM-метками.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading5"><a aria-controls="collapse5" aria-expanded="false" class="btn-link collapsed" data-target="#collapse5" data-toggle="collapse" href="index.html#">Что будет, если забыть добавить UTM-метку?</a></div>
+<div aria-labelledby="heading5" class="collapse" data-parent="#faqAccordion" id="collapse5">
+<div class="card-body">
+<p>Без UTM-разметки данные о кликах, поисковых запросах и других параметрах будут собираться без подробностей, а эффективность рекламы удастся рассчитать лишь приблизительно.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading6"><a aria-controls="collapse6" aria-expanded="false" class="btn-link collapsed" data-target="#collapse6" data-toggle="collapse" href="index.html#">В чем недостаток UTM-меток?</a></div>
+<div aria-labelledby="heading6" class="collapse" data-parent="#faqAccordion" id="collapse6">
+<div class="card-body">
+<p>Размеченная UTM-метками ссылка передает данные в соответствии с первоначальными параметрами, даже если пользователи копируют этот URL и используют на других ресурсах. Например, пользователь нашел размеченную ссылку в ВК и поделился ею в FB. При этом в статистике будет продолжать отображаться, будто бы трафик продолжает идти из ВК.</p>
+</div>
+</div>
+</div>
+</div>
+</section>	
+<section id="p13">
+<p><a id="p13" name="p13"> </a></p>
+<h2>Заключение</h2>
+<p>UTM-метки – это инструмент, без которого едва ли удастся оценить эффективность рекламы качественно и комплексно. С его помощью можно понять, как работает конкретная рекламная кампания, объявление, гостевая статья или пост в соцсети. В работе с тегированием помогают специализированные генераторы UTM-меток, которые могут обрабатывать большие ссылочные объемы. Это значительно экономит время и освобождает от рутинной работы, гарантируя синтаксически правильную разметку каждого URL.</p>
+</section>	
+<section id="p14">
+<p><a id="p14" name="p14"> </a></p>
+<h2>Видеоинструкция</h2>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="100%" src="https://www.youtube.com/embed/o2xBZGQc8i8?rel=0&showinfo=0" width="100%" loading="lazy" /></iframe></p>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="icon icon-tags"></span>
+
+
+                                        
+                                            <a href="../../tag/glossary/index.html">Словарь</a>
+                                        
+                                    </div>                                    <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                            <div class=" comments-area xs-comments-area comment-style2">
+    <div class="comment-header">
+    <h3 class="comments-title">2 комментария</h3>
+        <span class="border-divider"></span>
+    </div>
+    <ul class="comments-list">
+                   <li class="comment">
+            <div class="comment-body">
+                <img src="https://sun9-51.userapi.com/c637722/v637722417/4aa5b/O9LIeGnbFeY.jpg?ava=1" alt="">
+                <div class="meta-data">
+                    <div class="reply">
+                        <a href="index.html#comment-form" class="comment-reply-link" data-id="3">
+                              <i class="icon icon-reply "></i>
+                        </a>
+                    </div>
+                    <div class="comment-author">
+                        <a href="index.html#">Алексей Бытовичков</a>
+                        <p class="comment-date">13.05.2020</p>
+                        <p class="comment-time">21:30</p>
+                    </div>
+                    <div class="comment-content">
+                        <p>Можно использовать один параметр, а не все 3 обязательных?</p>
+                    </div>
+                </div>
+            </div>
+                                 <ul class="children">
+                    <li class="comment">
+                        <div class="comment-body">
+                            <img src="https://sun9-12.userapi.com/c850428/v850428871/ba1c1/215r5EfeeIc.jpg?ava=1" alt=" ">
+                            <div class="meta-data">
+
+                                <div class="comment-author">
+                                    <a href="index.html#">Олег Вершинин</a>
+                                    <p class="comment-date">13.05.2020</p>
+                                    <p class="comment-time">21:51</p>
+                                </div>
+                                <div class="comment-content">
+                                    <p>Обязательно использовать utm_source, чтобы определить источник перехода.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>                </ul>            </li>
+        </li>
+            </ul>
+</div>                <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Что такое utm-метки</a></li>
+	<li><a href="index.html#p1-1">Зачем нужны UTM-метки</a></li>
+	<li><a href="index.html#p2">Принцип работы utm</a></li>
+	<li><a href="index.html#p3">Пример URL c utm-метками</a></li>
+	<li><a href="index.html#p4">Пять основных параметров utm</a></li>
+	<li><a href="index.html#p5">Динамические параметры utm</a></li>
+	<li><a href="index.html#p6">Примеры разметки utm-меток в кампании</a></li>
+	<li><a href="index.html#p7">Как автоматизировать создание utm-меток</a></li>
+	<li><a href="index.html#p8">Как отследить переходы c utm-меток</a></li>
+	<li><a href="index.html#p9">Альтернативы UTM для отслеживания трафика</a></li>
+	<li><a href="index.html#p10">10 рекомендаций в работе с utm-метками</a></li>
+	<li><a href="index.html#p11">Ошибки и их решение</a></li>
+	<li><a href="index.html#p12">Часто задаваемые вопросы</a></li>
+	<li><a href="index.html#p13">Заключение</a></li>
+	<li><a href="index.html#p14">Видеоинструкция</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

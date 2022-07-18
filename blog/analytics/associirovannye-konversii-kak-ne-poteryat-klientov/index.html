@@ -1,0 +1,1194 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ассоциированные конверсии в google analytics и яндекс метрике | что такое ассоциированная конверсия</title>
+    <meta name="description" content="Что такое ассоциированные конверсии и для чего они нужны. Как отследить и проанализировать скрытые конверсии в системах аналитики и трактовать отчеты.">
+    <meta name="keywords" content="Ассоциированные конверсии">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/analytics/associirovannye-konversii-kak-ne-poteryat-klientov#cao",
+     "url": "https://neiros.ru/blog/analytics/associirovannye-konversii-kak-ne-poteryat-klientov#cao",
+     "headline":"Ассоциированные конверсии в google analytics и яндекс метрике | что такое ассоциированная конверсия",
+
+     "datePublished": "2022-01-14 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "Аналитика"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Ассоциированные конверсии – как не потерять клиентов</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Аналитика</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/51ffee8ddbcffecdc887a1cc4073248a.jpg" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                              
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Организуя бизнес, начинающие предприниматели представляют, как покупатели заходят на сайт и сразу делают заказ. Так бывает, но редко. Это, скорее, идеальная модель поведения клиента в Сети. На деле мы видим, что оформлению заказа может предшествовать множество точек касания с бизнесом, которые важно мониторить, чтобы понимать эффективность рекламных кампаний и <a href="../../sales/vse-o-voronke-prodazh-ot-istorii-k-primeneniyu-v-sovremennom-biznese/index.html">воронки продаж</a> в целом. Отслеживать контакты с пользователем помогают ассоциированные <a href="../konversiya-chto-eto-i-pochemu-vazhno-ee-znaty/index.html">конверсии</a>. Далее в статье рассмотрим подробнее, что это такое.</p>
+<p><img alt="ассоциированные конверсии" class="img-responsive sert-img" src="../../../images/51ffee8ddbcffecdc887a1cc4073248a.jpg" loading="lazy" draggable="false"></p>
+<section id="p1">
+<p><a id="p1" name="p1"> </a></p>
+<h2>Что такое ассоциированные конверсии</h2>
+<p>Если конверсия не стала прямой, когда пользователь впервые зашел на сайт, ее называют ассоциированной или «скрытой».</p>
+<p>Чтобы было понятнее, рассмотрим пример.</p>
+<p>Проходя мимо японского ресторана, человеку захотелось роллов, и он решил заказать их с доставкой. Дома ввел соответствующий запрос в поиске Яндекса, зашел на пару сайтов из рекламы (первый контакт), но так ничего и не заказал. Вернулся в поисковую выдачу и заметил статью «Топ-5 доставок суши в Москве». Начав читать ее, увидел, что две доставки, которые только что просматривал, имеют высокие оценки и хорошие отзывы (второй контакт), но сегодня выбор пал на любимую пиццу. Через несколько дней в Facebook пользователь видит рекламу одной из доставок, на сайте которой был ранее. Кликая по ссылке, человек заходит, выбирает позиции и делает заказ роллов (третий контакт).</p>
+<p>В данном случае первые два контакта не привели к прямой конверсии, но с их помощью клиент принял решение в пользу выбора конкретной доставки.</p>
+
+</section>
+
+<section id="p2">
+<p><a id="p2" name="p2"> </a></p>
+<h2>Для чего нужны ассоциированные конверсии</h2>
+<p>Представьте футбольную команду на поле в процессе игры: вратарь защищает ворота, защитники снижают риск того, что мяч полетит к воротам, нападающие атакуют противника. Если убрать защитников и вратаря, т. к. они не забивают голы, и запустить больше нападающих, команда проиграет. Аналогично и в маркетинге. Ассоциированная конверсия помогает избежать критичных ошибок при распределении рекламного бюджета.</p>
+<blockquote class="blockquote-v2"><p>Редкие покупатели приходят на сайт и сразу покупают. Большинству людей нужно время подумать. Но, если убрать факторы, которые подталкивают пользователя к принятию решения, конверсия может так и не случиться.</p></blockquote>
+<p>Покупка (особенно дорогого продукта) происходит примерно так:</p>
+<ol>
+<li>Человек не знает, что продает фирма.</li>
+<li>Человек знает, что продает фирма, но не осознает потребности в этом.</li>
+<li>Человек понимает, что продукт ему нужен, но не знает, стоит ли покупать его в данной компании.</li>
+<li>Человек понимает, что продукт ему необходим, решил покупать его в данной компании, но не знает, нужно ли совершать покупку сейчас.</li>
+</ol>
+<p>Каждый этап предполагает свои каналы трафика, которые дополняют друг друга с единой общей целью: чтобы клиент совершил конверсию. Если считать эффективным только финальное касание без учета промежуточных этапов, это нарушит воронку и станет большой ошибкой.</p>
+<p>Отслеживание ассоциированных конверсий позволяет компании:</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ak/otslezhivanie-associirovannyh-konversij-pozvolyaet.png"><img alt="отслеживание ассоциированных конверсий позволяет" class="img-responsive sert-img" src="../../../img/analytics/ak/otslezhivanie-associirovannyh-konversij-pozvolyaet.png" loading="lazy" /> </a></p>
+<ol>
+<li>Выявлять потребности клиентов, в т. ч. узнавать:</li>
+</ol>
+<ul style="padding-left: 40px;">
+<li>Как и откуда пользователи узнают о товарах или услугах;</li>
+<li>Сколько раз просматривают сайт/страницу перед тем, как сделать заказ;</li>
+<li>Сколько времени им требуется для принятия решения о покупке;</li>
+<li>Какие детали подталкивают к конверсионному действию.</li>
+</ul>
+<ol start="2">
+<li>Рассчитывать, какой вклад в общую цепочку вносит каждый отдельный канал. Для этого используется формула:</li>
+<p>Ассоциированные конверсии / Количество продаж по прямому взаимодействию или по финальному клику.</p></li>
+<li>Определять ценность каждого взаимодействия на пути к конверсии и грамотно распределять рекламный бюджет между наиболее эффективными источниками трафика.</li>
+<li>Рассчитывать стоимость клиента. Самыми дорогими считаются покупатели, которые много раз уходили с сайта и потребовали большой работы со стороны бизнеса, чтобы, наконец, вернуться и сделать заказ.</li>
+<li>Оценивать рекламную кампанию. Оценка эффективности проводится на основе данных по многоканальным последовательностям.</li>
+<li>Узнавать длину пути клиента от первого знакомства с компанией до заказа. Человеку может потребоваться как 2-3 касания с сайтом, так и 7-8 взаимодействий с электронной платформой.</li>
+</ol>
+</section>
+
+<section id="p3">
+<p><a id="p3" name="p3"> </a></p>
+<h2>Роль контекстной рекламы в ассоциированных конверсиях</h2>
+<p>Специалисты по контекстной рекламе уделяют особое внимание ассоциированным конверсиям. Они позволяют найти скрытые конверсии, которые не приносят трафика напрямую, но подталкивают клиента к совершению целевого действия.</p>
+<p>Контекстная реклама может использоваться в качестве способствующего конверсии триггера как на этапе знакомства человека с продуктом или брендом, так и в середине цепочки.</p>
+</section>
+
+<section id="p4">
+<p><a id="p4" name="p4"> </a></p>
+<h2>Чем отличается конверсия от ассоциированной конверсии</h2>
+<p>Конверсия – это процент клиентов, совершивших целевое действие, по отношению к общему количеству пользователей, побывавших на целевой странице.</p>
+<p>В маркетинге под конверсией чаще всего понимают главную конверсию, т. е. ту, которая произошла при выполнении главного целевого действия (покупка, заказ, подписка и т. д.). Однако в цепочке используется масса дополнительных каналов, которые напрямую не приводят пользователя к совершению нужного действия, но подталкивают к переходу на следующий этап воронки. Их называют ассоциированными конверсиями. Без них прямая конверсия могла бы никогда не произойти.</p>
+</section>
+
+<section id="p5">
+<p><a id="p5" name="p5"> </a></p>
+<h2>Типы ассоциированных конверсий</h2>
+<p>Скрытые конверсии условно делят на три типа:</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ak/tipy-skrytyh-konversij.png"><img alt="типы скрытых конверсий" class="img-responsive sert-img" src="../../../img/analytics/ak/tipy-skrytyh-konversij.png" loading="lazy" /> </a></p>
+<ol>
+<li>По первому касанию – цепочку последовательности начинает тот канал, который познакомил пользователя с продуктом.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ak/po-pervomu-kasaniyu.jpg"><img alt="по первому касанию" class="img-responsive sert-img" src="../../../img/analytics/ak/po-pervomu-kasaniyu.jpg" loading="lazy" /> </a></p>
+<li>По промежуточному контакту – это каналы, выступающие посредниками на пути к прямой конверсии. Они помогают будущему клиенту больше узнать о продукте, убедиться в надежности компании и задуматься о покупке. Это могут быть, например, статьи в блоге, полезные посты в социальных сетях, бесплатный чек-лист, кейсы.</li>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ak/po-promezhutochnomu-kontaktu.jpg"><img alt="по промежуточному контакту" class="img-responsive sert-img" src="../../../img/analytics/ak/po-promezhutochnomu-kontaktu.jpg" loading="lazy" /> </a></p>
+<li>По последнему касанию – это финишное звено цепочки, на котором происходит конверсия.</li>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ak/po-poslednemu-kasaniyu.jpg"><img alt="по последнему касанию" class="img-responsive sert-img" src="../../../img/analytics/ak/po-poslednemu-kasaniyu.jpg" loading="lazy" /> </a></p>
+</ol>
+<p>Каждый из перечисленных типов каналов важен в маркетинге и по-своему способствует конверсии.</p>
+</section>
+
+<section id="p6">
+<p><a id="p6" name="p6"> </a></p>
+<h2>Где и по каким отчетам отслеживаются ассоциированные конверсии</h2>
+<p>Для отслеживания вспомогательных каналов используются общедоступные сервисы аналитики и рекламы: Google Analytics, Google Ads, Яндекс. Метрика. Рассмотрим, какие отчеты можно использовать для мониторинга и обработки ассоциированных конверсий в каждом из них.</p>
+
+<h3>Google Analytics</h3>
+<p>Начнем с нюансов, которые нужно знать и учитывать, отслеживая ассоциированные конверсии в Google Analytics.</p>
+<ul>
+<li>Если трафик непрямой, засчитываются конверсии по последнему касанию.</li>
+<li>При учете транзакций уникальными считаются не пользователи, а сеансы.</li>
+<li>Присутствует задержка сбора статистики до 48 часов, что может быть причиной расхождения данных с показателями в общих отчетах Google Analytics.</li>
+<li>Система не отображает в отчетах скрытые конверсии по промежуточному взаимодействию.</li>
+<li>Вспомогательная конверсия присваивается каждому каналу, который стал ассоциированным в цепочке продаж.</li>
+<li>Если визит, который привел к конверсии, произошел напрямую по сохраненной ссылке, результат будет зачтен первому источнику.</li>
+<li>Если один пользователь совершает повторные сделки, они будут относиться к разным конверсиям.</li>
+</ul>
+<p>Зная особенности распределения данных об ассоциированных конверсиях, разберемся, по каким отчетам их можно посмотреть. Для этого в Google Analytics нужно открыть:</p>
+<p><b>Отчеты – Конверсии – <a href="../mnogokanalnye-posledovatelnosti-chto-ehto-takoe-i-kak-ispolzovat/index.html">Многоканальные последовательности</a></b></p>
+<h4>Обзор</h4>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/mp/obzor.jpg"><img alt="обзор" class="img-responsive sert-img" src="../../../img/analytics/mp/obzor.jpg" loading="lazy" /> </a></p>
+<p>Это сводный отчет, который показывает общее количество конверсий и ассоциированных конверсий, а также визуально демонстрирует вклад каждого канала в общее их число.</p>
+<h4>Ассоциированные конверсии</h4>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/mp/associirovannye-konversii.jpg"><img alt="ассоциированные конверсии" class="img-responsive sert-img" src="../../../img/analytics/mp/associirovannye-konversii.jpg" loading="lazy" /> </a></p>
+<p>Здесь отображается информация о каналах, которые повлияли на конверсии из других источников трафика. В последнем столбце можно увидеть наиболее эффективный вспомогательный канал и оценить его влияние на конверсию в соответствии с коэффициентом:</p>
+<ul>
+<li>менее 0,85 – у канала только завершающая роль в конверсии.</li>
+<li>от 0,85 до 1,15 – у канала вспомогательная и завершающая функции в цепочке продаж.</li>
+<li>более 1,15 – канал является только вспомогательным.</li>
+</ul>
+<p>Рекомендуется распределять рекламный бюджет по принципу Парето:</p>
+<ul>
+<li>большая часть (80%) каналам с коэффициентом до 1,15;</li>
+<li>меньшая часть (20%) каналам с коэффициентом более 1,15.</li>
+</ul>
+<h4>Основные пути конверсии</h4>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/mp/osnovnye-puti-konversii.jpg"><img alt="основные пути конверсии" class="img-responsive sert-img" src="../../../img/analytics/mp/osnovnye-puti-konversii.jpg" loading="lazy" /> </a></p>
+<p>Отчет показывает, какие каналы приводят людей на сайт, а также число взаимодействий с ним до совершения конверсии. Фактически по этим данным можно анализировать, как пользователи принимают решение.</p>
+<blockquote class="blockquote-v1"><p>Если на сайте использованы UTM-метки, нужно смотреть информацию по параметру «Источник/канал». Именно в нем отображаются данные с учетом UTM-меток.</p></blockquote>
+<h4>Время до конверсии</h4>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/mp/vremya-do-konversii.jpg"><img alt="время до конверсии" class="img-responsive sert-img" src="../../../img/analytics/mp/vremya-do-konversii.jpg" loading="lazy" /> </a></p>
+<p>Глядя на отчет, видно, сколько дней требуется клиенту, чтобы принять решение о покупке с тех пор, как он первый раз зашел на сайт. С учетом этого можно определить среднюю продолжительность цикла продаж и понять, когда именно необходимо предлагать товар аудитории.</p>
+<h4>Длина последовательности</h4>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/mp/dlina-posledovatelnosti.jpg"><img alt="длина последовательности" class="img-responsive sert-img" src="../../../img/analytics/mp/dlina-posledovatelnosti.jpg" loading="lazy" /> </a></p>
+<p>Отчет демонстрирует количество касаний пользователя с сайтом до совершения конверсии. Диаграмма показывает, как изменяется процент конверсии по мере прохождения цепочки продаж.</p>
+<p>Благодаря этим данным можно определить оптимальную частоту показов для достижения максимального числа конверсий.</p>
+<h4>Атрибуция</h4>
+<p>Для точности результатов можно проанализировать параметры, используя разные <a href="../modeli-atribucii-kak-orientir-pri-ocenke-kanalov-prodvizheniya/index.html">модели атрибуции</a>. Существует несколько типовых моделей:</p>
+<ul>
+<li>по последнему взаимодействию;</li>
+<li>по последнему непрямому клику;</li>
+<li>по последнему клику в Adwords;</li>
+<li>по первому взаимодействию;</li>
+<li>линейная;</li>
+<li>временной распад;</li>
+<li>на основе позиции.</li>
+</ul>
+<p>Также может быть создана собственная модель атрибуции на основе стандартных.</p>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ak/sobstvennaya-model-atribucii.jpg"><img alt="собственная модель атрибуции" class="img-responsive sert-img" src="../../../img/analytics/ak/sobstvennaya-model-atribucii.jpg" loading="lazy" /> </a></p>
+<h3>Google Ads</h3>
+<p>Сервис позволяет отслеживать скрытые конверсии в пределах рекламного аккаунта. Это значит, что проанализировать удастся только рекламные кампании, использованные для привлечения клиентов.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ak/google-ads.jpg"><img alt="ассоциированные конверсии в Google Ads" class="img-responsive sert-img" src="../../../img/analytics/ak/google-ads.jpg" loading="lazy" /> </a></p>
+<p>Для просмотра отчетов требуется:</p>
+<ol>
+<li>Зайти в раздел «Инструменты» -- «Атрибуция отчет» и выбрать «Ассоциированные конверсии».</li>
+<li>Задать необходимые параметры и фильтры:</li></ol>
+<ul style="padding-left: 40px;">
+<li>Рекламную кампанию;</li>
+<li>Группу объявлений;</li>
+<li>Ключевую фразу;</li>
+<li>Устройство;</li>
+<li>Период ретроспективного анализа;</li>
+<li>Вид конверсии.</li>
+</ul>
+
+<p>Данные отчета помогают понять, насколько эффективно работает рекламная кампания, какую роль в привлечении клиентов играет каждое ключевое слово, а также многое другое.</p>
+<h3>Яндекс.Метрика</h3>
+<p>В отличие от систем аналитики Google, Яндекс не позволяет сформировать единый отчет по ассоциированным конверсиям. Метрика дает возможность отслеживать каналы, которые привели к конверсии, а также сравнивать все каналы трафика по количеству целевых действий.</p>
+<p>Чтобы увидеть статистику по каналам, нужно просмотреть отчет «Источники, сводка». (Отчеты – Стандартные отчеты – Источники – Источники, сводка). По умолчанию здесь будут показаны следующие данные по разным источникам:</p>
+<ul>
+<li>количество посетителей;</li>
+<li>количество визитов;</li>
+<li>глубина просмотров;</li>
+<li>время на сайте;</li>
+<li>процент отказов.</li>
+</ul>
+<p>Для просмотра статистики по конверсиям нужно выбрать цель. Отчет продемонстрирует только те каналы, которые участвовали в конверсиях.</p>
+</section>
+
+<section id="p7">
+<p><a id="p7" name="p7"> </a></p>
+<h2>Что следует учитывать в процессе анализа</h2>
+<p>Проводя анализ ассоциированных конверсий, необходимо иметь в виду следующие факторы:</p>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ak/chto-sleduet-uchityvat-v-processe-analiza.jpg"><img alt="что следует учитывать в процессе анализа" class="img-responsive sert-img" src="../../../img/analytics/ak/chto-sleduet-uchityvat-v-processe-analiza.jpg" loading="lazy" /> </a></p>
+<ul>
+<li>конверсионная ценность ресурса определяется как общее число конверсий, которым он способствовал;</li>
+<li>если один пользователь совершил несколько дублирующихся конверсий, учитывается каждая из них;</li>
+<li>если после перехода с рекламы пользователь совершает прямой переход на сайт (например, по сохраненной ссылке), он не будет учитываться в счет рекламы;</li>
+<li>нельзя сегментировать отчетные данные по стандартным критериям, применяются только критерии многоканальных последовательностей;</li>
+<li>если в профиле применялись фильтры, отсекающие трафик, анализировать каналы, которые привели пользователей на ресурс, нет смысла.</li>
+</ul>
+</section>
+
+<section id="p8">
+<p><a id="p8" name="p8"> </a></p>
+<h2>Как взаимосвязаны модели атрибуции и ассоциированные конверсии</h2>
+<p>Анализируя данные из отчетов по ассоциированным конверсиям, можно выстроить примерный путь клиента от первого касания до покупки. Он позволяет правильно выбрать модель атрибуции и рационально распределить рекламный бюджет между рекламными каналами.</p>
+<p>Здесь нужно учитывать, что системы аналитики Google и Яндекс по умолчанию применяют атрибуцию «По последнему клику», т. е. конверсия засчитывается за каналом, откуда был совершен последний переход. Это не всем подходит. Воспользоваться такой моделью могут, например, службы такси, доставки, интернет-магазины продуктов и недорогих товаров обихода – компании, где покупки совершаются в 1-3 касания. Если же продукт дорогой, технически сложный, с множеством характеристик, требующий настройки, и клиенты долго принимают решение о покупке, модель по последнему клику не сработает корректно.</p>
+</section>
+
+<section id="p9">
+<p><a id="p9" name="p9"> </a></p>
+<h2>Какие бывают модели атрибуции</h2>
+<p>В разных системах аналитики модели атрибуции отличаются между собой. Рассмотрим наиболее распространенные системы Google Analytics и Яндекс.Метрику.</p>
+<p>В Google Analytics есть 7 стандартных моделей атрибуции.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/google-analytics.png"><img alt="модели атрибуции в Google Analytics" class="img-responsive sert-img" src="../../../img/analytics/ma/google-analytics.png" loading="lazy" /> </a></p>
+<ul>
+<li>По последнему взаимодействию – последний источник перехода перед совершением покупки получает всю ценность. Модель применима при коротком цикле продаж и уже сформированном спросе.</li>
+<li>По последнему непрямому клику – всю ценность конверсии получает последний канал без учета прямых переходов. Это актуально при малом количестве данных, необходимых для анализа рекламной кампании.</li>
+<li>По последнему клику в Google Ads – последний переход с Google-рекламы получает максимальную ценность. Атрибуция используется, если привлечение клиентов происходит в основном через Google Ads.</li>
+<li>По первому взаимодействию – первый источник, по которому пользователь перешел на сайт, получает 100% ценности конверсии. Применяется, когда нужно выяснить, откуда клиенты узнали о бренде, и повысить его узнаваемость.</li>
+<li>Линейная модель – все каналы получают равные доли ценности конверсии. Модель используется для продуктов с долгим циклом продаж.</li>
+<li>С учетом давности позиции – ценность конверсии источников возрастает по мере приближения к конечному каналу. Атрибуция оптимальна для коротких рекламных кампаний, а также при необходимости выяснить, какие источники приносят трафик, а какие конвертируют пользователей в покупателей.</li>
+<li>С привязкой к позиции – каналы первого и последнего касания с брендом получают одинаково высокую ценность, остальная распределяется по промежуточным каналам. Модель подходит компаниям, которые учитывают не только конвертирующие каналы, но и источник, который привел пользователя на сайт.</li>
+</ul>
+<p><a href="../kak-polzovatsya-yandeks-metrikoj-podrobnaya-instrukciya-dlya-novichkov/index.html">Яндекс.Метрика</a> ограничивается четырьмя моделями атрибуции.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/modeli-atribucii-yandeks-metriki.jpg"><img alt="модели атрибуции Яндекс Метрики" class="img-responsive sert-img" src="../../../img/analytics/ma/modeli-atribucii-yandeks-metriki.jpg" loading="lazy" /> </a></p>
+<ul>
+<li>Первый переход – отображается первый источник перехода, к которому относятся все последующие визиты. Таким образом, удается отследить историю посещений по каждому пользователю.</li>
+<li>Последний переход – учитывается только последний источник трафика, поэтому при анализе скрытых конверсий такая модель не применяется.</li>
+<li>Последний значимый переход – модель фиксирует только значимые переходы, к которым относятся визиты с рекламы, из поиска, рассылок, мессенджеров, соцсетей, по ссылкам на сайтах и в блогах.</li>
+<li>Последний переход из Яндекс Директ – учитывается последний переход по Яндекс-рекламе. Если такового не было, используется предыдущая модель.</li>
+</ul>
+</section>
+
+<section id="p10">
+<p><a id="p10" name="p10"> </a></p>
+<h2>Пример использования отчета ассоциированных конверсий</h2>
+<p>Фирма, которая продает LED-светильники, размещает рекламу в социальных сетях (тематические группы ВКонтакте). Она за месяц принесла 50 прямых переходов при бюджете 75 000 рублей. Необходимо выяснить, целесообразно ли продлевать размещение или выгоднее отключить канал.</p>
+<p>Данные по прямым конверсиям показали, что за каждую конверсию компания платит администраторам сообществ в ВК 1 500 рублей. По другим каналам конверсии обходятся примерно в 800 – 1 100 рублей. Напрашивается вывод о неэффективности источника, но так ли это?</p>
+<p>Отчеты показывают, что ВК принес 146 ассоциированных конверсий, которые содействовали получению выручки в размере 1 687 150 рублей. Это означает, что благодаря каналу фирма получила хорошую <a href="../../business/pribyl-kak-osnovnoj-pokazatel-ehffektivnosti-biznesa/index.html">прибыль</a> и с лихвой окупила расходы на финансирование рекламы в группах. Если его отключить, компания потеряет 146 заявок и не получит 1 687 150 рублей в кассу.</p>
+</section>
+
+<section id="p11">
+<p><a id="p11" name="p11"> </a></p>
+<h2>Часто задаваемые вопросы по ассоциированным конверсиям</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="headingOne"><a aria-controls="collapseOne" aria-expanded="false" class="btn-link collapsed" data-target="#collapseOne" data-toggle="collapse" href="index.html#">Почему важны не только прямые конверсии?</a></div>
+
+<div aria-labelledby="headingOne" class="collapse" data-parent="#faqAccordion" id="collapseOne" style="">
+<div class="card-body">
+<p>Большинство покупок совершаются после нескольких взаимодействий покупателя с брендом. Модель «пришел – купил» большая редкость. В среднем человеку нужно посетить от 2 до 4 сайтов и изучить около десятка источников, чтобы посмотреть цены, технические показатели и определиться с заказом. Особенно крупные и дорогие покупки люди могут обдумывать месяцами. Ассоциированные конверсии в этом случае играют огромную роль, подталкивая раз за разом пользователя к покупке. Без них просто не было бы прямых конверсий.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingTwo"><a aria-controls="collapseTwo" aria-expanded="false" class="btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse" href="index.html#">Как подсчитываются ассоциированные конверсии?</a></div>
+
+<div aria-labelledby="headingTwo" class="collapse" data-parent="#faqAccordion" id="collapseTwo">
+<div class="card-body">
+<p>В отчете Google отображается общее количество конверсий с длиной цепочки более 1 касания по выбранному каналу. Ассоциированными считаются все неотслеженные контакты с брендом, которые произошли до конверсии. Их ценность подсчитывается путем суммирования.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingfour"><a aria-controls="collapsefour" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefour" data-toggle="collapse" href="index.html#">Что делать, если на сайте много разных воронок?</a></div>
+
+<div aria-labelledby="headingfour" class="collapse" data-parent="#faqAccordion" id="collapsefour">
+<div class="card-body">
+<p>Любая воронка соответствует классическому циклу продажи:</p>
+<ol>
+<li>Осознание.</li>
+<li>Интерес.</li>
+<li>Рассмотрение.</li>
+<li>Покупка.</li>
+</ol>
+<p>На основе этого можно применять общую модель атрибуции независимо от количества используемых воронок.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingfive"><a aria-controls="collapsefive" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefive" data-toggle="collapse" href="index.html#">Считаются ли показы и клики одним и тем же событием?</a></div>
+
+<div aria-labelledby="headingfive" class="collapse" data-parent="#faqAccordion" id="collapsefive">
+<div class="card-body">
+<p>Нет, каждое из этих событий засчитывается отдельно, если оно произошло в рамках обозначенного периода ретроспективного анализа. Ознакомиться с этими данными можно в отчетах Floodlight и «Путь конверсии».</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingsix"><a aria-controls="collapsesix" aria-expanded="false" class="btn-link collapsed" data-target="#collapsesix" data-toggle="collapse" href="index.html#">С чего начать?</a></div>
+
+<div aria-labelledby="headingsix" class="collapse" data-parent="#faqAccordion" id="collapsesix">
+<div class="card-body">
+<p>В первую очередь стоит посмотреть и проанализировать рекламные кампании, которые стоят первыми в очереди на отключение. Часто решение отказаться от отдельно взятой кампании принимается на основе атрибуции по последнему клику. Чтобы не ошибиться и не отключить эффективный канал, важно узнать из отчетов, какая выручка была получена благодаря ассоциированным конверсиям.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="p12">
+<p><a id="p12" name="p12"> </a></p>
+<h2>Заключение</h2>
+<p>Скрытые конверсии не уступают по важности прямым, которые в 99% случаев тесно связаны с ними. При отключении каналов, которые помогали пользователям продвигаться по воронке, продажи могут значительно сократиться.</p>
+<p>Анализ ассоциированных конверсий – это способ избежать ошибок в ходе оценки эффективности рекламных кампаний. Общие отчеты систем аналитики не позволяют провести глубокий анализ и получить полную картину, поэтому перед принятием решения отключить некоторые каналы важно внимательно изучить все отчеты.</p>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                                                     <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Что такое ассоциированные конверсии</a></li>
+	<li><a href="index.html#p2">Для чего нужны</a></li>
+	<li><a href="index.html#p3">Роль контекстной рекламы в ассоциированных конверсиях</a></li>
+	<li><a href="index.html#p4">Чем отличается конверсия от ассоциированной конверсии</a></li>
+	<li><a href="index.html#p5">Типы</a></li>
+	<li><a href="index.html#p6">Где и по каким отчетам отслеживаются</a></li>
+	<li><a href="index.html#p7">Что следует учитывать в процессе анализа</a></li>
+	<li><a href="index.html#p8">Как взаимосвязаны модели атрибуции и ассоциированные конверсии</a></li>
+	<li><a href="index.html#p9">Какие бывают модели атрибуции</a></li>
+	<li><a href="index.html#p10">Пример использования отчета</a></li>
+	<li><a href="index.html#p11">Частые вопросы</a></li>
+	<li><a href="index.html#p12">Заключение</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

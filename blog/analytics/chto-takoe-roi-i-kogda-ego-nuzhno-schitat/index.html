@@ -1,0 +1,1319 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ROI - что это такое и как рассчитать рентабельность инвестиций | формула расчета РОИ в маркетинге</title>
+    <meta name="description" content="ROI – показатель возврата инвестиций – как и зачем его считать. Формула, оптимальное значение, примеры расчета. Как увеличить коэффициент и каких ошибок избегать.">
+    <meta name="keywords" content="ROI">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/analytics/chto-takoe-roi-i-kogda-ego-nuzhno-schitat#cao",
+     "url": "https://neiros.ru/blog/analytics/chto-takoe-roi-i-kogda-ego-nuzhno-schitat#cao",
+     "headline":"ROI - что это такое и как рассчитать рентабельность инвестиций | формула расчета РОИ в маркетинге",
+
+     "datePublished": "2021-12-17 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "Аналитика"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Что такое ROI и когда его нужно считать</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Аналитика</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/85ce6f8c72dcb041cda8d9b94cdbcb1f.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 20.12.2021</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Предприниматели и инвесторы вкладывают деньги в бизнес ради получения прибыли, поэтому важно регулярно отслеживать, какой результат приносят инвестиции. Не исключено, что компания работает в убыток, но это не сразу становится очевидным. Для точной количественной оценки применяется параметр ROI. В данной статье рассмотрим, как он помогает оценить  <a href="../../business/chto-takoe-rentabelnost-i-zachem-ee-rasschityvat/index.html">рентабельность инвестиций</a> и влияет на управление бизнесом в целом.</p>
+<p><img alt="ROI" class="img-responsive sert-img" src="https://neiros.ru/images/%0D%0A85ce6f8c72dcb041cda8d9b94cdbcb1f.png" loading="lazy" draggable="false"></p>
+<section id="p1">
+<p><a id="p1" name="p1"> </a></p>
+<h2>Что такое ROI</h2>
+<p>Финансовый показатель ROI переводится с английского языка как return on investment и отражает окупаемость инвестированных средств. Чтобы его вычислить, нужно знать всего два параметра:</p>
+<ul>
+<li>сумма инвестиций;</li>
+<li>доход.</li>
+</ul>
+<blockquote class="blockquote-v2"><p>С помощью ROI можно рассчитывать окупаемость инвестиций, вложенных в весь бизнес, отдельный проект, продукт или текущие потребности фирмы. Для понимания рентабельности вложений в маркетинг и рекламу используют показатель ROMI.</p></blockquote>
+</section>
+
+<section id="p2">
+<p><a id="p2" name="p2"> </a></p>
+<h2>Зачем считать ROI</h2>
+<p>Принятие управленческих решений невозможно без анализа финансовых показателей предприятия. Расчет ROI позволяет не только оценивать рентабельность вложений, но также:</p>
+<ul>
+<li>планировать бюджет;</li>
+<li>выделять наиболее эффективные каналы сбыта;</li>
+<li>составлять стратегию для успешного развития компании;</li>
+<li>избегать популярных ошибок и вложения денег впустую;</li>
+<li>отслеживать инвестиционную привлекательность бизнеса;</li>
+</ul>
+<p>Инвесторам ROI позволяет проводить обработку данных о компаниях, сравнивать их и формировать предельно стабильные инвестиционные портфели.</p>
+</section>
+
+<section id="p3">
+<p><a id="p3" name="p3"> </a></p>
+<h2>Как рассчитать ROI</h2>
+<p>Подсчет ROI начинается с подготовки исходных данных, которые помогут с учетом всех необходимых показателей получить предельно корректный ответ. Чтобы коэффициент возврата инвестиций был точнее, рекомендуется рассматривать более продолжительный период.</p>
+<p>Чтобы оценивать эффективность вложений, используют разные методы подсчета:</p>
+<ul>
+<li>по формуле или вручную – применяется, когда следует детально проанализировать финансовые тонкости бизнеса, производства или проекта, узнать источники тех или иных параметров; занимает много времени;</li>
+<li>с помощью таблицы Excel – полуавтоматизированный, достаточно удобный способ бесплатно рассчитать показатель; проследить положение дел в бизнесе помогает наглядность в виде таблицы со всеми параметрами;</li>
+<li>с помощью онлайн-калькулятора – идеальный способ, если вы хотите быстро вычислить ROI. Достаточно вписать соответствующие значения, и программа сразу же подсчитает коэффициент по запрограммированной формуле.</li>
+</ul>
+<p>Выбрать тот или иной метод расчета нужно с учетом исходных целей.</p>
+<h3>Формула расчета ROI</h3>
+<p>Формула применяется для получения наиболее точных расчетов и детального анализа финансового положения в организации.</p>
+<p>Предприниматели и инвесторы предпочитают рассчитывать ROI по самой простой формуле:</p>
+ <p><a data-fancybox="gallery" href="../../../img/conversion/formula-roi.jpg"><img alt="формула ROI" class="img-responsive sert-img" src="../../../img/conversion/formula-roi.jpg" loading="lazy" /> </a></p>
+<p><em>ROI = (Доход от вложений – Сумма вложений) / Сумма вложений * 100%</em></p>
+<p>Она дает поверхностное представление о финансах в бизнесе и позволяет понять лишь то, окупаются инвестиции или нет.</p>
+<p>Переломным значением в оценке окупаемости вложений является число 0. Если получен отрицательный коэффициент, это говорит о том, что инвестиции не окупаются.</p>
+<blockquote class="blockquote-v1"><p>В формуле учитываются показатели прибыли и вложения за заданный период. За этот же период рассчитывается коэффициент возврата инвестиций.</p></blockquote>
+<p>Финансисты предпочитают рассчитывать ROI по более сложной формуле. Она показывает сумму, на которую бюджет увеличился к концу периода:</p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/slozhnaya-formula-roi.png"><img alt="сложная формула ROI" class="img-responsive sert-img" src="../../../img/roi/slozhnaya-formula-roi.png" loading="lazy" /> </a></p>
+<p><em>ROI = (Сумма вложений к концу периода + Доход за период – Сумма инвестиций) / Сумма инвестиций</em></p>
+<p>Маркетологи и интернет-маркетологи рассчитывают ROMI, в котором учитываются только расходы на маркетинг: упаковку, рекламу, размещение баннеров, выпуск бумажной продукции, продвижение в Сети и т. д.</p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/formula-romi.png"><img alt="формула ROMI" class="img-responsive sert-img" src="../../../img/roi/formula-romi.png" loading="lazy" /> </a></p>
+<p><em>ROMI = (Прибыль – Расходы на маркетинг) / Расходы на маркетинг * 100%</em></p>
+<p>Чтобы узнать, какой процент инвестиций в один канал продвижения окупился, рассчитывают показатель ROAS. Для этого используется формула:</p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/formula-roas.png"><img alt="формула ROAS" class="img-responsive sert-img" src="../../../img/roi/formula-roas.png" loading="lazy" /> </a></p>
+<p><em>ROAS = Прибыль от рекламной кампании / Расходы на маркетинг * 100%</em></p>
+<p>Здесь участвуют расходы на ту же рекламу, с которой получен доход.</p>
+<h3>Excel шаблон</h3>
+<p>В процессе ручного расчета, несмотря на точность метода, можно допустить ошибку или просто не учесть важные параметры ввиду человеческого фактора. Чтобы получить сравнительно объективный ROI с небольшими затратами времени на вычисления, используют шаблон в таблицах Excel. Он позволяет автоматизировать процесс и учесть максимум нужных показателей. Однако обновлять значения переменных и задавать формулу в этом случае нужно вручную.</p>
+<h3>Калькулятор расчета</h3>
+<p>Полностью автоматизированный калькулятор с уже прописанной формулой для вычисления ROI. Здесь остается лишь ввести переменные и запросить расчет с помощью кнопки. Недостаток вычислений с помощью онлайн-калькулятора – невозможность сохранять полученные данные. Чтобы отслеживать динамику, нужно вести таблицу вручную.</p>
+<p>Функциональные калькуляторы ROI: Ciox, Checkroi, Advego, Unisender.</p>
+<p>Также у нас есть свой <a href="../../../tools/calculator-roi/index.html">онлайн-калькулятор ROI</a>, которым вы можете свободно воспользоваться для расчета окупаемости инвестиционных средств.</p>
+</section>
+
+<section id="p4">
+<p><a id="p4" name="p4"> </a></p>
+<h2>Как автоматизировать расчет ROI</h2>
+<p>Когда предстоит работать с большими массивами данных, стоит автоматизировать процесс. Это можно сделать, используя специальные инструменты, в т. ч. сервисы сквозной аналитики. Благодаря им не нужно вручную переносить значения доходов и расходов по каждому источнику трафика, объявлению и ключевому слову. Сервисы синхронизированы с <a href="../../automation/chto-takoe-crm-sistema-i-nuzhna-li-ona-vam/index.html">CRM</a> и не требует ручных действий.</p>
+<h3>Neiros</h3>
+<p>Сервис сквозной аналитики Neiros подтягивает данные из корпоративной CRM и объединяет их с показателями с сайта, рекламных каналов, <a href="../chto-takoe-kolltreking-i-kak-on-rabotaet/index.html">коллтрекинга</a> и других подключенных систем. Сводный отчет позволяет увидеть:</p>
+<ul>
+<li>количество переходов с рекламы на сайт;</li>
+<li>количество заявок и закрытых продаж;</li>
+<li>сколько денег на всё это потрачено.</li>
+</ul>
+<p>Сервис рассчитывает ROI автоматически и позволяет анализировать, насколько тот или иной канал траффика эффективен. В Neiros коэффициент возврата отслеживается для разных каналов, включая Google Ads, Яндекс.Директ, ВК и email-рассылки.</p>
+<h3>Google Analytics</h3>
+<p>Общедоступный онлайн-сервис для работы с данными, полученными по каналам Google. Позволяет вести статистику, анализировать, рассчитывать необходимые показатели по заданным метрикам. Если в рекламных кампаниях используются данные из других систем (Яндекс, Instagram, Facebook и другие), их нужно предварительно импортировать.</p>
+<blockquote class="blockquote-v2"><p>Google Analytics позволяет использовать только одну модель атрибуции, поэтому в расчетах могут быть учтены не все транзакции.</p></blockquote>
+<h3>Google Sheets</h3>
+<p>Еще один способ автоматизировать расчеты – перенос данных в Google Sheets из Google Analytics. Сделать всё это можно вручную. Однако сервис имеет ограничения по объемам данных, поэтому работать с большими массивами информации здесь не удастся.</p>
+</section>
+
+<section id="p5">
+<p><a id="p5" name="p5"> </a></p>
+<h2>Отличия ROI от других показателей</h2>
+<p>ROI, ROMI, ROAS, ДРР – эти показатели близки по смыслу и часто их путают. Рассмотрим, чем они отличаются друг от друга.</p>
+ <p><img alt="отличия ROI от других показателей" class="img-responsive sert-img" src="../../../img/roi/otlichiya-roi-ot-drugih-pokazatelej.jpg" loading="lazy" /></p>
+<h3>ROMI</h3>
+<p>ROMI расшифровывается как Return on Marketing Investment и отражает окупаемость маркетинговых инвестиций. Он имеет прямое отношение к ROI и отличается от него тем, что берутся во внимание только расходы на маркетинг.</p>
+<p>Формула ROMI аналогична ROI:</p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/formula-romi.png"><img alt="формула ROMI" class="img-responsive sert-img" src="../../../img/roi/formula-romi.png" loading="lazy" /> </a></p>
+<p><em>ROMI = (Прибыль – Вложения в маркетинг) / Вложения в маркетинг * 100%</em></p>
+<blockquote class="blockquote-v1"><p>Важно не путать маркетинг с рекламой. В ROMI учитываются абсолютно все маркетинговые затраты: реклама, продвижение, зарплата маркетологу, копирайтеру, дизайнеру и прочее.</p></blockquote>
+<p>Пример. Фирма «ХХХ» продает через интернет-магазин деревянные изделия. Чтобы о продуктах и производителе узнавали предприятия запустило рекламу и каждый месяц тратит:</p>
+<ul>
+<li>на рекламу – 50 000 р.;</li>
+<li>на настройку объявлений – 10 000 р.;</li>
+<li>на написание текстов объявлений – 8 000 р.</li>
+</ul>
+<p>К концу месяца реклама принесла доход в размере 210 000 р. Рассчитаем окупаемость вложений.</p>
+<p>ROMI = (210 000 – (50 000 + 10 000 + 8 000)) / (50 000 + 10 000 + 8 000) * 100% = 208%</p>
+<p>Это значит, что за месяц вложения в маркетинг окупились вдвое.</p>
+<h3>ROAS</h3>
+<p>ROAS расшифровывается как Return on Ad Spend и показывает, насколько окупаются деньги, вложенные в рекламные кампании. В отличие от ROMI, здесь не учитываются сопутствующие маркетинговые расходы, а берутся исключительно данные по рекламе.</p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/formula-roas.png"><img alt="формула ROAS" class="img-responsive sert-img" src="../../../img/roi/formula-roas.png" loading="lazy" /> </a></p>
+<p><em>ROAS = Прибыль от рекламы / Вложения в рекламу * 100%</em></p>
+<p>На основе приведенного выше примера, посмотрим, окупаются ли вложения в рекламу у компании «ХХХ».</p>
+<p>ROA = 210 000 / 50 000 * 100% = 420%</p>
+<p>Это значит, что, вкладывая 1 рубль в рекламу, компания зарабатывает 4,2 рубля.</p>
+<h3>ДРР</h3>
+<p>Доля рекламных рынков – то же самое, что CRR, – показатель, который помогает увидеть, какой процент от доходов с рекламы составляют издержки на нее. В отличие от ROI, где стремятся к более высокому значению, ДРР, наоборот, должен быть как можно ниже.</p>
+<p><b>Чем меньше значение ДРР, тем выгоднее рекламная кампания.</b></p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/formula-drr.png"><img alt="формула ДРР" class="img-responsive sert-img" src="../../../img/roi/formula-drr.png" loading="lazy" /> </a></p>
+<p><em>ДРР = Издержки на рекламную кампанию / Прибыль с рекламы * 100%</em></p>
+<p>Вычислим ДРР для нашего примера.</p>
+<p>ДРР = 50 000 / 210 000 * 100% = 24%</p>
+<p>Результат говорит о том, что компания «ХХХ» с каждого полученного с рекламы рубля тратит на нее 24 копейки.</p>
+</section>
+
+<section id="p6">
+<p><a id="p6" name="p6"> </a></p>
+<h2>Какие показатели рассчитываются вместе с ROI</h2>
+<p>ROI не единственный показатель, который нужно знать, чтобы оценить окупаемость инвестированных средств. Получить полную картину и понять, действительно ли инвестиции приносят достаточную <a href="../../business/pribyl-kak-osnovnoj-pokazatel-ehffektivnosti-biznesa/index.html">прибыль</a>, помогают показатели ROE и ROA.</p>
+<ul>
+<li>ROE – помогает оценить, насколько рентабелен собственный капитал фирмы, за все время, и понять, будет ли она стабильно работать в долгосрочной перспективе.</li>
+<li>ROA – помогает оценить степень рентабельности собственного капитала фирмы, накопленного за последние 12 месяцев. В совокупности с ROI демонстрирует перепады рентабельности и позволяет спрогнозировать, насколько стабильный курс держит компания.</li>
+</ul>
+<blockquote class="blockquote-v2"><p>С помощью этих инструментов можно оценивать рентабельность инвестиций только применительно к бизнесу в целом.</p></blockquote>
+</section>
+
+<section id="p7">
+<p><a id="p7" name="p7"> </a></p>
+<h2>Специфика ROI в разных направлениях инвестиций</h2>
+<p>Рассчитать окупаемость инвестированных в бизнес денег точно не всегда возможно. Трудности в подсчетах связаны с тем, что порой бывает сложно получить необходимые исходные данные о расходах. Особенно остро эта проблема стоит в компаниях, которые работают в сложных направлениях.</p>
+<p>Наибольшую эффективность ROI имеет в следующих направлениях:</p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/ehffektivnost-roi-imeet-v-napravleniyah.png"><img alt="наибольшую эффективность ROI имеет в следующих направлениях" class="img-responsive sert-img" src="../../../img/roi/ehffektivnost-roi-imeet-v-napravleniyah.png" loading="lazy" /> </a></p>
+<ol>
+<li>Прямые продажи или прямой маркетинг – услуги и товары реализуются через оффлайн-магазины, интернет, каталоги, путем рассылки новостей и предложений по email.</li>
+<li>Программы лояльности – окупаемость вложений можно вычислить по каждому клиенту.</li>
+<li>Стимуляция сбыта – продажи можно оптимизировать путем вложения бюджета в маркетинговые кампании с последующим возвратом.</li>
+<li>Работа с клиентами – вложения в политику компании и взаимодействие с клиентами окупаются за счет повторных покупок, что можно легко посчитать.</li>
+</ol>
+<p>Наиболее точное значение ROI можно получить, если рассчитать его по итогам проведенных мероприятий (рассылки, акции, реклама).</p>
+</section>
+
+
+<section id="p8">
+<p><a id="p8" name="p8"> </a></p>
+<h2>Какой показатель ROI считается нормальным</h2>
+<p>По итогам расчета ROI нужно правильно интерпретировать результаты, а это во многом зависит от того, куда вложили деньги. Не существует одного конкретного порога процента окупаемости инвестиций, который будет считаться одинаково хорошим для всех сфер деятельности. В каждом случае приемлемы свои значения.</p>
+<p><b>Для бизнеса.</b> Если ROI выше 10%, можно говорить о том, что фирма работает в плюс.</p>
+<p><b>Для маркетинга.</b> Здесь коэффициент возврата должен превышать 100%, иначе можно считать, что прибыль от рекламы не покрывает затраты на нее. Чем больше ROI в данном случае, тем лучше.</p>
+<p><b>Для валютных и фондовых рынков.</b> Приемлемыми считаются даже отрицательные коэффициенты, поскольку акции склонны меняться в цене за считанные часы. Большинство инвесторов, вкладывая деньги, не придают значения этому показателю и инвестируют даже в активы с отрицательным ROI.</p>
+<p>При анализе результатов стоит рассматривать каждый бизнес индивидуально. Некоторые проекты на начальном этапе кажутся убыточными, но очень хорошо окупаются со временем.</p>
+</section>
+
+<section id="p9">
+<p><a id="p9" name="p9"> </a></p>
+<h2>Примеры расчета ROI</h2>
+<p>Для лучшей демонстрации расчета коэффициента окупаемости инвестиций в разных сферах рассмотрим несколько примеров.</p>
+ <p><img alt="примеры расчета ROI" class="img-responsive sert-img" src="../../../img/roi/primery-rascheta-roi.jpg" loading="lazy" /></p>
+<h3>Пример 1. Недвижимость</h3>
+<p>Планируется взять ипотеку на 1-комнатную квартиру для сдачи её в аренду. Посмотрим, окупятся ли вложения в недвижимость при условии, что:</p>
+<ul>
+<li>цена квартиры – 1 800 000 р.;</li>
+<li>стартовый взнос по ипотеке – 270 000 р. (15%);</li>
+<li>срок кредитования – 20 лет;</li>
+<li>ставка по кредиту – 10% годовых;</li>
+<li>ежемесячная оплата по кредиту - 14 765 р.;</li>
+<li>предполагаемая арендная плата – 20 000 р.</li>
+</ul>
+<p>ROI = (20 000 – 14 765) * 12 / (14 765 * 12 + 270 000) * 100% = 14%</p>
+<p>Коэффициент показывает, что идея инвестировать в недвижимость с последующей ее сдачей в аренду имеет определенную выгоду. Но необходимо учитывать, что в расчете приняты идеальные условия – непрерывная сдача квартиры в аренду в течение года.</p>
+<h3>Пример 2. Рекламная кампания в Google Ads</h3>
+<p>Интернет-магазин запускает контекстную рекламу в Google с целью привлечения покупателей и увеличения дохода. Подсчитаем ROI при следующих исходных данных:</p>
+<ul>
+<li>затраты на рекламную кампанию в месяц – 60 000 р.;</li>
+<li>выручка за период – 180 000 р.;</li>
+<li><a href="../../business/chto-takoe-sebestoimost-i-kak-ee-schitat/index.html">себестоимость проданного товара</a> – 110 000 р.</li>
+</ul>
+<p>Необходимо определить валовую прибыль за период: 180 000 – 110 000 = 70 000 р.</p>
+<p>ROI = (70 000 – 60 000) / 60 000 * 100% = 16,7%</p>
+<p>Из расчета видно, что с каждого потраченного на рекламу рубля интернет-магазин вернул 16,7 копеек. Несмотря на положительный коэффициент, эффективность оказалась недостаточной. Рекомендуется пересмотреть ее или перенаправить часть бюджета в поддержку другого вида рекламы.</p>
+<h3>Пример 3. Email-маркетинг</h3>
+<p>Предприятие вложило часть бюджета в email-продвижение. Была запущена рассылка, которая привела клиентов. Исходные данные:</p>
+<ul>
+<li>выручка с продаж – 284 000 р.;</li>
+<li>маржа составила 22%;</li>
+<li>стоимость сервиса рассылок – 7 000 р.;</li>
+<li>з/п сотруднику – 25 000 р.</li>
+</ul>
+<p>Валовая прибыль = 284 000 * 0,22 = 62 480 р.</p>
+<p>ROMI = (62 480 – 7 000 – 25 000) / (7 000 + 25 000) * 100% = 95%</p>
+<p>Это значит, что каждый вложенный в рассылку рубль принес компании 95 копеек. Вложения в рекламу не окупились.</p>
+<h3>Пример 4. Рынок ценных бумаг</h3>
+<p>Покупая ценные бумаги в июне, инвестор тратил на каждую акцию 8 000 рублей. Дивиденды с них составляли 500 рублей ежемесячно. Когда в декабре акции подорожали до 15 000 рублей, инвестор продал их. Вычислим ROI, чтобы понять, была ли удачной инвестиция.</p>
+<p>Прибыль за период с июня по декабрь = (15 000 – 8 000) + (500 * 7) = 10 500 рублей</p>
+<p>ROI = 10 500 / 8 000 * 100% = 131,25%</p>
+<p>Высокий коэффициент свидетельствует о выгодном инвестировании. Каждый вложенный рубль принес инвестору 1,3 рубля чистого дохода.</p>
+<h3>Пример 5. Реклама офлайн</h3>
+<p>Магазин детской одежды запустил рекламную кампанию, в рамках которых промоутер на улице раздавал листовки и приглашал людей зайти внутрь. Чтобы узнать, было ли это эффективным, найдем ROI. Исходные данные:</p>
+<ul>
+<li>чистая прибыль за период действия акции – 240 000 р;</li>
+<li>зарплата промоутеру – 12 000 р.;</li>
+<li>печать листовок – 5 000 р.</li>
+</ul>
+<p>ROMI = (240 000 – 12 000 – 5 000) / (12 000 + 5 000) * 100% = 1 312%</p>
+<p>Результат говорит о сверхвысокой окупаемости. За каждый потраченный рубль магазин вернул 13 рублей чистого дохода.</p>
+</section>
+
+<section id="p10">
+<p><a id="p10" name="p10"> </a></p>
+<h2>Нюансы при расчете</h2>
+ <p><a data-fancybox="gallery" href="../../../img/roi/nyuansy-pri-raschete-roi.png"><img alt="нюансы при расчете ROI" class="img-responsive sert-img" src="../../../img/roi/nyuansy-pri-raschete-roi.png" loading="lazy" /> </a></p>
+<ul>
+<li>Модель атрибуции на основе <a href="../../sales/vse-o-voronke-prodazh-ot-istorii-k-primeneniyu-v-sovremennom-biznese/index.html">воронки</a> дает возможность предельно точно рассчитать ROI. В противном случае из-за многочисленных действий на сайте и за его пределами клиент может «потеряться», а данные по нему не смогут участвовать в вычислениях.</li>
+<li>На выручку влияет много факторов, которые необходимо учитывать при запуске рекламной кампании и в работе бизнеса в целом: качество сервиса, работа менеджера, контроль наличия товара на складе, актуальность контактов на сайте и т. д.</li>
+<li>Затраты нестабильны и могут меняться в расчетном периоде: повысилась стоимость доставки, увеличилась цена закупки, подорожали коммунальные услуги.</li>
+<li>Анализ лучше проводить в динамике. Это поможет учесть клиентов, которые пришли с рекламы, но приняли решение о покупке не сразу.</li>
+</ul>
+</section>
+
+<section id="p11">
+<p><a id="p11" name="p11"> </a></p>
+<h2>Какие ошибки возможны при расчете ROI</h2>
+<p>Субъективность при вычислении показателя, особенности жизненных циклов продаж, множество вариантов расчетов приводят к допущению ошибок. Рассмотрим наиболее частые причины неточных результатов.</p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/kakie-oshibki-vozmozhny-pri-raschete-roi.png"><img alt="какие ошибки возможны при расчете ROI" class="img-responsive sert-img" src="../../../img/roi/kakie-oshibki-vozmozhny-pri-raschete-roi.png" loading="lazy" /> </a></p>
+<ul>
+<li>Не учтены дополнительные расходы: эксплуатационные, оплаты подрядным компаниям, налоги, комиссионные выплаты и др.</li>
+<li>Использование разных отчетов, значения в которых различаются.</li>
+<li>Путаница в понятиях «прибыль» и «выручка». Иногда вместо прибыли считают выручку, что априори неверно.</li>
+<li>Неверное распределение сумм дохода и издержек между несколькими проектами, продуктами или рекламными кампаниями.</li>
+<li>Не учтена средняя продолжительность цикла сделки, из-за чего теряются данные о долго думающих клиентах.</li>
+</ul>
+</section>
+
+<section id="p12">
+<p><a id="p12" name="p12"> </a></p>
+<h2>Что делать после расчета</h2>
+<p>Когда ROI посчитан, возникает закономерный вопрос: что делать с результатами? Существует несколько вариантов дальнейших действий.</p>
+<ul>
+<li><b>Анализ.</b> Важно оценить, как меняется показатель в условиях рынка. В ходе анализа можно быстро определить, куда нерационально тратятся деньги, и перенаправить финансовые потоки.</li>
+<li><b>Корректировки.</b> Если ROI показал неудовлетворительный результат, можно не отказываться от проекта полностью, а частично его изменить, например, отключить неэффективные каналы.</li>
+<li><b>Эксперименты.</b> Зная текущий показатель, можно пробовать реализовывать новые идеи, выводить на рынок новые продукты, запускать проекты, которые были в планах, корректируя действия в процессе эксперимента.</li>
+</ul>
+</section>
+
+<section id="p13">
+<p><a id="p13" name="p13"> </a></p>
+<h2>В каких случаях ROI неинформативен</h2>
+<p>Многие инвесторы и бизнесмены рассчитывают ROI как основной показатель окупаемости и индикатор эффективности. Однако не всегда он бывает объективен и информативен. Рассмотрим, когда именно не стоит смотреть на этот коэффициент.</p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/v-kakih-sluchayah-roi-neinformativen.png"><img alt="d каких случаях ROI неинформативен" class="img-responsive sert-img" src="../../../img/roi/v-kakih-sluchayah-roi-neinformativen.png" loading="lazy" /> </a></p>
+<ul>
+<li><b>Когда компания использует сложную маркетинговую модель.</b> Расчет не дает понимания, какой маркетинговый прием принес результат, а какой ни к чему не привел.</li>
+<li><b>На первом этапе стартапа или в самом начале работы компании.</b> Расходы, значительно превышающие прибыль, негативно скажутся на значении ROI, но это не значит, что бизнес всегда будет убыточным.</li>
+<li><b>При существенной разнице в цене продуктов.</b> Не учитываются доли по каждому товару или услуге в общей сумме выручки, а значит, показатель будет искусственно завышен.</li>
+</ul>
+<p>Рассмотрим пример, когда ROI неинформативен.</p>
+<p>Автосалон выставил на продажу автомобиль и запустил рекламу. Покупатель ее увидел, перешел по ссылке, заинтересовался, но не стал принимать решение сразу. Через некоторое время посетил автосалон, посмотрел товар вживую и снова взял тайм-аут на раздумья. Только спустя две недели клиент вернулся, чтобы купить машину.</p>
+<p>Как видно, из-за долгих раздумий покупателя ROI со временем меняется и не может служить основанием для оценки окупаемости рекламной кампании.</p>
+</section>
+
+<section id="p14">
+<p><a id="p14" name="p14"> </a></p>
+<h2>Преимущества и недостатки ROI</h2>
+<p>Как и любой финансовый показатель, коэффициент возврата инвестиций имеет преимущества и недостатки, которые позволяют объективно оценить его способность оценивать эффективность бизнес- и маркетинговых процессов.</p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p>Среди преимуществ ROI:</p>
+            </td>
+            <td class="minus-block" width="400">
+            <p>К серьезным недостаткам относятся:</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>быстрая оценка состояния финансов в компании;</li>
+<li>возможность простого сравнения нескольких компаний по инвестиционным активам;</li>
+<li>учет суммы всех видов инвестиционных доходов, в т. ч. долгосрочных;</li>
+<li>изменение формулы для повышения информативности коэффициента в определенных ситуациях;</li>
+<li>демонстрация верности принятого инвестиционного решения.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>невозможность учесть фактор времени, все затраты и вложения;</li>
+<li>не отражает реальное положение дел на сложных рынках (без среднего чека, нормы дохода, с длинным циклом продаж);</li>
+<li>позволяет оценить финансовую ситуацию только по факту, без возможности получить данные на перспективу;</li>
+<li>для полной оценки эффективности нужны дополнительные значения других показателей и их комплексный анализ.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+<section id="p15">
+<p><a id="p15" name="p15"> </a></p>
+<h2>Как увеличить ROI</h2>
+<p>Наверняка каждый бизнесмен задумывается о том, как сделать, чтобы окупаемость вложенных средств повысилась. Рассмотрим основные методы.</p>
+ <p><a data-fancybox="gallery" href="../../../img/roi/kak-uvelichit-roi.png"><img alt="как увеличить ROI" class="img-responsive sert-img" src="../../../img/roi/kak-uvelichit-roi.png" loading="lazy" /> </a></p>
+<ol>
+<li><b>Снижайте расходы.</b> Разумная экономия с участием кризис-менеджера позволит тратить меньше, но не отказываться от важных для бизнеса статей расходов.</li>
+<li><b>Увеличивайте прибыль.</b> В этом помогает открытие новых рынков сбыта продукции, расширение ассортимента или набора услуг.</li>
+<li><b>Перераспределяйте расходы.</b> Нужно грамотно рассредоточить издержки между проектами, учесть зависимость затрат от числа персонала.</li>
+<li><b>Увеличивайте средний чек.</b> Старайтесь повысить лояльность клиента при взаимодействии с ним, предлагайте сопутствующие продукты, скидки, бонусы.</li>
+<li><b>Лучше анализируйте.</b> Грамотная аналитика дает возможность получать много полезной информации, которую можно использовать для развития компании.</li>
+<li><b>Будьте последовательны.</b> Звенья рекламы, которые проходит пользователь, должны соответствовать его запросу и вести на страницу с нужным продуктом</li>
+<li><b>Используйте все эффективные рекламные каналы.</b> Не стоит сосредотачиваться на одном источнике трафика и игнорировать остальные. Важно найти и развивать все эффективные каналы.</li>
+</ol>
+</section>
+
+<section id="p16">
+<p><a id="p16" name="p16"> </a></p>
+<h2>Ответы на вопросы</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="headingOne"><a aria-controls="collapseOne" aria-expanded="false" class="btn-link collapsed" data-target="#collapseOne" data-toggle="collapse" href="index.html#">Что дает расчет ROI?</a></div>
+
+<div aria-labelledby="headingOne" class="collapse" data-parent="#faqAccordion" id="collapseOne" style="">
+<div class="card-body">
+<p>Коэффициент показывает, насколько окупаются вложения в бизнес, проект, продукт или рекламу. Зная этот показатель, можно грамотно перераспределять бюджет или корректировать маркетинговую стратегию.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingTwo"><a aria-controls="collapseTwo" aria-expanded="false" class="btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse" href="index.html#">Для каких сфер можно рассчитывать ROI?</a></div>
+
+<div aria-labelledby="headingTwo" class="collapse" data-parent="#faqAccordion" id="collapseTwo">
+<div class="card-body">
+<p>Этот показатель актуален везде, где есть точные данные о прибыли и расходах: реклама, продвижение в интернете, новый продукт, филиал компании и т. д.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingfour"><a aria-controls="collapsefour" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefour" data-toggle="collapse" href="index.html#">Как эффективнее всего оценивать результат работы компании?</a></div>
+
+<div aria-labelledby="headingfour" class="collapse" data-parent="#faqAccordion" id="collapsefour">
+<div class="card-body">
+<p>Все варианты оценки результатов работы бизнеса могут быть эффективными, но удобнее, точнее и быстрее всего считается <a href="../skvoznaya-analitika-ot-vnedreniya-do-realnyh-kejsov/index.html">метод сквозной аналитики</a>. Он доступен всем пользователям, позволяет анализировать нужные данные и формировать понятные отчеты.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingfive"><a aria-controls="collapsefive" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefive" data-toggle="collapse" href="index.html#">Когда нужно считать ROI?</a></div>
+
+<div aria-labelledby="headingfive" class="collapse" data-parent="#faqAccordion" id="collapsefive">
+<div class="card-body">
+<p>Коэффициент окупаемости вложений считают перед принятием управленческих решений. Расчет должен предшествовать, например, решению закупать сырье или оборудование, развивать рекламный канал или отказываться от него.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingsix"><a aria-controls="collapsesix" aria-expanded="false" class="btn-link collapsed" data-target="#collapsesix" data-toggle="collapse" href="index.html#">Зачем в маркетинге считать ROI?</a></div>
+
+<div aria-labelledby="headingsix" class="collapse" data-parent="#faqAccordion" id="collapsesix">
+<div class="card-body">
+<p>Показатель помогает оценить пользу от инвестиций в маркетинг и правильно определить дальнейшую стратегию.</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" id="headingseven"><a aria-controls="collapseseven" aria-expanded="false" class="btn-link collapsed" data-target="#collapseseven" data-toggle="collapse" href="index.html#">Где расчет ROI обязателен?</a></div>
+
+<div aria-labelledby="headingseven" class="collapse" data-parent="#faqAccordion" id="collapseseven">
+<div class="card-body">
+<ul>
+<li>Прямые мгновенные онлайн-продажи.</li>
+<li>Отделы маркетинга, сбыта. В данном случае ROI может выступать как KPI отдела или каждого специалиста.</li>
+<li>Программы повышения продаж, программы лояльности, которые реализуются с применением маркетинга.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" id="headingeight"><a aria-controls="collapseeight" aria-expanded="false" class="btn-link collapsed" data-target="#collapseeight" data-toggle="collapse" href="index.html#">О чем говорит ROI со знаком «минус»?</a></div>
+
+<div aria-labelledby="headingeight" class="collapse" data-parent="#faqAccordion" id="collapseeight">
+<div class="card-body">
+<p>Отрицательный коэффициент означает, что средства не окупаются, а компания в текущий момент работает в убыток.</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="p17">
+<p><a id="p17" name="p17"> </a></p>
+<h2>Заключение</h2>
+<p>Коэффициент возврата инвестиций – не единственный, но важный показатель, необходимый, чтобы оценить работу компании. Считать его необходимо, чтобы понимать, окупаются ли вложенные средства, поскольку не всегда это заметно без детальных вычислений. Зная ROI, можно откорректировать маркетинговую стратегию, повысить прибыльность, эффективность проводимых мероприятий.</p>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="icon icon-tags"></span>
+
+
+                                        
+                                            <a href="../../tag/glossary/index.html">Словарь</a>
+                                        
+                                    </div>                                    <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Что такое ROI</a></li>
+	<li><a href="index.html#p2">Зачем считать ROI</a></li>
+	<li><a href="index.html#p3">Как рассчитать ROI</a></li>
+	<li><a href="index.html#p4">Как автоматизировать расчет ROI</a></li>
+	<li><a href="index.html#p5">Отличия ROI от других показателей</a></li>
+	<li><a href="index.html#p6">Какие показатели рассчитываются вместе с ROI</a></li>
+	<li><a href="index.html#p7">Специфика ROI в разных направлениях инвестиций</a></li>
+	<li><a href="index.html#p8">Какой показатель ROI считается нормальным</a></li>
+	<li><a href="index.html#p9">Примеры расчета ROI</a></li>
+	<li><a href="index.html#p10">Нюансы при расчете</a></li>
+	<li><a href="index.html#p11">Какие ошибки возможны при расчете ROI</a></li>
+	<li><a href="index.html#p12">Что делать после расчета</a></li>
+	<li><a href="index.html#p13">В каких случаях ROI неинформативен</a></li>
+	<li><a href="index.html#p14">Преимущества и недостатки ROI</a></li>
+	<li><a href="index.html#p15">Как увеличить ROI</a></li>
+	<li><a href="index.html#p16">Ответы на вопросы</a></li>
+	<li><a href="index.html#p17">Заключение</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

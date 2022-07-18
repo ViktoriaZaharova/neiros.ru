@@ -1,0 +1,1767 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Google Analytics - Что это такое и как настроить | Гугл Аналитикс - инструкция для новичков 2022 год</title>
+    <meta name="description" content="Google Analytics">
+    <meta name="keywords" content="Что такое Google Analytics и для чего ее используют. Как установить GA, настроить и отслеживать статистику. Разница между Google Analytics и Google Analytics 4.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/analytics/polnyj-gajd-po-google-analytics#cao",
+     "url": "https://neiros.ru/blog/analytics/polnyj-gajd-po-google-analytics#cao",
+     "headline":"Google Analytics - Что это такое и как настроить | Гугл Аналитикс - инструкция для новичков 2022 год",
+
+     "datePublished": "2022-03-07 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "Аналитика"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Полный гайд по Google Analytics</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Аналитика</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/46b65bece88bd7bf5a97ff0155e63c19.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 17.03.2022</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Ведение бизнеса в интернете не может быть успешным без постоянного комплексного анализа данных по ряду показателей. Посещаемость, время пользователей на сайте, <a href="../konversiya-chto-eto-i-pochemu-vazhno-ee-znaty/index.html">конверсия</a>, переходы, отказы – все это и многое другое позволяет отслеживать система веб-аналитики Google Analytics.</p>
+<p><img alt="Google Analytics" class="img-responsive sert-img" src="https://neiros.ru/images/%0D%0A46b65bece88bd7bf5a97ff0155e63c19.png" loading="lazy" draggable="false"></p>
+<p>В этой статье читайте, что это за платформа, что она умеет и как с ней работать.</p>
+
+<section id="p1">
+<p><a id="p1" name="p1"></a></p>
+<h2>Что такое Google Analytics</h2>
+<p>Google Analytics – система аналитики любых интернет-ресурсов, приложений, рекламных кампаний в Google Ads. Это незаменимый инструмент администраторов сайтов и интернет-маркетологов.</p>
+ <p><img alt="логотип Google Analytics" class="img-responsive sert-img" src="../../../img/analytics/logo.png" loading="lazy" /> </a></p>
+<p>Благодаря этой системе идет круглосуточный сбор данных о поведении посетителей сайта, каналах трафика, эффективности выбранной стратегии маркетинга. И это не полный список возможностей сервиса. Подробнее о них мы поговорим далее в статье.</p>
+</section>
+<section id="p2">
+<p><a id="p2" name="p2"></a></p>
+<h2>Цели и задачи использования Google Analytics</h2>
+
+<p>Анализ показателей сайта требуется для того, чтобы интернет-бизнесу было легче правильно определить целевую аудиторию, подстроиться под ее потребности в отрасли, повысить ценность коммерческого предложения.</p>
+<p>Если рассматривать цели и задачи сервиса подробно, то Google Analytics применяют, чтобы:</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/celi-i-zadachi-ispolzovaniya-google-analytics.png"><img alt="цели и задачи использования Google Analytics" class="img-responsive sert-img" src="../../../img/analytics/celi-i-zadachi-ispolzovaniya-google-analytics.png" loading="lazy" /> </a></p>
+<ul>
+<li>выделить или детализировать целевую аудиторию (ЦА);</li>
+<li>точнее выяснить предпочтения представителей ЦА;</li>
+<li>определить источники трафика и распределить их по степени эффективности, выявить наиболее результативные и неэффективные каналы;</li>
+<li>понять, на каком этапе и почему пользователи уходят с сайта;</li>
+<li>узнать, по каким seo запросам люди находят интернет-ресурс;</li>
+<li>определить самые популярные веб-страницы;</li>
+<li>выявить наиболее привлекательный для клиентов контент;</li>
+<li>контролировать эффективность рекламных кампаний;</li>
+<li>получить информацию о местоположении и демографии посетителей;</li>
+<li>отследить конверсии, в т. ч. показатели по:
+<ul>
+<li><a href="../associirovannye-konversii-kak-ne-poteryat-klientov/index.html">ассоциированным конверсиям</a>;</li>
+<li>основным путям конверсии;</li>
+<li>длине последовательности;</li>
+<li>времени до конверсии;</li>
+</ul>
+</li>
+<li>провести органический, реферальный и платный анализ трафика;</li>
+<li>получить исторические данные и сравнить с ними текущие показатели;</li>
+<li>создать и применить свои отчеты и пользовательские сегменты на основе проведенных измерений и метрик;</li>
+<li>получать оповещения об изменениях трафика на сайте.</li>
+</ul>
+<p>Все это позволяет вести мониторинг показателей и вовремя вносить изменения на сайте и в рекламные кампании для повышения эффективности их работы.</p>
+</section>
+<section id="p3">
+<p><a id="p3" name="p3"></a></p>
+<h2>Возможности Google Analytics</h2>
+<p>Система веб-аналитики имеет мощный набор инструментов, которые доступны всем пользователям. Далее в статье перечислим основные возможности Google Analytics.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/vozmozhnosti-google-analytics.png"><img alt="возможности Google Analytics" class="img-responsive sert-img" src="../../../img/analytics/vozmozhnosti-google-analytics.png" loading="lazy" /> </a></p>
+<ul>
+<li><b>Мультиязычный интерфейс.</b> Сервис показывает данные и формирует отчеты на всех распространенных языках.</li>
+<li><b>Универсальность.</b> Инструменты GA одинаковы для бизнеса всех уровней. Ими пользуются как крупные корпорации, так и малый бизнес.</li>
+<li><b>Готовые решения.</b> GA используют миллионы аналитиков и веб-мастеров со всего мира. Такой масштаб привел к накоплению огромной базы знаний. Практически любая проблема уже была решена ранее, очень просто найти ответ на свой вопрос.</li>
+<li><b>Визуализация процесса перехода пользователя к цели.</b> Данная возможность позволяет узнать, что помешало пользователю достичь заданной цели на странице. Это помогает оценить эффективность дизайна, текста, юзабилити и т. д.</li>
+<li><b>Перекрестная сегментация.</b> Аналитикс позволяет проводить сегментирование аналогично сводной таблице MS Excel. По пересечениям строк с данными ключевых метрик вы сможете получать важную рабочую информацию для продвижения.</li>
+<li><b>Настройка панелей инструментов.</b> Пользователи сервиса могут менять приоритет важности отчетов, добавляя более важные и убирая менее значимые с окна для быстрого анализа нужных показателей.</li>
+<li><b>Отправка отчетов по расписанию и экспорт.</b> Любой отчет может формироваться и отправляться на почту по заранее установленному расписанию. При необходимости отчеты можно сохранять на локальный диск как документ с нужным расширением.</li>
+</ul>
+</section>
+<section id="p4">
+<p><a id="p4" name="p4"></a></p>
+<h2>Иерархия в Google Analytics</h2>
+<p>Самая популярная система веб-аналитики имеет многоуровневый интерфейс. Каждый из уровней имеет определенные возможности с учетом положения в иерархии. Всего выделают 3 уровня:</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ierarhiya-v-google-analytics.png"><img alt="иерархия в Google Analytics" class="img-responsive sert-img" src="../../../img/analytics/ierarhiya-v-google-analytics.png" loading="lazy" /> </a></p>
+<ol>
+<li>Аккаунт – позволяет добавить до 100 похожих сайтов, к которым могут быть применены одинаковые настройки, а также открыть доступ сразу нескольким пользователям.</li>
+<li>Ресурс – определенный сайт, который отслеживается посредством специального кода. Всего к аккаунту может быть прикреплено 50 ресурсов.</li>
+<li>Представление – комплекс вариантов отчетов и настроек для вывода подробных данных о ресурсах. Позволяет задавать цели, предоставлять доступы для сотрудников. Также здесь настраиваются оповещения и многое другое. Каждому ресурсу доступно до 25 представлений с отчетами.</li>
+</ol>
+</section>
+<section id="p5">
+<p><a id="p5" name="p5"></a></p>
+<h2>Обзор интерфейса Google Analytics</h2>
+<p>Интерфейс сервиса одновременно простой и запутанный. Чтобы с ним мог разобраться даже новичок, разберем каждый элемент.</p>
+<p>В меню Google Analytics всего 4 раздела:</p>
+<ul>
+<li>главная страница;</li>
+<li>отчеты;</li>
+<li>мои отчеты;</li>
+<li>администратор.</li>
+</ul>
+<p>Далее в статье рассмотрим каждый из этих разделов и подразделы, которые в них входят.</p>
+<h3>Главная страница</h3>
+<p>Когда вы заходите в систему, попадаете на главную страницу. Здесь отображается:</p>
+<ul>
+<li>ваши аккаунты;</li>
+<li>перечень отслеживаемых сайтов и приложений;</li>
+<li>основные параметры по ресурсам: количество и длительность сеансов, отказы, конверсия.</li>
+</ul>
+<p>Если у вас много аккаунтов, сайтов или приложений, быстро отыскать нужный можно с помощью поиска.</p>
+<p>Также можно выбрать интервал времени, за который нужно смотреть статистику. Для этого достаточно указать диапазон дат в календаре.</p>
+<p>Платформа позволяет сравнивать показатели за разные периоды. Чтобы это сделать, отметьте пункт «Сравнить с» и укажите нужный отрезок времени.</p>
+<h3>Отчеты</h3>
+<p><a data-fancybox="gallery" href="../../../img/analytics/otchety-ga.png"><img alt="отчеты GA" class="img-responsive sert-img" src="../../../img/analytics/otchety-ga.png" loading="lazy" /> </a></p>
+<p>Это самый востребованный раздел в Google Analytics, именно с ним пользователи чаще всего работают. Просмотр статистики, создание сводок, настройка целей – все это доступно в отчетах.</p>
+<p>Левое меню предназначено для удобного перехода от одного отчета к другому. Если кликнуть по разделу, можно увидеть большой перечень подразделов, каждый из которых также может содержать подразделы. Но удобнее всего пользоваться поиском по названию отчета.</p>
+<p>На верхней панели есть инструменты экспорта. С их помощью можно открыть доступ к отчету другим пользователям, сохранить его на локальный диск в виде PDF-файла или таблицы, добавить сводку и так далее.</p>
+<p>Почти на каждой странице есть Справка с понятными и полезными подсказками, руководствами на русском языке.</p>
+<p>Как и на главной, здесь есть значок календаря, где можно выбрать интервал времени для точечного отображения данных.</p>
+<p>Раздел «Мои отчеты» имеет точно такой же интерфейс, поэтому отдельно рассматривать его в статье не имеет смысла.</p>
+<p>Основная часть страницы приходится непосредственно на отчеты. Далее рассмотрим их более подробно, чтобы знать, какие параметры и где нужно смотреть.</p>
+<h4>Сводки</h4>
+<p><a data-fancybox="gallery" href="../../../img/analytics/svodki-ga.png"><img alt="сводки GA" class="img-responsive sert-img" src="../../../img/analytics/svodki-ga.png" loading="lazy" /> </a></p>
+<p>На этой странице собраны разные отчеты в виде виджетов. Здесь можно выбрать нужный отчет для подробного анализа, создать новый виджет или удалить существующий, расположить их в удобном порядке, настроить отображение.</p>
+<h4>В режиме реального времени</h4>
+<p>В этом разделе собраны отчеты, отражающие происходящее на сайте в настоящее время. Задержка может составить всего несколько секунд, поэтому смело можно говорить о показателях online.</p>
+<p>Данные здесь всегда актуальные, поэтому временной промежуток выбрать нет возможности, за исключением последних 30 минут. Экспортировать статистику тоже не удастся.</p>
+<p>Раздел включает 6 подразделов.</p>
+<ul>
+<li>Обзор – общая информация о том, сколько людей находятся на сайте или в приложении в реальном времени, по каким поисковым запросам нашли сайт, какие страницы просматривают и т. д. Кликнув по отчету, переходим глубже в подразделы.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/obzor-v-rezhime-realnogo-vremeni.png"><img alt="обзор в режиме реального времени" class="img-responsive sert-img" src="../../../img/analytics/obzor-v-rezhime-realnogo-vremeni.png" loading="lazy" /> </a></p>
+<li>Местоположения – показывает, из какой страны, региона и города пользователи, которые просматривают сайт.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/mestopolozheniya-v-rezhime-realnogo-vremeni.png"><img alt="местоположения в режиме реального времени" class="img-responsive sert-img" src="../../../img/analytics/mestopolozheniya-v-rezhime-realnogo-vremeni.png" loading="lazy" /> </a></p>
+<li>Источники трафика – показывает, откуда и по каким запросам приходят посетители сайта. В аналитике приложений этот отчет отсутствует.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/istochnik-v-rezhime-realnogo-vremeni.png"><img alt="источник в режиме реального времени" class="img-responsive sert-img" src="../../../img/analytics/istochnik-v-rezhime-realnogo-vremeni.png" loading="lazy" /> </a></p>
+<li>Контент – выводит страницы, которые просматриваются посетителями.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/kontent-v-rezhime-realnogo-vremeni.png"><img alt="контент в режиме реального времени" class="img-responsive sert-img" src="../../../img/analytics/kontent-v-rezhime-realnogo-vremeni.png" loading="lazy" /> </a></p>
+<li>События – отображает действия людей на сайте: скачивания файлов, переходы по ссылкам, карту кликов, заполнение форм, воспроизведение видео, оставление комментариев в блог и остальные.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/sobytiya-v-rezhime-realnogo-vremeni.png"><img alt="события в режиме реального времени" class="img-responsive sert-img" src="../../../img/analytics/sobytiya-v-rezhime-realnogo-vremeni.png" loading="lazy" /> </a></p>
+<li>Конверсия – в отчете показано, сколько человек совершили целевое действие.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/konversiya-v-rezhime-realnogo-vremeni.png"><img alt="конверсия в режиме реального времени" class="img-responsive sert-img" src="../../../img/analytics/konversiya-v-rezhime-realnogo-vremeni.png" loading="lazy" /> </a></p>
+</ul>
+<h4>Аудитория</h4>
+<p>Из отчетов этого раздела можно получить подробные данные об аудитории сайта или приложения: где находятся эти люди, как попадают на сайт, с каких устройств заходят и прочее.</p>
+<p>В этом отчете также можно указать интервал времени для просмотра статистики, а также выбрать нужный сегмент аудитории.</p>
+<p>Раздел состоит из подразделов.</p>
+<ol>
+<li><b>Обзор.</b> Общая информация об аудитории сайта или приложения: число посетителей, визитов, просмотров, средняя длительность посещения, устройства и браузеры, процент отказов.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/obzor-auditoriya.png"><img alt="обзор аудитория" class="img-responsive sert-img" src="../../../img/analytics/obzor-auditoriya.png" loading="lazy" /> </a></p>
+<li><b>Активные пользователи.</b> Здесь отражена посещаемость сайта за 1 день, неделю, 2 недели и месяц.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/aktivnye-polzovateli-auditoriya.png"><img alt="активные пользователи аудитория" class="img-responsive sert-img" src="../../../img/analytics/aktivnye-polzovateli-auditoriya.png" loading="lazy" /> </a></p>
+<li><b>Общая ценность.</b> Отчет предназначен для оценки ценности пользователей, привлеченных через разные каналы (например, таргетированная или контекстная реклама).</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/obshchaya-cennost-auditoriya.png"><img alt="общая ценность аудитория" class="img-responsive sert-img" src="../../../img/analytics/obshchaya-cennost-auditoriya.png" loading="lazy" /> </a></p>
+<li><b>Когортный анализ.</b> Здесь можно группировать пользователей по различным признакам и отслеживать поведение отдельных когорт. Для этого нужно задать параметры для группировки:</li>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/kogortnyj-analiz-auditoriya.png"><img alt="когортный анализ аудитория" class="img-responsive sert-img" src="../../../img/analytics/kogortnyj-analiz-auditoriya.png" loading="lazy" /> </a></p>
+ </ol>   
+
+<ul style="padding-left: 40px;">
+<li>тип когорты;</li>
+<li>размер когорты;</li>
+<li>показатель, который сравнивается;</li>
+<li>диапазон дат.</li>
+</ul>
+
+<ol start="5">
+<li><b>Статистика по пользователям.</b> Данные по каждому посетителю сайта или пользователю приложения. Чтобы отобразить подробный отчет, нажимаем по ID юзера.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/statistika-po-polzovatelyam.png"><img alt="статистика по пользователям" class="img-responsive sert-img" src="../../../img/analytics/statistika-po-polzovatelyam.png" loading="lazy" /> </a></p>
+<li><b>Демография.</b> Информация про возраст и пол посетителей с отображением зависимости интересующих параметров от этих факторов.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/demografiya-auditoriya.png"><img alt="демография аудитория" class="img-responsive sert-img" src="../../../img/analytics/demografiya-auditoriya.png" loading="lazy" /> </a></p>
+<li><b>Интересы.</b> Отчет показывает, чем интересуется аудитория и отражает поведение пользователей с разными интересами. Здесь есть 4 подраздела: </li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/interesy-auditoriya.png"><img alt="интересы аудитория" class="img-responsive sert-img" src="../../../img/analytics/interesy-auditoriya.png" loading="lazy" /> </a></p>
+</ol>   
+<ul style="padding-left: 40px;">
+<li>обзор – сводные данные;</li>
+<li>сегменты аудитории по интересам – группы пользователей с разными интересами и статистика по каждой группе;</li>
+<li>сегменты аудитории, присутствующей на рынке – этот отчет имеет такой же смысл, но актуален для покупательских интересов;</li>
+<li>другие категории – более узкие интересы.</li>
+</ul>
+<ol start="8">
+<li><b>География.</b> В отчете отражена статистика по местоположению пользователей и языку:</li>
+ 
+<p><a data-fancybox="gallery" href="../../../img/analytics/geografiya-auditoriya.png"><img alt="география аудитория" class="img-responsive sert-img" src="../../../img/analytics/geografiya-auditoriya.png" loading="lazy" /> </a></p>
+</ol> 
+<ul style="padding-left: 40px;">
+<li>местоположение – представлено в виде тепловой карты, по которой можно увидеть, откуда приходят пользователи;</li>
+<li>язык – показана связь исследуемых показателей с языком пользователей.</li>
+</ul>
+<ol start="9">
+<li><b>Поведение.</b> Статистика того, что посетители делают на сайте или в приложении:</li>
+    
+ <p><a data-fancybox="gallery" href="../../../img/analytics/povedenie-auditoriya.png"><img alt="поведение аудитория" class="img-responsive sert-img" src="../../../img/analytics/povedenie-auditoriya.png" loading="lazy" /> </a></p>  
+ </ol>  
+<ul style="padding-left: 40px;">
+<li>новые и вернувшиеся – соотношение новых посетителей и тех, кто ранее уже заходил на сайт;</li>
+<li>периодичность и давность – в отчете отражено, сколько людей однократно посещали ресурс, а сколько заходили 2, 3 и более раз в течение заданного времени;</li>
+<li>взаимодействие – здесь показана глубина просмотра страниц и длительность сеанса;</li>
+<li>разрешение сеанса – для каждой сессии в процентах рассчитывается близость к совершению транзакции;</li>
+<li>вероятность конверсии – по каждому пользователю в процентах отражена вероятность совершения конверсии.</li>
+</ol>  
+</ul>
+<ol start="10">
+<li><b>Технологии.</b> Браузер, ОС, провайдер, домен сети, разрешение экрана и прочее. Статистика отображает корреляцию активности пользователей с параметрами их технических средств.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/tekhnologii-auditoriya.png"><img alt="технологии аудитория" class="img-responsive sert-img" src="../../../img/analytics/tekhnologii-auditoriya.png" loading="lazy" /> </a></p>
+<li><b>Мобильные устройства.</b> Отчет об устройствах пользователей, с которых они заходят на сайт:</li> 
+<p><a data-fancybox="gallery" href="../../../img/analytics/mobilnye-ustrojstva-auditoriya.png"><img alt="мобильные устройства аудитория" class="img-responsive sert-img" src="../../../img/analytics/mobilnye-ustrojstva-auditoriya.png" loading="lazy" /> </a></p>
+</ol> 
+<ul style="padding-left: 40px;">
+<li>обзор – общая информация о типе устройств пользователей: смартфон, планшет, ПК;</li>
+<li>устройства – статистика по моделям пользовательских устройств.</li>
+</ul>
+<ol start="12">
+<li><b>Разные устройства.</b> С помощью этого отчета можно анализировать конверсию на разных этапах цепочки, устанавливая связи между данными из нескольких сеансов:</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/raznye-ustrojstva-auditoriya.png"><img alt="разные устройства аудитория" class="img-responsive sert-img" src="../../../img/analytics/raznye-ustrojstva-auditoriya.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">    
+<li>пересечение устройств – отчет о количестве и видах устройств, используемых пользователями для просмотра веб-страниц;</li>
+<li>пути устройств – пять последних типов устройств, предшествующих конверсии;</li>
+<li>устройство, на котором произошла конверсия.</li>
+</ul>
+<ol start="13">
+<li><b>Специальные.</b> В этой категории есть 2 вида отчетов:</li>
+    
+  <p><a data-fancybox="gallery" href="../../../img/analytics/specialnye-auditoriya.png"><img alt="специальные аудитория" class="img-responsive sert-img" src="../../../img/analytics/specialnye-auditoriya.png" loading="lazy" /> </a></p>  
+  </ol>
+<ul style="padding-left: 40px;">
+<li>определено пользователем – можно указать свои переменные для отслеживания показателей;</li>
+<li>пользовательские переменные – можно выбрать пару «параметр-значение» для детализации показателей в стандартных отчетах.</li>
+</ul>
+<ol start="14">
+<li><b>Сравнение.</b> Отчеты в виде таблиц сравнения разных показателей:</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/sravnenie-auditoriya.png"><img alt="сравнение аудитория" class="img-responsive sert-img" src="../../../img/analytics/sravnenie-auditoriya.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>каналы – источники перехода на ресурс;</li>
+<li>устройства – с каких устройств чаще всего заходят;</li>
+<li>местоположения – пользователи каких стран чаще всего посещают сайт.</li>
+</ul>
+<ol start="15">
+<li><b>Пути пользователей.</b> В этом разделе представлена наглядная схема, которая демонстрирует поведение пользователей.</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/puti-polzovatelej.png"><img alt="пути пользователей" class="img-responsive sert-img" src="../../../img/analytics/puti-polzovatelej.png" loading="lazy" /> </a></p>
+</ol>
+<h4>Источник трафика</h4>
+<p>Здесь представлена статистика данных о том, откуда на сайт приходят пользователи. Среди подразделов следующие отчеты.</p>
+
+<ol>
+<li><b>Обзор.</b> Сводные данные о количестве пользователей, пришедших с разных каналов и их поведении на ресурсе.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/obzor-istochnik-trafika.png"><img alt="обзор источник трафика" class="img-responsive sert-img" src="../../../img/analytics/obzor-istochnik-trafika.png" loading="lazy" /> </a></p>
+<li><b>Весь трафик.</b> Это наборы отчетов по входящему трафику:</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/ves-trafik-istochnik-trafika.png"><img alt="весь трафик" class="img-responsive sert-img" src="../../../img/analytics/ves-trafik-istochnik-trafika.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>каналы – подробные отчеты по различным источникам трафика;</li>
+<li>карты эффективности – отражает эффективность разных каналов в сравнении друг с другом;
+<li>источник / канал – демонстрирует трафик с разных каналов и сайтов;</li>
+<li>переходы – статистика переходов по внешним URL.</li>
+</ul>
+<ol start="3">
+<li><b>Google Реклама.</b> Показывает статистику трафика на сайт или в приложение с рекламных объявлений в Google Ads:</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/google-reklama-istochnik-trafika.png"><img alt="Google реклама" class="img-responsive sert-img" src="../../../img/analytics/google-reklama-istochnik-trafika.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>кампании;</li>
+<li>карты эффективности;</li>
+<li>дополнительные ссылки Google Рекламы;</li>
+<li>корректировки ставок;</li>
+<li>ключевые слова;</li>
+<li>поисковые запросы;</li>
+<li>время суток;</li>
+<li>конечный URL;</li>
+<li>таргетинг медийных объявлений Google Рекламы;</li>
+<li>видеокампании;</li>
+<li>торговые кампании.</li>
+</ul>
+<ol start="4">
+<li><b>Search Console.</b> Статистика трафика из поисковых систем, данные подтягиваются из кабинета вебмастера. Подразделы:</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/search-console-istochnik-trafika.png"><img alt="Search Console" class="img-responsive sert-img" src="../../../img/analytics/search-console-istochnik-trafika.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>страницы входа – данные о страницах, на которые люди заходят из поисковиков;</li>
+<li>страны – перечень стран, в выдаче которых появляется сайт;</li>
+<li>устройства – данные об устройствах, с которых люди посещают сайт;</li>
+<li>запросы – поисковые запросы, по которым ресурс присутствует в выдаче.</li>
+</ul>
+<ol start="5">
+<li><b>Социальные сети.</b> Статистика трафика из соцсетей. Здесь можно посмотреть:</li>
+
+ <p><a data-fancybox="gallery" href="../../../img/analytics/specialnye-seti-istochnik-trafika.png"><img alt="специальные сети" class="img-responsive sert-img" src="../../../img/analytics/specialnye-seti-istochnik-trafika.png" loading="lazy" /> </a></p>  
+  </ol> 
+<ul style="padding-left: 40px;">
+<li>обзор;</li>
+<li>переходы из сетей;</li>
+<li>страницы входа;</li>
+<li>конверсии;</li>
+<li>социальные модули;</li>
+<li>пути пользователей.</li>
+</ul>
+<ol start="6">
+<li><b>Кампании.</b> Здесь можно оценить, насколько эффективны запущенные рекламные кампании. Подразделы:</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/kampanii-istochnik-trafika.png"><img alt="кампании" class="img-responsive sert-img" src="../../../img/analytics/kampanii-istochnik-trafika.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>все кампании;</li>
+<li>оплачиваемые ключевые слова;</li>
+<li>неоплачиваемые ключевые слова;</li>
+<li>анализ расходов.</li>
+</ul>
+
+
+<h4>Поведение</h4>
+<p>Здесь собраны отчеты о том, как люди взаимодействуют с ресурсом и его контентом. Из результатов можно узнать наиболее часто просматриваемые страницы, время загрузки по браузерам, долю отказов и т. д.</p>
+<ol>
+<li><b>Обзор.</b> Общие результаты раздела: данные о количестве просмотров постранично, популярные страницы, поиск по страницам и т. д.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/povedenie-obzor.png"><img alt="обзор" class="img-responsive sert-img" src="../../../img/analytics/povedenie-obzor.png" loading="lazy" /> </a></p>
+<li><b>Карта поведения.</b> Здесь отражены действия пользователей на сайте, их перемещения.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/karta-povedeniya.png"><img alt="карта поведения" class="img-responsive sert-img" src="../../../img/analytics/karta-povedeniya.png" loading="lazy" /> </a></p>
+<li><b>Контент сайта.</b> Статистика помогает узнать, какой контент нравится посетителям, а какие элементы сайта тормозят прохождение по воронке и требуют корректировки. Подразделы:</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/kontent-sajta.png"><img alt="контент сайта" class="img-responsive sert-img" src="../../../img/analytics/kontent-sajta.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>все страницы;</li>
+<li>анализ посещаемости страниц;</li>
+<li>страницы входа;</li>
+<li>страницы выхода.</li>
+</ul>
+<ol start="4">
+<li><b>Скорость загрузки сайта.</b> Отчет о времени загрузки веб-страниц:</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/skorost-zagruzki-sajta.png"><img alt="скорость загрузки сайта" class="img-responsive sert-img" src="../../../img/analytics/skorost-zagruzki-sajta.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>обзор;</li>
+<li>время загрузки страниц;</li>
+<li>ускорение загрузки;</li>
+<li>пользовательское время.</li>
+</ul>
+<ol start="5">
+<li><b>Поиск по сайту.</b> В статистике отображаются данные о частоте использования поиска по сайту. Внутренние разделы:</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/poisk-po-sajtu-povedenie.png"><img alt="поиск по сайту" class="img-responsive sert-img" src="../../../img/analytics/poisk-po-sajtu-povedenie.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>обзор;</li>
+<li>использование;</li>
+<li>поисковые запросы;</li>
+<li>поисковые страницы.</li>
+</ul>
+<ol start="6">
+<li><b>События.</b> В отчетах демонстрируется все, что происходит на сайте. Событием называется переход по ссылке, загрузка или скачивание файла, отправка формы, добавление товара в корзину, просмотр видео и т. д. Здесь можно посмотреть подразделы:</li>
+ 
+  <p><a data-fancybox="gallery" href="../../../img/analytics/sobytiya-povedenie.png"><img alt="события" class="img-responsive sert-img" src="../../../img/analytics/sobytiya-povedenie.png" loading="lazy" /> </a></p> 
+  </ol>
+<ul style="padding-left: 40px;">
+<li>обзор;</li>
+<li>лучшие события;</li>
+<li>страницы;</li>
+<li>карта событий.</li>
+</ul>
+<ol start="7">
+<li><b>Издатели.</b> Сюда входят отчеты, которые были импортированы из AdSense и Ad Exchange при условии, что эти ресурсы были связаны с Google Analytics. Есть три вложенных раздела:</li>
+ 
+<p><a data-fancybox="gallery" href="../../../img/analytics/izdateli-povedenie.png"><img alt="издатели" class="img-responsive sert-img" src="../../../img/analytics/izdateli-povedenie.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>обзор;</li>
+<li>издатели: страницы;</li>
+<li>издатели: URL перехода.</li>
+</ul>
+<ol start="8">
+<li><b>Эксперименты.</b> Этот инструмент позволяет тестировать лендинги и другие коммерческие страницы. Создавая несколько вариантов одной веб-страницы и направляя на каждую одинаковый трафик, можно отслеживать, как меняются показатели, и выбирать лучший вариант.</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/ehksperimenty-povedenie.png"><img alt="эксперименты" class="img-responsive sert-img" src="../../../img/analytics/ehksperimenty-povedenie.png" loading="lazy" /> </a></p>
+</ol>
+<h4>Конверсии</h4>
+<p>В этом разделе можно получить информацию о том, как часто посетители ресурса достигают заданных целей, и рассчитать конверсию. Целью может выступать любое действие: кликнуть по кнопке, перейти по ссылке, отправить заявку, подписаться на рассылку, поделиться материалом, оставить контакты (например, имя, телефон) и т. д.</p>
+<p>Здесь несколько разделов с подразделами.</p>
+<ol>
+<li><b>Цели.</b> Устанавливаются администратором как ключевой этап прохождения воронки:</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/celi-konversii.png"><img alt="цели" class="img-responsive sert-img" src="../../../img/analytics/celi-konversii.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>обзор – общие данные по целям;</li>
+<li>URL целей – результаты страниц с достигнутыми целями;</li>
+<li>обратный путь к цели – страницы, просмотренные пользователем перед тем, как он достиг цели;</li>
+<li>визуализация последовательностей – демонстрирует <a href="../../sales/vse-o-voronke-prodazh-ot-istorii-k-primeneniyu-v-sovremennom-biznese/index.html">воронку продаж</a>;</li>
+<li>карта целей – почти то же самое, плюс позволяет устанавливать критерии и делить пользователей на группы.</li>
+</ul>
+<ol start="2">
+<li><b>Электронная торговля.</b> Статистика о покупках и транзакциях через сайт:</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/ehlektronnaya-torgovlya.png"><img alt="электронная торговля " class="img-responsive sert-img" src="../../../img/analytics/ehlektronnaya-torgovlya.png" loading="lazy" /> </a></p>   
+</ol> 
+<ul style="padding-left: 40px;">
+<li>обзор – общее число транзакций, популярные товары, <a href="../../finance/vyruchka-vidy-raschet-otlichiya-ot-dohoda-i-pribyli/index.html">выручка</a>;</li>
+<li>эффективность товаров – отчеты по каждому товару или категории;</li>
+<li>эффективность продаж – такие же отчеты, как и в предыдущем подразделе, плюс перечень популярных идентификаторов;</li>
+<li>транзакции – отчеты по транзакциям;</li>
+<li>время до покупки – статистика времени на сайте от входа до оформления заказа.</li>
+</ul>
+<ol start="3">
+<li><b><a href="../mnogokanalnye-posledovatelnosti-chto-ehto-takoe-i-kak-ispolzovat/index.html">Многоканальные последовательности</a>.</b> Статистика по источникам визитов пользователей на сайт до момента, когда пользователь сможет выполнить конверсионный шаг:</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/mp/obzor.jpg"><img alt="обзор" class="img-responsive sert-img" src="../../../img/analytics/mp/obzor.jpg" loading="lazy" draggable="false"> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>обзор – общая информация;</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/mp/obzor.jpg"><img alt="обзор" class="img-responsive sert-img" src="../../../img/analytics/mp/obzor.jpg" loading="lazy" draggable="false"> </a></p>
+<li>ассоциированные конверсии – статистика по количеству ассоциированных конверсий всего и по каждому каналу;</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/mp/associirovannye-konversii.jpg"><img alt="ассоциированные конверсии" class="img-responsive sert-img" src="../../../img/analytics/mp/associirovannye-konversii.jpg" loading="lazy" draggable="false"> </a></p>
+<li>основные пути конверсии – отчет об источниках, количестве и последовательностях пользовательских переходов перед покупкой;</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/mp/osnovnye-puti-konversii.jpg"><img alt="основные пути конверсии" class="img-responsive sert-img" src="../../../img/analytics/mp/osnovnye-puti-konversii.jpg" loading="lazy" draggable="false"> </a></p>
+<li>время до конверсии – среднее количество дней, требуемое людям для покупки;</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/mp/vremya-do-konversii.jpg"><img alt="время до конверсии" class="img-responsive sert-img" src="../../../img/analytics/mp/vremya-do-konversii.jpg" loading="lazy" draggable="false"> </a></p>
+<li>длина последовательности – количество точек касания человека с сайтом до покупки;</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/mp/dlina-posledovatelnosti.jpg"><img alt="длина последовательности" class="img-responsive sert-img" src="../../../img/analytics/mp/dlina-posledovatelnosti.jpg" loading="lazy" draggable="false"> </a></p>
+<li>инструмент сравнения моделей – позволяет проанализировать эффективность конверсий и продаж с применением всех нужных каналов по разным <a href="../modeli-atribucii-kak-orientir-pri-ocenke-kanalov-prodvizheniya/index.html">моделям атрибуции</a>.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/mp/instrument-sravneniya-modulej.jpg"><img alt="инструмент сравнения модулей" class="img-responsive sert-img" src="../../../img/analytics/mp/instrument-sravneniya-modulej.jpg" loading="lazy" draggable="false"> </a></p>
+</ul>
+
+<h3>Администратор</h3>
+<p>Раздел администрирования имеет много подразделов. Если выбрать какой-либо из них, структура страницы поменяется. В левой части появится меню со стрелкой выхода на главную страницу, а сами настройки отобразятся справа.</p>
+<p>Переключаться между проектами можно, не выходя на главную страницу. Для этого в верхней панели есть выпадающее меню с перечнем всех сайтов и приложений, которые отслеживаются.</p>
+</section>
+<section id="p6">
+<p><a id="p6" name="p6"></a></p>
+<h2>Начало работы с Google Analytics</h2>
+<p>Гугл Аналитикс – с одной стороны, интуитивно понятная платформа, с другой – довольно сложный комплекс, включающий целый ряд инструментов, каждый из которых работает по-своему и требует тонкой настройки.</p>
+<p>Обращаем внимание! Сервис имеет мобильное приложение, но знакомство лучше начинать с десктопной версии.</p>
+<p>На первоначальном этапе начинающему пользователю предстоит создать учетную запись в Google Analytics.</p>
+<h3>Регистрация</h3>
+<p><a data-fancybox="gallery" href="../../../img/analytics/registraciya-v-ga.png"><img alt="регистрация в GA" class="img-responsive sert-img" src="../../../img/analytics/registraciya-v-ga.png" loading="lazy" /> </a></p>
+<p>Зайдите на сайт платформы и начните процесс регистрации, нажав на кнопку «Регистрация». Если аккаунт уже зарегистрирован, авторизуйтесь.</p>
+<h3>Настройка аккаунта</h3>
+<p>Введите данные аккаунта и настройте доступ к нему.</p>
+<ul>
+<li><b>Название аккаунта.</b> Поможет ориентироваться, если у вас несколько сайтов и аккаунтов.</li>
+<li><b>Настройки доступа к данным аккаунта.</b> Google надежен, поэтому здесь можно поставить галочки напротив всех пунктов.</li>
+</ul>
+<h3>Выбор типа ресурса</h3>
+<p>Укажите тип ресурса, для которого предстоит собирать статистику.</p>
+<ul>
+<li>Интернет – если вы будете анализировать сайт.</li>
+<li>Приложения – если нужно отслеживать статистику по программам на Android и iOS.</li>
+<li>Веб-сайты и приложения – если у вас и сайт, и приложение.</li>
+</ul>
+</section>
+<section id="p7">
+<p><a id="p7" name="p7"></a></p>
+<h2>Как настроить Google Analytics</h2>
+<p>Чтобы система веб-аналитики имела возможность собирать данные для статистики и анализировать их, недостаточно создать профиль в Google Analytics. Обязательно нужно настроить источник сбора данных (сайт или приложение), сгенерировать и установить код счетчика, а также связать аккаунт с Google Ads и Google Search Console.</p>
+<h3>Настройка ресурса</h3>
+<p>Если в качестве источника данных будет выступать сайт, укажите следующие данные.</p>
+<p><a data-fancybox="gallery" href="../../../img/analytics/nastrojka-resursa-v-ga.png"><img alt="настройка ресурса в GA" class="img-responsive sert-img" src="../../../img/analytics/nastrojka-resursa-v-ga.png" loading="lazy" /> </a></p>
+<ul>
+<li>название ресурса;</li>
+<li>часовой пояс;</li>
+<li>валюта;</li>
+<li>URL сайта.</li>
+</ul>
+<p>Когда создается ресурс, предпочтительно выбирать вариант «Google Аналитика 4 и Universal Analytics». Также предстоит ввести данные о компании.</p>
+<p>Если необходимо получать данные из приложения:</p>
+<ul>
+<li>укажите название и идентификатор приложения;</li>
+<li>скачайте файл конфигурации;</li>
+<li>добавьте в приложение Firebase SDK.</li>
+</ul>
+<h3>Получение идентификатора</h3>
+<p>Получите код, нажав «Получить идентификатор отслеживания». Ознакомьтесь с условиями соглашения и примите их. После этого станет доступен код отслеживания для добавления на сайт или в приложение.</p>
+<h3>Установка счетчика на сайт</h3>
+<p>Существует 3 способа:</p>
+<ol>
+<li><b>Вручную.</b> Для этого идентификатор отслеживания в виде асинхронного JavaScript нужно добавить в код всех страниц сайта.</li>
+
+<p><a data-fancybox="gallery" href="../../../img/analytics/ustanovka-koda-vruchnuyu-ga.png"><img alt="установка кода вручную" class="img-responsive sert-img" src="../../../img/analytics/ustanovka-koda-vruchnuyu-ga.png" loading="lazy" /> </a></p>
+</ol>
+<blockquote class="blockquote-v1">
+<p>Код лучше размещать в хедере, чтобы Google Analytics получал данные как можно скорее при загрузке сайта.</p>
+</blockquote>
+<ol start="2">
+<li><b>С помощью диспетчера тегов Google.</b> Для этого понадобится аккаунт в Tag Manager, который должен быть установлен на сайте. Нужно создать новый тег с кодом отслеживания и настроить его, следуя инструкции.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ustanovka-koda-pomoshchyu-dispetchera-tegov-google.png"><img alt="установка кода помощью диспетчера тегов Google" class="img-responsive sert-img" src="../../../img/analytics/ustanovka-koda-pomoshchyu-dispetchera-tegov-google.png" loading="lazy" /> </a></p>
+<li><b>С помощью плагинов CMS.</b> Все они интуитивно понятны. Как правило, достаточно добавить код в настройки плагина, и он пропишет его на всех страницах сайта.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ustanovka-koda-ga-pomoshchyu-plaginov-cms.png"><img alt="установка кода GA помощью плагинов CMS" class="img-responsive sert-img" src="../../../img/analytics/ustanovka-koda-ga-pomoshchyu-plaginov-cms.png" loading="lazy" /> </a></p>
+</ol>
+
+<h4>Как работает код отслеживания JavaScript на сайте</h4>
+<p>Будучи установленным на странице, при ее загрузке код открывается на заднем фоне. В это время браузер загружает элементы сайта и совершает другие действия. Асинхронный принцип работы позволяет собирать данные о визите пользователя на веб-страницу еще до ее полной загрузки.</p>
+<p>После загрузки кода Analytics система применяет уникальные идентификаторы, с помощью которых получает информацию о сайте, устройстве, пользователях, геолокации и т. д. Чаще таким идентификатором служит файл «куки» (cookie), но может быть создан и другой.</p>
+<p>Собранная информация направляется на сервер Google, где отображается в виде отчетов о сеансах, пользователях и их взаимодействии с определенным ресурсом.</p>
+<h4>Как работает SDK от Analytics в мобильных приложениях</h4>
+<p>Сбор данных в этом случае отличается от аналогичного процесса с сайтами. Вместо кода JavaScript здесь применяется пакет средств разработки SDK. Для iOS и Андроида такой пакет будет разным, но задачи у него одинаковые: собрать данные о том, как часто пользователь открывает приложение, что именно просматривает, какие действия выполняет и т. д.</p>
+<p>Собранные данные предварительно накапливаются в памяти устройства и лишь затем отправляются на серверы Гугл. Это связано с тем, что устройства могут быть не всегда подключены к сети. Кроме того, при передаче данных сокращается время работы устройства от батареи.</p>
+<h3>Проверка подключения</h3>
+<p>Сразу после установки счетчика на сайт не удастся считать статистику в Google Analytics. Статистика начинает отображаться в отчетах примерно через 4-6 часов, а иногда процесс затягивается на сутки. Но проверить, все ли корректно работает, можно сразу. Для этого во вкладке «Отчеты» выберите пункт «В режиме реального времени» – «Обзор».</p>
+<p>При правильно установленном идентификаторе вы увидите, сколько пользователей находится на вашем сайте прямо сейчас. Должен быть показан как минимум 1 человек – это вы.</p>
+<h3>Связь с Google Ads</h3>
+<p>Интеграция профилей в этих двух сервисах необходима, чтобы в отчетах рекламного аккаунта отображались данные из Аналитики. Для связи нужно:</p>
+<ol>
+<li>Зайти в раздел «Связь с другими продуктами».</li>
+<li>«Связь с Google Рекламой» – «Связать».</li>
+<li>Указать нужный профиль Google Ads.</li>
+</ol>
+<h3>Связь с Search Console</h3>
+<p>Благодаря этому сервису можно видеть позиции сайта в поисковой выдаче. Для связывания аккаунтов:</p>
+<ol>
+<li>В разделе «Администратор» выберите «Настройки ресурса».</li>
+<li>Откройте Search Console.</li>
+<li>Пропишите URL сайта.</li>
+</ol>
+<h3>Создание событий</h3>
+<p>Событием может выступать любое действие: нажатие на кнопку, переход по ссылке, загрузка файла и т. д. Чтобы обозначить определенное действие пользователя в системе как событие, нужно:</p>
+<ol>
+<li>Задать категорию.<br /> Например, презентация.</li>
+<li>Задать действие.<br /> Например, просмотр видео.</li>
+<li>Создать узнаваемый ярлык.</li>
+<li>Установить ценность.<br /> Например, 30 р. за 2 минуты просмотра.</li>
+<li>Создать скрипт и поместить его в код действия.</li>
+</ol>
+<p>После этого каждый просмотр видеопрезентации будет фиксироваться и отображаться в отчетах как событие.</p>
+<h3>Создание целей</h3>
+<p>В Google Analytics есть шаблоны целей, среди которых можно выбрать подходящие. Но эффективнее создавать свои цели. Для этого:</p>
+<ol>
+<li>В панели «Администратор» выберите вкладку «Цели» и нажмите на кнопку добавления цели.</li>
+<li>Отметьте пункт «Собственная» и нажмите «Далее».</li>
+<li>Введите название, выберите идентификатор и тип цели.</li>
+<li>Укажите подробные сведенья о цели: переход, ценность, последовательность.</li>
+<li>Сохраните настройки.</li>
+</ol>
+<h3>Настройка представлений</h3>
+<p>Представление – это отчет с возможностью отслеживать и анализировать определенные данные интернет-ресурса. Все посещения фиксируются системой по умолчанию, но можно создать новые представления с применением фильтров, которые исключат лишние данные и помогут выделить только важное. Для этого:</p>
+<ol>
+<li>В панели «Администратор» выберите вкладку «Настройки представления».</li>
+<li>Скопируйте текущее представление с помощью соответствующей кнопки.</li>
+<li>Пропишите новые настройки фильтрации.</li>
+<li>Сохраните изменения.</li>
+</ol>
+<h3>Настройка поиска по сайту</h3>
+<p>Это актуально для всех сайтов и интернет-магазинов, которые имеют внутреннюю систему поиска. Отслеживая поисковые запросы посетителей, можно узнать, что люди ищут именно на вашем сайте. Чтобы включить эту опцию:</p>
+<ol>
+<li>В панели «Администратор» выберите вкладку «Настройки представления».</li>
+<li>Скопируйте текущее представление с помощью соответствующей кнопки.</li>
+<li>Включите отслеживание поиска по сайту.</li>
+<li>Укажите до 5 параметров запроса через запятую.</li>
+<li>Сохраните изменения.</li>
+</ol>
+</section>
+<section id="p8">
+<p><a id="p8" name="p8"></a></p>
+<h2>Google Analytics 4</h2>
+<p>Сервис веб-аналитики Google Analytics 4 дает возможность собирать данные одновременно по интернет-ресурсам и приложениям. Система разрабатывалась с 2017 года, в 2019 году была представлена бета-версия, а в 2020 году вышел полностью доработанный вариант GA4.</p>
+<p>Google Analytics 4 отличается измененной концепцией сбора данных. Google Analytics при сборе статистики опирается на просмотры страниц пользователями (сессии), а Google Analytics 4 – на действия людей на сайте (события).</p>
+<h3>Преимущества Google Analytics 4</h3>
+<p>У обновленного инструмента Google есть целый ряд преимуществ. Рассмотрим основные.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/preimushchestva-google-analytics-4.png"><img alt="преимущества Google Analytics 4" class="img-responsive sert-img" src="../../../img/analytics/preimushchestva-google-analytics-4.png" loading="lazy" /> </a></p>
+<ul>
+<li>Идентификация посетителей независимо от устройства или браузера входа. Раньше система страдала более низкой точностью из-за того, что человек, повторно зашедший с другого браузера или устройства, не был идентифицирован и считался новым пользователем.</li>
+<li>Кроссплатформенное отслеживание. Теперь можно получать статистику не только по сайтам, но и по программам на базе iOS и Android.</li>
+<li>Конфиденциальность. Вместо файлов cookie для сбора пользовательских данных теперь используется библиотека gtag.js.</li>
+<li>Сбор информации с применением ИИ. Искусственный интеллект позволяет анализировать имеющуюся информацию и прогнозировать поведение людей. Маркетологам помогает новая опция «Подсказки», также работающая на основе ИИ.</li>
+<li>Подробное отслеживание пути пользователя в рамках воронки продаж. Обновленная система ориентирована на комплексное измерение пути.</li>
+<li>Новая обработка данных. За основу берутся события, а не сегменты и представления, которые исследовались в Google Analytics.</li>
+<li>Новая иерархия. Вместо трех уровней иерархии данных (аккаунт, ресурс, представление) в Google Analytics 4 используется только 2 уровня: аккаунт и ресурс.</li>
+<li>Расширенные возможности редактирования. В новой системе можно непосредственно в основном интерфейсе отслеживать, менять, настраивать события.</li>
+<li>Расширенная статистика за счет увеличенного количества инструментов.</li>
+</ul>
+<h3>Что лучше использовать: GA или GA4</h3>
+<p>При выборе версии Google Analytics нужно учитывать, что некоторые опции GA4 до сих пор находятся на этапе бета-тестирования и не могут использоваться полноценно. Обновленная система превосходит предшественника по удобству, точности и полноте анализа, но стоит объективно взвесить за и против с учетом всех факторов.</p>
+<p>Например, при использовании Google Data Studio работа с GA4 может быть затруднена из-за лишь частичного подключения к этому сервису. Например, не получится открывать доступ к отчетам, создавать свои метрики и сегменты.</p>
+<p>Многие администраторы сайтов используют для обработки данных на поиске сервис Google Search Analytics, к которому GA4 тоже пока не подключается.</p>
+<p>Таким образом, окончательный выбор версии Аналитики должен основываться на исходных требованиях к функционалу. В ряде случаев есть смысл поступиться удобством ради сохранения важных связок данных.</p>
+<h3>Интерфейс Google Analytics 4</h3>
+<p>Пользовательский интерфейс – пожалуй, одно из крупнейших отличий обновленной системы веб-аналитики от традиционной.</p>
+<blockquote class="blockquote-v2">
+<p>При переходе со старой версии Google Analytics на новую многие привычные отчеты, настроенные по умолчанию, будут потеряны.</p>
+</blockquote>
+<p>Чтобы уменьшить путаницу с GA4, рассмотрим основные элементы ее интерфейса.</p>
+<h4>Главная страница</h4>
+<p>Информация на главной странице обновленной Аналитики представлена в формате <a href="../chto-takoe-dashbord-i-chem-on-luchshe-privychnyh-otchetov/index.html">дашбордов</a>. Здесь в отчетах отображаются сводные данные по сайту и ПО для мобильных устройств.</p>
+<p>Сразу при входе мы видим первый дашборд, на котором показаны следующие данные за последние 7 дней:</p>
+<p><a data-fancybox="gallery" href="../../../img/analytics/glavnaya-stranica-ga.png"><img alt="Главная страница GA" class="img-responsive sert-img" src="../../../img/analytics/glavnaya-stranica-ga.png" loading="lazy" /> </a></p>
+<ul>
+<li>общее число пользователей на всех анализируемых площадках;</li>
+<li>количество новых посетителей;</li>
+<li>среднее время пребывания на площадках;</li>
+<li>суммарный доход.</li>
+</ul>
+<p>По любому из этих показателей можно построить наглядный график, а также изменить период отображения данных с 7 дней на 28, 90 или указать свое значение.</p>
+<p>Если прокрутить страницу вниз, можно увидеть следующие дашборды, которые отображают:</p>
+<ul>
+<li>статистику по каналам трафика с детализацией данных о переходах и источниках;</li>
+<li>местоположение посетителей и их действия с привязкой ко времени;</li>
+<li>эффективность удержания посетителей, самые популярные страницы;</li>
+<li>события на сайте и их общее число за выбранный период;</li>
+<li>пользовательская активность на разных устройствах и платформах.</li>
+</ul>
+<h4>Новое меню</h4>
+<p>Меню Google Analytics 4 принципиально отличается от меню предшественника. Здесь нет огромного количества отчетов, а лишь основные показатели, отражающие поведение людей на сайте или в приложении:</p>
+<p><a data-fancybox="gallery" href="../../../img/analytics/novoe-menyu-ga4.png"><img alt="новое меню GA4" class="img-responsive sert-img" src="../../../img/analytics/novoe-menyu-ga4.png" loading="lazy" /> </a></p>
+<ul>
+<li>«Жизненный цикл»;</li>
+<li>«Пользователь»;</li>
+<li>«События»;</li>
+<li>«Обзор».</li>
+</ul>
+<p>Далее рассмотрим их подробнее.</p>
+<h4>Разделы и отчеты</h4>
+<p>Разделы меню Google Analytics 4:</p>
+<ol>
+<li>«Жизненный цикл» – данные, демонстрирующие поведение посетителей в рамках подключенных потоков (сайт или сайт+приложения). Подразделы-отчеты:</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/zhiznennyj-cikl-ga4.png"><img alt="жизненный цикл GA4" class="img-responsive sert-img" src="../../../img/analytics/zhiznennyj-cikl-ga4.png" loading="lazy" /> </a></p>
+</ol>
+<ul style="padding-left: 40px;">
+<li>обзор;</li>
+<li>источники трафика;</li>
+<li>привлечение трафика;</li>
+<li>аудитории.</li>
+</ul>
+<ol start="2">
+<li>«Пользователь» – этот раздел содержит всего два отчета:</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/polzovatel-ga4.png"><img alt="пользователь GA4" class="img-responsive sert-img" src="../../../img/analytics/polzovatel-ga4.png" loading="lazy" /> </a></p>
+    </ol>
+
+<ul style="padding-left: 40px;">
+<li>демографические данные – об аудитории с учетом местоположения;</li>
+<li>технологические данные – о поведении людей с учетом браузеров входа на сайт.</li>
+</ul>
+<ol start="3">
+<li>«События» – в разделе два отчета:</li>
+</ol>
+<ul style="padding-left: 40px;">
+<li>конверсии – этот отчет после перехода на GA4 недоступен, для получения данных о конвертирующих событиях нужно интегрировать SDK или настроить теги;</li>
+<li>все события – здесь отображаются все пользовательские действия за последние 28 дней.</li>
+</ul>
+<ol start="4">
+<li>«Обзор» – в этом разделе находится «Центр анализа», состоящий из набора инструментов для анализа путей пользователей, последовательностей и проведения исследований. В «Галерее шаблонов» можно найти готовый отчет, на основе которого можно быстро создавать информативные дашборды.</li>
+</ol>
+<h3>Создание аккаунта Google Analytics 4</h3>
+<p>Тем, кто ранее не пользовался Аналитикой от Google, нужно прежде всего зарегистрироваться в Google Analytics. Для этого:</p>
+<ol>
+<li>Зарегистрируйтесь или авторизуйтесь в Google. Этот аккаунт будет действителен для всех сервисов Google.</li>
+<li>Укажите наименование аккаунта Google Analytics и отметьте нужные настройки доступа.</li>
+<li>Введите адрес сайта, валюту, часовой пояс.</li>
+<li>Заполните данные об организации.</li>
+</ol>
+<h3>Создание счетчика GA4</h3>
+<p>Чтобы система начала собирать данные, требуется настроить поток их поступления. Для этого выберите, откуда нужно получать сведенья:</p>
+<ul>
+<li>веб;</li>
+<li>приложение для Android;</li>
+<li>приложение для iOS.</li>
+</ul>
+<p>После того, как тип потока выбран, укажите URL сайта или информацию о приложении и кликните «Создать поток».</p>
+<p>Система сгенерирует специальный тег, который после добавления в код сайта или программы начнет отправлять данные в Аналитику.</p>
+<h3>Установка идентификатора Google Analytics 4</h3>
+<p>Если источником данных выступает интернет-ресурс, добавьте сгенерированный код в html-код каждой страницы сайта. Оптимально разместить его внутри тега head.</p>
+<p>Если вам нужно анализировать поток данных из приложения, вставьте в него идентификатор с помощью Firebase SDK.</p>
+<h3>Интеграция GA4 и Google Ads</h3>
+<p>Полноту сведений при наличии рекламного аккаунта в Гугл обеспечивает связь данных оттуда с аналитикой. Чтобы объединить аккаунты:</p>
+<ol>
+<li>В профиле Google Analytics 4 перейдите в раздел «Связь с другими продуктами».</li>
+<li>Выберите Google Рекламу и кликните «Связать».</li>
+<li>Укажите аккаунт Google Рекламы.</li>
+</ol>
+<p>После этого Google Analytics 4 получит право доступа к данным из рекламного кабинета для формирования расширенной статистики.</p>
+<h3>Как создать представление в GA4</h3>
+<p>В новой версии Аналитики представления не выделены в отдельную категорию, их функции частично относятся к автоматизированным отчетам по ID пользователя. Для использования User ID система больше не предложит создавать отдельные представления.</p>
+<p>Если вы хотите использовать представления для разграничения уровней доступа к инструментам и отчетам Аналитики, то в обновленной версии такая опция пока не реализована. Это тот случай, когда стоит иметь два аккаунта Google Analytics: традиционный и новый.</p>
+<h3>GA4 как часть экосистемы Google Analytics 360 Suite</h3>
+<p>Платформа Google Analytics 4 работает самостоятельно и при этом входит в состав экосистемы Google Analytics 360 Suite. Последняя объединяет шесть Google-продуктов, которые используются для комплексного сбора и анализа данных о поведении пользователей.</p>
+<ul>
+<li>Google Analytics 360 – платформа для хранения клиентских данных, собранных с применением инструментов Google.</li>
+<li>Google Audience Center 360 – сервис управления сведеньями для определения ЦА и привлечения посетителей с помощью рекламы.</li>
+<li>Google Attribution 360 – платформа для распределения бюджета между разными рекламными кампаниями и на другие нужды маркетинга.</li>
+<li>Google Data Studio 360 – система для визуализации данных.</li>
+<li>Google Tag Manager 360 – инструмент для добавления тегов в код сайтов.</li>
+<li>Google Optimize 360 – платформа для тестирования различных вариантов персонализации интернет-ресурса.</li>
+</ul>
+<p>Все эти инструменты маркетологи используют, чтобы оптимизировать взаимодействия с пользователями ресурсов. Однако Google Analytics 360 Suite – платформа не бесплатная. Расширенные пакетные возможности Google-сервисов стартуют от 7 тыс. долларов в месяц.</p>
+</section>
+<section id="p9">
+<p><a id="p9" name="p9"></a></p>
+<h2>Сравнительная таблица Google Analytics и Яндекс.Метрика</h2>
+<p>Всемирно известный Google Analytics в русскоязычном интернет-пространстве имеет конкурента в лице <a href="../kak-polzovatsya-yandeks-metrikoj-podrobnaya-instrukciya-dlya-novichkov/index.html">Яндекс.Метрики</a>. Последняя – тоже сервис веб-аналитики с большим функционалом, которым пользуется чуть ли ни каждый владелец сайта из России. Сравним эти две системы.</p>
+<table width="100%">
+<tbody>
+<tr>
+<td width="208">
+<p> </p>
+</td>
+<td width="208">
+<p>Google Analytics</p>
+</td>
+<td width="208">
+<p>Яндекс.Метрика</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>Идентичность данных</p>
+</td>
+<td width="208">
+<p>Расхождения от 10%</p>
+</td>
+<td width="208">
+<p>Расхождения от 10%</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>Скорость обработки данных</p>
+</td>
+<td width="208">
+<p>Средняя</p>
+</td>
+<td width="208">
+<p>Высокая</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>Полнота отчетов</p>
+</td>
+<td width="208">
+<p>Самая высокая</p>
+</td>
+<td width="208">
+<p>Высокая</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>Дружелюбность интерфейса</p>
+</td>
+<td width="208">
+<p>Средняя</p>
+</td>
+<td width="208">
+<p>Хорошая</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>Приспособленность к потребностям российского бизнеса</p>
+</td>
+<td width="208">
+<p>Средняя</p>
+</td>
+<td width="208">
+<p>Хорошая</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Из таблицы можно сделать вывод, что Google Analytics дает возможность анализировать статистику по всем параметрам максимально подробно. Начинающие веб-мастеры нередко пугаются весьма запутанного интерфейса системы, но богатый функционал компенсирует этот недостаток с лихвой.</p>
+</section>
+<section id="p10">
+<p><a id="p10" name="p10"></a></p>
+<h2>Возможные ошибки при настройке Google Analytics</h2>
+<p>Иногда пользователи сталкиваются с трудностями в работе с Google Analytics. Это бывает связано с ошибками, которые были допущены при настройке системы. Вот самые распространенные из них.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/vozmozhnye-oshibki-pri-nastrojke-google-analytics.png"><img alt="возможные ошибки при настройке Google Analytics" class="img-responsive sert-img" src="../../../img/analytics/vozmozhnye-oshibki-pri-nastrojke-google-analytics.png" loading="lazy" /> </a></p>
+<ul>
+<li>Трафик с корпоративных IP не фильтруется. Чтобы этого избежать, лучше для пробного трафика создавать отдельное пробное представление, а в основном использовать фильтры.</li>
+<li>Меньше 10% отказов. Зачастую это говорит о дублировании Analytics ID. Плагин Tag Assistant поможет выяснить, так ли это.</li>
+<li>Код идентификации установлен не на всех страницах сайта.</li>
+<li>Google Analytics не интегрирован с Search Console.</li>
+<li>Не собирается статистика по демографии. Причина описана в предыдущем пункте.</li>
+</ul>
+</section>
+<section id="p11">
+<p><a id="p11" name="p11"></a></p>
+<h2>Сквозная аналитика в Google Analytics</h2>
+<p><a href="../skvoznaya-analitika-ot-vnedreniya-do-realnyh-kejsov/index.html">Сквозная аналитика</a> позволяет не просто собирать статистику с сайта, а оценивать финансовую эффективность инвестиций в продвижение. К примеру, что это значит для бизнеса:</p>
+<ul>
+<li>можно автоматически управлять рекламными кампаниями;</li>
+<li>можно глубоко сегментировать <a href="../../marketing/celevaya-auditoriya-pochemu-marketing-nevozmozhen-bez-ee-opredeleniya/index.html">целевую аудиторию</a>;</li>
+<li>можно выделять наиболее эффективные и прибыльные рекламные кампании по результатам комплексного А/В тестирования.</li>
+</ul>
+<p>В Google Analytics можно настроить сквозную аналитику, но она имеет массу ограничений, по сравнению со специализированными сервисами. Ее можно использовать, когда канал продвижения или аналитики всего один. Если же требуется отслеживать одновременно несколько каналов, подключать <a href="../chto-takoe-kolltreking-i-kak-on-rabotaet/index.html">коллтрекинг</a>, другие дополнительные инструменты и услуги, сервисам сквозной аналитики в этом случае нет равных. Например, одним из таких сервисов является Neiros.</p>
+</section>
+<section id="p12">
+<p><a id="p12" name="p12"></a></p>
+<h2>Шпаргалка по отчетам</h2>
+<p>Google Analytics – достаточно запутанная система. Новички часто теряются в поисках нужных отчетов. В поддержку начинающим веб-мастерам мы создали шпаргалку, которая поможет ориентироваться в отчетах. С ее помощью вы быстро попадете в нужный раздел.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/shpargalka-google-analytics.jpg"><img alt="шпаргалка по отчетам Google Analytics" class="img-responsive sert-img" src="../../../img/analytics/shpargalka-google-analytics.jpg" loading="lazy" /> </a></p>
+</section>
+<section id="p13">
+<p><a id="p13" name="p13"></a></p>
+<h2>Часто задаваемые вопросы</h2>
+<div id="faqAccordion" class="accordion faqAccordion">
+<div class="card">
+<div id="headingOne" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapseOne" data-toggle="collapse">Что такое сэмплирование данных в Google Analytics?</a></div>
+<div id="collapseOne" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<p>Если за указанный период количество сессий превышает 500 тысяч, Google Analytics применяет сэмплирование во избежание перегрузки серверов. Это один из вариантов выборки данных, которые будут показаны в отчетах.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div id="headingTwo" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapseTwo" data-toggle="collapse">Сколько стоит Google Analytics?</a></div>
+<div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<p>Это бесплатная и общедоступная система, которую могут использовать некоммерческие и коммерческие структуры на одинаковых условиях. Интересно, что также существуют платное комплексное решение. Стоимость пакета GA 360 Suite определяется масштабом бизнеса.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div id="headingfour" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapsefour" data-toggle="collapse">Сколько стоит сертификация Google Analytics?</a></div>
+<div id="collapsefour" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<p>Пройти текст и получить сертификат может каждый желающий бесплатно.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div id="headingfive" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapsefive" data-toggle="collapse">Как часто обновляется Google Analytics?</a></div>
+<div id="collapsefive" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<p>Конкретных сроков Google не устанавливает, но, судя по наблюдениям, статистика обновляется примерно раз в 1-2 суток.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div id="headingsix" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapsesix" data-toggle="collapse">Как работает Google Analytics?</a></div>
+<div id="collapsesix" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<p>Вкратце: интегрированный на сайт код идентификации фиксирует все визиты на сайт и действия посетителей, передавая данные на серверы Google для дальнейшего отображения в отчетах.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div id="headingseven" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapseseven" data-toggle="collapse">Как поменять язык?</a></div>
+<div id="collapseseven" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<p>В разделе «Администратор» выберите вкладку «Пользователь», задайте нужный язык и сохраните изменения.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div id="headingeight" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapseeight" data-toggle="collapse">Как проверить наличие счетчика?</a></div>
+<div id="collapseeight" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<p>Если счетчик Google Analytics уже был установлен на сайт, его можно найти, открыв код любой страницы в браузере (Ctrl+U) и воспользовавшись поиском (Ctrl+F). В поиске необходимо ввести “Analytics”.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div id="headingnine" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapsenine" data-toggle="collapse">Как настроить электронную торговлю?</a></div>
+<div id="collapsenine" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<p>В панели «Администратор» выберите вкладку «Настройка электронной торговли», включите отслеживание и сохраните изменения. Обновленный код заново добавьте на сайт.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div id="headingten" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapseten" data-toggle="collapse">Как предоставить доступ к Google Analytics?</a></div>
+<div id="collapseten" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<p>Google позволяет предоставить доступ третьим лицам к аккаунту, ресурсу и представлению. Для этого в панели «Администратор» выберите вкладку, которая соответствует запросу, пропишите email пользователя, которому будет предоставлен доступ, задайте роль и нажмите «Добавить».</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div id="headingeleven" class="card-header"><a class="btn-link collapsed" href="index.html#" data-target="#collapseeleven" data-toggle="collapse">Как удалить счетчик?</a></div>
+<div id="collapseeleven" class="collapse" data-parent="#faqAccordion">
+<div class="card-body">
+<ol>
+<li>Уберите код со всех страниц сайта.</li>
+<li>В личном кабинете Google Analytics в панели «Администратор» выберите пункт «Аккаунт».</li>
+<li>Отметьте ненужный аккаунт и в настройках уберите его в корзину.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="p14">
+<p><a id="p14" name="p14"></a></p>
+<h2>Заключение</h2>
+<p>Google Analytics – самая популярная в мире система веб-аналитики. Огромный функционал и практически безграничные возможности наряду с высокой точностью сбора данных позволяют формировать актуальную статистику для последующей аналитики. Сложный, на первый взгляд, интерфейс таит в себе большое количество отчетов, каждый из которых помогает получать важную информацию о пользователях и их поведении. Настройка платформы довольно трудоемкая и требует определенных знаний, поэтому рекомендуем доверять ее специалистам.</p>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                                                     <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Что такое Google Analytics</a></li>
+	<li><a href="index.html#p2">Цели и задачи использования Google Analytics</a></li>
+	<li><a href="index.html#p3">Возможности Google Analytics</a></li>
+	<li><a href="index.html#p4">Иерархия в Google Analytics</a></li>
+	<li><a href="index.html#p5">Обзор интерфейса Google Analytics</a></li>
+	<li><a href="index.html#p6">Начало работы с Google Analytics</a></li>
+	<li><a href="index.html#p7">Как настроить Google Analytics</a></li>
+	<li><a href="index.html#p8">Google Analytics 4</a></li>
+	<li><a href="index.html#p9">Сравнительная таблица Google Analytics и Яндекс.Метрика</a></li>
+	<li><a href="index.html#p10">Возможные ошибки при настройке Google Analytics</a></li>
+	<li><a href="index.html#p11">Сквозная аналитика в Google Analytics</a></li>
+	<li><a href="index.html#p12">Шпаргалка по отчетам</a></li>
+	<li><a href="index.html#p13">Часто задаваемые вопросы</a></li>
+	<li><a href="index.html#p14">Заключение</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

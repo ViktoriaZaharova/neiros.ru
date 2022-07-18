@@ -1,0 +1,1593 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Сквозная аналитика - что это такое и зачем нужна | инструменты сквозной аналитики Neiros</title>
+    <meta name="description" content="Что такое сквозная аналитика сайта и зачем она нужна - простое внедрение инструментов сервиса Neiros, реальные кейсы наших клиентов.">
+    <meta name="keywords" content="Сквозная аналитика">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/analytics/skvoznaya-analitika-ot-vnedreniya-do-realnyh-kejsov#cao",
+     "url": "https://neiros.ru/blog/analytics/skvoznaya-analitika-ot-vnedreniya-do-realnyh-kejsov#cao",
+     "headline":"Сквозная аналитика - что это такое и зачем нужна | инструменты сквозной аналитики Neiros",
+
+     "datePublished": "2020-06-25 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "Аналитика"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Сквозная аналитика: от внедрения до реальных кейсов</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Аналитика</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/7c2954ff039993f7d5f58cf7008c81f0.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 27.06.2022</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Вложения в рекламные кампании без оценки их эффективности – деньги, выброшенные на ветер. Если используется несколько рекламных каналов, без аналитики невозможно узнать, какие из них приводят покупателей, а какие просто сливают бюджет. Увидеть результаты работы рекламы с изнанки и разобраться, на что конкретно тратятся деньги, помогает сквозная аналитика.</p>
+
+<p><img alt="Дашборд сквозной аналитики" class="img-responsive sert-img" src="../../../images/7c2954ff039993f7d5f58cf7008c81f0.png" loading="lazy"/></p>
+
+<p>Других способов настолько детально отслеживать весь путь клиента на <a href="../../business/kak-sozdat-sayt-s-nulya-svoimi-silami-podrobnyy-gayd-dlya-novichkov/index.html">сайте</a> не существует. Сквозная аналитика собирает данные о полном цикле сделки со всех доступных каналов трафика от момента просмотра пользователем рекламного объявления до момента последней, в т. ч. повторной продажи или коммуникации с менеджером. Этот метод наиболее результативный на настоящий момент и способствует мониторингу всех взаимодействий компании с клиентом, вовлечение его в воронку продаж вплоть до получения оплаты.</p>
+
+<section id="p1">
+<p><a id="p1" name="p1"> </a></p>
+
+<h2>Что такое сквозная аналитика</h2>
+
+<p>Сквозная аналитика (end-to-end analytics) – это метод маркетингового анализа, который дает возможность:</p>
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/vozmozhnosti-skvoznoj-analitiki.png"><img alt="возможности сквозной аналитики" class="img-responsive sert-img" src="../../../img/end-to-end/vozmozhnosti-skvoznoj-analitiki.png" loading="lazy"/> </a></p>
+
+<ul>
+    <li>автоматически отслеживать подробные данные по всем рекламным каналам с учетом лидов, закрытых сделок, полученной <a href="../../business/pribyl-kak-osnovnoj-pokazatel-ehffektivnosti-biznesa/index.html">прибыли</a>;</li>
+    <li>мониторить весь путь клиента: от просмотра интернет рекламы на сторонних площадках до суммы, которую компания получила от сделки с ним;</li>
+    <li>собирать информацию обо всех этапах воронки продаж, вплоть до <a href="../chto-takoe-roi-i-kogda-ego-nuzhno-schitat/index.html">ROI</a>.</li>
+</ul>
+
+<p>Простыми словами, сквозная аналитика – это способ видеть ошибки, а также сколько денег и куда было потрачено, как каждая точка захвата (объявление в <a href="../../ads/yandeks-direkt-krupneyshaya-reklamnaya-platforma-v-runete/index.html">Яндекс Директ</a>, Google Ads, seo, Telegram, виджет колбека, email-рассылка и др.) влияет на продажи. Объединяет данные и показывает путь клиента, начиная от первого касания с бизнесом до звонка и покупки в разных разрезах.</p>
+</section>
+
+<section id="p2">
+<p><a id="p2" name="p2"> </a></p>
+
+<h2>Задачи сквозной аналитики</h2>
+
+<p>Многие собирают статистику в системе веб-аналитики. Она имеет большой набор метрик для отслеживания различных параметров статистики, но даже при настроенной воронке нельзя всецело полагаться на данные о том, сколько пользователей и откуда совершают покупки на сайте. Например, если клиенты могут совершать звонки перед тем, как купить или вовсе обратиться в компанию, главное, что все эти контакты останутся неучтенными.</p>
+
+<p>Отследить и учесть звонки можно с помощью <a href="../chto-takoe-kolltreking-i-kak-on-rabotaet/index.html">коллтрекинга</a>. Данные оттуда легко интегрируются с системами веб-аналитики Яндекс и Google Analytics, формируется достаточно полный небольшой отчет по каждому каналу. Но информации о том, сколько потенциальных заказчиков действительно сделали заказ, на какую сумму покупают – эту информацию не удастся получить, если не подключить сквозную аналитику..</p>
+
+<p>Ее внедрение будет помогать получать и отправлять сводные отчеты со всех доступных систем, включая корпоративную <a href="../../automation/chto-takoe-crm-sistema-i-nuzhna-li-ona-vam/index.html">CRM</a>, и решать целый ряд рекламных задач. При этом не важно, какого масштаба бизнес. Сквозная аналитика нужна всем, кто имеет 2 и более платных каналов трафика, вкладывает деньги в рекламу и стремится к получению прибыли.</p>
+
+<p>Далее в статье рассмотрим задачи, которые решает внедрение сквозной аналитики в <a href="../../marketing/vse-o-marketinge-tseli-funktsii-oblasti-primeneniya-i-instrumenty/index.html">маркетинге</a>.</p>
+</section>
+
+<h3>Формирует подробный отчет по рекламным каналам</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/svodnii-otchot.jpg"><img alt="отчет по рекламным каналам" class="img-responsive sert-img" src="../../../img/end-to-end/svodnii-otchot.jpg" loading="lazy"/> </a></p>
+
+<p>Когда работает несколько рекламных кампаний в сервисе автоматизации рекламы Google Ads, важно отслеживать статистику по каждой из них. Обязательно будут такие каналы, которые расходуют бюджет, а продаж практически не дают. Также не исключены кампании, которые должны приносить больше прибыли, чем остальные. Глядя на цифры статистики, можно вовремя начать перераспределять рекламный бюджет, не допуская траты денег на продвижение неэффективных каналов.</p>
+
+<h3>Показывает ситуацию на каждом этапе воронки продаж</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/voronka.jpg"><img alt="ситуация на каждом этапе воронки продаж" class="img-responsive sert-img" src="../../../img/end-to-end/voronka.jpg" loading="lazy"/> </a></p>
+
+<p>Отчет сквозной аналитики позволяет проследить вручную, на каком этапе <a href="../../sales/vse-o-voronke-prodazh-ot-istorii-k-primeneniyu-v-sovremennom-biznese/index.html">воронки продаж</a> есть проблемы, и оперативно скорректировать план и стратегию. Например, обратить внимание на работу менеджеров, создать обратную связь на сайте, повысить качество обслуживания, настроить мобильное приложение, сократить цикл сделки, исключить возвраты, отрицательные отзывы и т. д.</p>
+
+<h3>Демонстрирует эффективность работы менеджеров</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/manager.jpg"><img alt="эффективность работы менеджеров" class="img-responsive sert-img" src="../../../img/end-to-end/manager.jpg" loading="lazy"/> </a></p>
+
+<p>Выборка закрытых сделок в отчете с делением по менеджерам позволяет проследить и показать, кто из сотрудников работает очень эффективно. Часто в качестве поощрения менеджеров вводится система персональных бонусов, а некоторые предприятия предпочитают привлечь и воздействовать на работников путем штрафов. Понять, эффективны ли новые предпринятые меры, можно также по результатам сквозной аналитики в личном кабинете.</p>
+
+<h3>Показывает «пустые» ключевые слова</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/keywords.jpg"><img alt="отчет по ключевым словам" class="img-responsive sert-img" src="../../../img/end-to-end/keywords.jpg" loading="lazy"/> </a></p>
+
+<p>Это ключи, по которым пришел трафик, но нет прибыли. Их желательно сразу отключать, чтобы не тратить денежные ресурсы впустую и добиться роста. Данные из системы сквозной аналитики дадут четкую картину о потраченных деньгах на каждое ключевое слово и прибыли с него за конкретный период (неделю, месяц, год).</p>
+
+<h3>Показывает прибыльные группы клиентов</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/segmentaciy.jpg"><img alt="прибыльные группы клиентов" class="img-responsive sert-img" src="../../../img/end-to-end/segmentaciy.jpg" loading="lazy"/> </a></p>
+
+<p>С помощью разделения пользователей на группы по разным признакам вы сможете четко отследить, какая из групп приносит больше всего прибыли бизнесу. По результатам такого анализа можно повторно настраивать контекстную рекламу, выбирать и добавить нужные параметры <a href="../../marketing/celevaya-auditoriya-pochemu-marketing-nevozmozhen-bez-ee-opredeleniya/index.html">целевой аудитории</a>.</p>
+
+<h3>Помогает выявить индивидуальные управленческие задачи</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/vyavleniye-svoih-upravlencheskih-zadach.png"><img alt="отчет по индивидуальным управленческим задачам" class="img-responsive sert-img" src="../../../img/end-to-end/vyavleniye-svoih-upravlencheskih-zadach.png" loading="lazy"/> </a></p>
+
+<p>Отчет аналитики предоставляет данные, актуальные для каждой должности в компании.</p>
+
+<p>Прежде всего сервис сквозной аналитики актуален для:</p>
+<ul>
+<li>владельцев бизнеса и руководителей предприятий – могут в комплексе оценивать, как работает отдел продаж и маркетинга;</li>
+<li>начальников отделов – могут быстро и просто получать готовую отчетность с важными показателями для оценки эффективности работы с клиентом и его жизненного цикла;</li>
+<li>специалистам, работающим с конкретными каналами продвижения – интернет-маркетолог получает возможность проверять гипотезы и оценивать, как работает реклама в целом.</li>
+</ul>
+
+<p>Информация о продажах, продукции, в т. ч. по оффлайн-магазинам. Картина распределения финансов выглядит так: расходы и прибыль с детализацией. С учетом этого можно точно отследить эффективность каждого офлайн отдела. По итогам удается сформировать собственные управленческие выводы относительно рекламы и работы всей компании, а также настроить основные текущие <a href="../../business/biznes-processy-kak-sposob-uluchshit-rabotu-predpriyatiya/index.html">бизнес-процессы</a>.</p>
+
+<section id="p3">
+<p><a id="p3" name="p3"> </a></p>
+
+<h2>Что нужно для внедрения</h2>
+
+<p>Построение сквозной аналитики начинается с осознания потребности в отслеживании четких данных о каждой продаже и каждому каналу в компании. Поскольку интернет-маркетинг и политика управления бюджетом по принципу «пальцем в небо», без наблюдения за работой рекламы – это путь в никуда.</p>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/skvoznay.jpg"><img alt="Схема сквозной аналитики" class="img-responsive sert-img" src="../../../img/end-to-end/skvoznay.jpg" loading="lazy"/> </a></p>
+
+<p>Сквозная аналитика собирает информацию для обработки и сводит комплексные отчеты на основе целого ряда невзаимосвязанных источников. Однако, чтобы система показывала данные, отражающие настоящую картину в компании, необходимо ее правильно внедрить и запустить.</p>
+
+<h3>Собрать данные веб-аналитики</h3>
+
+<p>Чаще всего в маркетинге используются две популярные системы:</p>
+
+<ul>
+    <li><a href="../kak-polzovatsya-yandeks-metrikoj-podrobnaya-instrukciya-dlya-novichkov/index.html">Яндекс.Метрика</a>;</li>
+    <li><a href="../polnyj-gajd-po-google-analytics/index.html">Google Analytics</a> .</li>
+</ul>
+
+<p>Они позволяют бесплатно найти и отслеживать самые значимые <a href="../../business/sistema-kpi-uluchshaem-pokazateli-kompanii/index.html">KPI</a> и собирают показатели по метрикам, касающиеся веб-среды. Помогает в этом система управления тегами Google Tag Manager (GTM). Это значит, полностью все, что пользователь делал на сайте после контакта с объявлением и перехода по рекламной ссылке, будет зафиксировано и отображено в статистике.</p>
+
+<h3>Интегрировать данные о расходах на рекламу</h3>
+ <p><img alt="данные о расходах на рекламу" class="img-responsive sert-img" src="../../../img/end-to-end/integrirovat-dannye-o-raskhodah-na-reklamu.png" loading="lazy" /></p>
+<p>В этом помогают специальные программы учета в компании, в т. ч. фиксации абсолютно всех расходов. Это предоставляет возможность наглядно оценивать текущее положение дел в бизнесе, а также отправлять партнерам и принимать комплексные отчеты по необходимым параметрам. Импорт из таких сервисов – неотъемлемая часть сквозной аналитики.</p>
+
+<h3>Собрать данные о контактах с клиентами</h3>
+
+<p>Если пользоваться сквозной аналитикой продаж, вы увидите абсолютно все обращения, заявки, покупки и даже больше  независимо от канала связи и курса компании. В этом случае необходимо интегрировать следующие данные:</p>
+
+<ul>
+    <li>события с форм обратной связи на сайте;</li>
+    <li>оформленные заказы;</li>
+    <li>ответы на звонки по любым вопросам;</li>
+    <li>количество обращений через виджеты, соцсети (группы ВКонтакте, Facebook и т.д.), а также другие точки касания.</li>
+</ul>
+
+<p>Здесь особенно важно наличие коллтрекинга, поскольку в большинстве сфер около 70% продаж в конечном счете совершается по телефону.</p>
+
+<p>Сквозная аналитика позволяет проследить все точки касания с клиентом, включая звонки.</p>
+
+<h3>Интегрировать данные из корпоративной CRM-системы</h3>
+
+<p>Это необходимый этап при внедрении сквозной аналитики, поскольку именно в корпоративной CRM идет сбор материалов, расходах и прибыли, клиентская база, карточки каждого клиента, данные о работе менеджеров и т. д. Без импорта сведений из CRM отчет сквозной аналитики будет неполноценным, поскольку именно от него зависит возможность увидеть подтверждения закрытия сделок, размеры чека, посчитать и оценить их <a href="../../business/chto-takoe-rentabelnost-i-zachem-ee-rasschityvat/index.html">прибыльность</a> в разрезе рекламных кампаний.</p>
+
+<p>На сегодняшний день наиболее популярные CRM – Битрикс24, AmoCRM, RetailCrm, Mегаплан, Мой Склад.</p>
+</section>
+
+<section id="p4">
+<p><a id="p4" name="p4"> </a></p>
+
+<h2>Способы сбора данных и визуализации</h2>
+
+<p>Сквозная веб-аналитика может быть реализована по-разному в зависимости от способа сбора персональных данных и используемых при этом инструментов, дополняющих друг друга. В маркетинге популярны 4 способа:</p>
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/sposoby-sbora-dannyh-i-vizualizacii.png"><img alt="способы сбора данных и визуализации" class="img-responsive sert-img" src="../../../img/end-to-end/sposoby-sbora-dannyh-i-vizualizacii.png" loading="lazy"/> </a></p>
+<ul>
+    <li>ручной – с помощью MS Excel;</li>
+    <li>на основе веб-аналитики;</li>
+    <li>в готовых программах;</li>
+    <li>кастомизированные решения.</li>
+</ul>
+
+<p>Рассмотрим в статье каждый вариант реализации сквозной системы аналитики.</p>
+
+<h3>Ручная аналитика в Excel</h3>
+
+<p>Выгрузка данных в MS Excel доступна всем, кто работает в этом редакторе, причем без дополнительных вложений. Практически все CRM, сервисы веб-аналитики в Яндекс и в Google Analytics, коллтрекинга предполагают создание отчета в формате Excel. Но этот способ имеет свои правила, преимущества и недостатки.</p>
+
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p>Плюсы</p>
+            </td>
+            <td class="minus-block" width="400">
+            <p>Минусы</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+            <ul>
+                <li>Просто реализовать</li>
+                <li>Мало затрат на прикладное ПО</li>
+                <li>Не нужно привлекать программистов</li>
+            </ul>
+            </td>
+            <td width="400">
+            <ul>
+                <li>Не подходит для масштабных проектов</li>
+                <li>Только оффлайн-режим работы</li>
+                <li>Нет возможности быстро анализировать данные (разрезы, средние значения, даты, сравнения)</li>
+                <li>Нужны навыки работы с таблицами</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p> </p>
+
+<h3>На основе сервисов веб-аналитики</h3>
+
+<p>Частично упростить сбор данных позволяют предложения платформ веб-аналитики, которые берут за основу файлы cookies. Работая с Google Analytics, Яндекс.Метрикой и другими доступными платформами, можно сформировать достаточно информативную и наглядную статистику.</p>
+
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p>Плюсы</p>
+            </td>
+            <td class="minus-block" width="400">
+            <p>Минусы</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+            <ul>
+                <li>Бесплатное или частично бесплатное использование</li>
+                <li>Можно отслеживать данные в здесь и сейчас</li>
+                <li>Удобная визуализация, в т. ч. возможна бесплатная интеграция с Data Studio</li>
+            </ul>
+            </td>
+            <td width="400">
+            <ul>
+                <li>Зафиксированные в Google или Яндексе транзакции ограничены действиями пользователей в сети</li>
+                <li>Нужен программист</li>
+                <li>Достаточно длительная настройка</li>
+                <li>Искажение статистики</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Аналитика в готовых сервисах</h3>
+
+<p>Готовые интеграторы и облачные сервисы помогают понятно и удобно сводить статистику по нужным условиям. Достаточно подписаться, оплатив выбранный пакет, и удастся частично автоматизировать процесс внедрения сквозной аналитики.</p>
+
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p>Плюсы</p>
+            </td>
+            <td class="minus-block" width="400">
+            <p>Минусы</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+            <ul>
+                <li>Работа онлайн</li>
+                <li>Просто и быстро настраивается  в течение нескольких минут</li>
+                <li>Удобная визуализация</li>
+                <li>Есть платформы со встроенным коллтрекингом</li>
+                <li>Множество автоинтеграций</li>
+            </ul>
+            </td>
+            <td width="400">
+            <ul>
+                <li>Есть ограничения по возможностям в зависимости от конкретной платформы</li>
+                <li>Ежемесячная абонентская плата</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Кастомизированные решения</h3>
+
+<p>Особенность кастомизированных решений в том, что они ориентированы на специфику конкретного бизнеса. Этот способ позволяет интегрировать вашу CRM-систему, коллтрекинг, внутренние БД, бизнес-платформы и другие источники данных, а также наглядно демонстрировать сведения из базовых отчетов с помощью вспомогательных инструментов и сервисов (Data Studio, Power BI, Owox BI-системы).</p>
+
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p>Плюсы</p>
+            </td>
+            <td class="minus-block" width="400">
+            <p>Минусы</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+            <ul>
+                <li>Охватывает все источники данных</li>
+                <li>Учитывает индивидуальные задачи бизнеса и маркетинга</li>
+                <li>Единый интерфейс для работы</li>
+                <li>Все интеграции данных происходят в конкретный момент времени</li>
+                <li>Доступно масштабирование</li>
+            </ul>
+            </td>
+            <td width="400">
+            <ul>
+                <li>Долгое внедрение</li>
+                <li>Высокая стоимость</li>
+                <li>Сложная реализация с привлечением специалистов</li>
+                <li>Нужна непрерывная поддержка и обслуживание</li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+<section id="p5">
+<p><a id="p5" name="p5"> </a></p>
+
+<h2>Преимущества и недостатки сквозной аналитики</h2>
+<p>Выше в статье мы рассмотрели плюсы и минусы разных вариантов реализации сквозной аналитики, а сейчас разберем сильные и слабые стороны системы в целом.</p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p>Преимущества</p>
+            </td>
+            <td class="minus-block" width="400">
+            <p>Недостатки</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ol>
+<li>Прозрачность. Система открыто отображает всю информацию о финансовых затратах на рекламу и результатах. Вы видите сразу, какой доход принесла реклама и сколько на нее было потрачено по каждому каналу. Благодаря этому можно определить точки роста, например, какие товары в тренде, как влияет на количество продаж сезонность и т. д.</li>
+<li>Скорость и простота использования. Сквозная аналитика формирует маркетинговый отчет за несколько секунд. Без сервиса на это уходили бы дни. Его можно открыть в отдельном окне и сразу использовать в работе. Систему не только просто использовать, но и легко подстроить под потребности бизнеса. Можно сделать так, чтобы отслеживались только нужные показатели за определенное время.</li>
+<li>Сокращение затрат на рекламу. Оценивается не стоимость клика, а полученная прибыль. Также экономить бюджет вашей рекламной кампании позволяет возможность получать отчеты с текущими данными без заказа маркетингового исследования.</li>
+</ol>
+            </td>
+            <td width="400">
+<ol>
+<li>Стоимость. Сервисы сквозной аналитики обходятся недешево, однако полученная экономия своих бюджетов на рекламу с лихвой их окупает.</li>
+<li>Риск сбоев в работе. Система сложная, поэтому не исключены всевозможные неполадки при ее эксплуатации (например, прекращение фиксации событий, заявок, звонков, действий на сайте). За короткое время решать подобные проблемы и сохранять ценные данные позволяет тех. поддержка.</li>
+<li>Необходимость обучения персонала. Работать со звонками и заявками нужно точно по инструкции, иначе показатели искажаются, а сквозная аналитика не приносит в дальнейшем нужного результата.</li>
+</ol>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</section>
+
+<section id="p6">
+<p><a id="p6" name="p6"> </a></p>
+
+<h2>Инструменты сквозной аналитики</h2>
+
+<p>Нужно понимать, что сквозную аналитику недостаточно просто внедрять, она не может работать на сайте сама по себе. Для сбора данных из различных мест нужны полезные инструменты и функции. Придется использовать сервисы, платформы, программное обеспечение, базы данных и т. д.</p>
+
+<p>Причем лучшие инструменты сквозной аналитики будут разные для разных компаний. Один бизнес работает только в Сети, другой практикует дополнительно продажи. Где-то компания состоит из нескольких крупных филиалов, а где-то – из 3-5 человек. Все это имеет значение при выборе стандартных инструментов, которые будут обеспечивать работу бизнес-аналитики. Далее в статье читайте о тех из них, которые используются чаще всего.</p>
+
+<h3>Коллтрекинг</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/calltracking/kombinirovannyy-kolltreking.jpg"><img alt="Коллтрекинг" class="img-responsive sert-img" src="../../../img/calltracking/kombinirovannyy-kolltreking.jpg" loading="lazy"/> </a></p>
+
+<p>Статический и <a href="../dinamicheskiy-kolltreking-sposob-opredeleniya-polzovatelya-po-zvonku-s-sayta/index.html">динамический коллтрекинг</a> - неотъемлемая часть сквозной аналитики для любого бизнеса (даже малого), который указывает телефон для связи. По статистике, 2/3 продаж совершаются в процессе телефонных переговоров с менеджером или после них. Если не учитывать контакты с клиентами по телефону, статистика данных, о том, насколько эффективна реклама, будет неполной и не позволит сформировать и знать картину продаж.</p>
+
+<h3>Емейл-трекинг</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/e-mail-trackung.jpg"><img alt="Емейл-трекинг" class="img-responsive sert-img" src="../../../img/end-to-end/e-mail-trackung.jpg" loading="lazy"/> </a></p>
+
+<p>Если где-то на сайте, в визитке или в рекламе указана электронная почта, отслеживать такие обращения можно с помощью емейл-трекинга. Он позволяет узнать, с какого рекламного источника или с какой страницы сайта приходит клиент. При этом данные о лидах максимально детализированы. Платформа собирает важные данные в удобном виде: откуда зашел пользователь, который принес <a href="../../sales/lidy-i-lidogeneratsiya-zachem-eto-nuzhno-biznesu/index.html">лид</a> или совершил покупку, и другую информацию из истории посещения и активности, вплоть до ключевого запроса в поиске, который вывел пользователя на рекламу в Google.</p>
+
+<h3>Сводные отчеты</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/svodnii-otchot.jpg"><img alt="Сводный отчет" class="img-responsive sert-img" src="../../../img/end-to-end/svodnii-otchot.jpg" loading="lazy"/> </a></p>
+
+<p>Сводный отчет позволяет отслеживать актуальную ситуацию в бизнесе по ключевым показателям, которые важны для развития предприятия. Данные по заявкам, продажам, <a href="../../finance/vyruchka-vidy-raschet-otlichiya-ot-dohoda-i-pribyli/index.html">выручке</a>, затратам и другим параметрам по каждому рекламному каналу – все они передаются и попадают в сквозную аналитику и учитываются в общей статистике.</p>
+
+<h3>Отслеживание событий</h3>
+
+<p>Импорт данных из разных систем (Google, Яндекс, CRM) дает учесть целевые события, индивидуальные для каждого бизнеса, в сквозной аналитике. К ним могут относиться:</p>
+
+<ul>
+    <li>добавление товара в «Корзину»;</li>
+    <li>заполнение формы обратной связи;</li>
+    <li>заказ обратного звонка;</li>
+    <li>сообщение в онлайн-чате;</li>
+    <li>регистрация на сайте;</li>
+    <li>клик по номеру телефона и т. д.</li>
+</ul>
+
+<h3>Многоканальные последовательности</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/multikanalnaya-atribucia.jpg"><img alt="Многоканальные последовательности" class="img-responsive sert-img" src="../../../img/end-to-end/multikanalnaya-atribucia.jpg" loading="lazy"/> </a></p>
+
+<p>Отчеты по <a href="../mnogokanalnye-posledovatelnosti-chto-ehto-takoe-i-kak-ispolzovat/index.html">мультиканальным последовательностям</a> отображают новости о влиянии различных источников трафика (рекламных каналов) на приток аудитории. Мультиканальная аналитика использует эти данные. Благодаря ей удается получить более полную картину.</p>
+
+<h3>Сплит-тестирование</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/split.jpg"><img alt="Сплит-тестирование" class="img-responsive sert-img" src="../../../img/end-to-end/split.jpg" loading="lazy"/> </a></p>
+
+<p>Понято, что сквозная аналитика сайта может быть немного более полноценной, если включить в нее результаты A/Б-тестирования. Оно позволяет получить данные о <a href="../konversiya-chto-eto-i-pochemu-vazhno-ee-znaty/index.html">конверсии</a> каждого рекламного канала не только в лиды, но и в продажи.</p>
+
+<h3>Когортный анализ</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/kogortniy-analoz.jpg"><img alt="Когортный анализ" class="img-responsive sert-img" src="../../../img/end-to-end/kogortniy-analoz.jpg" loading="lazy"/> </a></p>
+
+<p>В ходе <a href="../kogortnyy-analiz-kak-pomogaet-i-zachem-neobkhodim/index.html">когортного анализа</a> рассматриваются отдельные когорты (группы) лидов по их общим параметрам в определенное время. Таким образом, сквозная аналитика в сочетании с групповым анализом позволяет искать и выявить наиболее и наименее эффективные когорты и на основе этой информации построить и провести рекламную стратегию.</p>
+
+<h3>Модели атрибуции</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/modeli-atribucii.jpg"><img alt="Модели атрибуции" class="img-responsive sert-img" src="../../../img/end-to-end/modeli-atribucii.jpg" loading="lazy"/> </a></p>
+
+<p><a href="../modeli-atribucii-kak-orientir-pri-ocenke-kanalov-prodvizheniya/index.html">Модели атрибуции</a> помогают оценить вклад конкретного рекламного канала на пути к продаже. Выбор той или иной модели определяется этапом индивидуальной воронки продаж. Типовые модели атрибуции:</p>
+
+<ul>
+    <li>по первому касанию (First Interaction или First Click);</li>
+    <li>по последнему непрямому клику (Last Non-Direct Click);</li>
+    <li>линейная (Linear model);</li>
+    <li>с привязкой к позиции (Position Based или U-образная);</li>
+    <li>с учетом давности взаимодействия (Time Decay);</li>
+    <li>event-driven.</li>
+</ul>
+
+<h3>Дашборды</h3>
+
+<p><a href="../chto-takoe-dashbord-i-chem-on-luchshe-privychnyh-otchetov/index.html">Дашборд</a> - это интерактивная панель, с помощью которой маркетолог может посмотреть и проанализировать бизнес-показатели, оценить эффективность маркетинговой стратегии в целом.</p>
+
+<p>Она показывает информацию о:</p>
+
+<ul>
+    <li>продажах (покупках);</li>
+    <li>прибыли;</li>
+    <li>доходе;</li>
+    <li>окупаемости инвестиций.</li>
+</ul>
+
+<h3>UTM-метки</h3>
+
+<p>С помощью <a href="../polnoe-rukovodstvo-po-utm-metkam/index.html">UTM-меток</a> можно отследить весь путь посетителя от первого касания и оценить, насколько эффективна реклама и вся маркетинговая стратегия.. </p>
+<a data-fancybox="gallery" href="../../../img/utm/utm-metki-s-poyasneniyami.jpg"><img alt="UTM-метки" class="img-responsive sert-img" src="../../../img/utm/utm-metki-s-poyasneniyami.jpg" loading="lazy" draggable="false"> </a>
+
+<p>Этот инструмент, с помощью которого можно определить:</p>
+
+<ul>
+    <li>источник перехода на сайт;</li>
+    <li>тип рекламного трафика или канал;</li>
+    <li>рекламную кампанию;</li>
+    <li>детальную информацию.</li>
+</ul>
+
+</section>
+
+<section id="p7">
+<p><a id="p7" name="p7"> </a></p>
+
+<h2>Ключевые метрики в сквозной аналитике и маркетинге</h2>
+<p>Чтобы знать, сколько денег было заработано и потрачено, а также получить общее представление об эффективности рекламы, используют специальные метрики.</p>
+<ul>
+<li><a href="../../marketing/cpa-model-v-marketinge-chto-ehto-takoe-i-kak-s-nej-rabotat/index.html">CPA</a> – стоимость целевого действия.</li>
+<li><a href="../../marketing/model-cpc-v-marketinge-chto-eto-takoe-i-kak-ee-schitat/index.html">CPC</a> – стоимость клика.</li>
+<li>CPL – стоимость заявки.</li>
+<li><a href="../../marketing/chto-takoe-cpo-v-marketinge-i-kak-pokazatel-vliyaet-na-pribyl/index.html">CPO</a> – стоимость покупки/заказа.</li>
+<li>ROI – окупаемость вложений.</li>
+<li><a href="../../marketing/pokazatel-romi-chto-ehto-takoe-i-zachem-ego-schitat-formula-rascheta/index.html">ROMI</a> – окупаемость вложений в маркетинг.</li>
+<li>LTV – сумма дохода, полученного от конкретного клиента за все время взаимодействия с ним.</li>
+<li><a href="../../marketing/pokazatel-ctr-chto-ehto-takoe-i-kak-ego-povysit/index.html">CTR</a> – количество кликов.</li>
+</ul>
+<p>Все эти метрики включают стандартные отчеты сервисов Neiros, Calltouch, Roistat, Comagic, Alytics и т. д.</p>
+</section>
+
+<section id="p10">
+<p><a id="p10" name="p10"> </a></p>
+<h2>Когда нужна сквозная аналитика</h2>
+<p>Не всегда подключение сквозной аналитики нужно и целесообразно. Рассмотрим ситуации, когда от ее внедрения действительно будет польза на сайте.</p>
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/kogda-nuzhna-skvoznaya-analitika.png"><img alt="когда нужна сквозная аналитика" class="img-responsive sert-img" src="../../../img/end-to-end/kogda-nuzhna-skvoznaya-analitika.png" loading="lazy"/> </a></p>
+<ul>
+<li>Компания использует рекламные онлайн-каналы в количестве 2 и более.</li>
+<li>Сайт получает стабильный трафик с рекламы на регулярной основе.</li>
+<li>На рекламу выделен бюджет в размере более 100 тыс. руб.</li>
+<li>Требуется оценка показателей эффективности размещений в рамках PR-продвижения.</li>
+<li>Все заявки и заказы на сайте делаются осознанно, нет покупок, совершаемых на эмоциях, цикл принятия решений длинный, без автоматических инструментов отследить его трудно.</li>
+<li>Присутствуют и настроены бизнес-процессы.</li>
+</ul>
+</section>
+
+<section id="p11">
+<p><a id="p11" name="p11"> </a></p>
+<h2>Почему данных из систем аналитики Яндекса и Google недостаточно</h2>
+<p>У общедоступных систем аналитики Яндекс Метрика и Google Analytics есть возможность собирать большие объемы ценной информации для статистики по каналам. Например, с помощью Google Analytics можно узнать:</p>
+<ul>
+<li>количество пользователей, пришедших с каждого канала, их действия на сайте, просмотренные страницы и т. д.;</li>
+<li>конверсию;</li>
+<li>число транзакций;</li>
+<li>данные об отказах, количестве сеансов, время пребывания на сайте и т.д.</li>
+</ul>
+<p>Но для сквозной аналитики нужно много другой информации, например, рекламные расходы, данные обо всех точках касания с покупателем, исполняемость заказов и др. Получить ее с помощью сервисов Google Analytics и Яндекс Метрика невозможно. Кроме этого, они:</p>
+<ul>
+<li>имеют расхождения в получении значений конверсий и переходов;</li>
+<li>могут терять или, наоборот, добавлять количество конверсий;</li>
+<li>не всегда одинаково воспринимают посетителей, которые посещают сайт с большим перерывом, быстро уходят, шифруются или используют разные устройства для входа на сайт;</li>
+<li>читают каждый по-своему;</li>
+<li>не учитывают звонки и заявки в соцсетях и виджетах чатов.</li>
+</ul>
+<h3>Что это значит на практике</h3>
+<p>Разница в алгоритмах работы сервисов Яндекс и Google Analytics сказывается на качестве сбора и интерпретации значений.</p>
+<ul>
+<li>Нет обновления сведений о покупательском пути в реальном времени. Человек просто зашел на страницу или оставил заявку – статистика не изменится.</li>
+<li>Не всегда формируется история взаимодействия с пользователем из-за трудностей с его идентификацией при повторных действиях на сайте. Система фиксирует только первое касание.</li>
+<li>Нельзя выгрузить данные по этапам воронки и узнать, какую выручку принес конкретный клиент.</li>
+<li>Нельзя внести затраты на отдельный рекламный канал и узнать ROI.</li>
+<li>Без интеграции с CRM или другими платными сервисами невозможно мониторить базовые показатели прибыли по <a href="../../marketing/kak-vybrat-vygodnye-istochniki-trafika-i-sehkonomit-na-reklame/index.html">источникам трафика</a>.</li>
+<li>Без специалиста не получится проводить настройку корректной выгрузки информации в Google Spreadsheet или Excel.</li>
+</ul>
+<p>При этом систему сквозной аналитики Neiros просто внедрить даже человеку, который сталкивается с этим впервые, а весь процесс настройки под нужды компании занимает до 2 недель.</p>
+
+</section>
+
+<section id="p12">
+<p><a id="p12" name="p12"> </a></p>
+<h2>Пример настройки сквозной аналитики в условиях реального интернет-магазина</h2>
+<p>Для интернет-бизнеса, связанного с продажами, сквозная аналитика актуальна как никогда. Она помогает отслеживать большое количество показателей, связывать их и все время держать под рукой.</p>
+<p>Внедрение готовой системы для интернет-магазина – задача простая и выполняется в несколько этапов.</p>
+<ol>
+<li>Правильная постановка целей. Это необходимо для соответствия реальности и ожиданий. Ошибка – думать, что сквозная аналитика сама по себе решит все задачи, даст какие-либо преимущества или без обратной связи со стороны компании поможет сильно сэкономить.</li>
+<li>Внедрение стандартов для корректного сбора показателей из систем аналитики и рекламы.</li>
+<li>Контроль точности. Должен осуществляться при сборе сведений из каждого источника.</li>
+<li>Сбор данных. Источниками могут выступать системы аналитики Google или Яндекс, коллтрекинг, CRM-система, рекламные системы.</li>
+<li>Настройка визуализации. Здесь важно, кто будет просматривать отчеты, какие показатели и глубина погружения нужны этому специалисту. В отчеты могут входить, например, таблицы, графики, также можно строить диаграммы, воронки и прочие элементы для наглядной иллюстрации.</li>
+</ol>
+<h3>Схема работы сквозной аналитики</h3>
+<p>Чтобы понимать, как работает сквозная аналитика в интернет-магазине, удобно использовать схему.</p>
+<p>Согласно нее, СА работает так: счетчик устанавливается на сайт, собирает значения за определенное время и формирует отчет со статистикой по разным каналам.</p>
+<p>В техническом плане этот процесс имеет примерно такой вид:</p>
+<ol>
+<li>Человек заходит на сайт впервые.</li>
+<li>Модуль считывает cookie, затем ищет в базе или создает client id.</li>
+<li>Собирает и отправляет данные на свои серверы, а клики пользователей сопоставляются с их параметрами.</li>
+<li>Счетчик фиксирует выполнение целевого действия.</li>
+<li>Получает подменные номера, которые видит посетитель на сайте.</li>
+<li>Происходит конверсия. В этом случае схема будет зависеть от канала рекламы.</li>
+</ol>
+<p>Рассмотрим несколько схем.</p>
+<ul>
+<li>Продажа продукта через корзину сайта в CRM. В этом случае данные о покупке сразу передаются в систему. Трудности могут возникать, только если конверсией является определенная категория, а не любой товар.</li>
+<li>Продажа путем заявки из социальных сетей (ВКонтакте, Facebook). Здесь потребуется настройка коннектора (ПО для интеграции разных систем сбора данных) в web-аналитике и коллтректинге.</li>
+</ul>
+<h3>Как взаимодействует внутренняя CRM с внешними</h3>
+<p>Конверсии из корпоративной CRM без проблем передаются во внешнюю систему, что обеспечивает мгновенный обмен данными. При этом система позволяет:</p>
+<ul>
+<li>вести клиентскую базу, <a href="../../marketing/segmentaciya-rynka-ee-celi-raznovidnosti-kriterii-i-vazhnost-dlya-vashego-biznesa/index.html">сегментировать</a> ее, делать рассылки напрямую из CRM, фиксировать и передавать задачи;</li>
+<li>оперативно управлять продажами, устанавливать статусы сделок, разделять «холодных» и «теплых» клиентов;</li>
+<li>анализировать продажи на основании статистики, целей, прогнозов.</li>
+</ul>
+<h3>Загрузка данных</h3>
+<p>Информация подгружается из других источников (например, соцсетей, рекламных систем и др.) не чаще, чем 1 раз в сутки. Это связано с особенностями API внешних платформ.</p>
+<h3>Учет конверсий из источников оффлайн</h3>
+<p>Не все совершают покупки через сайт. Когда речь идет об оффлайн-конверсиях, без коллтрекинга не обойтись. Он может посчитать звонки для каждого канала с учетом ключ-фразы. Здесь важно понимать, какая реклама привела клиента, и какая именно фраза из объявления заставила его позвонить.</p>
+<h3>Выбор коллтрекинга</h3>
+<p>Чтобы рационально использовать сквозную аналитику, нужно правильно выбрать тип коллтрекинга, он бывает <a href="../chem-otlichayetsya-dinamicheskiy-kolltreking-ot-staticheskogo/index.html">статический и динамический</a>. Первый собирает общие данные по каналам, второй позволяет получить более точную информацию. Для внедрения коллтрекинга перенастраивать телефонию не нужно, а сам процесс выполняется всего в три этапа:</p>
+<ol>
+<li>Добавление кода на сайт.</li>
+<li>Оплата услуг согласно тарифу на определенное количество номеров.</li>
+<li>Настройка переадресации основного телефона компании.</li>
+</ol>
+<p>Для большинства интернет-магазинов достаточно готовых решений. Однако пытаться сэкономить за счет опций в бесплатных системах сквозной аналитики, не стоит. Ограниченный функционал не позволит получать достаточно информации для адекватного анализа и понимания, насколько эффективна контекстная, мультимедийная или <a href="../../ads/targeting-osobennosti-principy-raboty-plyusy-i-minusy-rekomendacii-po-nastrojke-i-ispolzovaniyu/index.html">таргетированная реклама</a>.</p>
+</section>
+<section id="p8">
+<p><a id="p8" name="p8"> </a></p>
+
+<h2>Как настроить сквозную аналитику в Neiros</h2>
+
+<p>Сквозная аналитика Neiros – это сервис, разработанный для оценки источников прибыли бизнеса и эффективности рекламных инструментов на сайте в конкретный момент времени.</p>
+
+<p>Для настройки сквозной аналитики Neiros выполняется:</p>
+
+<ol>
+    <li>Подключение любой корпоративной CRM в списке интеграций.</li>
+    <li>Подключение рекламных каналов.</li>
+    <li>Подключение точек захвата, например, коллтрекинга, колбека, чата, форм и других источников трафика.</li>
+    <li>Подключение источников данных о внутренних расходах на рекламу.</li>
+    <li>Настройка отображения отчета по каналам.</li>
+</ol>
+
+<p>Все эти действия выполняют специалисты сервиса Neiros самостоятельно.</p>
+</section>
+
+<section id="p9">
+<p><a id="p9" name="p9"> </a></p>
+
+<h2>Кейсы реальных клиентов Neiros</h2>
+
+<p>80% пользователей Neiros перед тем, как подключили сквозную аналитику, считали текущие показатели эффективности рекламы нормальными. Только после получения первых отчетов стало ясно: без аналитики были бы впустую потрачены колоссальные суммы, а сотни потенциальных покупателей так и не стали бы подлинными. Опыт нескольких компаний подтверждает, что не стоит полагаться на «слепую» работу с рекламой. Далее в статье говорим и рассказываем на примере наших клиентов.</p>
+
+<h3>Кейс 1. Увеличили прибыль на 40%</h3>
+
+<p>Клиент – ООО «Системы Безопасности», компания-инсталлятор систем безопасности, онлайн-продавец оборудования.</p>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/systemssec-sa.jpg"><img alt="" class="img-responsive sert-img" src="../../../img/end-to-end/systemssec-sa.jpg" loading="lazy"/> </a></p>
+
+<p>Фирма обратилась в рекламное агентство с проблемой анализа эффективности рекламных кампаний. Клиент получал множество нецелевых обращений, что объяснялось работой предприятия в разных ключах: предоставление услуг интегратора, продажа оборудования по всей России, технические консультации.</p>
+
+<h3>Кейс 2. Сэкономили 150 тыс. рублей в месяц на наружной рекламе</h3>
+
+<p>Клиент – бутик элитных часов «Швейцарский Стиль», магазин.</p>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/swiss-sa.jpg"><img alt="" class="img-responsive sert-img" src="../../../img/end-to-end/swiss-sa.jpg" loading="lazy"/> </a></p>
+
+<p>Компания обратилась, чтобы подключить сквозную аналитику для мониторинга эффективности рекламных каналов. Также клиент хотел выяснить причину сложности с дозвоном в магазин, причину которой руководству не удалось выявить и решить внутри компании.</p>
+
+<h3>Кейс 3. Повысили число клиентов на 44%</h3>
+
+<p>Клиент – компания «Смарт-модуль», производитель и установщик быстровозводимых металлических конструкций по всей России.</p>
+
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/smart-sa.jpg"><img alt="" class="img-responsive sert-img" src="../../../img/end-to-end/smart-sa.jpg" loading="lazy"/> </a></p>
+
+<p>Фирма обратилась с проблемой работы «в ноль» несмотря на востребованность и доступную стоимость продукции.</p>
+</section>
+<section id="p13">
+<p><a id="p13" name="p13"> </a></p>
+<h2>Частые ошибки при внедрении</h2>
+<p>При внедрении и настройке систем аналитики часто совершают ошибки. Рассмотрим самые распространенные.</p>
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/chastye-oshibki-pri-vnedrenii-skvoznoj-analitiki.png"><img alt="частые ошибки при внедрении сквозной аналитики" class="img-responsive sert-img" src="../../../img/end-to-end/chastye-oshibki-pri-vnedrenii-skvoznoj-analitiki.png" loading="lazy"/> </a></p>
+<p><b>По части UTM-разметки:</b></p>
+<ul>
+<li>буквы в разном регистре – отдельные СА могут интерпретировать метки, написанные со строчной или заглавной буквы, как одно значение или разные;</li>
+<li>используется разметка без справочника – обозначение разными метками одного канала приводит к задвоению базы, редактировать которую придется вручную.</li>
+</ul>
+<p><b>По части коллтрекинга:</b></p>
+<ul>
+<li>менеджеры не справляются с обработкой всех звонков – при превышении 5%-го порога недозвонившихся клиентов требуется увеличение количества сотрудников;</li>
+<li>недостаточный сервис со стороны менеджеров – при внедрении системы обратной связи можно узнать о качестве работы персонала непосредственно от клиентов;</li>
+<li>технические сбои – методом контрольных звонков можно определить, насколько хорошо работает коллтрекинг и ip-телефония.</li>
+
+</ul>
+<p><b>Лишние данные:</b></p>
+<ul>
+<li>данные долго обрабатываются – слишком много информации (видео из Яндекс вебвизора и подобные) сильно нагружает систему, замедляет ее работу, становится причиной задержек;</li>
+<li>большой объем – 90% информации, которая была собрана, не участвует в аналитике и лишь впустую занимает место.</li>
+</ul>
+</section>
+
+<section id="p14">
+<p><a id="p14" name="p14"> </a></p>
+<h2>Часто задаваемые вопросы</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="headingOne"><a aria-controls="collapseOne" aria-expanded="false" class="btn-link collapsed" data-target="#collapseOne" data-toggle="collapse" href="index.html#">Какой способ выбрать?</a></div>
+
+<div aria-labelledby="headingOne" class="collapse" data-parent="#faqAccordion" id="collapseOne" style="">
+<div class="card-body">
+<p>Это зависит от того, какие задачи ставятся перед СА и сколько вы готовы в нее вложить.</p>
+<ul>
+<li>Для быстрого анализа результативности рекламы в малом бизнеса подойдет любой сервис, который сможет собирать, анализировать и предоставлять информацию в виде отчета.</li>
+<li>Когда стоят специфичные задачи по анализу типовых рекламных кампаний, кроме самого сервиса понадобится программист с опытом работы с API для использования внешних скриптов и внедрения интеграций.</li>
+<li>Крупным организациям со сложной бизнес-структурой требуется сквозная аналитика, которая будет отвечать требованиям всех участников команды, обеспечивать качественный контроль и высокую точность. Для решения нетипичных задач могут потребоваться сторонние специалисты.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingTwo"><a aria-controls="collapseTwo" aria-expanded="false" class="btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse" href="index.html#">Кому не обязательна сквозная аналитика?</a></div>
+
+<div aria-labelledby="headingTwo" class="collapse" data-parent="#faqAccordion" id="collapseTwo">
+<div class="card-body">
+<ul>
+<li>Фирмам с мизерным LTV. По данным о первой продаже можно понять, насколько эффективен канал в целом.</li>
+<li>Организациям с высокой <a href="../../business/marzha-opredelenie-vidy-poryadok-rascheta/index.html">маржинальностью</a>. Последняя покрывает возможные ошибки со стороны маркетинга, обеспечивает возможности для роста и расширения.</li>
+<li>Предприятиям с длинным циклом сделки. Сервис аналитики будет буквально «съедать» бюджет вашей компании в ожидании получения заметной пользы.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingfour"><a aria-controls="collapsefour" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefour" data-toggle="collapse" href="index.html#">В чем разница между платными и бесплатными сервисами аналитики?</a></div>
+
+<div aria-labelledby="headingfour" class="collapse" data-parent="#faqAccordion" id="collapsefour">
+<div class="card-body">
+<p>Чтобы сквозная аналитика работала, как следует, ее строят по определенной схеме. По ней работают все платные сервисы, обеспечивая пользователям надежность и отсутствие белых пятен. Для бесплатных вариантов (например, в Google Bigquery) характерны всевозможные проблемы: с интеграций с CRM, синхронизацией заявок, загрузкой расходов и т. д.</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" id="headingfive"><a aria-controls="collapsefive" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefive" data-toggle="collapse" href="index.html#">Какие основные заблуждения?</a></div>
+
+<div aria-labelledby="headingfive" class="collapse" data-parent="#faqAccordion" id="collapsefive">
+<div class="card-body">
+<ul>
+<li>Внедрение сквозной аналитики = рост продаж. Это не так. СА не гарантирует, что прибыль будет расти, а лишь дает подробную статистику эффективности рекламных каналов, что и служит ключом к достижению целей компании.</li>
+<li>Платные платформы ничем не отличаются. Разница есть, и она в количестве настроек. Также отличается цена обслуживания, специализация сервиса (углубленное изучение источников, моментальное формирование отчетов, работа с голосовым поиском и т. д.). При выборе готового решения ориентироваться стоит исключительно на потребности бизнеса.</li>
+<li>Система не работает. «Специалистов», которые твердо уверены, что система не работает или работает некорректно, крайне сложно переубедить. На самом деле, в 99% случаев им достаточно прочесть мануал, чтобы понять, что все идет как надо.</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="p15">
+<p><a id="p15" name="p15"> </a></p>
+<h2>Заключение</h2>
+<p>Когда на рынке масса конкурентных компаний, очень важно оперативно реагировать на любые изменения. Помогает в этом уникальный инструмент маркетинга и рекламы – система сквозной аналитики. Благодаря готовым решениям в комплексе с грамотно сформированным бюджетом и расставленными приоритетами вы сможете повысить эффективность рекламы и расширите аудиторию.</p>
+</section>
+
+<section id="p16">
+<p><a id="p16" name="p16"> </a></p>
+<h2>Видеоинструкция</h2>
+
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="100%" src="https://www.youtube.com/embed/3ixfh_Zrxhw?rel=0&showinfo=0" width="100%" loading="lazy"></iframe></p>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                                                     <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Что такое сквозная аналитика</a></li>
+	<li><a href="index.html#p2">Задачи сквозной аналитики</a></li>
+	<li><a href="index.html#p3">Что нужно для внедрения</a></li>
+	<li><a href="index.html#p4">Способы сбора данных и визуализации</a></li>
+	<li><a href="index.html#p5">Преимущества и недостатки сквозной аналитики</a></li>
+	<li><a href="index.html#p6">Инструменты сквозной аналитики</a></li>
+	<li><a href="index.html#p7">Ключевые метрики в сквозной аналитике и маркетинге</a></li>
+	<li><a href="index.html#p10">Когда нужна сквозная аналитика</a></li>
+	<li><a href="index.html#p11">Почему данных веб-аналитики недостаточно</a></li>
+	<li><a href="index.html#p12">Пример настройки сквозной аналитики</a></li>
+	<li><a href="index.html#p8">Как настроить сквозную аналитику в Neiros</a></li>
+	<li><a href="index.html#p9">Кейсы реальных клиентов</a></li>
+	<li><a href="index.html#p13">Частые ошибки при внедрении</a></li>
+	<li><a href="index.html#p14">Часто задаваемые вопросы</a></li>
+	<li><a href="index.html#p15">Заключение</a></li>
+	<li><a href="index.html#p16">Видеоинструкция</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

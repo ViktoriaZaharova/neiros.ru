@@ -1,0 +1,1261 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CR - что это такое в рекламе и маркетинге | формула и расчет conversion rate - коэффициент конверсии</title>
+    <meta name="description" content="Что такое CR и чем он отличается от CTR. Особенности применения конверсии и для чего нужно ее считать. Формула и примеры расчета. Как увеличить коэффициент.">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/analytics/cr-koehfficient-konversii-chto-ehto-takoe-primenenie-formula-rascheta#cao",
+     "url": "https://neiros.ru/blog/analytics/cr-koehfficient-konversii-chto-ehto-takoe-primenenie-formula-rascheta#cao",
+     "headline":"CR - что это такое в рекламе и маркетинге | формула и расчет conversion rate - коэффициент конверсии",
+
+     "datePublished": "2022-01-28 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "Аналитика"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">CR - коэффициент конверсии: что это такое, применение, формула расчета</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Аналитика</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/169cbba25fa802d332aa0a2e1cc91d5a.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 04.02.2022</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Запуск рекламных кампаний предполагает оценку их результативности. Для этого в интернет-маркетинге применяется множество метрик, одна из которых – CR (<a href="../konversiya-chto-eto-i-pochemu-vazhno-ee-znaty/index.html">конверсия</a>).</p>
+<p>Далее в статье рассмотрим, что это такое, как и для чего рассчитывать коэффициент, кому это нужно и многое другое.</p>
+<p><img alt="Conversion rate" class="img-responsive sert-img" src="https://neiros.ru/images/%0D%0A169cbba25fa802d332aa0a2e1cc91d5a.png" loading="lazy" draggable="false"></p>
+<section id="p1">
+<p><a id="p1" name="p1"> </a></p>
+<h2>Что значит CR</h2>
+<p>CR или Conversion rate – коэффициент конверсии.</p>
+<p>Конверсия – процент <a href="../../sales/lidy-i-lidogeneratsiya-zachem-eto-nuzhno-biznesu/index.html">лидов</a> – пользователей, совершивших целевое действие, от общего количества пользователей на конкретном уровне <a href="../../sales/vse-o-voronke-prodazh-ot-istorii-k-primeneniyu-v-sovremennom-biznese/index.html">воронки продаж</a>.</p>
+<p>В качестве целевого может выступать любое действие посетителя, которое прямо или косвенно приближает его к главной цели компании – продаже.</p>
+<p>Чаще CR определяют для таких целевых действий:</p>
+<ul>
+<li>клик по рекламе или переход на сайт;</li>
+<li>подписка на рассылку;</li>
+<li>заказ обратного звонка;</li>
+<li>переход в каталог товаров;</li>
+<li>добавление товара в корзину;</li>
+<li>оформление заказа или заявка;</li>
+<li>активность в социальных сетях (репосты, лайки, комментарии, подписки).</li>
+</ul>
+<p>Конверсия позволяет понять, насколько правильно настроена и эффективна рекламная кампания. Показатель подсчитывают на каждом этапе воронки продаж, в т. ч. чтобы отследить и скорректировать слабые места.</p>
+</section>
+
+<section id="p2">
+<p><a id="p2" name="p2"> </a></p>
+<h2>Чем отличается CR от CTR</h2>
+<p>CTR (аббревиатура расшифровывается как click-through rate) – это коэффициент кликабельности рекламных объявлений и одна из разновидностей конверсии. Его рассчитывают как соотношение кликов по рекламе и общего числа ее показов.</p>
+<p><a data-fancybox="gallery" href="../../../img/conversion/formula-ctr.png"><img alt="формула CTR" class="img-responsive sert-img" src="../../../img/conversion/formula-ctr.png" loading="lazy" draggable="false"> </a></p>
+
+<p><em>CTR = Количество переходов по рекламе / Число показов * 100%</em></p>
+<p>Например, рекламный баннер был показан 1 000 раз, а кликнули по нему 70 человек. CTR составит 7%.</p>
+<p>В ситуациях, когда стоит задача получить максимум переходов по ссылке или в определенный раздел сайта, можно считать, что CTR = CR. Чаще этот показатель вычисляют, чтобы оценить, как работает баннер, тизер или другой вид рекламного объявления. Если же задача другая, рассчитать CR придется дополнительно.</p>
+<p>Например, если из 70 кликов по баннеру заявку оставили 32 человека, то конверсия в заявку составит:</p>
+<p>CR = 32 * 100% / 1 000 = 3,2%</p>
+<p>При этом CR и CTR отличаются.</p>
+<p>Сравним эти показатели более детально.</p>
+<table style="
+    width: 100%;
+">
+<tbody>
+<tr>
+<td width="208">
+<p>Характеристики</p>
+</td>
+<td width="208">
+<p>CR</p>
+</td>
+<td width="208">
+<p>CTR</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>Расшифровка</p>
+</td>
+<td width="208">
+<p>Conversion rate</p>
+</td>
+<td width="208">
+<p>Click-through rate</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>Значение</p>
+</td>
+<td width="208">
+<p>Коэффициент конверсии</p>
+</td>
+<td width="208">
+<p>Коэффициент кликабельности</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>Для чего нужен</p>
+</td>
+<td width="208">
+<p>Чтобы отслеживать, сколько пользователей переходят с одного уровня воронки на другой, при арбитраже трафика</p>
+</td>
+<td width="208">
+<p>Чтобы оценить эффективность объявления, правильность настройки рекламы, выбора целевой аудитории</p>
+</td>
+</tr>
+<tr>
+<td width="208">
+<p>Варианты конверсии</p>
+</td>
+<td width="208">
+<p>Любые: в заявку, покупку, регистрацию, подписку, повторный заказ, коллбек и т. д.</p>
+</td>
+<td width="208">
+<p>Из просмотров рекламы в клики по ней</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="p3">
+<p><a id="p3" name="p3"> </a></p>
+<h2>Для чего нужно подсчитывать конверсию</h2>
+<p>Рациональное управление бизнесом невозможно без подсчета конверсии и других важных метрик. CR позволяет оценить насколько эффективен маркетинг, его инструменты и реклама в плане лидогенерации, включая работу сайта, на разных этапах привлечения клиентов.</p>
+<p>Подсчет коэффициента позволяет компании решать ряд важных задач.</p>
+ <p><a data-fancybox="gallery" href="../../../img/cr/dlya-chego-nuzhno-podschityvat-konversiyu.jpg"><img alt="для чего нужно подсчитывать конверсию" class="img-responsive sert-img" src="../../../img/cr/dlya-chego-nuzhno-podschityvat-konversiyu.jpg" loading="lazy" /> </a></p>
+
+<ul>
+<li><b>Оценивать результативность лидогенерации.</b> Метрика показывает, насколько эффективно на сайт приходят новые лиды.<br /> Пример. Контекстная реклама приводит 150 человек ежедневно, цена одного клика в среднем 50 р. Генерация трафика стоит около 7 500 р. в день. Однако из привлеченных пользователей лидами становятся лишь 6 человек. Можно сделать вывод, что при хорошо работающей рекламе слабым звеном выступает целевая страница, над которой и предстоит поработать.</li>
+<li><b>Тестирование нововведений на сайте.</b> Играют роль любые изменения: дизайн, цветовая гамма, формы заказа, оффер, призывы, кнопки, полезные материалы и т. д.<br /> Пример. Стоит задача поменять оффер на лендинге. Рассматривается несколько вариантов. Чтобы определиться с формулировкой, нужно сгенерировать целевой трафик примерно в равном объеме на каждый оффер, затем сравнить CR и выбрать тот вариант, который даст больший коэффициент.</li>
+<li><b>Отслеживание конверсии каждого уровня воронки.</b> Это помогает определить эффективность маркетинга поэтапно, в т. ч. отследить реакции пользователей на движения компании и точечно скорректировать последние.<br /> Пример. За неделю на сайт зашло 1 300 пользователей, 400 из них посетили страницу товара, 180 добавили его в корзину, 8 оплатили заказ.<br /> CR в добавление в корзину = 180 / 1 300 * 100% = 13,8%<br /> CR в покупку = 8 / 1 300 * 100% = 0,6%<br /> Можно сделать вывод, что потенциальные клиенты охотно кладут товар в корзину, но реальных покупателей очень мало. Это говорит о возможных проблемах с настройкой корзины (нет напоминаний об отложенных товарах или они не сохраняются, когда пользователь уходит с сайта).</li>
+<li><b>Выявление слабых участков в работе.</b> Коэффициент указывает на места, о которые «спотыкается» и уходит часть клиентов.<br /> Пример. Потенциальные клиенты успешно проходят воронку до тех пор, пока не начинают общаться с менеджером по телефону. Это означает, что причиной ухода лидов могут быть неэффективные скрипты продаж, которые используются в настоящее время. Необходимо их улучшить и протестировать.</li>
+<li><b>Прогноз расходов и оценка <a href="../../business/chto-takoe-rentabelnost-i-zachem-ee-rasschityvat/index.html">рентабельности</a> инвестиций.</b> Коэффициент позволяет просчитывать стоимость одного клиента, разрабатывать план продаж для сотрудников, отслеживать динамику и т. д.</li>
+</ul>
+<p>На конверсию влияет множество факторов: сфера деятельности, конкуренция, средний чек и т. д. Так, агентство недвижимости будет иметь гораздо меньший CR, чем газетный киоск, но <a href="../../business/pribyl-kak-osnovnoj-pokazatel-ehffektivnosti-biznesa/index.html">прибыль</a> с продаж несравнима.</p>
+</section>
+
+<section id="p4">
+<p><a id="p4" name="p4"> </a></p>
+<h2>Где применяют коэффициент конверсии</h2>
+ <p><img alt="коэффициент конверсии применение" class="img-responsive sert-img" src="../../../img/cr/koehfficient-konversii.jpg" loading="lazy" /></p>
+<p>Conversion rate – один из ключевых показателей современного интернет-маркетинга и рекламы. С его помощью можно увидеть реальные цифры лидогенерации, оценить эффективность маркетинга и его инструментов.</p>
+<p>Некоторые считают, что расчет конверсии актуален только в интернет-среде, но это не так. Оффлайн-компании не меньше нуждаются в отслеживании и оценке маркетинговых показателей.</p>
+<p>Многоэтапная работа с клиентами в любом бизнесе должна сопровождаться определением конечных и промежуточных результатов на ключевых этапах. Так, классическая стратегия включает 5 главных стадий:</p>
+<ol>
+<li>Привлечение клиента.</li>
+<li>Интерес.</li>
+<li>Удержание.</li>
+<li>Вовлечение.</li>
+<li>Продажа.</li>
+</ol>
+<p>CR позволяет определить коэффициент для каждого из этапов, отследить, как меняются показатели при переходе от одной ступени к другой, затем определить итоговую конверсию.</p>
+<blockquote class="blockquote-v2"><p>Расчет конверсии актуален всегда, когда основная задача – получить выгоду от привлеченных пользователей, а не сам факт их привлечения.</p></blockquote>
+</section>
+
+<section id="p5">
+<p><a id="p5" name="p5"> </a></p>
+<h2>Как считать Conversion Rate</h2>
+<p>Прежде всего нужно определиться с четырьмя элементами воронки, которые служат основой расчета CR. К ним относятся:</p>
+<p><a data-fancybox="gallery" href="../../../img/cr/kak-schitat-conversion-rate.png"><img alt="как считать Conversion Rate" class="img-responsive sert-img" src="../../../img/cr/kak-schitat-conversion-rate.png" loading="lazy" /> </a></p>
+<ol>
+<li>Посещаемость – нужно знать, сколько человек заходит на ресурс за конкретный период.</li>
+<li>Число лидов – это лица, которые нажимают на кнопку, звонят или заказывают обратный звонок, отправляют форму со своими контактами и т. д.</li>
+<li>Конверсия – это заданные целевые действия, например, покупка, запись на пробный урок, скачивание приложения.</li>
+<li>Количество конверсионных целей – учитываются только достигнутые цели за выбранный период.</li>
+</ol>
+<p>Чтобы считать конверсию, нужны всего два показателя:</p>
+<ul>
+<li>общее число посетителей сайта или целевой страницы за заданный период;</li>
+<li>количество пользователей, которые совершили целевое действие за этот же период.</li>
+</ul>
+<p>Чтобы вычислить CR, нужно:</p>
+<ol>
+<li>Определить период времени, за который будет проводиться расчет.</li>
+<li>Узнать, сколько всего пользователей зашло на сайт в обозначенное время.</li>
+<li>Узнать, сколько конверсий было совершено за этот период.</li>
+<li>Разделить количество конверсий на общее число посетителей.</li>
+<li>Полученный результат умножить на 100%.</li>
+</ol>
+<p>Расчет CR актуален:</p>
+<ul>
+<li>отдельно для каждого уровня воронки продаж;</li>
+<li>для каждого рекламного канала и канала продаж;</li>
+<li>для конкретного региона, города, района, если бизнес имеет сеть представительств;</li>
+<li>для интернет-магазина, что помогает оценить эффективность его работы;</li>
+<li>для анализа работы конкретного менеджера.</li>
+</ul>
+<p>Рассчитывать CR можно за любой период: день, неделю, месяц, квартал, полгода, год.</p>
+<h3>Как отслеживают конверсию</h3>
+<p>Прежде чем начать отслеживать конверсию сайта, нужно ее создать. Для этого в профиле Google Ads (раздел «Отслеживание») необходимо перейти в раздел «Конверсия» и добавить первую позицию, нажав «+».</p>
+<p>Зная конверсию, можно:</p>
+<ul>
+<li>отследить звонки по указанному на сайте номеру;</li>
+<li>отследить страницу сайта, на которой была целевая активность;</li>
+<li>отследить скачивание и запуск приложения;</li>
+<li>импортировать отчет при интеграции с Google Analytics.</li>
+</ul>
+<h3>Формула расчета</h3>
+<p>Формула CR выглядит следующим образом:</p>
+<p><a data-fancybox="gallery" href="../../../img/cr/formula-cr.png"><img alt="формула CR" class="img-responsive sert-img" src="../../../img/cr/formula-cr.png" loading="lazy" /> </a></p>
+<p><em>CR = Число пользователей, совершивших целевое действие / Общее количество посетителей * 100%</em></p>
+<blockquote class="blockquote-v1"><p>Количества посетителей и конверсий должны быть взяты за одинаковый отрезок времени. Нельзя использовать в вычислениях цифры конверсий за месяц, а посещаемости за неделю.</p></blockquote>
+<h3>Расчет показателя CR: калькулятор</h3>
+<p>Быстро вычислить CR без ручных расчетов можно с помощью онлайн-калькулятора. В сервисе нужно указать те же исходные данные, что и в формуле, после чего система моментально посчитает и выдаст результат.</p>
+<form id="calc" method="post">
+<div class="row">
+<div class="col-md-4"><strong>Посетители</strong><br />
+<input id="m1" placeholder="Число" type="text" value="" /></div>
+<div class="col-md-4"><strong>Целевые действия</strong> <input id="m2" placeholder="Число" type="text" value="" /></div>
+<div class="col-md-4"><strong>CR</strong>
+<div id="m3" style="margin-top: 0px">%</div>
+</div>
+</div>
+</form>
+</section>
+
+<section id="p6">
+<p><a id="p6" name="p6"> </a></p>
+<h2>Примеры расчета CR</h2>
+<p>Рассмотрим несколько примеров расчета, которые помогут понять, как посчитать CR в разных случаях.</p>
+<h3>Пример 1 – конверсия продаж</h3>
+<p>Онлайн-школа дизайна продала через лендинг 86 обучающих курсов за месяц. За этот же период посадочную страницу посетило 2 200 пользователей.</p>
+<p>CR = 86 / 2 200 * 100% = 3,9%</p>
+<p>Конверсия из посещений в продажи составила 3,9%.</p>
+<h3>Пример 2 – конверсия в рекламе</h3>
+<p>Запущена контекстная реклама бесплатного вебинара в Яндекс Директ. За 14 дней объявление принесло 12 652 визита на сайт, из которых 2 846 пользователей зарегистрировались на вебинар.</p>
+<p>CR = 2 846 / 12 652 * 100% = 22,5%.</p>
+<h3>Пример 3 – средняя конверсия сайта</h3>
+<p>Интернет-магазин одежды посещает 600 человек в месяц, из которых покупки совершает 95 пользователей.</p>
+<p>CR = 95 / 600 * 100% = 15,8%.</p>
+</section>
+
+<section id="p7">
+<p><a id="p7" name="p7"> </a></p>
+<h2>Какая конверсия считается «хорошей», а какая – «плохой»</h2>
+<p>CR – такая метрика, которую нельзя однозначно назвать хорошей или плохой. Показатель определяется рядом сопутствующих параметров, например:</p>
+<ul>
+<li>сфера деятельности;</li>
+<li>нюансы, которые характеризуют <a href="../../business/biznes-processy-kak-sposob-uluchshit-rabotu-predpriyatiya/index.html">бизнес-процессы</a> конкретной компании;</li>
+<li>продукция;</li>
+<li>средний чек;</li>
+<li>конкуренция и т. д.</li>
+</ul>
+<p>Автосалон «Феррари» будет иметь CR гораздо ниже, чем магазин мелкой бытовой техники. Но покупка одного автомобиля приносит автосалону такую прибыль, для получения которой магазину быттехники придется работать целый год.</p>
+<p>Приводим усредненные CR для разных сфер бизнеса:</p>
+<ul>
+<li>10% – финансы, инвестирование, медиа, реклама;</li>
+<li>8% – медицина, образование;</li>
+<li>7% – сфера IT, разработка ПО;</li>
+<li>5% – производство, инновации;</li>
+<li>4% – туризм;</li>
+<li>3% – оптовые и розничные онлайн-продажи;</li>
+<li>2% – некоммерческие организации.</li>
+</ul>
+<p>Усредненные числа не должны выступать эталоном, но молодые компании, которые только открываются и не имеют собственных данных, могут ориентироваться на эти значения.</p>
+</section>
+
+<section id="p8">
+<p><a id="p8" name="p8"> </a></p>
+<h2>Как увеличить коэффициент конверсии</h2>
+<p>Конверсия зависит от множества факторов. На большинство из них можно повлиять, улучшив значение показателя. Рассмотрим, что же можно сделать, чтобы пользователи охотнее выполняли целевые действия, и конверсия повышалась.</p>
+<p><a data-fancybox="gallery" href="../../../img/cr/kak-uvelichit-koehfficient-konversii.png"><img alt="как увеличить коэффициент конверсии" class="img-responsive sert-img" src="../../../img/cr/kak-uvelichit-koehfficient-konversii.png" loading="lazy" /> </a></p>
+<ul>
+<li><b>Анализируем, почему не выполняются целевые действия.</b> На этом этапе полезно привлечь независимую фокус-группу и проследить за действиями пользователей на сайте.</li>
+<li><b>Меняем и тестируем контент и дизайн.</b> Если реклама, оффер или призыв к действию «не цепляют», дизайн не привлекает, не появляется желание прочесть текст, а изображения и видео неинформативны, это одна из главных причин низкой конверсии. Важно разработать и протестировать несколько вариантов контента и дизайна. Если предполагается несколько изменений, тестировать их необходимо поочередно.</li>
+<li><b>Улучшаем карточки товаров.</b> Посетители могут уходить без оформления заказа из-за отсутствия важной информации о товарах: технических характеристик, отзывов, подробных фотографий, данных о гарантиях, оплате, доставке.</li>
+<li><b>Добавляем полезный и уникальный контент.</b> Качественные фото и видео о продукции, релевантные инфографики, ссылки на соцсети, поиск по сайту, новости компании или полезные статьи из блога – все это помогает людям получать актуальную информацию и повышает конверсию.</li>
+<li><b>Проводим SEO- и маркетинговую оптимизацию.</b> Использование правильных ключевых слов в текстах и офферах, структура, которая незаметно проводит человека по воронке, положительно сказывается на показателе.</li>
+<li><b>Делаем сайт интуитивно понятным и удобным.</b> Порой посетители «теряются» на сайте, им приходится слишком долго искать страницу с нужным товаром или важную информацию. Стоит избегать запутанной структуры. По статистике, если за 3-4 клика посетителю не удается найти нужный товар или информацию, с вероятностью 90% он не сделает заказ.</li>
+<li><b>Используем призывы к действию.</b> Понятные призывы без дополнительных условий помогают человеку решиться на конвертирующее действие. Усиливают эффект бонусы, которые человек может получить, став лидом.</li>
+<li><b>Упрощаем форму заказа.</b> Большое количество полей отпугивает пользователей. Люди не готовы разглашать много информации о себе. Сокращение формы до 1-2 полей может значительно повысить конверсию.</li>
+<li><b>Ограничиваем время.</b> Небольшой таймер, отсчитывающий время до окончания акции, способен стимулировать пользователей подписаться или купить товар.</li>
+<li><b>Запускаем релевантную рекламу.</b> Сегментация целевой аудитории и персонализированная реклама для каждой группы ЦА значительно повышает CR.</li>
+</ul>
+<p>Работа над повышением показателя – это, по сути, CRO (Conversion Rate Optimization) или оптимизация коэффициента конверсии.</p>
+ <p><img alt="Conversion Rate Optimization" class="img-responsive sert-img" src="../../../img/cr/cro.jpg" loading="lazy" /></p>
+<p>Если мероприятия по улучшению привели к росту показателя, можно говорить об успешной оптимизации.</p>
+</section>
+
+<section id="p9">
+<p><a id="p9" name="p9"> </a></p>
+<h2>Инструменты аналитики для отслеживания Conversion Rate</h2>
+<p>Когда бизнес простой и небольшой, собирать данные и рассчитывать CR можно вручную. Но при расширении бизнеса и объемов данных, увеличении количества целевых действий рационально использовать для отслеживания конверсий специальные инструменты.</p>
+ <p><a data-fancybox="gallery" href="../../../img/metrika/conversion.jpg"><img alt="конверсии в Яндекс метрике" class="img-responsive sert-img" src="../../../img/metrika/conversion.jpg" loading="lazy" /> </a></p>
+<p>Самые распространенные:</p>
+<ul>
+<li><a href="../kak-polzovatsya-yandeks-metrikoj-podrobnaya-instrukciya-dlya-novichkov/index.html">Яндекс.Метрика</a>;</li>
+<li>Google Analytics.</li>
+</ul>
+<p>Они максимально точно собирают данные и позволяют узнать;</p>
+<ul>
+<li>откуда люди приходят на сайт;</li>
+<li>что делают на странице, куда кликают, какой процент страницы просматривают, какой контент прокручивают;</li>
+<li>сколько времени проводят на сайте.</li>
+</ul>
+<p>Сервисы аналитики позволяют задавать конверсионные цели на разных этапах воронки и следить за их достижением. Система фиксирует выполнение условий и автоматически считает конверсию. Результаты доступны в соответствующих отчетах.</p>
+<p>Отслеживать CR за пределами сайта помогают другие сервисы и ПО:</p>
+<ul>
+<li>в контекстной рекламе – управляющие аккаунты Яндекс.Директ и Google Ads;</li>
+<li>в Facebook и Instagram – Facebook Ads Manager.</li>
+</ul>
+<p>Удобно собирать данные для аналитики можно с помощью сервисов NEIROS, Funnel.io, Tableau, Mixpanel.</p>
+<p>Если бизнес предполагает и онлайн-, и оффлайн-коммуникации с клиентами, для их отслеживания могут понадобиться специальные корпоративные программы: <a href="../../automation/chto-takoe-crm-sistema-i-nuzhna-li-ona-vam/index.html">CRM</a>, сервисы <a href="../chto-takoe-kolltreking-i-kak-on-rabotaet/index.html">коллтрекинга</a> и т. д.</p>
+</section>
+
+<section id="p10">
+<p><a id="p10" name="p10"> </a></p>
+<h2>Как расшифровать результаты расчета CR</h2>
+<p>Мы уже знаем, что «хорошей» и «плохой» конверсии не существует. В каждом случае нужно оценивать качественный результат. Оптимально – сравнивать его с показателями за предыдущие периоды и делать выводы с учетом динамики.</p>
+<p>Чтобы понять, почему нельзя ориентироваться на «голые» цифры и показатели аналогичных компаний, рассмотрим два примера.</p>
+<p>Пример 1. Начинающий мастер маникюра создал лендинг для продажи услуги через интернет со скидкой. Конверсия за неделю составила 50%. Но радоваться рано, ведь на страницу зашло всего 2 пользователя, а человек, который оставил заявку, – подруга мастера.</p>
+<p>Пример 2. Застройщик продает загородные коттеджи через сайт. В последнем месяце конверсия в покупку составила 2% от числа всех посетителей (8 000 человек). На первый взгляд, 2% – немного, но по факту это 160 человек, которые реально купили по коттеджу. В пересчете на деньги – отличный результат.</p>
+<p>Как видно, на итог влияет масса сопутствующих факторов, которые нельзя игнорировать в погоне за средними цифрами.</p>
+</section>
+
+<section id="p11">
+<p><a id="p11" name="p11"> </a></p>
+<h2>Часто задаваемые вопросы</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="headingOne"><a aria-controls="collapseOne" aria-expanded="false" class="btn-link collapsed" data-target="#collapseOne" data-toggle="collapse" href="index.html#">Почему показатель конверсии важен?</a></div>
+
+<div aria-labelledby="headingOne" class="collapse" data-parent="#faqAccordion" id="collapseOne" style="">
+<div class="card-body">
+<p>Конверсия определяет продажи и прибыль компании, помогает оценивать производительность приложений и сайтов, дает понимание степени достижения бизнес-целей. Повышение CR – один из способов сокращения расходов при неизменных доходах.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingTwo"><a aria-controls="collapseTwo" aria-expanded="false" class="btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse" href="index.html#">В каких единицах измеряется конверсия?</a></div>
+
+<div aria-labelledby="headingTwo" class="collapse" data-parent="#faqAccordion" id="collapseTwo">
+<div class="card-body">
+<p>Conversion rate рассчитывается в процентах.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingfour"><a aria-controls="collapsefour" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefour" data-toggle="collapse" href="index.html#">Что такое CR в CPA?</a></div>
+
+<div aria-labelledby="headingfour" class="collapse" data-parent="#faqAccordion" id="collapsefour">
+<div class="card-body">
+<p>Крупные CPA-сети обязательно рассчитывают конверсию для каждого оффера. При выборе партнерской программы это ключевой показатель, на который нужно ориентироваться. Чем выше CR, тем больше можно заработать.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingfive"><a aria-controls="collapsefive" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefive" data-toggle="collapse" href="index.html#">Какой CR лендинга считать хорошим?</a></div>
+
+<div aria-labelledby="headingfive" class="collapse" data-parent="#faqAccordion" id="collapsefive">
+<div class="card-body">
+<p>Согласно опросу Databox, самая большая группа – это лендинги с конверсией 1-10%. За ней следует группа с CR в пределах 21-30%, следующая – 11-20%.</p>
+<p>Маркетологи считают «хорошим» показатель конверсии, лежащий в диапазоне 21-50% и 3-5%. Очевидно, что разброс обусловлен сферой деятельности компании.</p>
+<p>Так, при определении оптимального значения, стоит брать за основу цифры конверсии в своей сфере, а также учитывать усредненные показатели.</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+</section>
+
+<section id="p12">
+<p><a id="p12" name="p12"> </a></p>
+<h2>Заключение</h2>
+<p>Расчет конверсии в маркетинге – это возможность выявить эффективные инструменты и слабые места, провести оптимизацию, узнать, как повысить показатель, а вместе с ним и прибыль компании. Но «хорошие» цифры могут быть обманчивы. Важно устанавливать собственные «планки» CR с учетом отрасли, специфики деятельности, продукта, среднего чека и других входных данных.</p>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="icon icon-tags"></span>
+
+
+                                        
+                                            <a href="../../tag/glossary/index.html">Словарь</a>
+                                        
+                                    </div>                                    <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Что значит CR</a></li>
+	<li><a href="index.html#p2">Чем отличается CR от CTR</a></li>
+	<li><a href="index.html#p3">Для чего нужно подсчитывать конверсию</a></li>
+	<li><a href="index.html#p4">Где применяют коэффициент конверсии</a></li>
+	<li><a href="index.html#p5">Как считать Conversion Rate</a></li>
+	<li><a href="index.html#p6">Примеры расчета CR</a></li>
+	<li><a href="index.html#p7">Какая конверсия считается «хорошей», а какая – «плохой»</a></li>
+	<li><a href="index.html#p8">Как увеличить коэффициент конверсии</a></li>
+	<li><a href="index.html#p9">Инструменты аналитики для отслеживания Conversion Rate</a></li>
+	<li><a href="index.html#p10">Как расшифровать результаты расчета CR</a></li>
+	<li><a href="index.html#p11">Часто задаваемый вопросы</a></li>
+	<li><a href="index.html#p12">Заключение</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

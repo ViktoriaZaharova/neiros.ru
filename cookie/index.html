@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cookie-box">
+  <a href="#" class="cookie-box__active"><img src="img/cookie_2.svg" alt=""></a>
+  
+  <a href="#" class="cookie-box__close"><img src="img/cross.svg" alt=""></a>
+  <div class="cookie-box__body">
+    <p>Мы используем cookie, чтобы
+      пользоваться сайтом было удобно.
+      Находясь на нашем сайте, вы
+      даете согласие на использование
+      cookie. <a href="#" class="d-inline color-blue" target="_blank">Узнать больше </a></p>
+  </div>
+</div>
+
+
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+  $(document).ready(function () {
+      $('.cookie-box__active').click(function (e) {
+          e.preventDefault();
+          $('.cookie-box').addClass('active');
+      });
+
+     $('.cookie-box__close, .btn-confirm').click(function (e) {
+         e.preventDefault();
+         $('.cookie-box').removeClass('active');
+     });
+  });
+</script>
+
+</body>
+</html>

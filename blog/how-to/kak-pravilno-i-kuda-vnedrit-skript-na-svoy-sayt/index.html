@@ -1,0 +1,1144 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Как установить скрипт на сайт - подключить JS в HTML</title>
+    <meta name="description" content="Как вставлять код html на страницы сайтов и добавить html-код в WordPress, на самописный сайт или на конструктор. Вставка кодов на различные платформы.">
+    <meta name="keywords" content="скрипт на сайт">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/how-to/kak-pravilno-i-kuda-vnedrit-skript-na-svoy-sayt#cao",
+     "url": "https://neiros.ru/blog/how-to/kak-pravilno-i-kuda-vnedrit-skript-na-svoy-sayt#cao",
+     "headline":"Как установить скрипт на сайт - подключить JS в HTML",
+
+     "datePublished": "2022-06-22 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "How to"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Как правильно и куда внедрить скрипт на свой сайт</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">How to</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/10391221fad23a39b1479df56fc30e08.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 22.06.2022</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Под кодом страницы обычно подразумевается совокупность элементов на языке разметки HTML, которые служат для ее форматирования и отображения в удобном виде. Чаще всего употребляется вариант названия – HTML-код. Просмотреть код любой веб-страницы можно прямо в браузере.</p>
+<p><img alt="код для сайта" class="img-responsive sert-img" src="../../../images/10391221fad23a39b1479df56fc30e08.png" loading="lazy" draggable="false"></p>
+<p>Для создания страниц необходимо использовать языки веб-программирования. Среди них наиболее широко распространены PHP, Python и Ruby on Rails для Unix-систем, а для Windows характерна разработка динамического контента с использованием средств .NET. Это все касается серверной части, а для программирования на клиентской стороне чаще всего используется JavaScript. Подробнее об этом поговорим в статье ниже.</p>
+<section id="p0">  <p><a id="p0"> </a></p><h2>Где искать код для установки</h2>
+<p>Установить код в счетчик сайта несложно. Ниже в статье разберем подробно, что и куда внедрять. Сейчас разберемся где искать код для установки метрик.</p>
+<p><strong>В <a href="../../analytics/kak-polzovatsya-yandeks-metrikoj-podrobnaya-instrukciya-dlya-novichkov/index.html">Яндекс Метрике</a>.</strong> Код находится в настройках: нажмите на кнопку-шестеренку. Выберите вкладку «Счётчик» и перемотайте в конец страницы.</p>
+<p><a data-fancybox="gallery" href="../../../img/code/kod-yandeks-metriki.jpg"><img alt="Код яндекс метрики" class="img-responsive sert-img" src="../../../img/code/kod-yandeks-metriki.jpg" loading="lazy"> </a></p>
+<p><strong>В Neiros.</strong> Счетчик для аналитики Neiros поможет отслеживать статистику вашего сайта. Найти и внедрить код можно 2 способами:</p><br>
+<p><a data-fancybox="gallery" href="../../../img/code/kod-v-neiros.jpg"><img alt="код в Neiros" class="img-responsive sert-img" src="../../../img/code/kod-v-neiros.jpg" loading="lazy"> </a></p>
+<ol>
+<li>При создании нового проекта на втором шаге. Вы можете просто скопировать инструкцию в соответствующем разделе и отдать ее разработчику.</li>
+<li>Найти код можно в разделе проекты <em>https://neiros.cloud/setting/sites</em>, кликнув на настройки в открывшемся меню.</li>
+</ol>
+<p>Для получения достоверных данных, код необходимо устанавливать на каждую страницу.</p>
+</section> <section id="p1"> <p><a id="p1"> </a></p><h2>Куда вставляется код на сайте</h2>
+<p>Для начала нужно определиться со структурой сайта. Например, нужно подключить javascript, обычно скрипты либо выносят в отдельный файл или размещают в верхней части сайта. За отображение сайта, отвечает несколько файлов. Вот самые популярные в WordPress: index.php; single.php; page.php; header.php; footer.php; sidebar.php; style.css.</p>
+<p><img alt="файл отвечающие за отображение сайта" class="img-responsive sert-img" src="../../../img/code/fayl-otvechayushchie-za-otobrazhenie-sayta.jpg" loading="lazy"></p>
+<p>Разберем по структуре:</p>
+<ol>
+<li>За вывод верхней части отвечает файл header.php (шапка сайта). Начало этого файла имеет следующий вид:
+<pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html &lt;?php language_attributes(); ?&gt;&gt;
+&lt;head&gt;
+Сюда вы можете вставить скрипт
+&lt;?php wp_head(); ?&gt;
+&lt;/head&gt;</code></pre>
+<p>Между тегами < head > размещают скрипты, которые работают на всех страницах сайта.</p>
+<p>К примеру, для каждой темы содержимое этих тегов может быть разным.</p></li>
+<li>За отображение главной страницы сайта отвечает файл index.php чаще всего с помощью языка php в этом файле объединяется код из других файлов например (header.php, footer.php) тем самым отображаемая страница в браузере собирается из нескольких файлов. Главная страница работает также, как и остальные.</li>
+<li>За вывод сайдбара (боковой блок, меню сайта) отвечает файл sidebar.php сюда же Вы можете, к примеру, добавить блок с <a href="../../ads/chto-takoe-reklama-polnyy-obzor-ponyatiya-i-vidy/index.html">рекламой</a> услуги или компании.</li>
+<li>В случае если вы хотите изменить отражение записей блога используйте файл single.php.</li>
+<li>Для изменения страниц сайта используйте следующий файл — page.php.</li>
+<li>Подвал сайта — footer.php, в нем также можно размещать скрипты, его часто используется для вставки счетчиков посещаемости. Туда можно добавить и другие элементы.</li>
+<li>Если вы хотите видоизменить отображение сайта, то вам понадобиться файл стилей style.css.</li>
+</ol>
+<p>Чтобы понять куда вставлять код, можно использовать стандартный инструмент Google Chrome для этого нажмите правой кнопкой мыши на свободную часть страницы (любое место) и выберете вкладку просмотреть код. С его помощью мы сможете определить название блока над, под или в который надо вставить ваш код. Для выделения нужного блока нажмите на выделенную красным кнопку и наведите на нужную область сайта.</p>
+<h3>Как вставить код с помощью header.php</h3>
+<p>Сайты с панелью управления WordPress полны ограничений: ни HTML-код вручную не добавить, ни сниппеты JavaScript. Частично обойти ограничения помогают сторонние плагины или расширения, но чаще вебмастерам приходится добавлять код напрямую в файлы, хранящаяся на страницах хостинга. Речь о header.php, взаимодействовать с которым предстоит по следующему алгоритму:</p>
+<ol>
+<li>Файл нужно сохранить на жесткий диск ПК (выгрузить с хостинга) и открыть текстовым редактором, вроде Sublime Text.</li>
+<li>Вставка кода в header.php</li>
+<li>Система сразу отобразит весь код, включая заголовки и служебную информацию (The Head) и содержимое веб-страницы (The Body).</li>
+<li>Редактировать доступный код и обращаться к справочникам за дополнительной информацией не придется. Достаточно лишь найти парный тег < link > < /link >, который располагается или в < head > < /head > (в нижней части кода) или в < body > < /body > (в самом низу). Добавленную информацию необходимо сохранить (поможет комбинация клавиш Ctrl + S), а после – уже отредактированный файл – выгрузить обратно на страницы хостинга с заменой. На всякий случай, желательно сохранить резервную копию header.php.</li>
+</ol>
+<p><a data-fancybox="gallery" href="../../../img/code/podklyuchenie-koda-v-head.jpg"><img alt="Подключение кода в head" class="img-responsive sert-img" src="../../../img/code/podklyuchenie-koda-v-head.jpg" loading="lazy"> </a></p>
+<p>Если вместо стандартной панели администратора сайт состоит из разрозненных HTML-страниц с кодом, действовать придется иначе: вместо разового добавления сниппета JavaScript между парным тегом < link > < /link > в Header.php, предстоит скопировать и вставить код на каждую страницу. Index.html, contact.html, services.html – вне зависимости от типа страницы, раздела или отображаемой информации процедуру предстоит повторять для всех файлов сразу, иначе будет нарушена структура сайта.</p>
+</section> <section id="p2"> <p><a id="p2"> </a></p><h2>Подключение JavaScript в HTML</h2>
+<p>Есть два основных типа подключение JS в HTML. Рассмотрим каждый подробнее.</p>
+<h3>Вставка JavaScript непосредственно в HTML-файл</h3>
+<p>Первый способ добавить JavaScript в HTML – прямой. Вы можете сделать это путем использования тэгов < script > < /script >, которые должны обрамлять весь код JS, который вы пишете. JS код может быть вставлен:</p>
+<p><img alt="Секции body и head" class="img-responsive sert-img" src="/img/code/sektsii-body-i-head.png" loading="lazy"></p>
+<ul>
+<li>между тэгами < head ></li>
+<li>между тегами < body ></li>
+</ul>
+<p>В зависимости от того, где вы добавляете код JavaScript в вашем файле HTML, его загрузка будет отличаться. Рекомендуемой практикой является добавление его в разделе < head >, так он будет оставаться отдельно от самого кода файла HTML. Но размещение его в < body > может улучшить скорость загрузки, так как актуальный контент сайта или блога будет загружен быстрее и только потом будет разобран код JavaScript.</p>
+<p>Любые скрипты вставляются в HTML с помощью тега < script >. Между открывающим и закрывающим тегом вставляем или сам код скрипта, или ссылку на внешний файл.</p>
+<h3>Вставка из отдельного файла</h3>
+<p>Загрузка из внешнего файла всегда лучше, если наша программа JavaScript нужна нескольким веб-страницам. Для подключения внешнего файла опять используем открывающий и закрывающий теги < script >...< /script >, но между ними указываем не код программы, а путь к файлу с расширением .js, где записан этот код программы.</p>
+<p><img alt="Вставка js из отдельного файла" class="img-responsive sert-img" src="/img/code/vstavka-js-iz-otdelnogo-fayla.png" loading="lazy"></p>
+<p>Некоторые преимущества подключения JS кода из внешнего файла:</p>
+<ul>
+<li>Когда код HTML и JavaScript отделены, сохраняется принцип структурного разделения, и это делает отдельные блоки более удобными для повторного использования и более рациональным.</li>
+<li>Читаемость кода и его редактирование становится проще и удобнее.</li>
+<li>Такой код проще поддерживать.</li>
+<li>Кэширование файлов JavaScript повышает общую производительность путем снижения времени загрузки страницы.</li>
+</ul>
+<p>В нашем примере программу alert("Привет, Neiros") мы сохраняем в отдельный файл neiros.js, а относительный или абсолютный путь к нему прописываем между тегами.</p>
+<pre>
+<code>&lt;script&gt;...&lt;/script&gt; с атрибутом src=&quot;&quot;.
+&lt;script src=&quot;/js/neiros.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>или</p>
+<pre>
+<code>&lt;script src=&quot;https://neiros.ru/js/neiros.js&quot;&gt;&lt;/script&gt;</code></pre>
+</section> <section id="p3"> <p><a id="p3"> </a></p><h2>Как вставить JS и HTML в PHP-код</h2>
+<p>При разработке собственного модуля веб-мастер использует дополнительные скрипты и верстку (CSS, HTML). Каждый элемент и html-код подключается отдельно, в тело страницы или любой выбранный файл. Но есть особая категория дополнений, которые требуется вставить непосредственно в файл PHP. Для начала уточним, что PHP включает в себя короткий echo-тег <?=, который является сокращением для более многословного < ?php echo.</p>
+<p>Рассмотрим для примера два варианта, как правильно внедрять html-код, JavaScript или CSS в код PHP:</p>
+<ol>
+<li>Тег echo. Работая со страницей, которая написана на PHP, веб-мастер оперирует тегом echo (который нужен, чтобы выводить сообщение на экран). Используя данный тег, выводим и один из упомянутых ранее кодов ( html-код, JavaScript или CSS). Учтите при применении внешних кавычек вида " ", внутренние кавычки, обрамляющие элементы, должны выглядеть, как ' ', или в обратном порядке, в противном случае возникает ошибка.</li>
+<li>Тег echo с применением дополнительного html-кода. Это более распространенный и популярный вариант. В подобную конструкцию можно вставить html-код, JavaScript или CSS. Кавычкам уже не придается ключевого значения, они могут быть любыми. При желании возможно внедрять переменные вывода.</li>
+</ol>
+<p>Пример:</p>
+<p>HTML-код можно перемешивать с командами PHP:</p>
+<pre>
+<code>&lt;h1&gt;&lt;?php echo 'Заголовок' ?&gt;&lt;/h1&gt;</code></pre>
+<p>Также HTML код можно подставить в PHP-шную строку:</p>
+<pre>
+<code>&lt;?php echo 'Слон&lt;br&gt;Наполеон'; ?&gt;</code></pre>
+<p>Результат в браузере:</p>
+<p>Слон</p>
+<p>Наполеон</p>
+<p>Мы можем как угодно совмещать PHP код и HTML теги:</p>
+<pre>
+<code>&lt;div&gt;&lt;?php echo 'Строка1' ?&gt;&lt;/div&gt;
+&lt;span&gt;&lt;?php echo '&lt;strong&gt;Строка2&lt;/strong&gt;' ?&gt;&lt;/span&gt;</code></pre>
+<p>Если немного расширить программный текст и добавить функцию подключения php страниц include(), то можно сформировать несколько HTML страниц, тем самым получив простейший сайт или полезный блог. При этом вам не придется вносить изменения на каждую страницу и во все статьи, например, данные для шапки сайта. Достаточно будет внести изменения в файл header.php.Ниже постараемся ответить на все вопросы.</p>
+</section> <section id="p4"> <p><a id="p4"> </a></p><h2>Подключение к сайту PHP-скриптов</h2>
+<p>Подключение PHP-скриптов осуществляется всего тремя способами:</p>
+<ol>
+<li>Вставка кода в саму страницу сайта (обратите внимание, что если вы имеете страницу с расширением *.html – вам необходимо сменить расширение на *.php).</li>
+<li>С помощью файла (в таком случае подключение можно осуществлять и на странице с *.html расширением). Но для работы этого способа в файл .htaccess, который находится в корне вашего сайта, в самый верх, необходимо добавить эти строки:
+<p><em>RemoveHandler .html .htm<br>
+AddType application/x-httpd-php .php .htm .html .phtml</em></p>
+<p>Если такого файла нет на хостинге — создайте его через любой текстовый редактор.</p></li>
+<li>С помощью JS-скрипта. В этом случае вы также можете получить результат выполненного PHP-скрипта на сервере. Реализация будет следующая:</li>
+</ol>
+<pre>
+<code>&lt;div class=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+$(document).ready(function() {
+$(&quot;.result&quot;).load(&quot;/main.php&quot;);
+});
+&lt;/script&gt;</code></pre>
+<p>Где « .result » – это класс, куда будут загружаться данные, а « /main.php », соответственно, адрес до PHP-скрипта.</p>
+<p>Если вы грузите данные с другого сервера, то поддержка PHP на вашем сервере не обязательна. Не забывайте подключить к вашему сайту библиотеку jQuery.</p>
+<p>Здесь правила абсолютно те же: полный адрес к файлу, если он находится на внешнем сервере, относительный – если на вашем.</p>
+<p>Если вы хотите подключить PHP-скрипт к вашему сайту, то на сервере должна быть поддержка PHP. О том, есть ли у вас такая возможность – узнайте у своего хостинг-провайдера.</p>
+<p>Чтобы использовать самописные php скрипты для обработки тех или иных событий в moguta.cms, можно создать php файл в папке mg-pages. Поместите в папку mg-pages скрипт myscript.php, после этого он будет доступен при обращении к сайту http://site.ru/myscript как будто он находится в корне сайта.</p>
+</section> <section id="p5"> <p><a id="p5"> </a></p><h2>Вставка кода на различные платформы</h2>
+<p>Если ваш сайт работает на CMS-системе, то код счётчика нужно вставить в файл, отвечающий за генерацию заголовка (header) всех страниц сайта.</p>
+<h3>WordPress</h3>
+<p>Сайт на базе WordPress и сайт WordPress.com – две разные вещи. Первый управляется с помощью CMS, установленной на собственном сервере. Это значит, что вы заплатили за доменное имя (myname.com) и за хостинг. Сайт WordPress.com бесплатный. Вы можете зарегистрировать на нем сайт без оплаты хостинга. При этом URL сайта будет: myname.wordpress.com.</p>
+<p>Управляя сайтом на WordPress.com, вы ограничены в выборе кодов и фрагментов JavaScript, которые можете установить. Причина в протоколе безопасности – разработчики не позволяют пользователям вставлять коды на платформу.</p>
+<p>В WordPress вставить html-код на страницу можно вручную или добавить готовый плагин. Примеры плагинов для Вордпресс:</p>
+<ol>
+<li>LuckyWP Scripts Control;</li>
+<li>Tracking Code Manager;</li>
+<li>Head Footer and Post Injections;</li>
+<li>SyntaxHighlighter Evolved;</li>
+<li>Code Prettify;</li>
+<li>Wp-Syntex.</li>
+</ol>
+<p><a data-fancybox="gallery" href="/img/code/plaginy-wordpress.jpg"><img alt="Плагины WordPress" class="img-responsive sert-img" src="/img/code/plaginy-wordpress.jpg" loading="lazy"> </a></p>
+<p>Множество плагинов по факту добавляются с помощью настроек панели управления. Некоторые помещают в шапке, то есть размещая html-код внутри контейнера < head >…< /head >, другие нужно вставить в так называемый подвал, область контента, перед тегом < /body > (или закрывающим). Имейте в виду, что вставить html-код возможно и перед < body > (закрывающим тегом), иные ситуации требуют именно такого шага. Для внедрения произвольного кода HTML на боковую панель или размещении текста на главной странице никаких посторонних инструментов, типа плагинов, не понадобится. Добавление происходит при переходе в меню «Внешний вид» на вкладку «Настройка» (как вариант – на вкладку «Виджеты»). Определяем область, куда вставить html-код на сайт, при нажатии кнопки «Добавить виджет» в открывающемся списке находим нужный код html. Остается лишь вставить код и сохранить изменения.</p>
+<p>Вставить html-код в страницу можно через панель управления — находим нужную статью и открываем ее. Затем переходим в режим редактирования и просто помещаем html-код в нужный сектор.</p>
+<h3>Bitrix</h3>
+<p>Установка на сайт Bitrix кода осуществляется так – открывается общий шаблон и вставляется нужный html-код. Действия пользователя – административная панель разворачивается на странице, открывается вкладка «Шаблон сайта», переход в раздел «В панели управления», где нажимаем на опцию «Редактировать шаблон».</p>
+<p><a data-fancybox="gallery" href="/img/code/redaktirovat-shablon-bitriks.jpg"><img alt="Редактировать шаблон битрикс" class="img-responsive sert-img" src="/img/code/redaktirovat-shablon-bitriks.jpg" loading="lazy"> </a></p>
+<p>Далее необходимо вставить html-код счетчика можно непосредственно в редакторе. Одно из важных условий – ко всем страницам применяется одинаковый шаблон.</p>
+<h3>Joomla</h3>
+<p>Есть 3 варианта:</p>
+<ol>
+<li>При помощи плагина. Применим для внедрения нужного кода плагин, работающий непосредственно с сайтами на движке Joomla, – Sourcerer, с его помощью можно добавить любой распространенный код, будь то html-код или css, php, javascript. Последовательность действий: В административном разделе находим «Расширения» → «Менеджер расширений» → «Загрузить файл пакета» → «Выберите файл». В сохраненных файлах находим архив с программой и открываем его. Загружаем и устанавливаем плагин.</li>
+<li>С помощью модуля. В разделе «Расширения админки» воспользуемся «Менеджером модулей». С помощью соответствующей кнопки создаем новый модуль. Из предложенных опций на вкладке «Выбор типа модуля» находим HTML-код и кликаем на ссылку. Заполняем окно «Заголовок», прописываем открывающий и закрывающий теги {source} и {/source}, вставьте html-код между тегами. Далее в стандартных полях модуля указываем свои настройки: показ заголовка/или нет, выбираем местоположение модуля и завершаем работу нажатием кнопок «Опубликовано» и «Сохранить».</li>
+<li>Вставить код в статью в редакторе Joomla. Порядок работы идентичен вставке кода в модуле. Установив приложение Sourcerer, прописываем теги {source}{/source} в редакторе материалов и помещаем между ними нужный код.</li>
+</ol>
+<p><a data-fancybox="gallery" href="/img/code/kod-dlya-joomla.png"><img alt="Код для Joomla" class="img-responsive sert-img" src="/img/code/kod-dlya-joomla.png" loading="lazy"> </a></p>
+<h3>Modx</h3>
+<p>Есть 2 основных способа: установка кода через Чанк и установка кода в шаблон.</p>
+<p>Инструкция, чтобы избежать ошибки при вставке кода в шаблон:</p>
+<ol>
+<li>Авторизация в административной части вашего сайта. Сделать это вы можете при помощи кнопки “Авторизация” — или же обратившись в адресной строке по адресу www.***адрес вашего сайта***/manager</li>
+<li>После ввода своего логина и пароля вы получите доступ к административной панели вашего сайта. В правом меню нужно выбрать пункт «Элементы», выбрать подпункт «Шаблоны» — и кликнуть на активный шаблон вашего сайта.</li>
+<li>Откроется окно управления шаблоном вашего сайта. Необходимо найти поле «Код шаблона (html)». Именно сюда вам нужно вставить ваш код: в самом конце кода шаблона вы увидите строчку “</body>”. Именно перед ней стоит вставить код.</li>
+<li>Установка кода практически завершена. Единственное, что вам осталось сделать — нажать кнопку “сохранить” в административном меню сайта.</li>
+</ol>
+<p>Обновите главную страницу вашего сайта — его название появится в Личном кабинете на странице Мои сайты.</p>
+<p><a data-fancybox="gallery" href="/img/code/kod-dlya-modx.jpg"><img alt="Код для modx" class="img-responsive sert-img" src="/img/code/kod-dlya-modx.jpg" loading="lazy"> </a></p>
+<p>Инструкция для установки кода через чанк. Чанк в MODx — это небольшой кусок HTML-кода или другой информации, который можно многократно использовать в шаблоне, другом чанке или сниппете. Чанки в админке MODX расположены на левой панели во вкладке "Элементы". Добавление кода может быть напрямую через чанк, что включает в себя все сквозные элементы верстки, обычно это хедер и футер.</p>
+<h3>Opencart</h3>
+<p>Чтобы внедрить сторонний виджет на сайт, нужно зайти в модуль, далее переключаетесь в режим "Исходный код" и вставляете нужный код, как и в других сайтах. Вставляем скопированный код в header.tpl или в footer.tpl файл. Найти эти файлы можно тут catalog\view\theme\default(ваша тема)\template\common\footer.tpl. По завершению выходите из режима "Исходный код", сохраняете.</p>
+<p><a data-fancybox="gallery" href="/img/code/kod-dlya-opencart.jpg"><img alt="Код для Opencart" class="img-responsive sert-img" src="/img/code/kod-dlya-opencart.jpg" loading="lazy"> </a></p>
+<h3>Wix</h3>
+<p>Программа Wix предлагает решение в виде Wix App Market. Там можно найти разнообразные виджеты для маркетинга, социальных медиа и аналитики данных. Для добавления на сайт постороннего кода или скрипта плагина требуется приложение HTML. Внешний код или его компоненты обозначаются как iframe. Краткая инструкция, как в Wix вставить html-код:</p>
+<p>В левой части редактора нажимаем кнопку «Добавить» → «Еще» → Перетаскиваем приложение «HTML-код» на страницу или кликаем на него → «Вставить код» → Добавляем нужный код HTTPS → Завершаем работу кнопкой «Применить».</p>
+<p>Некоторые моменты Wix:</p>
+<ul>
+<li>Встраиваемый код должен быть с расширением HTTPS (HTTP не отображается).</li>
+<li>Код html определяется парными тегами, например открывающим <p> и закрывающим </p>.</li>
+<li>В коде прописаны базовые элементы страницы, для некоторых функций пишутся коды отдельно. Если что-то не отображается — нужно добавить в код.</li>
+<li>Перед встраиванием кода убедитесь в его обновлении и совместимости с HTML5.</li>
+<li>Викс оборудован защитой от встраивания на чужие платформы, поэтому может не отобразиться в редакторе или на вашем ресурсе после публикации ссылки или вставки кода в HTML-приложении.</li>
+</ul>
+<h3>Tilda</h3>
+<p>Используйте блок T123 «HTML-код». Через него добавляется абсолютно любой код, включая теги script и style.</p>
+<p>HTML код можно добавлять на страницу (внутрь тега < body >), либо в head сайта или страницы.</p>
+<p>Чтобы добавить блок на страницу, откройте Библиотеку блоков → Другое и добавьте блок T123.В режиме редактирования (и предпросмотра) код выводится просто текстом. Чтобы код заработал, страницу нужно опубликовать.</p>
+<p>В блоке поддерживается HTML, JavaScript (нужно использовать тэг < script >) и CSS (нужно использовать тег < style >). Чтобы добавить код в head на все страницы, нужно зайти: «Настройки сайта» → «Еще» → «HTML-код для вставки внутрь head». Чтобы добавить код в Head на отдельной странице, нужно зайти: «Настройки страницы» → «Дополнительно» → «HTML-код для вставки внутрь head».</p>
+<p><a data-fancybox="gallery" href="/img/code/kod-v-tilda.jpg"><img alt="Код в Tilda" class="img-responsive sert-img" src="/img/code/kod-v-tilda.jpg" loading="lazy"> </a></p>
+<h3>VK</h3>
+<p>Видеть результаты форматирования может только владелец аккаунта и применять только тот инструментарий, который имеется в настройках онлайн-сервиса.</p>
+<p>Как изменить: Для начала открываете страницу, куда собираетесь вставить код, и активируете опцию просмотра ее кода комбинацией Ctrl + U. Заходим в контекстное меню, выбираем опцию Edit with Notepad ++ и приступаем к редактированию. Сохранить созданный файл на компьютер можно, применив комбинацию клавиш Ctrl + S или «Сохранить на компьютер». Новая веб-страница будет загружена на жесткий диск, включая все составляющие ее элементы – картинки, скрипты и прочее.</p>
+<h3>Shopify</h3>
+<p>В панели управления найдите раздел с интернет-магазинами Online Store и выберите темы Themes. Чтобы получить доступ к нужной вкладке, кликните по «Actions» и выберите «Edit HTML/CSS» (нам потребуются фрагменты). Клик по опции откроет диалоговое окно с возможностью добавить новый фрагмент, после назовите сниппет и нажмите на кнопку Create snippet. Введите код для сниппета в зону для «tracking snippet.liquid» и кликните «сохранить».</p>
+</section> <section id="p6"> <p><a id="p6"> </a></p><h2>Установка кода на самописный сайт</h2>
+<p>Самописный сайт создан с нуля, для управления контентом не использует CMS. Поставить на него код будет чуть сложнее, чем на WordPress и другие CMS или конструкторы, потому что придется вспомнить про FTP.</p>
+<p>FTP – File Transfer Protocol. В переводе – протокол передачи данных. Его используют для передачи файлов с компьютера на открытый сервер хостинга. Можно скачать бесплатный FTP-клиент FileZilla. FTP-менеджеры типа FileZilla позволяют перетаскивать файлы и картинки с сайта на сервер. С помощью программы вы можете добавлять файлы на сервер или скачивать их, заменять старые файлы на новые, удалять ненужные данные, менять названия доков.</p>
+<p><a data-fancybox="gallery" href="/img/code/filezilla.jpg"><img alt="FileZilla" class="img-responsive sert-img" src="/img/code/filezilla.jpg" loading="lazy"> </a></p>
+<p>В протоколе передачи данных нет ничего сложного, для большинства людей самая сложная часть – просто связаться с сервером. Если у вас возникли любые проблемы с сервером, свяжитесь с хостингом. Это может занять час, зато по истечении 60 минут вы будете знать всё, что нужно.</p>
+<p>После того, как вы зашли на FTP-сервер, обязательно сделайте резервную копию сайта. Если совершите ошибку, важные файлы никуда не денутся. Сделать резервную копию можно с помощью простого перетаскивания всех файлов с сервера на компьютер.</p>
+<blockquote class="blockquote-v2"><p>Резервная копия позволяет подстраховаться — не забудьте сохранить все файлы в отдельной папке на компьютере до внесения изменений.</p></blockquote>
+<p>Обычно программный интерфейс FTP-менеджера состоит из двух колонок. Например, в левой колонке файлы, которые хранятся на компьютере. В правой – файлы с сервера. Чтобы поменять или добавить файлы, просто перетаскивайте их из одной колонки в другую.</p>
+</section> <section id="p7"> <p><a id="p7"> </a></p><h2>Часто задаваемые вопросы</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="heading1"><a aria-controls="collapse1" aria-expanded="false" class="btn-link collapsed" data-target="#collapse1" data-toggle="collapse" href="#">Что такое HTML импорт?</a></div>
+<div aria-labelledby="heading1" class="collapse" data-parent="#faqAccordion" id="collapse1" style="">
+<div class="card-body">
+<p>HTML импорт позволяет помещать HTML страницы, а также CSS и JavaScript файлы, внутрь других HTML страниц. HTML импорт, это простая для понимания вещь, способ вставки на страницу других HTML страниц.</p>
+<p>Интересно то, что HTML это самые простые файлы, но иногда с ними труднее всего работать. Даже PHP файлы имеют возможность включения, почему же HTML этого не может? Благодаря веб-компонентам, можно включать одни HTML документы в другие. Также, при помощи этого же тега, есть возможность подключать CSS и JavaScript.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading2"><a aria-controls="collapse2" aria-expanded="false" class="btn-link collapsed" data-target="#collapse2" data-toggle="collapse" href="#">В чем причина увеличения размера страниц сайтов?</a></div>
+<div aria-labelledby="heading2" class="collapse" data-parent="#faqAccordion" id="collapse2">
+<div class="card-body">
+<p>Загрузка скриптов влияет на самую главную метрику производительности: время до появления интерактивности (Time to Interactive). Например, изображения на странице и дизайн практически не влияют на эту метрику, потому что они не блокируют загрузку элементов интерфейса. Скрипты становятся главной причиной подтормаживаний сайта. Пользователю приходится несколько секунд ждать загрузки страницы, а потом она некоторое время не реагирует на ввод с тачскрина, движения мышью или нажатия с клавиатуры. Сами же скрипты выполняются в основном потоке, то есть находятся на критическом пути рендеринга. Поэтому ни в коем случае нельзя безгранично раздувать количество скриптов на странице. Если пользователь с настольного компьютера или ноутбука еще кое-как загрузит страницу, то пользователь на смартфоне может ее не дождаться. Через десять секунд ожидания он просто закроет страницу.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading3"><a aria-controls="collapse3" aria-expanded="false" class="btn-link collapsed" data-target="#collapse3" data-toggle="collapse" href="#">Как вставить HTML-код в письмо Mail.ru или Yandex.ru?</a></div>
+<div aria-labelledby="heading3" class="collapse" data-parent="#faqAccordion" id="collapse3">
+<div class="card-body">
+<p>Вставить html-код в письмо «Яндекс» или «Майл.ру» можно, создав шаблон письма. Ширина не должна превышать 640 пикселей чтобы письмо выглядело хорошо на любом мониторе. Проверяем, как отреагирует на встраиваемый шаблон выбранный почтовый сервис.</p>
+<p>В первую очередь тестируем почтовые клиенты, которыми чаще всего пользуемся сами:</p>
+<ul>
+<li>Mail.ru;</li>
+<li>Yandex;</li>
+<li>Mozilla Thunderbird;</li>
+<li>The Bat;</li>
+<li>Gmail;</li>
+<li>Microsoft Outlook.</li>
+</ul>
+<p>Считается, что корректно вставить html-код позволяют лишь два клиента – Microsoft Outlook и Mozilla Thunderbird. Но так как большинство пользователей привыкли пользоваться только «Яндексом» или «Мэйл.ру», то пробуем на них:</p>
+<ol>
+<li>Производим установку и настройку Mozilla Thunderbird на учетную запись пользователя. В настройках в обязательном порядке отмечаем, что для передачи данных будет использоваться IMAP – протокол для входящей корреспонденции и SMTP – протокол для исходящей. Подобная операция откроет возможность скачивания почты в Mozilla Thunderbird так, чтобы серверы Yandex ее не удаляли и автоматически обновляли все письма с Mozilla Thunderbird.</li>
+<li>Помещаем html-код в письмо и в виде шаблона сохраняем его в Thunderbird. Через несколько минут фиксируем необходимую папку «template» в программе Yandex и находим там сверстанное письмо с html-кодами. Можно доработать созданный шаблон и сохранить в желаемом виде уже Yandex-почте.</li>
+</ol>
+<p>Создавая новое письмо, воспользуемся своей заготовкой, для чего нужно нажать на зеленую ссылку «Шаблон» и подгрузить нужный шаблон. На «Яндекс Почте» для хранения шаблонов есть специальная папка в разделе «Черновики».</p>
+<p>Часто случается, что пользователь загружает изображения со сторонних сайтов и у принимающей стороны картинки не отображаются. Самый эффективный вариант – сделать перекодировку картинки в код base64 – это и надежней, и занимает меньше времени.</p>
+</div>
+</div>
+</div>
+</div>
+</section> <section id="p8"> <p><a id="p8"> </a></p><h2>Заключение</h2>
+<p>Бывают ситуации, когда необходимо проанализировать содержимое веб-страницы: посмотреть description, узнать размер какого-то элемента или просто выяснить, какой используется шрифт. С помощью опции «Просмотреть код» можно узнать не только это, но и многое другое – практически всю подноготную сайта. Если вы решите проанализировать сайты конкурентов, немного разбираясь в коде, вы сможете оценить не только визуальную и контентную стороны страниц. У вас получится определить, с помощью каких ключевых слов продвигается сайт, на какой CMS работает и немного больше понять стратегию продвижения конкурентов. В статье мы разобрали сервисы, задачи разработчиков при создании страниц, основы кода и примеры.</p></section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="icon icon-tags"></span>
+
+
+                                        
+                                            <a href="/blog/tag/instructions/">Инструкции</a>
+                                        
+                                    </div>                                    <div class="social-share">
+                                        <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p0">Где искать код для установки</a></li>
+	<li><a href="index.html#p1">Куда вставляется код на сайте</a></li>
+	<li><a href="index.html#p2">Подключение JavaScript в HTML</a></li>
+	<li><a href="index.html#p3">Как вставить JS и HTML в PHP-код</a></li>
+	<li><a href="index.html#p4">Подключение к сайту PHP-скриптов</a></li>
+	<li><a href="index.html#p5">Вставка кода на различные платформы</a></li>
+	<li><a href="index.html#p6">Установка кода на самописный сайт</a></li>
+	<li><a href="index.html#p7">Часто задаваемые вопросы</a></li>
+	<li><a href="index.html#p8">Заключение</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

@@ -1,0 +1,1330 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CTR - что это такое в рекламе и как посчитать | показатель click through rate - формула расчета</title>
+    <meta name="description" content="Что такое CTR и нужно ли его отслеживать. Формула расчета коэффициента кликабельности и способы его повысить при работе с разными типами рекламы.">
+    <meta name="keywords" content="CTR">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/marketing/pokazatel-ctr-chto-ehto-takoe-i-kak-ego-povysit#cao",
+     "url": "https://neiros.ru/blog/marketing/pokazatel-ctr-chto-ehto-takoe-i-kak-ego-povysit#cao",
+     "headline":"CTR - что это такое в рекламе и как посчитать | показатель click through rate - формула расчета",
+
+     "datePublished": "2022-03-09 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Ден Пивкин"} ],
+     "about": [
+    {"@type": "Event", "name": "Маркетинг"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Показатель CTR – что это такое и как его повысить</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Маркетинг</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/657312f595212d26b769df9c81c48f70.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/denpivkin/index.html">Ден Пивкин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/e637a2c2a11d388ac012940146676361.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 04.05.2022</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>При запуске контекстной рекламы некоторые сталкиваются с проблемой отсутствия трафика на сайт. При этом возникает ощущение, что люди видят объявление, но по ссылке не переходят. В таких условиях напрашивается мысль, что в конкретной нише <a href="../../ads/yandeks-direkt-krupneyshaya-reklamnaya-platforma-v-runete/index.html">Яндекс Директ</a> просто не работает. Но не стоит делать поспешных выводов. Гораздо информативнее проанализировать ключевые показатели. Одним из них является CTR.</p>
+<p><img alt="CTR" class="img-responsive sert-img" src="../../../images/e637a2c2a11d388ac012940146676361.png" loading="lazy" draggable="false"></p>
+<p>В рамках данной статьи ниже читайте подробнее, что это такое, для чего и как считать показатель кликабельности, какие возможности это дает бизнесу и как воздействовать на метрику.</p>
+<section id="p1">
+<p><a id="p1" name="p1"> </a></p>
+<h2>Что такое CTR</h2>
+<p>CTR (Click-through rate) – это показатель кликабельности рекламного объявления, ссылки, кнопки, баннера или другого кликабельного элемента на сайте.</p>
+<p><img alt="что такое CTR" class="img-responsive sert-img" src="../../../img/ctr/chto-takoye-ctr.jpg" loading="lazy" /></p>
+<p>Простыми словами, это отношение количества пользователей, которые нажали на рекламу (или другой отслеживаемый элемент) к числу людей, которые ее увидели.</p>
+<p>Выражается показатель чаще всего в процентах для удобства восприятия и анализа значений.</p>
+</section>
+<section id="p2">
+<p><a id="p2" name="p2"> </a></p>
+<h2>Зачем считать CTR</h2>
+<p>Показатель кликабельности CTR прежде всего говорит о том, насколько объявление интересует пользователей. Это поможет маркетологу делать определенные выводы о правильности его составления, настройки рекламы, точности выбора <a href="../celevaya-auditoriya-pochemu-marketing-nevozmozhen-bez-ee-opredeleniya/index.html">целевой аудитории</a> и других факторах.</p>
+<p>Существует ряд <a href="../vse-o-marketinge-tseli-funktsii-oblasti-primeneniya-i-instrumenty/index.html">маркетинговых</a> причин, по которым компании нужно рассчитывать CTR.</p>
+<p><a data-fancybox="gallery" href="../../../img/ctr/zachem-schitat-ctr.png"><img alt="зачем считать CTR" class="img-responsive sert-img" src="../../../img/ctr/zachem-schitat-ctr.png" loading="lazy" /> </a></p>
+<ul>
+<li><b>Определение стоимости клика и ее снижение.</b> Чем выше CTR, тем меньше приходится платить рекламодателю за 1 клик. Отслеживая показатель, можно воздействовать на него путем создания более качественных объявлений. Чем лучше объявление, тем чаще рекламная система выбирает его на аукционе VCG и показывает, а это выгоднее для рекламного бюджета.</li>
+<li><b>Отслеживание трафика.</b> Чем выше значение CTR, тем больше потенциальных клиентов кликает по рекламе и переходит на сайт. Важно, чтобы объявление было максимально привлекательным для аудитории, предлагало решение актуальной проблемы, но не обещало того, чего человек не найдет на посадочной странице.</li>
+<li><b>Тестирование креативов.</b> Применяя в объявлениях разные тексты, заголовки, призывы, дизайнерские решения и отслеживая CTR, можно делать выводы об эффективности тех или иных маркетинговых приемов. Это особенно актуально для <a href="../../ads/targeting-osobennosti-principy-raboty-plyusy-i-minusy-rekomendacii-po-nastrojke-i-ispolzovaniyu/index.html">таргетированной рекламы</a>, которая обычно запускается для очень узкой ЦА.</li>
+<li><b>Сравнение показателей.</b> В рекламных сетях Яндекса и Google CTR может отличаться. Яндекс часто занижает показатель, поскольку на качество трафика влияет сайт, где была показана реклама.</li>
+<li><b>Определение эффективности лендинга.</b> Лендинг – это как большое рекламное объявление, состоящее из текста, графики и кнопок <a href="../../analytics/konversiya-chto-eto-i-pochemu-vazhno-ee-znaty/index.html">конверсии</a>. В конечном итоге он должен привести к клику пользователя. Поэтому в данном случае CTR является главным показателем эффективности.</li>
+</ul>
+</section>
+
+<section id="p3">
+<p><a id="p3" name="p3"> </a></p>
+<h2>Зачем увеличивать CTR</h2>
+<p>Если в рекламной системе размещено объявление, которое получает плохой отклик пользователей, цена за клики по нему возрастает, а число показов уменьшается. В конечном итоге стоимость клика по такой рекламе может превысить стоимость конкурентной рекламы вдвое, и это не предел.</p>
+
+<blockquote class="blockquote-v1"><p>Яндекс устанавливает минимальный порог CTR по ряду поисковых запросов. Если значение показателя опускается ниже 0,5%, показы рекламы прекращаются.</p></blockquote>
+<p>Таким образом, если CTR не повышать, продвижение сайта потребует неоправданно большого рекламного бюджета, а из-за малого количества показов окажется неэффективным.</p>
+</section>
+
+<section id="p4">
+<p><a id="p4" name="p4"> </a></p>
+<h2>От чего зависит CTR</h2>
+<p>Все рекламодатели и оптимизаторы отслеживают CTR и заинтересованы в его росте. Рассмотрим, от чего зависит этот показатель.</p>
+<p><a data-fancybox="gallery" href="../../../img/ctr/ot-chego-zavisit-ctr.png"><img alt="от чего зависит CTR" class="img-responsive sert-img" src="../../../img/ctr/ot-chego-zavisit-ctr.png" loading="lazy" /> </a></p>
+<ul>
+<li>Ниша бизнеса и уровень конкуренции в ней. В одних сферах CTR 1% является хорошим показателем, в других это очень низкое значение.</li>
+<li>Тип кампании. Самый высокий CTR, как правило, у объявлений контекстной рекламы.</li>
+<li>Целевая аудитория. «Холодная» аудитория реже кликает по рекламе.</li>
+<li>Уникальное торговое предложение (УТП). Пользователей привлекают уникальные предложения, в то время как клишированные объявления чаще остаются без внимания.</li>
+<li>Качество объявления. Оригинальные изображения, интересный дизайн баннера, лаконичный текст без ошибок – все это создает положительное впечатление и повышает кликабельность.</li>
+</ul>
+<p>Перечисленные факторы влияния актуальны для любой рекламы. Однако стоит разграничивать контекстную и медийную рекламу. Рассматривать эти две категории в одинаковом ключе нельзя, поэтому выделим их отдельно.</p>
+<h3>В контекстной рекламе</h3>
+<ul>
+<li><b>Ключевые слова.</b> Если в объявлении использованы релевантные ключи, CTR значительно повышается, реклама становится дешевле.</li>
+<li><b>Заголовок.</b> Это первое, на что обращают внимание пользователи. Неудачный <a href="../../content/kak-napisat-zagolovok-esli-net-opyta-razbor-osnovnyh-tekhnik-s-primerami/index.html">заголовок</a> может стать причиной провала рекламной кампании. Обязательно в заголовке должен присутствовать ключ, который сама поисковая система выделит жирным шрифтом при показе объявления.</li>
+<li><b>Позиция рекламы в поисковой выдаче.</b> Этот фактор определяется наличием ключевых слов в объявлении и значением ожидаемого CTR. Чем выше последнее, тем больше поисковики заинтересованы показывать объявление и тем выше будет его реальный CTR.</li>
+<li><b>Рекламный бюджет.</b> Достаточная сумма, выделенная на рекламу, тоже в некоторой степени может определять CTR. Если вы хотите платить за клик 10 рублей и получать хороший трафик на сайт или в блог, это не сработает.</li>
+<li><b>Цена за клик.</b> Чем больше рекламодатель готов платить за рекламу, тем выше объявление будет показываться в поисковой системе. При этом больше пользователей будут переходить по рекламе, и ее CTR начнет расти.</li>
+<li><b>Занижение ставки на старте.</b> Когда рекламная кампания использует большое количество ключевых слов, ставку часто занижают из-за риска слива бюджета. Однако такие объявления редко оказываются вверху выдачи, получают меньше кликов, а значит, CTR падает.</li>
+</ul>
+<h3>В медийной рекламе</h3>
+<p>В медийной сфере кликабельность рекламы определяется преимущественно ее дизайном. Здесь важны уникальные визуальные элементы, цель которых – запомниться, произвести впечатление, привлечь пользователей познакомиться с брендом или продуктом. Кроме этого, на привлекательность баннера влияют:</p>
+<ul>
+<li>качество дизайна – например, профессиональное исполнение, обработка изображений, сочетаемость цветов, баланс яркости и контрастности;</li>
+<li>размер баннера – должен подбираться с учетом успешных форматов в конкретной нише бизнеса;</li>
+<li>интерактив – анимация и другие динамические элементы объявления делают его заметнее и привлекательнее на сайте.</li>
+</ul>
+</section>
+
+<section id="p5">
+<p><a id="p5" name="p5"> </a></p>
+<h2>На что влияет показатель CTR</h2>
+<p>Коэффициент кликабельности позволяет отслеживать и понимать, какой стиль подачи рекламы нравится пользователям на конкретном сайте, какие заголовки их привлекают, а что мешает достигать цели. Этот показатель чрезвычайно важен в маркетинге, от него зависит:</p>
+<p><a data-fancybox="gallery" href="../../../img/ctr/na-chto-vliyaet-pokazatel-ctr.png"><img alt="на что влияет показатель CTR" class="img-responsive sert-img" src="../../../img/ctr/na-chto-vliyaet-pokazatel-ctr.png" loading="lazy" /> </a></p>
+<ul>
+<li>стратегия – зная, что нравится и не нравится целевой аудитории, можно планировать создать другие рекламные кампании, отслеживая их эффективность;</li>
+<li>качество трафика – при высоком CTR по рекламе переходит большое количество пользователей, которые заинтересовались и с большой долей вероятности купят товар, воспользуются услугой, зарегистрируются в сервисе, подпишутся на блог, напишут комментарий к статье или скачают приложение;</li>
+<li>затраты на рекламу – кликабельность напрямую определяет рекламные расходы. Если низкий CTR, стоимость клика по рекламе возрастает. Отслеживание коэффициента кликабельности позволяет оптимизировать объявление и увеличить CTR в рамках прежней рекламной кампании.</li>
+</ul>
+</section>
+
+<section id="p6">
+<p><a id="p6" name="p6"> </a></p>
+<h2>Как рассчитать CTR</h2>
+<p>Для расчета показателя кликабельности используют формулу, которая определяет CTR как процентное соотношение общего числа кликов по рекламе и общего числа ее показов.</p>
+<p><a data-fancybox="gallery" href="../../../img/conversion/formula-ctr.png"><img alt="формула CTR" class="img-responsive sert-img" src="../../../img/conversion/formula-ctr.png" loading="lazy" draggable="false"> </a></p>
+<p><em>CTR = Число кликов / Количество показов * 100%</em></p>
+<p>Узнать значения переменных можно в личных кабинетах рекламных площадок, например, Google Ads, Яндекс.Директ, myTarget и др.</p>
+<h3>Способы расчета</h3>
+<p>Рассчитать CTR можно двумя способами:</p>
+<ol>
+<li>Вручную. Для этого понадобится формула и калькулятор. Нужно:</li>
+</ol>
+<ul style="padding-left: 40px;">
+<li>запустить рекламную кампанию;</li>
+<li>собрать статистику по кликам и показам;</li>
+<li>вычислить показатель кликабельности по формуле.</li>
+</ul>
+<ol start="2">
+<li>В рекламных сетях. Практически все популярные рекламные площадки автоматически рассчитывают и выводят значение CTR. Посмотреть его можно в рекламном кабинете среди других показателей.</li>
+</ol>
+
+<h3>Онлайн-калькулятор</h3>
+<p>Для расчета просто введите свои данные, и калькулятор вычислит показатель.</p>
+<form id="calc" method="post">
+<div class="row">
+<div class="col-md-4"><strong>Показы</strong><br />
+<input id="m1" placeholder="Число" type="text" value="" /></div>
+<div class="col-md-4"><strong>Клики</strong><br />
+<input id="m2" placeholder="Число" type="text" value="" /></div>
+<div class="col-md-4"><strong>CTR</strong>
+<div id="m3" style="margin-top: 0px">%</div>
+</div>
+</div>
+</form>
+<h3>Примеры расчета</h3>
+<p><b>Пример 1. Расчет CTR для отдельного объявления.</b></p>
+<p>Яндекс Директ показал объявление контекстной рекламы 3 000 раз. Пользователи кликнули по нему и перешли на сайт 120 раз. Рассчитаем CTR по формуле.</p>
+<p>CTR = 120 / 3 000 * 100% = 4%</p>
+<p><b>Пример 2. Расчет CTR для рекламной кампании.</b></p>
+<p>В рамках рекламной кампании в первый месяц объявление было показано 6 000 раз и получило 1 200 кликов. Во второй месяц показатели немного изменились: 8 000 показов и 1 700 переходов.</p>
+<p>CTR<sub>1</sub> = 1 200 / 6 000 * 100% = 20%</p>
+<p>CTR<sub>2</sub> = 1 700 / 8 000 * 100% = 21,25%</p>
+<p>CTR<sub>РК</sub> = (1 200 + 1 700) / (6 000 + 8 000) * 100% = 20,7%</p>
+</section>
+
+<section id="p7">
+<p><a id="p7" name="p7"> </a></p>
+<h2>Какой CTR считается хорошим</h2>
+<p>Значения CTR различаются не только в зависимости от ниши. Этот параметр не имеет четких цифровых критериев и оценивается индивидуально с учетом множества факторов. Далее в статье рассмотрим, какой показатель кликабельности можно назвать хорошим для рекламы разных типов.</p>
+<p><a data-fancybox="gallery" href="../../../img/ctr/kakoj-ctr-schitaetsya-horoshim.png"><img alt="какой CTR считается хорошим" class="img-responsive sert-img" src="../../../img/ctr/kakoj-ctr-schitaetsya-horoshim.png" loading="lazy" /> </a></p>
+<ol>
+<li>Контекстная реклама в Google и Яндекс – 5-10% для рекламы товаров и услуг. Показатель выше, чем 15%, считается высоким. Здесь выделяют три вида контекстной рекламы, и для каждой разновидности CTR будет разным:</li>
+</ol>
+<ul style="padding-left: 40px;">
+<li>коммерческая – предполагает коммерческие поисковые запросы со словами «купить», «цена», CTR в этом случае может лежать в диапазоне от 1-5% до 10-20%;</li>
+<li>информационная – предлагается пользователям, которые ищут полезную информацию в блогах и информационных разделах сайтов. Здесь хорошим считается коэффициент кликабельности в пределах 3-8%;</li>
+<li>геозависимая – привязывается к географическому местоположению пользователя, в данном случае хорошим результатом является CTR 20-25%.</li>
+</ul>
+<ol start="2">
+<li>SEO – 8% и выше для первой страницы поисковой выдачи. Чем выше страница в поиске, тем больше у нее CTR.</li>
+<li>Таргетированная реклама в социальных сетях – 1-2% для хорошо настроенного таргетинга. Если конкретизировать, то в разных соцсетях будет разное значение CTR:</li>
+</ol>
+<ul style="padding-left: 40px;">
+<li>Twitter – 2%;</li>
+<li>Instagram – 0,94%;</li>
+<li>Facebook – 0,72%;</li>
+<li>ВКонтакте – 0,15%.</li>
+</ul>
+<ol start="4">
+<li>Медийная (баннерная) реклама – в РСЯ средний показатель, по данным исследования Wordstream, – 0,35%. Хорошим значением считается CTR 0,84-1%. У Google этот показатель значительно ниже – 0,08%.</li>
+<li>Email рассылки – 4% по данным исследования MailChimp.</li>
+</ol>
+<p>Все приведенные в статье значения CTR являются условными.</p>
+<blockquote class="blockquote-v2"><p>При запуске первой рекламной кампании практически невозможно спрогнозировать CTR. Отследить значение можно лишь с течением времени по мере получения результатов.</p></blockquote>
+</section>
+
+<section id="p8">
+<p><a id="p8" name="p8"> </a></p>
+<h2>Как повысить CTR</h2>
+<p>Каждая платформа для размещения рекламы имеет свою специфику поэтому способы повышения кликабельности объявлений тоже различаются. Но есть и общие методы повышения CTR рекламы, актуальные для всех сайтов.</p>
+<p><a data-fancybox="gallery" href="../../../img/ctr/kak-povysit-ctr.png"><img alt="как повысить CTR" class="img-responsive sert-img" src="../../../img/ctr/kak-povysit-ctr.png" loading="lazy" /> </a></p>
+<ul>
+<li>Проверьте, правильно ли определена целевая аудитория, разделите ее на <a href="../segmentaciya-rynka-ee-celi-raznovidnosti-kriterii-i-vazhnost-dlya-vashego-biznesa/index.html">сегменты</a>.</li>
+<li>Проведите работы по тестированию рекламных объявлений в разных форматах.</li>
+<li>Уберите из объявлений ключевые запросы, по которым объявление не должно показываться.</li>
+<li>Избегайте стоковых изображений.</li>
+<li>Формулируйте объявления с точки зрения выгоды для клиента.</li>
+<li>Постоянно изучайте конкурентов, их сайты, предложения, рекламу, поисковые запросы.</li>
+</ul>
+<p>Далее в статье выясним, как улучшить CTR разных видов рекламы.</p>
+<h3>Контекстная реклама Google и Яндекса (PPC)</h3>
+<ul>
+<li>Разделяйте рекламные кампании на тематику и поиск.</li>
+<li>Следуйте правилу: 1 объявление – 1 ключевое слово.</li>
+<li>Используйте мощный призыв к действию.</li>
+<li>Публикуйте специальные предложения со скидками и другими выгодами для клиентов.</li>
+<li>Указывайте цифры и факты в текстах объявлений.</li>
+<li>Включайте главный ключевой запрос в заголовок.</li>
+<li>Сужайте ЦА, используя низкочастотные ключевые слова.</li>
+<li>Подбирайте минус-слова.</li>
+<li>Для конверсионных запросов создавайте новые объявления.</li>
+<li>Подключайте спец. расширения рекламных систем (ссылки на разделы сайта, оценки продавцов).</li>
+<li>Задействуйте фавикон.</li>
+<li>Используйте поисковые операторы, быстрые ссылки, контактную информацию.</li>
+<li>Отключайте авторасширение фраз.</li>
+<li>Добавляйте уникальные изображения и тестируйте объявление с разными картинками и содержанием.</li>
+<li>Фиксируйте результаты и анализируйте статистику.</li>
+</ul>
+<h3>SEO</h3>
+<ul>
+<li>Подбирайте качественные ключевые слова (кроме специфичных) с высокой конкурентоспособностью.</li>
+<li>Размещайте на сайте и в блоге только качественный, релевантный, интересный для пользователей контент.</li>
+<li>Внедрите систему внутренней перелинковки.</li>
+<li>Привлекайте на сайт внешние ссылки.</li>
+</ul>
+<h3>Медийная реклама</h3>
+<ul>
+<li>Акцентируйте внимание на качественной и яркой графике.</li>
+<li>Используйте анимацию для привлечения внимания к баннеру.</li>
+<li>Добавьте в URL основные ключевые слова.</li>
+<li>Задействуйте объемные CTA и длинные ключевые слова.</li>
+</ul>
+<h3>Таргетированная реклама</h3>
+<ul>
+<li>Усильте CTA.</li>
+<li>Выкладывайте интересный и актуальный контент, постоянно дорабатывайте его.</li>
+<li>Способствуйте переходу по ссылкам, используя закрытый контент.</li>
+<li>Применяйте привлекательные картинки.</li>
+<li>Призывайте к конкретным действиям: зарегистрироваться, перейти, скачать и т. д.</li>
+<li>Подключайте CTA-кнопки.</li>
+</ul>
+<h3>Email рассылки</h3>
+<ul>
+<li>Прописывайте вовлекающую тему письма.</li>
+<li>Постоянно работайте над качеством контента, рассылайте аудитории только интересные и полезные статьи.</li>
+<li>Заканчивайте письма четким призывом к действию.</li>
+<li>Используйте кнопки с призывом к действию.</li>
+<li>Применяйте адаптивный и узнаваемый дизайн писем.</li>
+<li>Проверяйте, хорошо ли загружаются изображения и графические элементы дизайна.</li>
+<li>Персонализируйте письма.</li>
+<li>Старайтесь выбрать оптимальную частоту рассылок, не частите.</li>
+<li>Выбирайте наиболее эффективные типы контента, используя A/B тестирование.</li>
+</ul>
+</section>
+
+<section id="p9">
+<p><a id="p9" name="p9"> </a></p>
+<h2>CTR в Яндекс Директ</h2>
+ <p><a data-fancybox="gallery" href="../../../img/ctr/ctr-v-direct.png"><img alt="CTR в Яндекс Директ" class="img-responsive sert-img" src="../../../img/ctr/ctr-v-direct.png" loading="lazy" /> </a></p>
+<p>Яндекс Директ является приоритетной рекламной площадкой в русскоязычном интернете, поскольку большинство пользователей из России используют в качестве поисковой системы именно Яндекс. В статье уделим ему особое внимание и остановимся на ключевых аспектах.</p>
+
+<h3>Как поднять CTR в поисковых кампаниях Яндекс Директ</h3>
+<p>По показателю кликабельности можно судить об эффективности рекламной кампании: правильности выбора целевой аудитории, корректности настройки, оформления объявления.</p>
+<p>Яндекс Директ выдвигает определенные требования к рекламным объявлениям. Разберемся, что же влияет на CTR в этой РС и как повысить кликабельность.</p>
+<ul>
+<li><b>Релевантность.</b> Чем точнее рекламное предложение соответствует запросу пользователя, тем больше вероятность, что человек перейдет по ссылке.</li>
+<li><b>Правильный выбор ключевых слов.</b> В приоритете средне- и низкочастотные ключевые слова. По ним больше шансов привлечь целевой трафик. Стоит избегать:</li>
+</ul>
+<ul style="padding-left: 40px;">
+<li>высокочастотных ключей, состоящих из одного слова;</li>
+<li>высоко- и среднечастотных запросов, состоящих из двух слов и используемых без кавычек;</li>
+<li>околочастотных и информационных ключей.</li>
+</ul>
+<ul>
+<li><b>Удаление лишних слов.</b> Нерелевантные ключи снижают CTR, поэтому от них нужно вовремя избавляться.</li>
+<li><b>Использование расширений.</b> Чем больше полей будет заполнено, тем больше по размеру будет объявление. У объемной рекламы больше шансов привлечь внимание пользователя.</li>
+<li><b>Адекватная ставка.</b> Объявления с низкой ставкой показываются внизу поисковой выдачи. 2/3 пользователей туда даже не смотрят, а это значит, что CTR будет снижаться. Для повышения показателя важно попасть в спецразмещение, а для этого необходимо установить адекватную цену за клик.</li>
+</ul>
+<h3>Насколько важен CTR в РСЯ</h3>
+<p>В отличие от других рекламных площадок, Яндекс не определяет стоимость клика в зависимости от величины кликабельности. Здесь система работает в обратном порядке. Если уровень CTR не дотягивает до конкурентов, придется повышать цену клика, чтобы объявление получило показы.</p>
+<p>Чем выше значение CTR при одинаковых ставках, тем чаще система показывает объявление. Это приводит к тому, что кликабельность растет, а вместе с ней увеличивается и целевой трафик.</p>
+<h3>Какой CTR в РСЯ является большим</h3>
+<p>Нормальное значение CTR в рекламной сети Яндекса, как правило, лежит в пределах 0,35-1%. Если показатель кликабельности значительно превышает данный уровень, это повод обратить пристальное внимание на такие кампании.</p>
+<p>Причиной завышенных показателей может быть банальный человеческий фактор. Причем чаще в мобильном приложении, т. к. там баннер может занимать половину экрана. Пользователь вместо «крестика» закрытия рекламы случайно кликает на нее, и система засчитывает переход. В таких случаях при высоком CTR в рекламной кампании мизерное количество заявок или вовсе их отсутствие.</p>
+<h3>Как сделать прогноз CTR в Яндекс.Директе</h3>
+<p>Чтобы оценить эффективность будущей рекламной кампании и правильно рассчитать бюджет, в Яндекс Директ составляют прогноз CTR. Система берет за основу статистику показов и кликов по заданному ключевому слову, а также средний показатель кликабельности в нише. При этом учитывается:</p>
+<ul>
+<li>уровень конкуренции;</li>
+<li>объем ниши;</li>
+<li>фактор сезонности;</li>
+<li>регион(ы) показа рекламы.</li>
+</ul>
+<p>Для прогнозирования в Директе:</p>
+<ol>
+<li>Зайдите на страницу «Инструменты».</li>
+<li>Перейдите в раздел «Прогноз бюджета».</li>
+ <p><a data-fancybox="gallery" href="../../../img/ctr/prognoz-byudzheta-v-direkt.png"><img alt="прогноз бюджета в Директ" class="img-responsive sert-img" src="../../../img/ctr/prognoz-byudzheta-v-direkt.png" loading="lazy" /> </a></p>
+<li>Укажите регион и ключевые слова.</li>
+<li>Нажмите «Посчитать».</li>
+ <p><a data-fancybox="gallery" href="../../../img/ctr/ocenka-byudzheta-regiona-v-direkt.png"><img alt="расчет бюджета в директ" class="img-responsive sert-img" src="../../../img/ctr/ocenka-byudzheta-regiona-v-direkt.png" loading="lazy" /> </a></p>
+</ol>
+</section>
+
+<section id="p10">
+<p><a id="p10" name="p10"> </a></p>
+<h2>Как настроить автоматический расчет CTR</h2>
+<p>Рекламные платформы дают возможность отслеживать целый ряд показателей, влияющих на позиции рекламы, ее показы, рекламный бюджет. Для эффективного продвижения маркетолог должен следить не только за CTR, но также и за другими значениями.</p>
+<p><img alt="автоматический расчет CTR" class="img-responsive sert-img" src="../../../img/ctr/avtomaticheskij-raschet-ctr.png" loading="lazy" /></p>
+<p>Дело в том, что в базовом пакете <a href="../../analytics/polnyj-gajd-po-google-analytics/index.html">Google Analytics</a> может получать данные о результатах рекламных кампаний только из Google Ads. Но для полноценного анализа и расчета CTR нужна информация и из других рекламных источников. Автоматизировать передачу данных о кликах, показах, расходах по всем РК можно с помощью инструментов сервиса сквозной аналитики Neiros.</p>
+<p>После быстрой настройки <a href="../../analytics/skvoznaya-analitika-ot-vnedreniya-do-realnyh-kejsov/index.html">сквозная аналитика</a> позволяет сосредоточить в Google Analytics данные из всех рекламных площадок по каждой кампании, подсчитать CTR и другие важные параметры, проанализировать эффективность рекламы.</p>
+</section>
+
+<section id="p11">
+<p><a id="p11" name="p11"> </a></p>
+<h2>Часто задаваемые вопросы</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="headingOne"><a aria-controls="collapseOne" aria-expanded="false" class="btn-link collapsed" data-target="#collapseOne" data-toggle="collapse" href="index.html#">Как позиция в выдаче виляет на CTR?</a></div>
+
+<div aria-labelledby="headingOne" class="collapse" data-parent="#faqAccordion" id="collapseOne" style="">
+<div class="card-body">
+<p>Позиция в выдаче актуальна только для рекламодателей, которые ориентированы на объявления в поиске. Здесь есть несколько ключевых моментов, связанных с CTR:</p>
+<ul>
+<li>важно попасть на первые две страницы выдачи, в противном случае не придется рассчитывать на какой-либо трафик, клики и, тем более, продажи;</li>
+<li>CTR рекламы, которая занимает 1-е место в выдаче, – около 30%, ссылка на 10-м месте получает всего 3% кликов;</li>
+<li>вопросительные заголовки рекламных объявлений получают на 14% больше кликов, чем заголовки без слов «как», «зачем», «что такое» и т. д.;</li>
+<li>CTR объявлений, содержащих запрос пользователя в URL, на 18% выше;</li>
+<li>кликбейтные слова («шок», «ужасное событие», «самое лучшее средство», «происшествие года») снижают кликабельность примерно на 14%.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingTwo"><a aria-controls="collapseTwo" aria-expanded="false" class="btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse" href="index.html#">Почему одного высокого CTR недостаточно?</a></div>
+
+<div aria-labelledby="headingTwo" class="collapse" data-parent="#faqAccordion" id="collapseTwo">
+<div class="card-body">
+<p>При запуске рекламной кампании нет цели достигнуть высоких показателей, будь то CTR или другие метрики. У рекламодателей цель – повысить <a href="../../business/pribyl-kak-osnovnoj-pokazatel-ehffektivnosti-biznesa/index.html">прибыль</a>. Показатель кликабельности играет не последнюю роль в ее достижении, ведь именно клики обеспечивают приток потенциальных клиентов на сайт. Однако сам по себе высокий CTR не гарантирует продажи.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingfour"><a aria-controls="collapsefour" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefour" data-toggle="collapse" href="index.html#">Что значит «аномально высокий CTR»?</a></div>
+
+<div aria-labelledby="headingfour" class="collapse" data-parent="#faqAccordion" id="collapsefour">
+<div class="card-body">
+<p>Необычно высокие значения CTR можно наблюдать в ситуациях, когда регистрируется очень много кликов по объявлению, но дальнейших действий от пользователей не следует. Например, они сразу уходят с сайта или находятся на странице одинаковое количество времени, а затем покидают ее без покупок. Почему так происходит:</p>
+<ul>
+<li>вас скликивают, т. е. кто-то платит пользователям за клики по вашей рекламе;</li>
+<li>на вашем сайте что-то работает некорректно, например, не подгружается посадочная страница;</li>
+<li>ваша реклама мешает пользователям, это наблюдается в основном при использовании мобильных устройств, когда рекламный баннер может закрывать половину экрана.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingfive"><a aria-controls="collapsefive" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefive" data-toggle="collapse" href="index.html#">Почему высокий CTR – это не всегда хорошо для бизнеса?</a></div>
+
+<div aria-labelledby="headingfive" class="collapse" data-parent="#faqAccordion" id="collapsefive">
+<div class="card-body">
+<p>На первый взгляд, высокий CTR может сказать о том, что пользователям интересно предложение. Но при ближайшем рассмотрении всплывают подводные камни. Простой пример: объявление получило 1000 кликов, но на следующей ступени <a href="../../sales/vse-o-voronke-prodazh-ot-istorii-k-primeneniyu-v-sovremennom-biznese/index.html">воронки</a> 980 пользователей покинули сайт. То есть реклама изначально была оптимизирована для получения трафика, но не учитывала последующую конверсию.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingsix"><a aria-controls="collapsesix" aria-expanded="false" class="btn-link collapsed" data-target="#collapsesix" data-toggle="collapse" href="index.html#">Надо ли гнаться за высоким CTR?</a></div>
+
+<div aria-labelledby="headingsix" class="collapse" data-parent="#faqAccordion" id="collapsesix">
+<div class="card-body">
+<p>Бизнесу нужны не клики, а продажи, и гнаться нужно именно за последними. Объявление может приводить на сайт огромный трафик, но почти не давать продаж, а может быть составлено так, чтобы отсечь нецелевую аудиторию на этапе клика, но привлечь реальных клиентов. Однако реклама в Яндексе и Google требует определенных показателей кликабельности, в противном случае система просто перестанет показывать объявление, отдавая приоритет в показах более востребованной рекламе. Таким образом, совета два: либо устанавливать более высокую цену за клик, либо повышать CTR.</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" id="headingseven"><a aria-controls="collapseseven" aria-expanded="false" class="btn-link collapsed" data-target="#collapseseven" data-toggle="collapse" href="index.html#">Как CTR распределяется между сайтами?</a></div>
+
+<div aria-labelledby="headingseven" class="collapse" data-parent="#faqAccordion" id="collapseseven">
+<div class="card-body">
+<p>Google. По сведеньям аналитики Backlinko, всего 0,78% пользователей переходят на вторую страницу поисковой выдачи, поэтому данные по ней даже не рассматриваются. CTR распределяется по позициям выдачи 1-й страницы примерно так:</p>
+<ul>
+<li>самый высокий показатель кликабельности у первой позиции – 31,73%;</li>
+<li>уже со второй позиции CTR резко падает;</li>
+<li>на топ-3 поисковой выдачи приходится 75% кликов;</li>
+<li>продвижение сайта верх в выдаче, начиная с 7-й позиции, будет давать значительный прирост трафика;</li>
+<li>на позициях с 10-й по 8-ю не наблюдается существенного изменения показателя кликабельности, поэтому продвижение сайта в этих пределах не дадут заметного эффекта.</li>
+</ul>
+<p>Яндекс. В этой рекламной системе можно рассматривать не только первую страницу выдачи, а около 20 позиций. В целом распределение показателя кликабельности происходит следующим образом:</p>
+<ul>
+<li>на топ-3 приходится 47,17% всех кликов;</li>
+<li>CTR резко падает почти втрое, начиная с 4-й позиции поисковой выдачи;</li>
+<li>4-я позиция получает меньше кликов, чем 5-я и 6-я;</li>
+<li>на второй странице в первых позициях отмечается более высокий CTR, чем у последних позиций первой страницы.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" id="headingeight"><a aria-controls="collapseeight" aria-expanded="false" class="btn-link collapsed" data-target="#collapseeight" data-toggle="collapse" href="index.html#">Как определить CTR страниц сайта в поисковиках?</a></div>
+
+<div aria-labelledby="headingeight" class="collapse" data-parent="#faqAccordion" id="collapseeight">
+<div class="card-body">
+<p>Чтобы узнать, какой показатель кликабельности у страниц сайта в Google, нужно:</p>
+<ol>
+<li>Зайти в Google Search Console.</li>
+<li>Перейти в раздел «Эффективность» – «Средний CTR».</li>
+</ol>
+<p>В Яндексе это можно сделать так:</p>
+<ol>
+<li>Зайти в Яндекс.Вебмастер.</li>
+<li>Перейти во вкладку «Отчеты» – «Стандартные отчеты» – «Источники» – «Поисковые запросы».</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingnine"><a aria-controls="collapsenine" aria-expanded="false" class="btn-link collapsed" data-target="#collapsenine" data-toggle="collapse" href="index.html#">Как правильно собирать статистику по CTR?</a></div>
+
+<div aria-labelledby="headingnine" class="collapse" data-parent="#faqAccordion" id="collapsenine">
+<div class="card-body">
+<p>Сбор статистики оптимально осуществлять за полный временной цикл, например, за полные сутки, за неделю, за 14 дней, за месяц. В противном случае есть риск получения неточных данных. Данные за полный период помогают понять, когда люди чаще кликают по рекламе, а когда переходят на сайт редко или не переходят вовсе.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingten"><a aria-controls="collapseten" aria-expanded="false" class="btn-link collapsed" data-target="#collapseten" data-toggle="collapse" href="index.html#">Чем отличается CTR от CR?</a></div>
+
+<div aria-labelledby="headingten" class="collapse" data-parent="#faqAccordion" id="collapseten">
+<div class="card-body">
+<p><a href="../../analytics/cr-koehfficient-konversii-chto-ehto-takoe-primenenie-formula-rascheta/index.html">CR – коэффициент конверсии</a>, он показывает, какой процент пользователей от общего числа посетителей сайта совершили целевое действие, например, оформили заказ, оставили заявку, позвонили по телефону из раздела «Контакты», подписались на рассылку или новости, оставили отзыв и т. д. CR и CTR могут быть равны, если целью рекламной кампании являются переходы пользователей на посадочную страницу.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="p12">
+<p><a id="p12" name="p12"> </a></p>
+<h2>Заключение</h2>
+<p>Задача рекламы – привлечь трафик на посадочную страницу. Чем больше пользователей кликает по объявлению, тем больше сайт получает потенциальных клиентов. Однако высокий CTR не гарантия продаж. Тем не менее, отслеживать эту метрику важно. С ее помощью можно обнаружить неэффективные объявления и рационально распределить рекламный бюджет.</p>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="icon icon-tags"></span>
+
+
+                                        
+                                            <a href="../../tag/glossary/index.html">Словарь</a>
+                                        
+                                    </div>                                    <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/657312f595212d26b769df9c81c48f70.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Ден Пивкин</h3>
+                            <h4 class="authr-designation">Интернет-маркетолог</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Что такое CTR</a></li>
+	<li><a href="index.html#p2">Зачем считать CTR</a></li>
+	<li><a href="index.html#p3">Зачем увеличивать CTR</a></li>
+	<li><a href="index.html#p4">От чего зависит CTR</a></li>
+	<li><a href="index.html#p5">На что влияет показатель CTR</a></li>
+	<li><a href="index.html#p6">Как рассчитать CTR</a></li>
+	<li><a href="index.html#p7">Какой CTR считается хорошим</a></li>
+	<li><a href="index.html#p8">Как повысить CTR</a></li>
+	<li><a href="index.html#p9">CTR в Яндекс Директ</a></li>
+	<li><a href="index.html#p10">Как настроить автоматический расчет CTR</a></li>
+	<li><a href="index.html#p11">Часто задаваемые вопросы</a></li>
+	<li><a href="index.html#p12">Заключение</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

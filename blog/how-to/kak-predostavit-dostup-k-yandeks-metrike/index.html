@@ -1,0 +1,1032 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Как дать доступ к Яндекс метрике</title>
+    <meta name="description" content="Как безопасно предоставить доступ к Яндекс.Метрике, какими бывают уровни доступа, как вернуть доступ к счетчику, если нет пароля от почты.">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/how-to/kak-predostavit-dostup-k-yandeks-metrike#cao",
+     "url": "https://neiros.ru/blog/how-to/kak-predostavit-dostup-k-yandeks-metrike#cao",
+     "headline":"Как дать доступ к Яндекс метрике",
+
+     "datePublished": "2021-12-22 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "How to"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Как предоставить доступ к Яндекс.Метрике</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">How to</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/30f630000b9dd8e497e3fb77690eccb5.jpg" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                              
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p><a href="../../analytics/kak-polzovatsya-yandeks-metrikoj-podrobnaya-instrukciya-dlya-novichkov/index.html">Яндекс.Метрика</a> – это популярный сервис для веб-аналитики сайтов от компании Яндекс, аналог сервиса Google Analytics. Его главная задача – собирать разнообразную статистику о посещаемости и поведении посетителей на сайте (сколько человек просмотрело текст или видео, сколько подписалось, сколько написано отзывов, каков процент дочитываний материалов или других целевых действий) и создать отчеты. С помощью счетчиков и настроек Яндекс.Метрики можно понять, насколько эффективна контекстная реклама Яндекс.Директа, из каких источников приходит трафик на сайт, на какие сегменты делится трафик, нужна ли странице SEO-оптимизация, какие статьи популярны, что влияет на поисковые выдачи и многое другое. Доступ к данным счетчиков может быть предоставлен одному или нескольким людям по усмотрению владельца аккаунта.</p>
+<p><img alt="Яндекс.Метрика" class="img-responsive sert-img" src="../../../images/30f630000b9dd8e497e3fb77690eccb5.jpg" loading="lazy" draggable="false"></p>
+<section id="p1">
+<p><a id="p1" name="p1"> </a></p>
+<h2>Зачем открывать доступ к Яндекс.Метрике другим людям</h2>
+<p>Яндекс.Метрика предоставляет данные статистики, необходимые в работе специалистам, оказывающим разные услуги: маркетологам, вебмастерам, подрядчикам и так далее. В зависимости от цели, специфики сайта или блога, объемов трафика, политики маркетинга и продвижения, это могут быть десятки человек. Некоторым из них нужно отслеживать данные сайтов в реальном времени, другим – один раз за определенный период, например, для анализа эффективности рекламной кампании, аудита сайта и т.д. Разумное решение – не высылать данные каждый раз по запросу, а один раз предоставить доступ.</p>
+<p>Яндекс предусмотрел возможные проблемы с конфиденциальностью, поэтому владелец аккаунта может назначать доступ разного уровня, с разными полномочиями. Уровней доступа три:</p>
+<ol>
+<li><b>Публичный доступ.</b> Общую статистику сайта могут видеть все, у кого есть ссылка, но подробная информация недоступна.</li>
+<li><b>Гостевой доступ.</b> Предоставляется через добавление пользователя. В гостевом варианте доступа настраивается уровень конфиденциальности и полномочий, например, можно дать права на редактирование или разрешить только просмотр.</li>
+<li><b>Представительский доступ.</b> Дает такие же полномочия, как у владельца. Можно просматривать любые данные, вносить любые изменения, открывать и настраивать доступ.</li>
+</ol>
+</section>
+<section id="p2">
+<p><a id="p2" name="p2"> </a></p>
+<h2>Сравнительная таблица уровней доступа к Яндекс.Метрике</h2>
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td width="188">
+<p><b>Тип доступа</b></p>
+</td>
+<td width="160">
+<p><b>Описание</b></p>
+</td>
+<td width="181">
+<p><b>Назначение</b></p>
+</td>
+</tr>
+<tr>
+<td width="188">
+<p>Публичный</p>
+</td>
+<td width="160">
+<p>Предоставляет доступ к общей статистике любому пользователю интернета, если у него есть ссылка.</p>
+</td>
+<td width="181">
+<p>Быстро поделиться статистикой, не разглашая важные конфиденциальные данные.</p>
+</td>
+</tr>
+<tr>
+<td width="188">
+<p>Гостевой (индивидуальный)</p>
+</td>
+<td width="160">
+<p>Настраиваемый индивидуальный доступ с возможностью редактирования.</p>
+</td>
+<td width="181">
+<p>Добавлять сотрудников компании и предоставлять им возможности в соответствии с их нуждами.</p>
+</td>
+</tr>
+<tr>
+<td width="188">
+<p>Представительский</p>
+</td>
+<td width="160">
+<p>Создание таких же прав, как у владельца. Позволяет назначать права другим пользователям.</p>
+</td>
+<td width="181">
+<p>Если вы работаете в команде, у вас есть партнер, заместитель или помощник, ему можно предоставить все полномочия владельца.</p>
+</td>
+</tr>
+<tr>
+<td width="188">
+<p>Передача прав владельца другому аккаунту (смена пользователя)</p>
+</td>
+<td width="160">
+<p>Метрику можно отвязать от аккаунта и передать другому пользователю.</p>
+</td>
+<td width="181">
+<p>При продаже/покупке сайта или при смене email, Яндекс.Метрика переносится на новый аккаунт.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="p3">
+<p><a id="p3" name="p3"> </a></p>
+<h2>Как открыть, настроить и отобрать доступ – пошаговые инструкции</h2>
+<p>Яндекс.Метрика предлагает гибкие возможности для управления доступом. Настройки простые, интуитивно понятные. Если вы делаете это впервые, следуйте инструкциям ниже.</p>
+<h3>Публичный</h3>
+<ol>
+<li>В аккаунте Яндекс.Метрики на панели справа выберите «Настройка» (значок шестеренки).</li>
+ <p><a data-fancybox="gallery" href="../../../img/metrika/publichnyj_1.png"><img alt="публичный доступ в Яндекс метрику" class="img-responsive sert-img" src="../../../img/metrika/publichnyj_1.png" loading="lazy" /> </a></p>
+<li>Затем перейдите на вкладку «Доступ», справа будет переключатель ВКЛ/ОТКЛ. Переведите его в положение ВКЛ, чтобы получить ссылку на статистику.</li>
+ <p><a data-fancybox="gallery" href="../../../img/metrika/publichnyj_2.png"><img alt="публичный доступ в Яндекс метрику получение ссылки" class="img-responsive sert-img" src="../../../img/metrika/publichnyj_2.png" loading="lazy" /> </a></p>
+</ol>
+<p>Эту прямую ссылку можно отправить любому, с кем вы хотите поделиться информацией. Такой доступ следует использовать с осторожностью и в исключительных случаях, лучше не использовать вообще. Ему достаточно много альтернатив, например, можно просто выложить на сайт скриншоты с нужной информацией.</p>
+<h3>Гостевой</h3>
+<p>«Настройка» -> «Доступ» -> «Индивидуальный доступ». Здесь можно посмотреть список всех добавленных пользователей, а также добавить новых.</p>
+ <p><a data-fancybox="gallery" href="../../../img/metrika/gostevoj.png"><img alt="гостевой доступ в Яндекс метрику" class="img-responsive sert-img" src="../../../img/metrika/gostevoj.png" loading="lazy" /> </a></p>
+<p>В списке 4 колонки:</p>
+<ul>
+<li>логин;</li>
+<li>возможности доступа (только просмотр или редактирование);</li>
+<li>дата добавления;</li>
+<li>комментарий (здесь можно сделать пометку, например, указать имя или должность сотрудника).</li>
+</ul>
+<p>Над списком расположена большая кнопка «Добавить пользователя», нажмите на нее, чтобы добавить нового сотрудника. Введите логин, выберите нужную настройку из двух вариантов – просмотр или редактирование, добавьте комментарий, если требуется, и нажмите «Добавить». Готово, сотрудник получил доступ к метрике, больше ничего делать не нужно.</p>
+ <p><a data-fancybox="gallery" href="../../../img/metrika/gostevoj_2.png"><img alt="добавление сотрудника в Яндекс Метрике" class="img-responsive sert-img" src="../../../img/metrika/gostevoj_2.png" loading="lazy" /> </a></p>
+<blockquote class="blockquote-v1"><p>Назначайте право редактирования только тем сотрудникам, которые настраивают метрику. Для тех, кто работает с данными счетчиков, достаточно будет просмотра. </p></blockquote>
+<h3>Представительский</h3>
+<ol>
+<li>На самой верхней панели есть раздел «Представители», выберите его.</li>
+ <p><a data-fancybox="gallery" href="../../../img/metrika/predstavitel.png"><img alt="доступ в Яндекс метрику для представителей" class="img-responsive sert-img" src="../../../img/metrika/predstavitel.png" loading="lazy" /> </a></p>
+<li>Далее пользователь добавляется так же как в «Доступе» - в специальном окне нужно указать логин и добавить комментарий по желанию.</li>
+ <p><a data-fancybox="gallery" href="../../../img/metrika/predstavitel_2.png"><img alt="добавление логина представителя в Яндекс метрику" class="img-responsive sert-img" src="../../../img/metrika/predstavitel_2.png" loading="lazy" /> </a></p>
+</ol>
+<p>Сотрудник сможет переключаться между основным и аккаунтом представителя у себя в кабинете в специальном меню, которое появится после назначения ему представительского доступа. Особенность таких прав в том, что пользователь получает доступ сразу ко всем счетчикам и настройкам системы. Если это не входит в ваши планы, вы можете разрешить редактирование только некоторых счетчиков через предоставление гостевого доступа в меню «Доступ».</p>
+<h3>Как удалить пользователей</h3>
+<p>Найти, удалить или настроить можно прямо из списка в «Доступе» или на вкладке «Представители». Справа напротив логина пользователя, после комментария есть два значка – карандаш (редактирование) и крестик (удаление).</p>
+ <p><a data-fancybox="gallery" href="../../../img/metrika/kak-udalit-polzovatelej.png"><img alt="удаление пользователей в Яндекс метрике" class="img-responsive sert-img" src="../../../img/metrika/kak-udalit-polzovatelej.png" loading="lazy" /> </a></p>
+  <p><a data-fancybox="gallery" href="../../../img/metrika/kak-udalit-polzovatelej-u-predstavitelej.png"><img alt="уделение пользователей у представителей" class="img-responsive sert-img" src="../../../img/metrika/kak-udalit-polzovatelej-u-predstavitelej.png" loading="lazy" /> </a></p>
+<blockquote class="blockquote-v2"><p>Не забывайте снимать доступ сразу после прекращения работы с сотрудником, это убережет ваши сайты от утечки данных.</p></blockquote>
+<h3>Можно ли передать логин и пароль от учетной записи</h3>
+<p>Нельзя, потому что это очень опасный способ. Передавая логин и пароль третьему лицу, вы передаете ему полный контроль над вашим профилем Яндекса, доступ к почте, контактам и аккаунтам, зарегистрированным на эту почту, доступ к Яндекс.Диску. Даже если это ваше доверенное лицо, топовый автор блога, близкий друг или ближайший родственник, передавая ему пароль, вы повышаете вероятность случайной утечки.</p>
+<h3>Доступ через Яндекс.Коннект</h3>
+<p>Яндекс.Коннект – это платформа для корпоративного взаимодействия. Вы создаете в ней организацию, добавляете людей, пользуетесь корпоративной почтой, диском, мессенджером и CRM-сервисом. К организации можно привязывать счетчики, это даст возможность управлять индивидуальным доступом напрямую из Яндекс.Коннекта, но не повлияет на функционал самого индивидуального (гостевого) доступа.</p>
+</section>
+
+<section id="p4">
+<p><a id="p4" name="p4"> </a></p>
+<h2>Управление правами владельца</h2>
+<p>Права владельца можно отвязать от email в любой момент. Если почта потерялась, а привязанный к сайту счетчик все еще работает, есть возможность вернуть доступ к счетчику.</p>
+<h3>Как перенести права на другой аккаунт</h3>
+<p>Такая необходимость возникает, если вы решили сменить электронный адрес и не хотите постоянно перелогиниваться ради доступа к Метрике. Также благодаря этой функции вы можете передать права при продаже бизнеса или сайта, сохранив при этом свой аккаунт на Яндексе.</p>
+<ul>
+<li>На панели справа выберите «Настройка»</li>
+<p><a data-fancybox="gallery" href="../../../img/metrika/publichnyj_1.png"><img alt="перенос права доступа на другой аккаунт в Яндекс Метрике" class="img-responsive sert-img" src="../../../img/metrika/publichnyj_1.png" loading="lazy" /> </a></p>
+<li>Перейдите на вкладку «Счетчик», справа будет кнопка «Перенести на другой аккаунт».</li>
+<p><a data-fancybox="gallery" href="../../../img/metrika/perenos-schetchika.png"><img alt="кнопка «Перенести на другой аккаунт в Яндекс Метрике" class="img-responsive sert-img" src="../../../img/metrika/perenos-schetchika.png" loading="lazy" /> </a></p>
+<li>Далее указываете адрес нового владельца сайта, вводите капчу и нажимаете «Перенести счетчик».</li>
+<p><a data-fancybox="gallery" href="../../../img/metrika/perenos-schetchika_2.png"><img alt="ввод адреса нового владельца в Яндекс Метрике" class="img-responsive sert-img" src="../../../img/metrika/perenos-schetchika_2.png" loading="lazy" /> </a></p>
+</ul>
+<p>С этого момента счетчик будет доступен только с адреса новой почты.</p>
+<h3>Как восстановить доступ к метрике</h3>
+<p>Иногда теряется пароль от почты, к которой привязан установленный на сайте счетчик. В этом случае вы можете отправить запрос на восстановления доступа в службу поддержки. В Яндекс.Вебмастере потребуется подтвердить права на счетчик. Рассмотрение заявки займет несколько часов, после чего вам бесплатно восстановят доступ.</p>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                                                     <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Зачем открывать доступ к Яндекс.Метрике</a></li>
+	<li><a href="index.html#p2">Сравнительная таблица уровней доступа</a></li>
+	<li><a href="index.html#p3">Как открыть, настроить и отобрать доступ </a></li>
+	<li><a href="index.html#p4">Управление правами владельца</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

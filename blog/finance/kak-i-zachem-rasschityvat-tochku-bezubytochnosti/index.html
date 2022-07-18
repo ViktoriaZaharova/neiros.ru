@@ -1,0 +1,1719 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Точка безубыточности - что это такое и как рассчитать | формула и расчет точки безубыточности (ТБУ)</title>
+    <meta name="description" content="Что такое точка безубыточности, когда и кому нужно ее знать. Формулы, способы и примеры расчета точки безубыточности, расшифровка показателей, планирование.">
+    <meta name="keywords" content="Точка безубыточности">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/finance/kak-i-zachem-rasschityvat-tochku-bezubytochnosti#cao",
+     "url": "https://neiros.ru/blog/finance/kak-i-zachem-rasschityvat-tochku-bezubytochnosti#cao",
+     "headline":"Точка безубыточности - что это такое и как рассчитать | формула и расчет точки безубыточности (ТБУ)",
+
+     "datePublished": "2022-04-18 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Алексей Ефремов"} ],
+     "about": [
+    {"@type": "Event", "name": "Финансы"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Как и зачем рассчитывать точку безубыточности</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Финансы</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/fb22a538539b85c205f26bc695d5ed66.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/aleksefremov/index.html">Алексей Ефремов</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/2a6113d848312d058d071b75eb4a8fb7.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 19.04.2022</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Организация, расширение и даже текущая работа бизнеса неизменно связана с вложениями в проект. Чем раньше они окупаются, тем лучше для предприятия, тем скорее оно начинает получать <a href="../../business/pribyl-kak-osnovnoj-pokazatel-ehffektivnosti-biznesa/index.html">прибыль</a>. Точка безубыточности (ТБУ) – тот маркер, в достижении которого заинтересован любой бизнесмен. Она не только показывает, насколько прибыльна компания, но и дает возможность определить, как повлиять на <a href="../../business/chto-takoe-rentabelnost-i-zachem-ee-rasschityvat/index.html">рентабельность</a>.</p>
+<p><img alt="Точка безубыточности" class="img-responsive sert-img" src="../../../images/2a6113d848312d058d071b75eb4a8fb7.png" loading="lazy" draggable="false"></p>
+<p>Из этой статьи вы узнаете, что такое точка безубыточности, когда, кому и зачем она нужна, получите формулы и научитесь расшифровывать показатели. Тому, как рассчитать точку безубыточности, будет посвящен отдельный раздел в статье.</p>
+<section id="p0">  <p><a id="p0"> </a></p><h2>Что такое точка безубыточности</h2>
+<p>Точка безубыточности (break-event point) переводится с английского как точка критического объема производства. Иногда этот термин называют иначе: точка нулевой прибыли или порог рентабельности – суть у этих понятий она и та же.</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/grafik-tbu.png"><img alt="График тбу" class="img-responsive sert-img" src="../../../img/tbu/grafik-tbu.png" loading="lazy" /> </a></p>
+<blockquote class="blockquote-v1"><p>В экономике и маркетинге точка безубыточности – это объем производства, при достижении которого полученные доходы перекрывают расходы на ведение бизнеса. Доходы, которые превышают точку безубыточности, являются <a href="../../business/chistaya-pribyl-klyuchevoj-pokazatel-finansovoj-stabilnosti/index.html">чистой прибылью</a> компании.</p></blockquote>
+<p>Простыми словами, если вы достигли точки безубыточности, значит, все вложенные в проект деньги вернулись, но прибыль еще не получена, то есть фирма сработала «в ноль».</p>
+</section> <section id="p1"> <p><a id="p1"> </a></p><h2>Задачи расчета точки безубыточности</h2>
+<p>Главная цель расчета точки безубыточности – оценка финансового состояния компании и получение данных для экономического планирования.</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/zadachi-rascheta-tochki-bezubytochnosti.png"><img alt="Задачи расчета точки безубыточности" class="img-responsive sert-img" src="../../../img/tbu/zadachi-rascheta-tochki-bezubytochnosti.png" loading="lazy" /> </a></p>
+<p>Также это позволяет решать ряд сопутствующих управленческих задач в рамках бизнеса.</p>
+<ul>
+  <li>Определять минимальный уровень продаж, который обеспечит прибыль предприятию.</li>
+<li>Определять наиболее выгодную цену для продажи продуктов.</li>
+<li>Рассчитывать <a href="../../business/chto-takoe-sebestoimost-i-kak-ee-schitat/index.html">себестоимость</a> при нынешних ценах.</li>
+<li>Планировать новое производство и продажи.</li>
+<li>Рассчитывать сроки окупаемости вложений.</li>
+<li>Контролировать производство и реализацию продукции, предотвращая риски работы в убыток.</li>
+<li>Понимать целесообразность выпуска новых линеек продукции, выхода на новые рынки, освоения новых технологий, расширения производства или дилерской сети;</li>
+<li>Регулярно оценивать финансовый сектор предприятия, в т. ч. финансовую стабильность, надежность и платежеспособность.</li>
+<li>Корректировать убыточные направления и перераспределять ресурсы на более перспективные.</li>
+<li>Прогнозировать возможную динамику прибыльности бизнеса в зависимости от колебания цен и прочих расходов, выявлять узкие места в процессе производства.</li>
+<li>Понимать допустимые проседания в продажах, <a href="../vyruchka-vidy-raschet-otlichiya-ot-dohoda-i-pribyli/index.html">выручке</a> или объеме выпуска новой продукции.</li>
+<li>Находить резервы для оптимальных затрат.</li>
+</ul>
+<p>Различные предприятия преследуют свои цели при расчете точки безубыточности, поэтому данный список задач с трудом получится назвать окончательным.</p>
+</section> <section id="p2"> <p><a id="p2"> </a></p><h2>Когда применяется точка безубыточности</h2>
+<p>Точку безубыточности рассчитывают в следующих ситуациях:</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/kogda-primenyaetsya-tochka-bezubytochnosti.png"><img alt="Когда применяется точка безубыточности" class="img-responsive sert-img" src="../../../img/tbu/kogda-primenyaetsya-tochka-bezubytochnosti.png" loading="lazy" /> </a></p>
+<ol>
+<li>При планировании бизнеса.</li>
+<li>Перед внесением изменений в текущий проект.</li>
+<li>Перед продажей компании.</li>
+<li>При разработке франшизы.</li>
+<li>При выводе бизнеса из кризиса.</li>
+</ol>
+<p><b>Планирование бизнеса и разработка франшизы</b>. В этих случаях необходимо построить финансовую модель на основе общей информации о доходах и расходах конкурентов, а также ситуации на рынке. Точка безубыточности помогает понять предполагаемый объем продаж, который должен покрыть расходы. Благодаря этому можно оценить перспективу получения прибыли в текущих условиях.</p>
+<p><b>Внесение изменений и вывод компании из кризиса</b>. Рассчитывая точку безубыточности, можно провести анализ состава и структуры затрат предприятия. При этом становится видно, как показатели изменяются с течением времени. Это позволяет оптимизировать текущие издержки, своевременно переводить постоянные расходы в переменные, отслеживать закупочную стоимость товара или сырья.</p>
+<p><b>Продажа компании</b>. Для определения цены продажи бизнеса нужно оценить его эффективность и перспективы получения прибыли. Сделать это можно путем расчета точки безубыточности.</p>
+</section> <section id="p3"> <p><a id="p3"> </a></p><h2>Кому необходим показатель</h2>
+<p>О том, кому необходимо знать точку безубыточности, удобнее говорить, используя таблицу.</p>
+<table>
+<tbody>
+<tr>
+<td width="200">
+<p>Кому</p>
+</td>
+<td width="600">
+<p>Зачем</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" width="623">
+<p><em>Внутри компании</em></p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Коммерческий директор</p>
+</td>
+<td width="600">
+<p>Планирование и прогнозирование продаж. Оценка минимальной отпускной цены, на которой будет основываться бюджет. Анализ нынешних продаж и допустимой наценки.</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Директор отдела продаж и развития</p>
+</td>
+<td width="600">
+<p>Определение объемов расходов. Расчет средних цен на товары и услуги с учетом удержания конкурентоспособности бизнеса. Составление <a href="../../sales/plan-prodazh-zachem-on-nuzhen-i-kak-sostavit/index.html">плана продаж</a>.</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Сотрудники финансового отдела</p>
+</td>
+<td width="600">
+<p>Анализ финансовой устойчивости путем сопоставления точки безубыточности и реального объема продаж. Отслеживание своевременных зачислений платежей от клиентов.</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Производственный директор</p>
+</td>
+<td width="600">
+<p>Поддержка количества сырья и материалов, которые нужны для выпуска готовой продукции в заданном объеме. Поиск новых поставщиков, чтобы снизить стоимость закупки.</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Собственники бизнеса, акционеры</p>
+</td>
+<td width="600">
+<p>Оценка финансовых возможностей и общего финансового положения дел в фирме.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" width="623">
+<p><em>Вне компании</em></p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Банки</p>
+</td>
+<td width="600">
+<p>Оценка финансовой прочности предприятия и анализ его платежеспособности.</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Инвесторы</p>
+</td>
+<td width="600">
+<p>Оценка привлекательности компании с точки зрения инвестиций. Понимание ее финансовой стабильности и устойчивости.</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Кредиторы</p>
+</td>
+<td width="600">
+<p>Анализ надежности и платежеспособности организации.</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Государственные структуры</p>
+</td>
+<td width="600">
+<p>Понимание устойчивости компании на рынке.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section> <section id="p4"> <p><a id="p4"> </a></p><h2>Каким бывает расчет безубыточности</h2>
+<p>Рассчитывают точку безубыточности в двух вариациях:</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/kakim-byvaet-raschet-bezubytochnosti.png"><img alt="Каким бывает расчет безубыточности" class="img-responsive sert-img" src="../../../img/tbu/kakim-byvaet-raschet-bezubytochnosti.png" loading="lazy" /> </a></p>
+<ul>
+<li>в денежном выражении;</li>
+<li>в единицах продукции.</li>
+</ul>
+<p><b>Точка безубыточности в денежном выражении</b>. Показывает минимальный размер выручки, благодаря которому компании удастся окупить затраты и выйти к нулю. Такой вариант подходит для предприятий, основная деятельность которых связана с продажей большого количества товаров. Пример: интернет-магазин электроники продает на своем сайте множество видов электронных устройств и посчитать ТБУ удобнее в денежном выражении.</p>
+<p><b>Точка безубыточности в единицах продукции</b>. Показывает минимальное количество товаров/услуг, которые обязательно нужно продать, чтобы избежать убытков. Именно этот вариант используется, когда фирма реализует один продукт. Пример: онлайн-школа каллиграфии продает через сайт единственный обучающий курс.</p>
+</section> <section id="p5"> <p><a id="p5"> </a></p><h2>Классификация издержек для расчетов</h2>
+<p><a data-fancybox="gallery" href="../../../img/tbu/klassifikatsiya-izderzhek-dlya-raschetov.png"><img alt="Классификация издержек для расчетов" class="img-responsive sert-img" src="../../../img/tbu/klassifikatsiya-izderzhek-dlya-raschetov.png" loading="lazy" /> </a></p>
+<p>В основе расчета точки безубыточности лежат затраты, которые можно разделить на две категории:</p>
+<ol>
+<li>Постоянные.</li>
+<li>Переменные.</li>
+</ol>
+<p><b>Постоянные затраты</b> не зависят от объема производства и выручки. Компания все равно вкладывает эти финансы в бизнес, даже если он приносит мало прибыли.</p>
+<p>К постоянным издержкам относятся:</p>
+<ul>
+<li>аренда помещения;</li>
+<li>зарплата административному персоналу, включая директора;</li>
+<li>выплаты по кредитам и другим обязательствам;</li>
+<li>амортизация;</li>
+<li>реклама.</li>
+</ul>
+<p><b>Переменные затраты</b> напрямую зависят от объема произведенной и реализованной продукции, полученной выручки. Чем они больше, тем выше переменные затраты.</p>
+<p>К ним относятся:</p>
+<ul>
+<li>закупка сырья для производства или товаров для перепродажи;</li>
+<li>зарплата рабочим, задействованным в производстве и продаже;</li>
+<li>коммунальные услуги;</li>
+<li>закупка ГСМ;</li>
+<li>доставка товаров покупателям.</li>
+</ul>
+</section> <section id="p6"> <p><a id="p6"> </a></p><h2>Какие данные нужны для расчета точки безубыточности</h2>
+<p>В основе расчета точки безубыточности лежат расходы проекта. Для правильных вычислений важно понимать, в чем разница между переменными и постоянными затратами, какие издержки относятся к каждому из них. Об этом мы говорили выше в статье. Теперь разберемся, какие исходные данные требуются для расчета точки безубыточности.</p>
+<table>
+<tbody>
+<tr>
+<td width="110">
+<p>Показатель</p>
+</td>
+<td width="190">
+<p>Обозначение</p>
+</td>
+<td width="500">
+<p>Расшифровка</p>
+</td>
+</tr>
+<tr>
+<td width="110">
+<p>CVP/BEP</p>
+</td>
+<td colspan="2" width="519">
+<p>Точка безубыточности</p>
+</td>
+</tr>
+<tr>
+<td width="110">
+<p>TFC</p>
+</td>
+<td width="190">
+<p>Постоянные расходы</p>
+</td>
+<td width="500">
+<p>Затраты, независящие от объема производства и выручки, не меняются в течение длительного периода.</p>
+</td>
+</tr>
+<tr>
+<td width="110">
+<p>TVC</p>
+</td>
+<td width="190">
+<p>Переменные расходы</p>
+</td>
+<td width="500">
+<p>Затраты, которые могут колебаться в зависимости от уровня производства и продаж. Показатель быстро реагирует на малейшие изменения в работе предприятия.</p>
+</td>
+</tr>
+<tr>
+<td width="110">
+<p>AVC</p>
+</td>
+<td width="190">
+<p>Переменные расходы на единицу товара</p>
+</td>
+<td width="500">
+<p>Переменные затраты на производство и реализацию одного товара или услуги.</p>
+</td>
+</tr>
+<tr>
+<td width="110">
+<p>TR</p>
+</td>
+<td width="190">
+<p>Выручка</p>
+</td>
+<td width="500">
+<p>Деньги, полученные компанией от реализации продукции.</p>
+</td>
+</tr>
+<tr>
+<td width="110">
+<p>P</p>
+</td>
+<td width="190">
+<p>Цена реализации</p>
+</td>
+<td width="500">
+<p>Отпускная стоимость, за которую человек сможет купить товар компании или воспользоваться его услугой.</p>
+</td>
+</tr>
+<tr>
+<td width="110">
+<p>Q</p>
+</td>
+<td width="190">
+<p>Объем производства в натуральной величине</p>
+</td>
+<td width="500">
+<p>Количество единиц выпущенной и проданной продукции или оказанных услуг за конкретный период (месяц, квартал, год, день).</p>
+</td>
+</tr>
+<tr>
+<td width="110">
+<p>MR</p>
+</td>
+<td width="190">
+<p><a href="../../business/marzha-opredelenie-vidy-poryadok-rascheta/index.html">Маржинальный доход</a> (маржа)</p>
+</td>
+<td width="500">
+<p>Выручка без переменных расходов.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section> <section id="p7"> <p><a id="p7"> </a></p><h2>Формулы и способы расчета точки безубыточности</h2>
+<p>Точку безубыточности можно рассчитать по-разному. В этом разделе статьи читайте в подробностях, как это сделать.</p>
+<p>Выбор формулы для вычисления зависит от исходных данных и особенностей предприятия.</p>
+<h3>Формула ТБУ в денежном выражении</h3>
+<p>В данном случае результат вычисления отражает минимальный размер выручки, которую нужно получить предприятию, чтобы окупить все затраты на проект и выйти в ноль.</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/formula-tbu-v-denezhnom-vyrazhenii.png"><img alt="Формула ТБУ в денежном выражении" class="img-responsive sert-img" src="../../../img/tbu/formula-tbu-v-denezhnom-vyrazhenii.png" loading="lazy" /> </a></p>
+<p><em>BEP<sub>Д</sub> = TR * TFC / (TR – TVC)</em></p>
+<p>В этой формуле знаменатель – маржинальный доход, который определяется как разница между выручкой и переменными расходами. Рассчитать его можно в т. ч. на единицу товара, учитывая, что выручка рассчитывается как произведение стоимости реализации и объема производства:</p>
+<p><em>TR = P * Q</em></p>
+<p>Маржинальный доход на единицу продукции составит:</p>
+<p><em>MR на 1 единицу = P – TVC на 1 единицу</em></p>
+<h4>Расчет ТБУ по коэффициенту маржинального дохода</h4>
+<p>Когда товаров или услуг несколько, удобно рассчитывать точку безубыточности в денежном выражении с помощью коэффициента маржинального дохода:</p>
+<p><em>BEP<sub>Д</sub> = TFC / K<sub>MR</sub></em></p>
+<p>При этом коэффициент маржинального дохода рассчитывается по следующей формуле:</p>
+<p><em>K<sub>MR</sub> = MR / TR = MR на 1 единицу / P</em></p>
+<h3>Формула ТБУ в натуральном выражении</h3>
+<p>Для расчета точки безубыточности в натуральном эквиваленте используют следующую формулу:</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/formula-tbu-v-naturalnom-vyrazhenii.png"><img alt="Формула ТБУ в натуральном выражении" class="img-responsive sert-img" src="../../../img/tbu/formula-tbu-v-naturalnom-vyrazhenii.png" loading="lazy" /> </a></p>
+<p><em>BEP<sub>Н</sub> = TFC / MR</em></p>
+<p>Если маржинальной доход неизвестен, его можно рассчитать по формуле:</p>
+<p><em>MR = P – AVC</em></p>
+<p>Средние переменные расходы на единицу продукции вычисляют таким образом:</p>
+<p><em>AVC = TVC / Q</em></p>
+<h3>Способы расчета</h3>
+<p>Применяют разные способы определения точки безубыточности:</p>
+<ul>
+<li>вручную по формуле (математический метод);</li>
+<li>с построением графика;</li>
+<li>в электронных таблицах;</li>
+<li>с помощью платформ управления предприятием;</li>
+<li>по Шеремету.</li>
+</ul>
+<p>Рассмотрим более подробно каждый из способов.</p>
+<h4>Математический метод или вручную</h4>
+<p>Этот метод предполагает определение точки безубыточности в денежном или натуральном выражении по формулам. Вычисления следует производить вручную.</p>
+<p><img alt="Математический метод расчета ТБУ или вручную" class="img-responsive sert-img" src="../../../img/tbu/matematicheskiy-metod-rascheta-tbu-ili-vruchnuyu.jpg" loading="lazy" /></p>
+<p>Математический метод предполагает:</p>
+<ul>
+<li>сбор всех необходимых данных для расчета;</li>
+<li>применение подходящих формул;</li>
+<li>корректировка исходных метрик по результатам вычислений, если это необходимо, например, изменение стоимости;</li>
+<li>повторный расчет.</li>
+</ul>
+<p>По итогам вычислений, используя новые данные по проекту, разрабатывают план по достижению нужных результатов.</p>
+<p>Ручной расчет ТБУ по классической модели, при которой вычисление проводится для одного продукта, предполагает допущения по следующим факторам:</p>
+<ul>
+<li>объем выпуска продукции и ее себестоимость изменяются прямо пропорционально;</li>
+<li>номенклатура товаров/услуг остается неизменной;</li>
+<li>в пределах конкретного объема производства постоянные и переменные затраты, а также стоимость не меняются;</li>
+<li>в пределах расчетных интервалов производственная мощность не меняется;</li>
+<li>объем незавершенного производства колеблется несущественно, а вся новая продукция реализуется.</li>
+</ul>
+<blockquote class="blockquote-v2"><p>Важно не путать точку безубыточности с точкой окупаемости. Последняя показывает, через какое время вложенные средства окупятся, и проект начнет получать прибыль.</p></blockquote>
+<h4>Расчет с построением графика</h4>
+<p>Это наиболее наглядный способ представления данных. На графике по вертикальной оси откладывается выручка, по горизонтальной – объем производства. Результаты:</p>
+<ul>
+<li>выручка – красная линия;</li>
+<li>общие затраты – синяя линия;</li>
+<li>чистая прибыль – зеленая линия;</li>
+<li>точка безубыточности – пересечение синей и красной линий.</li>
+</ul>
+<p><a data-fancybox="gallery" href="../../../img/tbu/grafik-tbu-excel.jpg"><img alt="График ТБУ Excel" class="img-responsive sert-img" src="../../../img/tbu/grafik-tbu-excel.jpg" loading="lazy" /> </a></p>
+<p>Чтобы отразить точку безубыточности более полно, эксперту рекомендуется работать по следующей инструкции:</p>
+<ol>
+<li>На вертикальной оси откладываем объем продаж.</li>
+<li>На горизонтальной оси – затраты.</li>
+<li>Откладываем точку объема продаж и строим линию, проходящую через нее и начало координат.</li>
+<li>Вычисляем переменные затраты, используя заданный объем продаж.</li>
+<li>Через полученную точку и начало координат строим линию переменных затрат.</li>
+<li>Отображаем постоянные затраты на нужном уровне в виде горизонтальной линии.</li>
+<li>Из точки валовых затрат строим линию, параллельную переменным затратам.</li>
+<li>По имеющемуся объему продаж вычисляем выручку.</li>
+<li>Через полученную точку и начало координат отчерчиваем линию выручки.</li>
+</ol>
+<p>В данном случае точкой безубыточности станет пересечение линий валовых затрат и выручки.</p>
+<h4>Расчет в электронных таблицах</h4>
+<p>Для полуавтоматического расчета точки безубыточности подходят электронные таблицы MS Excel и Google Таблицы. Для расчета показателя нужно:</p>
+<ol>
+<li>Вручную прописать исходные данные для единицы продукции:
+<ol>
+<li>Постоянные затраты на единицу продукта;</li>
+<li>Переменные затраты на единицу продукта;</li>
+<li>Цена на товар или услугу;</li>
+</ol>
+<p><a data-fancybox="gallery" href="../../../img/tbu/excel-1.jpg"><img alt="Excel-1" class="img-responsive sert-img" src="../../../img/tbu/excel-1.jpg" loading="lazy" /> </a></p>
+</li>
+<li>Сформировать таблицу и отразить в ней следующие колонки:
+<ol>
+<li>Объем производства;</li>
+<li>Постоянные затраты;</li>
+<li>Переменные затраты;</li>
+<li>Валовые затраты;</li>
+<li>Выручка;</li>
+<li>Маржинальные доход;</li>
+<li>Чистая прибыль.</li>
+</ol>
+<p><a data-fancybox="gallery" href="../../../img/tbu/excel-2.jpg"><img alt="Excel-2" class="img-responsive sert-img" src="../../../img/tbu/excel-2.jpg" loading="lazy" /> </a></p>
+</li>
+<li>Задать формулы, по которым будут рассчитываться промежуточные результаты:
+<ol>
+<li>Переменные затраты;</li>
+<li>Валовые затраты (сумма постоянных и переменных затрат);</li>
+<li>Выручка (произведение цены и объема производства);</li>
+<li>Маржа (выручка минус переменные затраты);</li>
+<li>Объем чистой прибыли (маржа минус постоянные затраты).</li>
+</ol>
+<p><a data-fancybox="gallery" href="../../../img/tbu/excel-3.jpg"><img alt="Excel-3" class="img-responsive sert-img" src="../../../img/tbu/excel-3.jpg" loading="lazy" /> </a></p>
+</li>
+</ol>
+<p>Глядя на колонку чистой прибыли, можно наблюдать, как по мере увеличения объема производства растет показатель.</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/excel-4.jpg"><img alt="Excel-4" class="img-responsive sert-img" src="../../../img/tbu/excel-4.jpg" loading="lazy" /> </a></p>
+<p>Первое положительное значение чистой прибыли и является точкой безубыточности.</p>
+<h4>Расчет с помощью платформ управления предприятием</h4>
+<p>Вычислить точку безубыточности на современном предприятии можно с помощью специализированного ПО, например:</p>
+<ul>
+<li>1С:ERP Управление предприятием;</li>
+<li>WA:Финансист.</li>
+</ul>
+<p>Эти платформы позволяют собирать финансовые данные в процессе работы компании и, используя их, определять точку безубыточности в автоматическом режиме. В частности, системы помогают:</p>
+<ul>
+<li>отражать все виды издержек (финансовые, материальные, трудовые);</li>
+<li>анализировать ценовые решения;</li>
+<li>рассчитывать себестоимость продукта и объем продаж</li>
+</ul>
+<p>Преимущество таких платформ – автоматический режим вычислений, что значительно экономит время и трудовые ресурсы.</p>
+<h4>Расчет по Шеремету</h4>
+<p>Российский, а в прошлом советский экономист А.Д. Шеремет разработал собственный способ определения точки безубыточности. Он предполагает 3 основных этапа:</p>
+<ol>
+<li>Собираем необходимые данные для анализа проекта: объем производства, продаж, показатели прибыли или убытка.</li>
+<li>Определяем постоянные и переменные затраты, зону безопасности и точку безубыточности.</li>
+<li>Оцениваем уровень производства или продаж, который обеспечит компании финансовую устойчивость.</li>
+</ol>
+<p>Расчет точки безубыточности по Шеремету предполагает поиск нижней границы финансовой устойчивости предприятия, а также обеспечение возможностей, которые позволят увеличить зону безопасности.</p>
+</section> <section id="p8"> <p><a id="p8"> </a></p><h2>Примеры расчета точки безубыточности</h2>
+<p>Пример 1. Расчет точки безубыточности для магазина электроники.</p>
+<p>В ассортименте магазина электроники есть разные виды товаров. По каждому товару разные поставщики и разные выручки, существуют переменные индивидуальные издержки, а также постоянные общие для всех затраты. Для наглядности составим таблицу.</p>
+<table>
+<tbody>
+<tr>
+<td width="156">
+<p>Товар</p>
+</td>
+<td width="156">
+<p>Выручка, тыс. руб.</p>
+</td>
+<td width="156">
+<p>Переменные затраты, тыс. руб.</p>
+</td>
+<td width="156">
+<p>Постоянные затраты, тыс. руб.</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Смартфоны</p>
+</td>
+<td width="156">
+<p>250</p>
+</td>
+<td width="156">
+<p>120</p>
+</td>
+<td rowspan="5" width="156">
+<p>400</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Планшеты</p>
+</td>
+<td width="156">
+<p>420</p>
+</td>
+<td width="156">
+<p>180</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Смарт-часы</p>
+</td>
+<td width="156">
+<p>150</p>
+</td>
+<td width="156">
+<p>110</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Наушники</p>
+</td>
+<td width="156">
+<p>40</p>
+</td>
+<td width="156">
+<p>15</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Всего:</p>
+</td>
+<td width="156">
+<p>860</p>
+</td>
+<td width="156">
+<p>425</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Поскольку товары и цены на них очень разные, оптимально считать точку безубыточности в денежном эквиваленте. Воспользуемся формулой, которая позволяет определить ТБУ в диапазоне:</p>
+<p>BEP<sub>Д</sub> = TFC / (1 – К<sub>TVC</sub>), где</p>
+<p>К<sub>TVC</sub> = TVC / TR</p>
+<p>В рамках примера составим еще одну таблицу с результатами расчетов коэффициента переменных расходов, а также маржи и ее процента в выручке для каждого товара.</p>
+<table>
+<tbody>
+<tr>
+<td width="156">
+<p>Товар</p>
+</td>
+<td width="156">
+<p>Маржа, тыс. руб.</p>
+</td>
+<td width="156">
+<p>Коэффициент маржинального дохода</p>
+</td>
+<td width="156">
+<p>Коэффициент переменных расходов</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Смартфоны</p>
+</td>
+<td width="156">
+<p>130</p>
+</td>
+<td width="156">
+<p>0,52</p>
+</td>
+<td width="156">
+<p>0,48</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Планшеты</p>
+</td>
+<td width="156">
+<p>240</p>
+</td>
+<td width="156">
+<p>0,57</p>
+</td>
+<td width="156">
+<p>0,43</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Смарт-часы</p>
+</td>
+<td width="156">
+<p>40</p>
+</td>
+<td width="156">
+<p>0,27</p>
+</td>
+<td width="156">
+<p>0,73</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Наушники</p>
+</td>
+<td width="156">
+<p>25</p>
+</td>
+<td width="156">
+<p>0,63</p>
+</td>
+<td width="156">
+<p>0,37</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Всего:</p>
+</td>
+<td width="156">
+<p>435</p>
+</td>
+<td width="156">
+<p>0,51</p>
+</td>
+<td width="156">
+<p>0,49</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Зная коэффициент переменных расходов по всему магазину, можно определить среднюю точку безубыточности как:</p>
+<p>BEP<sub>Д</sub> = 400 / (1 – 0,49) = 784,31 тыс. рублей</p>
+<p>Поскольку это средний показатель, нужно рассчитать наиболее оптимистичную величину. Она носит название маржинальная упорядоченность по убыванию. В качестве ориентира будут выступать самые рентабельные товарные позиции: смартфоны и планшеты.</p>
+<p>От их продажи магазин получает маржинальный доход в размере 370 тыс. руб. Эта сумма покрывает большую часть постоянных издержек. Недостающие 30 тыс. руб. покроет продажа смарт-часов. Если сложить выручку от продажи всех перечисленных товаров, получим точку безубыточности:</p>
+<p>BEP<sub>Д оптим.</sub> = 250 + 420 + (30/40 * 150) = 782,5 тыс. рублей</p>
+<p>Наиболее пессимистичный прогноз носит название маржинальная упорядоченность по возрастанию. В этом случае в первую очередь будут проданы наушники и смарт-часы. В сумме будет получена выручка 190 тыс. руб. Недостающие 210 тыс. покроют продажи смартфонов.</p>
+<p>Пример 2. Расчет точки безубыточности для предприятия.</p>
+<p>Предположим, что производственная компания выпускает отбеливающие растворы для бытового использования. Поскольку в этом <a href="../../marketing/segmentaciya-rynka-ee-celi-raznovidnosti-kriterii-i-vazhnost-dlya-vashego-biznesa/index.html">сегменте</a> цены почти не меняются, порог рентабельности будет удобно рассчитывать в натуральной величине: по количеству выпущенных и реализованных бутылок.</p>
+<p>Исходные данные отобразим, используя таблицу.</p>
+<table>
+<tbody>
+<tr>
+<td width="500">
+<p>Показатель</p>
+</td>
+<td width="300">
+<p>Значение</p>
+</td>
+</tr>
+<tr>
+<td width="500">
+<p>Розничная цена 1 бутылки</p>
+</td>
+<td width="300">
+<p>80 руб.</p>
+</td>
+</tr>
+<tr>
+<td width="500">
+<p>Переменные издержки на выпуск 1 бутылки</p>
+</td>
+<td width="300">
+<p>42 руб.</p>
+</td>
+</tr>
+<tr>
+<td width="500">
+<p>Постоянные расходы предприятия в месяц</p>
+</td>
+<td width="300">
+<p>76 000 руб.</p>
+</td>
+</tr>
+<tr>
+<td width="500">
+<p>Выручка в месяц</p>
+</td>
+<td width="300">
+<p>280 000 руб.</p>
+</td>
+</tr>
+<tr>
+<td width="500">
+<p>Фактический объем выпуска в месяц</p>
+</td>
+<td width="300">
+<p>3 500 шт.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Данный пример расчета предполагает определение точки безубыточности в натуральной величине (в штуках):</p>
+<p>BEP<sub>Н.</sub> = 76 000 / (80 – 42) = 2 000 шт.</p>
+<p>Из расчета видно, что в данный момент предприятие успешно работает и получает прибыль, выпуская и реализуя в месяц на 1 500 бутылок больше, чем необходимо продать для выхода «в ноль».</p>
+<p>Пример 3. Расчет точки безубыточности для стартапа.</p>
+<p>Начинающий предприниматель собирается открыть фирму и оказывать услугу по ремонту бытовых газовых котлов. По предварительным данным, предстоят следующие постоянные расходы каждый месяц:</p>
+<ul>
+<li>аренда офиса – 20 000 руб.;</li>
+<li>коммунальные платежи – 5 000 руб.;</li>
+<li>амортизация транспорта – 10 000 руб.;</li>
+<li>амортизация инструмента – 5 000 руб.</li>
+</ul>
+<p>Чтобы понять, насколько перспективно данное направление в условиях стартапера, необходимо рассчитать точку безубыточности, исходя из того, что цена услуги составит 10 000 рублей, а продать в месяц планируется 10 услуг. Переменные расходы составят 15 000 рублей в месяц.</p>
+<p>Определим основные показатели.</p>
+<p>Постоянные затраты:</p>
+<p>TFC = 20 000 + 5 000 + 10 000 + 5 000 = 40 000 рублей</p>
+<p>Средние переменные расходы:</p>
+<p>AVC = 15 000 / 10 = 1 500 рублей</p>
+<p>Маржинальная прибыль:</p>
+<p>MR = 10 000 – 1 500 = 8 500 рублей</p>
+<p>Теперь можно рассчитать точку безубыточности для стартапа:</p>
+<p>BEP<sub>Н</sub> = TFC / MR = 40 000 / 8 500 = 4,7 ≈ 5 шт.</p>
+<p>В данном примере при указанных условиях стартаперу предстоит оказывать минимум 5 услуг в месяц, чтобы исключить работу в убыток.</p>
+</section> <section id="p9"> <p><a id="p9"> </a></p><h2>Построение графика</h2>
+<p>Путем графического отображения показателей, связанных с точкой безубыточности, можно проследить их логику и взаимную зависимость.</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/postroenie-grafika-tbu.png"><img alt="Построение графика ТБУ" class="img-responsive sert-img" src="../../../img/tbu/postroenie-grafika-tbu.png" loading="lazy" /> </a></p>
+<p>Если рассматривать эту модель, можно заметить следующие закономерности:</p>
+<ul>
+<li>линия AD всегда горизонтальна, это постоянные расходы;</li>
+<li>линия ОВ демонстрирует прямую зависимость выручки от продаж;</li>
+<li>линия АС покажет, как меняются средние совокупные затраты;</li>
+<li>пересечение АС и ОВ – точка безубыточности, которая показывает объем продаж, при котором выручка достигает значения совокупных затрат.</li>
+</ul>
+<blockquote class="blockquote-v1"><p>Внимание! Результаты анализа графика не всегда универсальны. Он может иметь разную форму, а зависимость между доходами, издержками и объемом производства может быть нелинейной.</p></blockquote>
+</section> <section id="p10"> <p><a id="p10"> </a></p><h2>Расшифровка показателей</h2>
+<p>После того, как собраны все исходные данные и проведены вычисления, важно правильно интерпретировать результаты. В статье рассмотрим, на что стоит обратить внимание.</p>
+<ul>
+<li>Объем продаж меньше ТБУ – явный признак того, что бизнес работает в убыток и, оставаясь в такой ситуации, планомерно движется к банкротству.</li>
+<li>Достижение ТБУ в середине месяца – благоприятный показатель.</li>
+<li>Точка безубыточности находится на уровне соотношения постоянных и переменных расходов – в такие периоды стоит минимизировать постоянные издержки или переводить их в переменные. В противном случае предприятие становится финансово неустойчивым.</li>
+<li>Бизнес не может работать без существенных постоянных затрат. Чтобы их компенсировать, необходимо автоматизировать внутренние процессы и стремиться продать как можно больше.</li>
+<li>Премиальный сегмент предполагает работу над повышением узнаваемости бренда и уникальности продукта, чтобы перекрыть значительные постоянные издержки.</li>
+<li>Молодым компаниям не рекомендуется повышать долю постоянных расходов в условиях непредсказуемого спроса на новый продукт.</li>
+<li>Слишком низкие или, наоборот, завышенные цены могут препятствовать окупаемости. Это повод пересмотреть ценообразование.</li>
+</ul>
+</section> <section id="p11"> <p><a id="p11"> </a></p><h2>Анализ и планирование на основе точки безубыточности</h2>
+<p>Расчет точки безубыточности – основа для дальнейшего анализа текущих показателей компании, прогнозирования, а также составления новых производственного и финансового планов.</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/analiz-i-planirovanie-na-osnove-tochki-bezubytochnosti.png"><img alt="Анализ и планирование на основе точки безубыточности" class="img-responsive sert-img" src="../../../img/tbu/analiz-i-planirovanie-na-osnove-tochki-bezubytochnosti.png" loading="lazy" /> </a></p>
+<p>Планирование безубыточности компании осуществляется в несколько этапов:</p>
+<ol>
+<li>Анализ текущих продаж и финансовых показателей. На этом этапе нужно выделить сильные и слабые стороны, найти способы уменьшить себестоимость, учитывая, как влияют внешние и внутренние факторы. Под прицелом оказывается работа отделов сбыта, снабжения, рациональность процесса производства, общий уровень менеджмента в организации.</li>
+<li>Прогноз цен на товары и услуги. Необходимо оценить все факторы влияния и предположить возможный диапазон наценки. Эта стадия планирования также предполагает изучение альтернативных каналов сбыта или переориентирование компании на производство схожей продукции при неблагоприятных рыночных условиях.</li>
+<li>Расчет себестоимости, переменных и постоянных издержек. Требуется составить план по объему незавершенного производства для каждого этапа, сформировать потребность предприятия в основных и оборотных средствах, определить источники их получения. В производственных расходах также стоит учесть дополнительные расходы по обязательствам, включая выплаты по лизингу, кредитам и другим статьям.</li>
+<li>Расчет точки безубыточности. На данном этапе следует определить величину кромки безопасности. Запас прочности должен определяться уровнем стабильности внешних факторов. После этого вычисляется объем производства и реализации на уровне кромки безопасности.</li>
+<li>Ценовое планирование. Здесь стоит задача определить такие цены, которые помогут достичь нужного объема продаж. Далее проводится повторный расчет точки безубыточности и кромки безопасности.</li>
+<li>Принятие нового плана безубыточности. Необходимо утвердить данные окончательного плана по точке критического объема.</li>
+<li>Контроль выполнения плана. Весь процесс делится на составляющие: контроль расходов по всем статьям, общей себестоимости, выполнения плана продаж, внесения оплаты от покупателей и т. д. Важно понимать, соответствует ли нынешнее финансовое положение компании имеющемуся плану безубыточности.</li>
+</ol>
+</section> <section id="p12"> <p><a id="p12"> </a></p><h2>Что необходимо еще рассчитать</h2>
+<p>При планировании безубыточности предприятия могут потребоваться дополнительные параметры. Рассмотрим, какие еще полезные данные необходимо получить после расчета точки безубыточности.</p>
+<h3>Запас прочности и минимальная выручка</h3>
+<p>Чтобы компания не рисковала уйти в минус при малейшем повышении цен или налогов, выручка всегда должна превышать точку безубыточности. Запас финансовой прочности (ЗФП) показывает, насколько фирма превзошла эту отметку.</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/formula-zapasa-finansovoy-prochnosti.png"><img alt="Формула запаса финансовой прочности" class="img-responsive sert-img" src="../../../img/tbu/formula-zapasa-finansovoy-prochnosti.png" loading="lazy" /> </a></p>
+<p><em>ЗФП = (Выручка – Выручка в ТБУ) / Выручка</em></p>
+<p>Если запас прочности превышает 0,5, это говорит о том, что минимальная выручка минимум вдвое превышает точку безубыточности, и компания не имеет финансовых проблем.</p>
+<h3>Неучтенные расходы</h3>
+<p>Когда компания выпускает гораздо больше продукции, чем предусмотрено в точке безубыточности, весь объем выпуска реализуется, но ожидаемых финансовых результатов нет, это говорит либо об ошибке в расчетах, либо о неучтенных расходах. Примеры неучтенных расходов:</p>
+<ul>
+<li>издержки на реализацию;</li>
+<li>налоги;</li>
+<li>другие расходы и доходы;</li>
+<li>издержки, которые уходят в прибыль (поддержка соц. сферы, программа развития, содержание сайта и пр.);</li>
+<li>необходимый к уплате налог на прибыль.</li>
+</ul>
+<p>В качестве дополнения к ТБУ было введено понятие реальной точки безубыточности, которая учитывает издержки текущего периода. Ее рассчитывают по формуле:</p>
+<p><em>BEP<sub>реальная</sub> = (TFC + Затраты из прибыли) / (1 – Доля переменных затрат)</em></p>
+<p>В ситуациях, когда компания имеет обязательства, которые необходимо погашать, вводят понятие долговой точки безубыточности:</p>
+<p><em>BEP<sub>долговая</sub> = Постоянные платежи / (1 – Доля переменных затрат)</em></p>
+<p>В данном случае:</p>
+<p><em>Постоянные платежи = TFC + Расходы на прибыль + Часть долга</em></p>
+<p>Часть долга – та сумма задолженности, которую фирма планирует выплатить в течение заданного периода.</p>
+</section> <section id="p13"> <p><a id="p13"> </a></p><h2>Использование полученных результатов на практике</h2>
+<p>Определение точки безубыточности наглядно показывает, как связаны друг с другом прибыль, выручка и издержки. Отслеживая эту взаимосвязь, управляющее звено компании получает рычаги для централизованного влияния на финансовую ситуацию.</p>
+<p>В частности, на основе анализа точки безубыточности осуществляется ценообразование. Влияние цены и издержек предприятия на финансовые показатели позволяет прогнозировать динамику цены, а также переменных и постоянных расходов.</p>
+<p>Зная точку безубыточности, руководитель фирмы может легко сориентироваться в цифрах и назначить оптимальную цену на продукт. Если же такой возможности нет, могут быть сокращены издержки, что позволит снизить себестоимость, оставив цену на прежнем уровне.</p>
+</section> <section id="p14"> <p><a id="p14"> </a></p><h2>Плюсы и минусы метода</h2>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p>Преимущества построения модели точки безубыточности</p>
+            </td>
+            <td class="minus-block" width="400">
+            <p>Недостатки</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ol>
+<li>легкость вычислений за счет простой формулы и небольшого количества переменных;</li>
+<li>высокая точность для крупных предприятий со стабильными объемами продаж;</li>
+<li>наглядность благодаря очевидной взаимосвязи прибыли, затрат и объема продаж.</li>
+</ol>
+            </td>
+            <td width="400">
+<ol>
+<li>вероятность погрешности из-за невозможности учета ряда факторов вследствие постоянно меняющихся производственных и внешних условий;</li>
+<li>плохая применимость для малых предприятий с неустойчивым уровнем продаж;</li>
+<li>по результатам расчета ТБУ не всегда можно дать четкие комментарии для улучшения финансовой ситуации.</li>
+</ol>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</section> <section id="p15"> <p><a id="p15"> </a></p><h2>Подводные камни определения точки безубыточности</h2>
+<p>В процессе вычисления точки безубыточности могут возникать проблемы.</p>
+<p><a data-fancybox="gallery" href="../../../img/tbu/podvodnye-kamni-opredeleniya-tochki-bezubytochnosti.png"><img alt="Подводные камни определения точки безубыточности" class="img-responsive sert-img" src="../../../img/tbu/podvodnye-kamni-opredeleniya-tochki-bezubytochnosti.png" loading="lazy" /> </a></p>
+<p>Разберем ситуации, в которых бывает трудно рассчитать порог рентабельности.</p>
+<ul>
+<li>При росте предложения на рынке компания снижает цены, это приводит к сдвигу ТБУ вправо. Такой же эффект дает предоставление скидок оптовым клиентам, например, при покупке через сайт.</li>
+<li>При повышении спроса растут цены, это смещает точку безубыточности влево.</li>
+<li>Расходы на сырье, материалы или товар могут колебаться: при крупных закупках они снижаются, при простое поставок выходит рост.</li>
+<li>При больших объемах выпуска продукции могут сокращаться затраты на удельные з/п персоналу.</li>
+<li>Постоянные и переменные издержки со временем зачастую возрастают.</li>
+<li>Сложно четко разграничить постоянные и переменные расходы.</li>
+<li>Структура продаж может сильно меняться в процессе работы компании.</li>
+</ul>
+<p>Перечисленные ситуации стоит учитывать в анализе порога рентабельности, однако примитивные бизнес-планы, как правило, игнорируют их.</p>
+</section> <section id="p16"> <p><a id="p16"> </a></p><h2>Часто задаваемые вопросы</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="headingOne"><a aria-controls="collapseOne" aria-expanded="false" class="btn-link collapsed" data-target="#collapseOne" data-toggle="collapse" href="index.html#">Что делать, если объем продаж меньше, чем точка безубыточности?</a></div>
+
+<div aria-labelledby="headingOne" class="collapse" data-parent="#faqAccordion" id="collapseOne" style="">
+<div class="card-body">
+<p>Если речь идет о небольшом предприятии, например, о магазине, который работает через сайт или оффлайн, один из эффективных вариантов – включить режим экономии. Но сокращение расходов может дать побочные эффекты. Приведем примеры:</p>
+<ul>
+<li>из-за уменьшения количества продавцов ради экономии на сдельной зарплате снижается качество обслуживания клиентов;</li>
+<li>закупленный дешевле товар оказывается худшего качества при том, что плата за него была прежней.</li>
+</ul>
+<p>Это неизменно приводит к потере клиентов и сокращению прибыли.</p>
+<p>Распространенный эффективный способ избежать этого и получить хорошую прибыль – известная акция «черная пятница». Работая весь год практически с нулевым доходом, ритейлеры получают колоссальную прибыль за счет активной торговли в конце периода.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingTwo"><a aria-controls="collapseTwo" aria-expanded="false" class="btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse" href="index.html#">Как быстрее достигнуть точки безубыточности?</a></div>
+
+<div aria-labelledby="headingTwo" class="collapse" data-parent="#faqAccordion" id="collapseTwo">
+<div class="card-body">
+<p>Для этого бизнесмены применяют два метода: снижение расходов и увеличение цены. В первом случае распределяют расходы в порядке значимости и прорабатывают те статьи, на которых можно сэкономить, например, более дешевая аренда склада, отказ от такси для сотрудников, перевод сайта на более дешевый хостинг.</p>
+<p>Во втором случае повышают цены на товары или услуги компании. Этот метод подходит компаниям, которые объективно работают на 5+: выпускают хороший товар или предоставляют качественные услуги, всегда в срок выполняют обязательства по договору, превосходят конкурентов.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading3"><a aria-controls="collapse3" aria-expanded="false" class="btn-link collapsed" data-target="#collapse3" data-toggle="collapse" href="index.html#">Что такое точка бесприбыльности и до каких пределов можно развить бизнес?</a></div>
+<div aria-labelledby="heading3" class="collapse" data-parent="#faqAccordion" id="collapse3">
+<div class="card-body">
+<p>Точка бесприбыльности – это тот объем выручки, по достижении которого активно расширяющаяся компания начинает опять работать в убыток. Например, при увеличении выпуска товара и переходе на многосменную работу предприятию придется увеличить расходы на оплату вечерних и ночных смен, амортизацию, ремонт оборудования и т. д.</p>
+<p>Чтобы понимать, до каких пределов можно развивать бизнес и не пропустить негативную тенденцию, стоит отслеживать следующие показатели:</p>
+<ul>
+<li>постоянные издержки – не должны увеличиваться при росте выручки;</li>
+<li>переменные расходы – должны увеличиваться медленнее, чем выручка;</li>
+<li>чистая прибыль и маржа – должна увеличиваться быстрее, чем выручка.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section> <section id="p17"> <p><a id="p17"> </a></p><h2>Заключение</h2>
+<p>Рассчитать точку безубыточности очень легко, имея минимум бухгалтерских данных. В свою очередь, этот показатель помогает определить минимальную выручку, которую должна получать компания, чтобы окупить расходы, или минимальное количество товара/услуг, которые нужно продавать, чтобы выйти в ноль. Доход, вдвое превышающий точку безубыточности, позволяет поддерживать устойчивое финансовое положение предприятия.</p></section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                                                     <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/fb22a538539b85c205f26bc695d5ed66.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Алексей Ефремов</h3>
+                            <h4 class="authr-designation">Финансовый консультант</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p0">Что такое точка безубыточности</a></li>
+	<li><a href="index.html#p1">Задачи расчета точки безубыточности</a></li>
+	<li><a href="index.html#p2">Когда применяется точка безубыточности</a></li>
+	<li><a href="index.html#p3">Кому необходим показатель</a></li>
+	<li><a href="index.html#p4">Каким бывает расчет</a></li>
+	<li><a href="index.html#p5">Классификация издержек</a></li>
+	<li><a href="index.html#p6">Какие данные нужны</a></li>
+	<li><a href="index.html#p7">Формулы и способы расчета</a></li>
+	<li><a href="index.html#p8">Примеры расчета</a></li>
+	<li><a href="index.html#p9">Построение графика</a></li>
+	<li><a href="index.html#p10">Расшифровка показателей</a></li>
+	<li><a href="index.html#p11">Анализ и планирование</a></li>
+	<li><a href="index.html#p12">Что необходимо еще рассчитать</a></li>
+	<li><a href="index.html#p13">Использование полученных результатов</a></li>
+	<li><a href="index.html#p14">Плюсы и минусы метода</a></li>
+	<li><a href="index.html#p15">Подводные камни определения</a></li>
+	<li><a href="index.html#p16">Часто задаваемые вопросы</a></li>
+	<li><a href="index.html#p17">Заключение</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

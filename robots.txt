@@ -1,0 +1,14 @@
+User-Agent: Yandex
+Disallow: /*files/
+Disallow: /lp/
+Disallow: /*?
+Disallow: /x1/
+Host: https://neiros.ru
+
+User-Agent: *
+Disallow: /*files/
+Disallow: /lp/
+Disallow: /*?
+Disallow: /x1/
+
+Sitemap:  https://neiros.ru/sitemap.xml

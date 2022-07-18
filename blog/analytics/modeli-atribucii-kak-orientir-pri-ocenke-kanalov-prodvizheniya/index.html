@@ -1,0 +1,1896 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Модель атрибуции - что это такое в маркетинге и рекламе |  модели атрибуции в Яндекс Директ, Метрика, Google Analytics и ads</title>
+    <meta name="description" content="Модели атрибуции – что это такое и зачем нужны. Какие бывают и что влияет на выбор модели. Разница между Google Analytics и Ads, Яндекс Метрикой и Директ.">
+    <meta name="keywords" content="Модели атрибуции">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/analytics/modeli-atribucii-kak-orientir-pri-ocenke-kanalov-prodvizheniya#cao",
+     "url": "https://neiros.ru/blog/analytics/modeli-atribucii-kak-orientir-pri-ocenke-kanalov-prodvizheniya#cao",
+     "headline":"Модель атрибуции - что это такое в маркетинге и рекламе |  модели атрибуции в Яндекс Директ, Метрика, Google Analytics и ads",
+
+     "datePublished": "2022-01-07 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "Аналитика"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Модели атрибуции как ориентир при оценке каналов продвижения</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Аналитика</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/a3bca24f2c475987e52779b6d74be675.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 03.04.2022</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Если вам хоть один раз приходилось анализировать трафик, вы уже сталкивались с атрибуцией, даже если не знали о ней. А ведь существует множество моделей, каждая из которых применяется в определенных условиях. В этой статье рассмотрим, что такое модели атрибуции, какие они бывают и для чего используются.</p>
+<section id="p1">
+<p><a id="p1" name="p1"> </a></p>
+<h2>Что такое модель атрибуции</h2>
+<p>Модель атрибуции – это правило, по которому источники трафика распределяются по точкам взаимодействия с клиентами в зависимости от степени вклада каждого из них в конверсию.</p>
+<p>Чтобы было понятнее, рассмотрим простой кейс-пример.</p>
+<p>Компания «Рога и копыта» продает украшения ручной работы через свой сайт. Для продвижения использует аккаунт в Instagram (Facebook), контекстную рекламу, ремаркетинг. Потенциальный клиент проделывает примерно такой путь:</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/cepochka-dejstvij-klienta.png"><img alt="цепочка действий клиента" class="img-responsive sert-img" src="../../../img/analytics/ma/cepochka-dejstvij-klienta.png" loading="lazy" /> </a></p>
+<ol>
+<li>Видит фото товара в Instagram и решает подписаться. Регулярно просматривает посты в ленте. Товар вызывает интерес, и пользователь заходит в каталог.</li>
+<li>По названию компании находит ее в поиске Google и переходит на сайт из контекстной рекламы, но заказ временно откладывает.</li>
+<li>Благодаря ретаргетингу <a href="../../ads/yandeks-direkt-krupneyshaya-reklamnaya-platforma-v-runete/index.html">Яндекс Директ</a> повторно сталкивается с товаром через пару дней. В этот раз компания ввела акцию и предлагает более выгодную цену.</li>
+<li>Человек кликает по объявлению ремаркетинга, попадает на сайт и делает заказ.</li>
+</ol>
+<p>Такая цепочка предполагает 3 касания с брендом, предшествующие заказу: Instagram, контекстная реклама, ремаркетинг. Каждое из касаний имеет свою ценность, которую и помогает определять атрибуция.</p>
+</section>
+
+<section id="p2">
+<p><a id="p2" name="p2"> </a></p>
+<h2>Зачем нужна атрибуция</h2>
+<p>В большинстве сфер от момента первого контакта с клиентом до продажи проходит несколько этапов, которые отражены в типичной <a href="../../sales/vse-o-voronke-prodazh-ot-istorii-k-primeneniyu-v-sovremennom-biznese/index.html">воронке</a>:</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/zachem-nuzhna-atribuciya.png"><img alt="зачем нужна атрибуция" class="img-responsive sert-img" src="../../../img/analytics/ma/zachem-nuzhna-atribuciya.png" loading="lazy" /> </a></p>
+<ol>
+<li>Знакомство с компанией.</li>
+<li>Стадия раздумий: выбор продукта, оценка необходимости купить, сравнение цен, отзывов и т. д.</li>
+<li>Покупка или <a href="../konversiya-chto-eto-i-pochemu-vazhno-ee-znaty/index.html">конверсия</a>.</li>
+<li>Повторные разы конверсии (удержание).</li>
+</ol>
+<p>Удерживать покупателей всегда гораздо дешевле, чем искать и привлекать новых, за счет применения более целевых рекламных кампаний, оценить эффективность которых значительно проще.</p>
+<p>Атрибуция в бизнесе играет важную роль:</p>
+<ul>
+<li>помогает так распределить бюджет между рекламными каналами, чтобы повысить их эффективность, в частности <a href="../chto-takoe-roi-i-kogda-ego-nuzhno-schitat/index.html">ROI</a> и ROAS, а также снизить финансовые риски;</li>
+<li>повышает персонализацию для предложения клиентам в удобных для них каналах именно тех товаров, которыми они интересуются;</li>
+<li>позволяет выстроить длительные и выгодные отношения с потребителями для их удержания, улучшения персонализации сервиса и продаж.</li>
+</ul>
+<h3>Как атрибуция влияет на оптимизацию</h3>
+<p>Возможности рекламы можно грамотно оценить, если во всей цепочке взаимодействия с клиентом определить ключевой заход на сайт. Это может быть одна фраза, которая определяет <a href="../../marketing/celevaya-auditoriya-pochemu-marketing-nevozmozhen-bez-ee-opredeleniya/index.html">поведение целевой аудитории</a> в рамках РК. Когда меняется модель атрибуции, происходит изменение в значимости ключевых слов, поэтому затраты на рекламу тоже необходимо пересматривать. Выглядит это примерно так:</p>
+<ol>
+<li>Меняется модель атрибуции.</li>
+<li>Конверсии перераспределяются в системе, и там же происходит переоценка эффективности ключевых запросов.</li>
+<li>Выполняем перерасчет ставок, оптимизируем рекламу.</li>
+</ol>
+</section>
+
+
+<section id="p3">
+<p><a id="p3" name="p3"> </a></p>
+<h2>Виды моделей атрибуции</h2>
+<p>Когда компания уже давно на рынке и использует разные каналы продвижения, важно знать, какие из них действительно приводят к покупке прямо или косвенно. В этом случае выбор моделей атрибуции должен быть продуманным и тщательным. Если же фирма только выходит на рынок, ей важно заявить о себе, и для этого могут понадобиться совсем другие каналы.</p>
+<blockquote class="blockquote-v1"><p>Недооценка какого-либо канала может стать причиной значительного сокращения продаж из-за «закрытия» важного этапа, который не приводил к конверсии прямо, но подталкивал клиентов к переходу на конверсионную ступень воронки.</p></blockquote>
+<p>Рассмотрим, какие бывают модели атрибуции, как они работают и когда их нужно применять.</p>
+<h3>Модели на основе позиции</h3>
+<h4>По первому клику (First Interaction или First Click)</h4>
+<p>Ценность конверсии относится к самому первому источнику, где пользователь впервые столкнулся и познакомился с брендом. 
+<p><img alt="по первому клику" class="img-responsive sert-img" src="../../../img/analytics/ma/po-pervomu-kliku.png" loading="lazy" /></p>
+ <p>Подходит для:</p>
+<ul>
+<li>компаний, которые стремятся к узнаваемости;</li>
+<li>бизнес-проектов, которым нужно расширить охват ЦА;</li>
+<li>маркетологов в поиске площадок, которые дадут конвертируемый трафик.</li>
+</ul>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>простота настройки и использования, поскольку не требует равномерно распределять вес между каналами и расчетов;</li>
+<li>идеальный вариант при формировании спроса и повышении узнаваемости.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>узкий профиль не дает увидеть всю картину;</li>
+<li>не учитываются касания, которые совершил клиент перед покупкой;</li>
+<li>вышестоящие каналы переоценены.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>По последнему клику (Last Interaction или Last Click)</h4>
+<p>Наиболее ценным в плане конверсии считается канал, предшествующий конверсии. При этом влияние других каналов, которые участвовали в достижении результата, не учитывается.</p>
+<p><img alt="по последнему клику" class="img-responsive sert-img" src="../../../img/analytics/ma/po-poslednemu-kliku.png" loading="lazy" /></p>
+<p>Метод идеален для:</p>
+<ul>
+<li>компаний с коротким циклом продаж;</li>
+<li>проектов, использующих цепочку из 1-3 рекламных каналов.</li>
+</ul>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>понятная модель, которой привыкли пользоваться маркетологи;</li>
+<li>помогает в оценке проектов, где основной упор сделан на быстрые продажи.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>игнорирует вклад других каналов в полученный результат, хотя многие покупки совершаются за счет нескольких касаний.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>По последнему непрямому клику (Last Non-Direct Click)</h4>
+<p>Как и в предыдущей модели, самым ценным в плане конверсии считается завершающий канал в цепочке. Однако, если это был прямой переход, вес передается источнику, который находится в цепочке перед ним. Суть в том, чтобы отсеять потребителей, которые уже были знакомы с брендом и перешли на сайт по прямой ссылке.</p>
+<p><img alt="по последнему непрямому клику" class="img-responsive sert-img" src="../../../img/analytics/ma/po-poslednemu-nepryamomu-kliku.png" loading="lazy" /></p>
+<p>Метод актуален для:</p>
+<ul>
+<li>маркетологов, которым необходимо понять, как работает выбранный платный канал;</li>
+<li>бизнес-проектов, не стремящимся к узнаваемости бренда.</li>
+</ul>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>акцентирует внимание на источниках платного трафика;</li>
+<li>используется в качестве основы, с которой можно сравнивать остальные модели атрибуции.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>игнорирует влияние других источников трафика, в т. ч. email-рассылок, из которых пользователи переходят по прямым ссылкам;</li>
+<li>не учитывает источники, которые способствовали решению клиента оставить контакты или совершить звонок.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>По последнему клику в Google Рекламе (Last Google Ads Click)</h4>
+<p>Если пользователь кликнул по объявлению в Google Ads, ему будет присвоена максимальная ценность. Этот метод стоит выбирать компаниям, которые используют только платную гугл-рекламу и хотят найти наиболее эффективное объявление.</p>
+<p><img alt="по последнему клику в Google Рекламе" class="img-responsive sert-img" src="../../../img/analytics/ma/po-poslednemu-kliku-v-google-reklame.png" loading="lazy" /></p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>простая модель;</li>
+<li>учитывает контакты с покупателями, пришедшими с платной рекламы.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>игнорирует другие источники трафика, в т. ч. Яндекс. Директ.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Линейная модель атрибуции (Linear model)</h4>
+<p>В этой модели ценность от конверсии делится равномерно между всеми звеньями в цепочке. Применять ее можно предприятиям с длинным циклом продаж и проектам (преимущественно из сферы B2B), в которых важно постоянно быть на связи с клиентом независимо от этапа воронки.</p>
+<p><img alt="линейная модель атрибуции" class="img-responsive sert-img" src="../../../img/analytics/ma/linejnaya-model-atribucii.png" loading="lazy" /></p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>простая;</li>
+<li>учитывает взаимодействия с аудиторией равно на всех этапах.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>не может быть взята за основу при необходимости перераспределить рекламный бюджет.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>С учетом давности взаимодействия (Time Decay)</h4>
+<p>С каждым новым звеном в цепочке ценность от конверсии возрастает. Первый источник трафика считается наименее ценным, а конечный важен больше всего. Это хороший вариант для ограниченных во времени бизнес-проектов, которым необходимо понять, насколько эффективны рекламные кампании.</p>
+<p><img alt="с учетом давности взаимодействия" class="img-responsive sert-img" src="../../../img/analytics/ma/s-uchetom-davnosti-vzaimodejstviya.png" loading="lazy" /></p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>каждый канал учитывается;</li>
+<li>наибольшая ценность справедливо отводится последнему каналу.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>источники, которые вовлекли клиента в воронку, остаются недооцененными.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>На основе позиции (Position Based или U-образная)</h4>
+<p>Ценность между источниками распределяется по такому принципу, чтобы большую долю веса получили первое и последнее звенья в цепочке: каналы, которые вовлекли пользователя в воронку и закрыли сделку. Данный метод отлично идет компаниям, которые ставят на одну ступень потребность в привлечении новой аудитории и превращение уже привлеченных пользователей в клиентов.</p>
+<p><img alt="на основе позиции" class="img-responsive sert-img" src="../../../img/analytics/ma/na-osnove-pozicii.png" loading="lazy" /></p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>логичное распределение ценности между каналами.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>риск недооценивания промежуточных звеньев, которые могли сильнее повлиять на решение пользователя, чем ожидается.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>W-образная модель</h4>
+<p>В отличие от U-образной модели, здесь вес распределяется между крайними звеньями цепочки и одним из срединных касаний, которое могло подтолкнуть пользователя к совершению целевого действия. Метод принесет результат бизнесу, использующему рекламные кампании с лидогенерацией.</p>
+<p><img alt="W-образная модель" class="img-responsive sert-img" src="../../../img/analytics/ma/w-obraznaya-model.png" loading="lazy" /></p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>оценка каналов и оптимизация кампании за счет добавления или удаления неэффективных звеньев цепочки.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>нет понимания, как именно клиент мог взаимодействовать с брендом в середине цепочки;</li>
+<li>чрезмерное занижение ценности других касаний;</li>
+<li>проблема сложной настройки.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Z-образная модель</h4>
+<p>Здесь ценность конверсии равномерно распределяется между первым, последним, промежуточным касаниями, а также этапом, на котором пользователь превратился в лида (оставил контакты, оформил подписку на рассылку или блог и т. д.). Этот вариант покажет, насколько эффективно функционируют предприятия с хорошо налаженной совместной работой отделов маркетинга и продаж.</p>
+<p><img alt="Z-образная модель" class="img-responsive sert-img" src="../../../img/analytics/ma/z-obraznaya-model.png" loading="lazy" /></p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>можно достаточно точно отследить путь пользователя вплоть до каждого посещения;</li>
+<li>больше возможностей выявить эффективные стратегии, которые приносят хорошую <a href="../../business/pribyl-kak-osnovnoj-pokazatel-ehffektivnosti-biznesa/index.html">прибыль</a>.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>сложная реализация.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h4>Post-click конверсия</h4>
+<p>Модель позволяет заложить разное количество времени на принятие решения пользователем в той или иной ситуации в зависимости от сферы бизнеса и продукта. Идеальна для компаний, которые продают дорогие продукты (автомобили, недвижимость, строительство)</p>
+<p><img alt="Post-click конверсия" class="img-responsive sert-img" src="../../../img/analytics/ma/post-click.png" loading="lazy" /></p>
+
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>учет фактора времени, которое может понадобиться для принятия решения.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>модель не учитывает мероприятия, способствующие повышению узнаваемости бренда.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Post-View конверсия</h4>
+<p>Модель предполагает использование невидимого тега pixel tag, который собирает статистику о последующих действиях пользователей, увидевших рекламу, даже в том случае, если они в итоге не кликнули по ней. Подходит компаниям, которые заботятся об имидже, и <a href="../../business/biznes-processy-kak-sposob-uluchshit-rabotu-predpriyatiya/index.html">бизнес-процессам</a>, требующим оптимизации.</p>
+<p><img alt="Post-View конверсия" class="img-responsive sert-img" src="../../../img/analytics/ma/post-view.png" loading="lazy" /></p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>помогает учесть отложенный контакт с рекламой;</li>
+<li>способствует узнаваемости.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>риск того, что пользователь не станет читать рекламное объявление, даже если оно будет просмотрено.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Пользовательская модель</h4>
+<p>После глубокого анализа значительного массива данных вес каждого взаимодействия с покупателем указывается вручную. Применяя эту модель, вы сможете посмотреть, насколько эффективно работают бизнес-процессы с долгим циклом продаж и компании с продвинутыми технологиями, хорошими аналитиками и маркетологами.</p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>помогает увидеть весь путь покупателя до совершения транзакции.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>трудная настройка;</li>
+<li>потребность в большом объеме исходных данных.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Алгоритмические модели</h3>
+<h4>На основе данных (Data-Driven Attribution)</h4>
+<p>Эта модель работает без предварительно заданных условий и определяет ценность каналов на основе Вектора Шелпи и пользовательских значений. Эффективность каждого канала и его влияние на конверсию оценивается независимо от положения конкретного звена в цепочке. Используют ее маркетологи, которые хотят выделить максимально эффективные ключевые фразы и кампании для рационального распределения бюджета. При этом, когда нужно узнать, на каком месте в цепочке находится канал, такая модель не покажет реального положения дел.</p>
+<p><img alt="Data-Driven модель атрибуции" class="img-responsive sert-img" src="../../../img/analytics/ma/data-driven-attribution.png" loading="lazy" /></p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>достоверность и объективность за счет использования собственных данных.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>может применяться только компаниями с большим массивом данных в <a href="../polnyj-gajd-po-google-analytics/index.html">Google Analytics</a> для проведения расчета;</li>
+<li>нельзя оценить продвижение по воронке;</li>
+<li>не позволяет включить в расчеты данные из оффлайн-источников (например, из CRM) для оценки каждой транзакции.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>На основе Цепей Маркова (Markov Chains)</h4>
+<p>Модель помогает понять, как изменится конверсия, если тот или иной канал будет отсутствовать в цепочке. Оценка осуществляется путем поочередного удаления каждого источника трафика и анализа числа транзакций после этого. Подходит компаниям, которые хранят все данные в одной системе.</p>
+<p>3 этапа расчета ценности:</p>
+<ol>
+<li>Расчет вероятности конверсии при удалении каждого из каналов.</li>
+<li>Расчет количества потерянных конверсий при удалении конкретного канала.</li>
+<li>Расчет ценности каждого канала.</li>
+</ol>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p></br> </p>
+            </td>
+            <td class="minus-block" width="400">
+            <p></br> </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<ul>
+<li>возможность оценки взаимного влияния на конверсию источников трафика и определения наиболее значимого канала.</li>
+</ul>
+            </td>
+            <td width="400">
+<ul>
+<li>первое звено в цепочке остается недооцененным;</li>
+<li>нужны знания основ программирования.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Использование нескольких моделей атрибуции</h3>
+<p>В некоторых случаях, когда стоит задача средней или высокой сложности, использование одной модели атрибуции может стать причиной ложных выводов. Если использовать одновременно несколько моделей атрибуции, можно снизить риск ошибок и взглянуть на ситуацию с разных сторон.</p>
+<p>Маркетологи экспериментальным путем находят эффективные способы принятия решений, наблюдая, как разные методы влияют на общие результаты бизнес-проектов.</p>
+</section>
+
+<section id="p4">
+<p><a id="p4" name="p4"> </a></p>
+<h2>Факторы, влияющие на выбор моделей атрибуции</h2>
+<p>Выбор моделей атрибуции напрямую зависит от поставленных задач. Чтобы не ошибиться, важно определиться со следующими параметрами:</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/faktory-vliyayushchie-na-vybor-modelej-atribucii.png"><img alt="факторы, влияющие на выбор моделей атрибуции" class="img-responsive sert-img" src="../../../img/analytics/ma/faktory-vliyayushchie-na-vybor-modelej-atribucii.png" loading="lazy" /> </a></p>
+<ol>
+<li>Цикл сделки – отражает длительность взаимодействия с покупателем от первого касания до закрытия сделки. Бывает:</li>
+</ol>
+<ul style="padding-left: 40px;">
+<li>Короткий – клиент совершает покупку меньше, чем за 3 касания, в этом случае хорошо подходит модель Last Click;</li>
+<li>Длинный – предполагает более 3 контактов с пользователем, чаще требует использования разных моделей атрибуции.</li>
+</ul>
+<ol start="2">
+<li>Особенность работы канала – прямое предложение перейти по рекламной ссылке или нативное воздействие на пользователя с помощью интересного ему материала. В первом случае подходят классические модели на основе клика, во втором требуется больше аналитической работы.</li>
+<li>Число каналов – один или несколько. Оценить один канал легко. При большом наборе каналов может потребоваться целый ряд моделей атрибуции даже при коротком цикле продаж.</li>
+<li>Маркетинговая задача – продажи, рассказ о бренде, привлечение лидов, удержание пользователей и т. д. В зависимости от того, какая стоит задача, выбирается модель оценки.</li>
+</ol>
+<p>Также полезно сформулировать следующие тезисы:</p>
+<ul>
+<li>приоритетные конверсии;</li>
+<li>число шагов для совершения транзакции;</li>
+<li>присутствует ли фактор сезонности;</li>
+<li>время, в течение которого пользователь принимает решение;</li>
+<li>степень узнаваемости бренда;</li>
+<li>проводилась ли глубокая аналитика, есть ли данные статистики о конверсиях;</li>
+<li>насколько конкурентная ниша.</li>
+</ul>
+<h3>Как пересматривать модель атрибуции</h3>
+<p>Любое изменение перечисленных выше параметров говорит о том, что используемую модель атрибуции следует проверить и пересмотреть.</p>
+<p>Что может свидетельствовать о снижении эффективности модели атрибуции:</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/kak-peresmatrivat-model-atribucii.png"><img alt="как пересматривать модель атрибуции" class="img-responsive sert-img" src="../../../img/analytics/ma/kak-peresmatrivat-model-atribucii.png" loading="lazy" /> </a></p>
+<ul>
+<li>overlap каналов перешагнул барьер в 15%;</li>
+<li>скачкообразное изменение числа посетителей из органики;</li>
+<li>рекламные сети и внутренняя система аналитики сильно различаются по моделям;</li>
+<li>значительная оптимизация или отключение одного канала ухудшает работу других;</li>
+<li>изменение масштабов канала, приводящего пользователей из органики, провоцирует снижение роста численности новых посетителей;</li>
+<li>мониторинг корреляции каналов без учета их влияния друг на друга.</li>
+</ul>
+</section>
+
+<section id="p5">
+<p><a id="p5" name="p5"> </a></p>
+<h2>Модели атрибуции в Google Analytics</h2>
+<p>В Google Analytics представлено сравнительно большое количество возможностей моделирования атрибуций. </p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/google-analytics.png"><img alt="модели атрибуции в Google Analytics" class="img-responsive sert-img" src="../../../img/analytics/ma/google-analytics.png" loading="lazy" /> </a></p>
+<p>Чтобы не наделать ошибок в работе с ними, важно понимать ряд особенностей.</p>
+<ul>
+<li>Google Analytics использует по умолчанию не такие модели атрибуции, как Google Ads, и дает больше конверсий.</li>
+<li>Выбранная модель атрибуции применяется в пределах аккаунта для всех каналов, с которыми пользователь столкнулся на пути к конверсии.</li>
+<li>Код транзакции лучше создавать с использованием кода Google Ads, т. к. он учитывает <a href="../associirovannye-konversii-kak-ne-poteryat-klientov/index.html">ассоциированные конверсии</a>, а также помогает собирать статистику при работе автоматических стратегий и в рекламном аккаунте.</li>
+<li>Независимо от настроек атрибуции, системно применяется модель Last Click для видеокампаний и кампаний в КМС.</li>
+<li>Стандартную модель Last Non-Direct Click в Google Analytics изменить нельзя. Определить показатели при использовании иных моделей можно путем их сравнения.</li>
+</ul>
+<p>В Google Analytics нельзя изменить атрибуцию по умолчанию, а также иные типовые модели, но любую из них можно модифицировать. Впоследствии стандартную и измененную модели можно сравнивать между собой, чтобы оценить эффективность кампаний.</p>
+<p>Для этого следует:</p>
+<ol>
+<li>В меню администратора в категории «Представление» выбрать «Настройки многоканальных последовательностей», далее – «Создать модель атрибуции».</li>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/sozdat-model-atribucii.jpg"><img alt="создать модель атрибуции" class="img-responsive sert-img" src="../../../img/analytics/ma/sozdat-model-atribucii.jpg" loading="lazy" /> </a></p>
+<li>В выпадающем перечне будет доступно 5 типовых моделей атрибуции, которые можно модифицировать.</li>
+</ol>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/5-tipovyh-modelej-atribucii.jpg"><img alt="5 типовых моделей атрибуции" class="img-responsive sert-img" src="../../../img/analytics/ma/5-tipovyh-modelej-atribucii.jpg" loading="lazy" /> </a></p>
+<p>Параметры, которые можно изменить:</p>
+<ul>
+<li>период ретроспективного анализа (максимальный предел – 90 суток);</li>
+<li>ценность по типам взаимодействий (недоступно для моделей 1-го и последнего взаимодействия);</li>
+<li>пользовательское распределение ценности.</li>
+</ul>
+<h3>Где смотреть отчеты по модели атрибуции</h3>
+<p>Результаты сравнения разных моделей атрибуции доступны в категории Конверсии – <a href="../mnogokanalnye-posledovatelnosti-chto-ehto-takoe-i-kak-ispolzovat/index.html">многоканальные последовательности</a> – Инструмент сравнения моделей.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/instrument-sravneniya-modelej.jpg"><img alt="инструмент сравнения моделей" class="img-responsive sert-img" src="../../../img/analytics/ma/instrument-sravneniya-modelej.jpg" loading="lazy" /> </a></p>
+<p>Здесь можно выбрать для анализа следующие параметры:</p>
+<ul>
+<li>тип конверсии;</li>
+<li>тип каналов трафика – все или только Google Рекламу;</li>
+<li>период ретроспективного анализа.</li>
+</ul>
+<p>Также доступны фильтры сравнения моделей, которые помогают определить ценность каналов.</p>
+<h3>Проект атрибуции</h3>
+<p>Google Analytics предлагает отличный инструмент для анализа конверсий – проект атрибуции. Он может использоваться для грамотного распределения рекламного бюджета и построения полной маркетинговой стратегии.</p>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ma/proekt-atribucii.jpg"><img alt="проект атрибуции" class="img-responsive sert-img" src="../../../img/analytics/ma/proekt-atribucii.jpg" loading="lazy" /> </a></p>
+<p>Возможности:</p>
+<ul>
+<li>сравнение моделей атрибуции одновременно с разных ресурсов;</li>
+<li>применение атрибуции на основе данных, в т. ч. при использовании бесплатной аналитики.</li>
+</ul>
+<blockquote class="blockquote-v2"><p>Чтобы модель была доступна для сравнения, нужно иметь минимум 1000 конверсий за последние 28 дней для соответствующего действия.</p></blockquote>
+<h3>Как еще можно оценивать модели атрибуции в Google Analytics</h3>
+<p>Аналитики практикуют два способа:</p>
+<ol>
+<li>Настройка своих моделей. За основу берется стандартная модель и вручную дополняется актуальными для бизнес-проекта параметрами.</li>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/nastrojka-svoih-modelej.jpg"><img alt="настройка своих моделей" class="img-responsive sert-img" src="../../../img/analytics/ma/nastrojka-svoih-modelej.jpg" loading="lazy" /> </a></p>
+<li>Сравнение. Сравнивать между собой можно любые модели. При этом можно выявить недооцененные источники и ключевые слова.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ma/sravnenie-modelej.jpg"><img alt="сравнение моделей" class="img-responsive sert-img" src="../../../img/analytics/ma/sravnenie-modelej.jpg" loading="lazy" /> </a></p>
+</ol>
+
+<h3>Модели</h3>
+<p><b>Простые:</b></p>
+<ul>
+<li>по первому взаимодействию – First Interaction – весь вес присваивается первому источнику;</li>
+<li>по последнему взаимодействию – Last Interaction – вся ценность отдается последнему источнику;</li>
+<li>по последнему непрямому клику – Last Non-Direct Click – самым ценным считается последний источник, кроме случаев прямого перехода;</li>
+<li>по последнему клику в Google Рекламе – Last Google Ads Click – наиболее весомым окажется последний рекламный источник.</li>
+</ul>
+<p><b>Другие:</b></p>
+<ul>
+<li>линейная модель – Linear – равномерное распределение ценности между всеми точками касания;</li>
+<li>с учетом давности взаимодействий (временной спад) – Time Decay – вес распределяется по мере возрастания от самого дальнего источника к наиболее близкому к транзакции;</li>
+<li>с привязкой к позиции – Position Based – большую ценность получают первый и последний звенья цепочки;</li>
+<li>с привязкой к данным – Data-driven – вес распределяется системой на основании собранной ранее статистики о наиболее частых источниках конверсии;</li>
+</ul>
+<p><b>Кастомные:</b></p>
+<ul>
+<li>по количеству хитов в сессии – помогают оценить активность пользователей, которые приходят из конкретного источника;</li>
+<li>на основе воронки – Funnel-based – основной вес распределяется между каналами, которые переводили пользователя на новую ступень воронки.</li>
+</ul>
+<p><b>Собственная модель атрибуции:</b></p>
+<ul>
+<li>создается на базе стандартных моделей, если они не могут решить поставленную задачу.</li>
+</ul>
+</section>
+
+<section id="p6">
+<p><a id="p6" name="p6"> </a></p>
+<h2>Модели атрибуции в Google Ads</h2>
+<p>У Гугл Рекламы свой набор моделей атрибуции, которые хоть и похожи по названию на модели Google Analytics, но отличаются от них по принципам использования и настройки.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/google-ads.png"><img alt="модели атрибуции в Google Ads" class="img-responsive sert-img" src="../../../img/analytics/ma/google-ads.png" loading="lazy" /> </a></p>
+<blockquote class="blockquote-v1"><p>Модели атрибуции в Google Ads используются только для торговых и поисковых рекламных кампаний. Они не собирают данные о переходах из органической выдачи, рассылок и т. д.</p></blockquote>
+<p><b>По последнему клику</b> – приоритет отдается ключевому слову, которое привело к транзакции, или последнему клику по рекламе.</p>
+<p><b>По первому клику</b> – ключевая фраза или объявление, по которому кликнули раньше всего, получает наибольший вес.</p>
+<p><b>Линейная атрибуция</b> – все рекламные ссылки, которые способствовали конверсии, имеют одинаковую ценность.</p>
+<p><b>С учетом давности взаимодействия</b> – чем ближе касание к моменту конверсии, тем больший вес ему отдается.</p>
+<p><b>С привязкой к позиции</b> – первый и последний контакт или ключевое слово в цепочке взаимодействий получают 40% ценности.</p>
+<p><b>На основе данных</b> – вес конверсий распределяется согласно имеющейся статистики по конкретному действию. Для использования этой модели в течение 30 дней должно быть собрано не менее 600 конверсий и 15 000 переходов из поиска.</p>
+<h3>Как настроить отчет модели атрибуции в Google Ads</h3>
+<p>При создании целей в Google Ads или импорте их из Google Analytics можно выбрать атрибуцию, которую система будет считать при расчете заданной конверсии. Впоследствии ее можно изменить и сравнить с другими моделями.</p>
+<p>Для этого нужно авторизоваться в аккаунте Google Ads и выполнить следующие действия:</p>
+<ol>
+<li>Справа вверху кликнуть по значку инструментов и выбрать «Атрибуция» в разделе «Отслеживание».</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ma/otslezhivanie.jpg"><img alt="отслеживание" class="img-responsive sert-img" src="../../../img/analytics/ma/otslezhivanie.jpg" loading="lazy" /> </a></p>
+<li>В левом меню нажать «Сравнение моделей» и в выпадающем списке «Параметр» отметить нужный вариант.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ma/parametr.jpg"><img alt="параметр" class="img-responsive sert-img" src="../../../img/analytics/ma/parametr.jpg" loading="lazy" /> </a></p>
+<li>Затем указать параметры: действие-конверсия и период ретроспективного анализа.</li>
+<li>Далее в выпадающем списке выбираем подходящую модель и сохраняем изменения, нажав на соответствующую кнопку.</li>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/podhodyashchaya-model.jpg"><img alt="подходящая модель" class="img-responsive sert-img" src="../../../img/analytics/ma/podhodyashchaya-model.jpg" loading="lazy" /> </a></p>
+</ol>
+<p>Чтобы изменить модель атрибуции для текущего действия-конверсии, следует:</p>
+<ol>
+<li>Авторизоваться в аккаунте Google</li>
+<li>Справа вверху кликнуть по значку инструментов и выбрать «Конверсии» в разделе «Отслеживание».</li>
+<li>Кликнуть на название нужной конверсии в таблице и нажать «Изменить настройки».</li>
+<li>Из выпадающего списка «Модель атрибуции» выбрать подходящий вариант.</li>
+<li>Кликнуть «Сохранить» и «Готово».</li>
+</ol>
+<h4>Модели атрибуции в столбцах отчетов</h4>
+<p>Система позволяет спрогнозировать результаты при новой модели атрибуции. Для этого для нынешней модели необходимо в таблице отчетов добавить нужные столбцы в разделе «Атрибуция».</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/modeli-atribucii-v-stolbcah-otchetov.jpg"><img alt="модели атрибуции в столбцах отчетов" class="img-responsive sert-img" src="../../../img/analytics/ma/modeli-atribucii-v-stolbcah-otchetov.jpg" loading="lazy" /> </a></p>
+<p>В столбцах отображаются данные с пометкой «текущая модель» и без нее. Сравнивая их, можно оценить, насколько новая модель подходит для решения бизнес-задач.</p>
+<blockquote class="blockquote-v1"><p>Статистика включает также данные, которые не поддаются влиянию моделей атрибуции.</p></blockquote>
+</section>
+
+<section id="p7">
+<p><a id="p7" name="p7"> </a></p>
+<h2>Модели атрибуции Яндекс Метрики</h2>
+<p>Всего четыре модели атрибуции доступно в <a href="../kak-polzovatsya-yandeks-metrikoj-podrobnaya-instrukciya-dlya-novichkov/index.html">Яндекс Метрике</a>, но применять их можно в разных отчетах. Для этого предусмотрено удобное переключение на панели сверху.</p>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/modeli-atribucii-yandeks-metriki.jpg"><img alt="модели атрибуции Яндекс Метрики" class="img-responsive sert-img" src="../../../img/analytics/ma/modeli-atribucii-yandeks-metriki.jpg" loading="lazy" /> </a></p>
+<p><b>Последний значимый переход.</b> Наивысшая ценность присваивается последнему значимому визиту, т. е. тому, который был выполнен по рекламной ссылке, партнерской ссылке или через поисковые системы. Незначимыми считаются внутренние и прямые переходы на сайт.</p>
+<p><b>Последний переход из Директа.</b> Согласно этой модели, самым главным и ценным считается последний переход на сайт, совершенный через рекламу в Директе. Все остальные визиты не учитываются.</p>
+<p><b>Первый переход.</b> Самый первый визит на сайт в течение 6 месяцев считается наиболее ценным источником конверсии. Модель применима в бизнес-проектах, в которых покупателям требуется много времени для принятия решений.</p>
+<p><b>Последний переход.</b> Учитывается только последний источник в конкретный момент. Это нужно для анализа технической составляющей сайта. История переходов здесь не сохраняется, а все оставшиеся визиты пользователей игнорируются.</p>
+</section>
+
+<section id="p8">
+<p><a id="p8" name="p8"> </a></p>
+<h2>Модели атрибуции Яндекс Директ</h2>
+<p>Зайдя в Директ, можно увидеть все те же модели, которые выше были описаны для Метрики. Это связано с отсутствием своих настроек атрибуции. Работая совместно с Метрикой, Директ берет их из ее отчетов и формирует свои сводки на основе кликов по рекламе, не учитывая другие визиты на сайт.</p>
+<p>Применять можно двумя способами:</p>
+<ol>
+<li>Аналогично Метрике путем создания отчета в Мастере отчетов.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ma/sozdanie-otcheta-v-mastere-otchetov.jpg"><img alt="создание отчета в Мастере отчетов" class="img-responsive sert-img" src="../../../img/analytics/ma/sozdanie-otcheta-v-mastere-otchetov.jpg" loading="lazy" /> </a></p>
+<li>Выбрав атрибуцию в стратегиях РК. В этом случае будут учитываться те конверсии, которые Директ выберет из Яндекс Метрики в процессе оптимизации.</li>
+<p><a data-fancybox="gallery" href="../../../img/analytics/ma/atribuciya-v-strategiyah-rk.jpg"><img alt="атрибуция в стратегиях РК" class="img-responsive sert-img" src="../../../img/analytics/ma/atribuciya-v-strategiyah-rk.jpg" loading="lazy" /> </a></p>
+<li>Путем выбора модели атрибуции в рекламной кампании с оплатой за конверсии:</li>
+</ol>
+<ul style="padding-left: 40px;">
+<li>Последний переход из Директа – все конверсии после перехода по рекламе будут оплачены. Модель повышает расходы, но учитывает все возможные конверсии;</li>
+<li>Первый переход – оплата назначается только за конверсии покупателей, перешедших с Директа;</li>
+<li>Последний переход – оплачиваются только конверсии клиентов, которые завершили свой путь по цепочке взаимодействий, перейдя по рекламе с Директа;</li>
+<li>Последний значимый – оплачиваемыми являются конверсии, совершенные после перехода с Яндекс-рекламы, но предшествующие следующему значимому переходу.</li>
+</ul>
+
+
+</section>
+
+
+<section id="p9">
+<p><a id="p9" name="p9"> </a></p>
+<h2>Таблица сравнения моделей атрибуции: Яндекс.Метрика vs. Google Analytics</h2>
+<p>Предлагаем краткую сравнительную таблицу с моделями атрибуции на двух самых распространенных платформах аналитики – Google Analytics и Яндекс Метрика.</p>
+<table style="
+    width: 100%;
+">
+<tbody>
+<tr>
+<td width="156">
+<p>Google Analytics</p>
+</td>
+<td width="156">
+<p>Яндекс.Метрика</p>
+</td>
+<td width="156">
+<p>Наивысшая ценность</p>
+</td>
+<td width="156">
+<p>Когда применять</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Первое взаимодействие</p>
+</td>
+<td width="156">
+<p>Первый переход</p>
+</td>
+<td width="156">
+<p>Первый источник</p>
+</td>
+<td width="156">
+<p>При необходимости оценить точки касания</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Последнее взаимодействие</p>
+</td>
+<td width="156">
+<p>Последний переход</p>
+</td>
+<td width="156">
+<p>Последний источник</p>
+</td>
+<td width="156">
+<p>Для выявления проблемных страниц; когда пользователи быстро принимают решения</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>По последнему непрямому клику</p>
+</td>
+<td width="156">
+<p>Последний значимый переход</p>
+</td>
+<td width="156">
+<p>Последний источник, кроме прямых переходов, а у Метрики также кроме переходов с сохраненных страниц и внутренних переходов.</p>
+</td>
+<td width="156">
+<p>Когда нужно исключить источники с низкой значимостью</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Последний клик в Google Рекламе</p>
+</td>
+<td width="156">
+<p>Последний переход из Директа</p>
+</td>
+<td width="156">
+<p>Последний переход с рекламы в Директе или Ads соответственно</p>
+</td>
+<td width="156">
+<p>При оценке эффективности РК</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Линейная модель</p>
+</td>
+<td width="156">
+<p>-</p>
+</td>
+<td width="156">
+<p>Равномерное распределение между всеми источниками трафика</p>
+</td>
+<td width="156">
+<p>Когда все каналы важны и задействованы в привлечении клиентов</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Временной спад</p>
+</td>
+<td width="156">
+<p>-</p>
+</td>
+<td width="156">
+<p>По мере приближения источников к конверсии их ценность возрастает</p>
+</td>
+<td width="156">
+<p>При оценке эффективности акций и коротких РК</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Модель на основе позиций</p>
+</td>
+<td width="156">
+<p>-</p>
+</td>
+<td width="156">
+<p>Первый и последний источники</p>
+</td>
+<td width="156">
+<p>Когда нужно узнать наиболее конвертирующий канал, а также откуда клиенты узнают о фирме</p>
+</td>
+</tr>
+<tr>
+<td width="156">
+<p>Модель на основе данных</p>
+</td>
+<td width="156">
+<p>-</p>
+</td>
+<td width="156">
+<p>Автоматическое распределение ценности системой при достаточном количестве исходных данных</p>
+</td>
+<td width="156">
+<p>Для выявления наиболее действенных источников и ключевых слов</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="p10">
+<p><a id="p10" name="p10"> </a></p>
+<h2>Преимущества и недостатки моделей атрибуции в системах веб-аналитики</h2>
+<p>Как и все инструменты, модели атрибуции имеют плюсы и минусы. Попытаемся разобраться с ними.</p>
+<table class="plus-minus-block">
+    <tbody>
+        <tr>
+            <td class="plus-block" width="400">
+            <p>Преимущества:</p>
+            </td>
+            <td class="minus-block" width="400">
+            <p>Недостатки:</p>
+            </td>
+        </tr>
+        <tr>
+            <td width="400">
+<p>Путем распределения общей ценности конверсии между разными используемыми ключевыми фразами или рекламными объявлениями, модели атрибуции позволяют:</p>
+<ul>
+<li>использовать оптимальную модель для конкретного бизнеса с учетом его особенностей и поведения покупателей;</li>
+<li>подталкивать пользователей к определенным решениям, когда они только начинают задумываются о выборе продукта;</li>
+<li>улучшать стратегию присвоения ставок, учитывая результаты работы рекламных объявлений.</li>
+</ul>
+            </td>
+            <td width="400">
+<p>Использование стандартных моделей атрибуции без глубокого погружения в маркетинг и аналитику может приводить к некоторым сложностям:</p>
+<ul>
+<li>недопонимание, насколько эффективными могут быть более сложные алгоритмы;</li>
+<li>разрозненность данных, сосредоточенных онлайн и оффлайн;</li>
+<li>отсутствие специалиста, который работал бы с атрибуцией на профессиональном уровне;</li>
+<li>собственные модели атрибуции отдельных сервисов можно использовать только для формирования внутренних отчетов;</li>
+<li>оценка эффективности цепочки касаний ограничена двумя моделями атрибуции.</li>
+</ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+<section id="p11">
+<p><a id="p11" name="p11"> </a></p>
+<h2>Как сменить модель атрибуции</h2>
+<p>Изменить выбранную модель атрибуции в Google можно при импорте конверсий или сразу после него. Для этого:</p>
+<ul>
+<li>зайдите в настройки;</li>
+<li>выберите категорию отслеживаний;</li>
+<li>перейдите в конверсии;</li>
+<li>задайте цикл.</li>
+</ul>
+ <p><a data-fancybox="gallery" href="../../../img/analytics/ma/nastrojki-modeli-atribucii.png.jpeg"><img alt="настройки модели атрибуции" class="img-responsive sert-img" src="../../../img/analytics/ma/nastrojki-modeli-atribucii.png.jpeg" loading="lazy" /> </a></p>
+<p>Сделать то же самое в Яндексе при стандартных настройках невозможно. Изменить атрибуцию здесь можно путем выбора нужного алгоритма в параметрах отчета.</p>
+</section>
+
+<section id="p12">
+<p><a id="p12" name="p12"> </a></p>
+<h2>Примеры применения разных моделей атрибуции</h2>
+<p><b>Пример 1. Мини-салон красоты с хорошими мастерами</b></p>
+<p>Салон оказывает услуги, в которых женщины нуждаются регулярно. Высококлассный сервис и качество услуг говорят за себя: достаточно одного сеанса, чтобы клиент остановил свой выбор и стал постоянным.</p>
+<p>Задача – поиск новых клиентов.</p>
+<p>Подходящая модель – по первому клику. Однажды переходя на сайт, клиент решает воспользоваться услугой, а первое касание является решающим.</p>
+<p><b>Пример 2. Интернет-магазин автозапчастей</b></p>
+<p>Ниша высококонкурентная, товары неуникальные, потребность в них периодическая.</p>
+<p>Задача – убедить посетителя потратить деньги именно в этом магазине, хотя тот же товар есть еще у десятка других продавцов.</p>
+<p>Подходящая модель – по последнему непрямому клику.</p>
+<p><b>Пример 3. Продажа элитного жилья от застройщика</b></p>
+<p>Недвижимость – крупная разовая покупка. При выборе жилья покупатель долго думает, процесс выбора может занимать до года.</p>
+<p>Задача – подталкивать клиента к покупке с помощью всех доступных каналов и при каждом касании.</p>
+<p>Подходящая модель – линейная.</p>
+<blockquote class="blockquote-v2"><p>Это лишь примеры использования разных моделей атрибуции, однако на практике рекомендуется проводить анализ по всем атрибуциям, чтобы вовремя выявлять сильные и слабые стороны кампании.</p></blockquote>
+
+</section>
+
+<section id="p13">
+<p><a id="p13" name="p13"> </a></p>
+<h2>Частые вопросы про модели атрибуции</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="headingOne"><a aria-controls="collapseOne" aria-expanded="false" class="btn-link collapsed" data-target="#collapseOne" data-toggle="collapse" href="index.html#">Как определить, какие кампании нужно дорабатывать, а какие не стоит трогать?</a></div>
+
+<div aria-labelledby="headingOne" class="collapse" data-parent="#faqAccordion" id="collapseOne" style="">
+<div class="card-body">
+<p>Для этого применяют модели last click и top score. По результатам можно получить отчет, где кампании будут разбиты на 3 категории:</p>
+<ul>
+<li>требующие кардинальной переработки или отключения;</li>
+<li>которые можно оставить как есть или усилить;</li>
+<li>которые можно доработать.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingTwo"><a aria-controls="collapseTwo" aria-expanded="false" class="btn-link collapsed" data-target="#collapseTwo" data-toggle="collapse" href="index.html#">Когда использовать стандартные модели атрибуции?</a></div>
+
+<div aria-labelledby="headingTwo" class="collapse" data-parent="#faqAccordion" id="collapseTwo">
+<div class="card-body">
+<ul>
+<li>При коротком цикле сделки, коротком пути до продажи и 2-3 каналами продвижения идеально подходит модель Last click.</li>
+<li>Когда нужно увеличить охват, расширить воронку, привлечь на сайт потенциальных потребителей, повысить узнаваемость ТМ, подойдет модель First click.</li>
+<li>Если бизнес имеет длинный цикл сделки и работает в сегменте В2В, можно использовать Linear model.</li>
+<li>Когда самыми значимыми являются первое и последнее касания, придется кстати Position-based.</li>
+<li>Бизнес-проектам, в которых важно оценить, насколько эффективны краткосрочные РК, подойдет Time Decay.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingfour"><a aria-controls="collapsefour" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefour" data-toggle="collapse" href="index.html#">Какая модель позволяет получить наиболее достоверную информацию?</a></div>
+
+<div aria-labelledby="headingfour" class="collapse" data-parent="#faqAccordion" id="collapsefour">
+<div class="card-body">
+<p>Самые точные и достоверные результаты можно получить, используя вероятностные модели. Они показывают, как тот или иной канал в цепочке взаимодействий с клиентом влияет на вероятность конверсии.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingfive"><a aria-controls="collapsefive" aria-expanded="false" class="btn-link collapsed" data-target="#collapsefive" data-toggle="collapse" href="index.html#">Как правильно выбрать модель атрибуции?</a></div>
+
+<div aria-labelledby="headingfive" class="collapse" data-parent="#faqAccordion" id="collapsefive">
+<div class="card-body">
+<p>Проанализируйте отчеты из сервисов аналитики, сравните, как работают текущие модели атрибуции. При этом важно учесть особенности поведения потребителей и опыт ведения бизнеса.</p>
+</div>
+</div>
+</div>
+
+
+<div class="card">
+<div class="card-header" id="headingsix"><a aria-controls="collapsesix" aria-expanded="false" class="btn-link collapsed" data-target="#collapsesix" data-toggle="collapse" href="index.html#">От чего зависит эффективность модели атрибуции?</a></div>
+
+<div aria-labelledby="headingsix" class="collapse" data-parent="#faqAccordion" id="collapsesix">
+<div class="card-body">
+<ul>
+<li>Наличие ответственного специалиста.</li>
+<li>Точность определения пути клиентов.</li>
+<li>Применение онлайн- и оффлайн-данных.</li>
+<li>Качество исходных данных.</li>
+<li>Правильный выбор модели на основе тестирования и сравнения атрибуций.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header" id="headingseven"><a aria-controls="collapseseven" aria-expanded="false" class="btn-link collapsed" data-target="#collapseseven" data-toggle="collapse" href="index.html#">В чем преимущества модели атрибуции на основе воронки?</a></div>
+
+<div aria-labelledby="headingseven" class="collapse" data-parent="#faqAccordion" id="collapseseven">
+<div class="card-body">
+<p>Помогает не только выявить эффективный канал, но и обозначить, где конкретно он эффективен. Отсутствуют ограничения по минимальному объему исходных данных. Модель фиксирует новых пользователей, а также тех, кто вернулся на ресурс, показывая подробную информацию по каждой транзакции. Отображает уровень исполняемости сделок из <a href="../../automation/chto-takoe-crm-sistema-i-nuzhna-li-ona-vam/index.html">корпоративной CRM</a>, учитывает маржу.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="p14">
+<p><a id="p14" name="p14"> </a></p>
+<h2>Заключение</h2>
+<p>Интернет-среда постоянно меняется, и модель атрибуции не может долгое время оставаться без изменений. Чтобы вовремя подстроиться под реалии и получать актуальную информацию, рекомендуем регулярно перепроверять и при необходимости пересматривать каждую модель.</p>
+<ul>
+<li>Следите за органикой, за ней часто скрываются платные рекламные каналы. Изменение показателей органики может свидетельствовать о том, что используемые модели атрибуции больше необъективны.</li>
+<li>Не допускайте, чтобы Overlap превышал порог в 10-15%. Если это случилось, значит каналы сильно пересекаются, а модель атрибуции требует модификации и тестов на инкрементальность.</li>
+<li>Обращайте внимание на внешние изменения. По мере снижения взаимодействия клиентов с рекламными каналами точность классических моделей будет снижаться.</li>
+<li>Следите за изменениями и перепадами числа посетителей из органической выдачи.</li>
+<li>Фиксируйте разницу между моделями рекламных сетей и моделями атрибуции внутренней аналитической системы.</li>
+<li>Обращайте внимание на ситуации, когда после существенной оптимизации или отключения одного канала ухудшается работа других.</li>
+</ul>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                                                     <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Что такое модель атрибуции</a></li>
+	<li><a href="index.html#p2">Зачем нужна атрибуция</a></li>
+	<li><a href="index.html#p3">Виды моделей атрибуции</a></li>
+	<li><a href="index.html#p4">Факторы, влияющие на выбор моделей атрибуции</a></li>
+	<li><a href="index.html#p5">В Google Analytics</a></li>
+	<li><a href="index.html#p6">В Google Ads</a></li>
+	<li><a href="index.html#p7">В Яндекс Метрики</a></li>
+	<li><a href="index.html#p8">В Яндекс Директ</a></li>
+	<li><a href="index.html#p9">Яндекс.Метрика vs. Google Analytics</a></li>
+	<li><a href="index.html#p10">Преимущества и недостатки</a></li>
+	<li><a href="index.html#p11">Как сменить модель атрибуции</a></li>
+	<li><a href="index.html#p12">Примеры применения разных моделей атрибуции</a></li>
+	<li><a href="index.html#p13">Частые вопросы</a></li>
+	<li><a href="index.html#p14">Заключение</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

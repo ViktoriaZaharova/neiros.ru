@@ -1,0 +1,1395 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Когортный анализ - что это такое простыми словами и  как сделать когортное исследование</title>
+    <meta name="description" content="Что такое когортный анализ, для чего и в каких сферах он используется. Что нужно для когортного анализа и как его проводить. Ключевые метрики, примеры и сервисы.">
+    <meta name="keywords" content="Когортный анализ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/analytics/kogortnyy-analiz-kak-pomogaet-i-zachem-neobkhodim#cao",
+     "url": "https://neiros.ru/blog/analytics/kogortnyy-analiz-kak-pomogaet-i-zachem-neobkhodim#cao",
+     "headline":"Когортный анализ - что это такое простыми словами и  как сделать когортное исследование",
+
+     "datePublished": "2022-06-27 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "Аналитика"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Когортный анализ – как помогает и зачем необходим</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Аналитика</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/5ec46fd0442be279c736a36f1e4b9eb9.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 27.06.2022</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Запуск нового продукта, ребрендинг, запуск маркетинговой кампании – все это влияет на восприятие бизнеса <a href="../../marketing/celevaya-auditoriya-pochemu-marketing-nevozmozhen-bez-ee-opredeleniya/index.html">целевой аудиторией</a> и ее поведение. Предположить, каким оно будет, проанализировать действия пользователей на сайте или других интернет-площадках и лучше понять их позволяет когортный анализ. В этой статье разберем, что такое когорты и когортный анализ, зачем и кому он нужен, а также как исследовать когорты.</p>
+<p><img alt="когортный анализ" class="img-responsive sert-img" src="../../../images/5ec46fd0442be279c736a36f1e4b9eb9.png" loading="lazy" draggable="false"></p>
+<section id="p0">  <p><a id="p0"> </a></p><h2>Что такое когортный анализ</h2>
+<p>Начинать рассматривать понятие когортного анализа стоит с выяснения значения термина «когорта». Он был известен задолго до появления <a href="../../marketing/vse-o-marketinge-tseli-funktsii-oblasti-primeneniya-i-instrumenty/index.html">маркетинга</a>. Еще во 2 ст. до н. э. в Древнем Риме когортами называли тактические армейские подразделения. Что касается нашего времени, то трактовка изменилась, тем не менее, суть осталась прежней.</p>
+<p>Когорта – это группа пользователей (целевой аудитории), которые совершили в определенное время то или иное действие.</p>
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/kogortniy-analoz.jpg"><img alt="Когортный анализ" class="img-responsive sert-img" src="../../../img/end-to-end/kogortniy-analoz.jpg" loading="lazy" draggable="false"> </a></p>
+<blockquote class="blockquote-v1"><p>Очень важно учитывать временной признак, поскольку именно он является характерной чертой когорт, отличая их от обычных сегментов целевой аудитории.</p></blockquote>
+<p>Например, в ходе <a href="../../ads/chto-takoe-reklama-polnyy-obzor-ponyatiya-i-vidy/index.html">рекламной</a> кампании в один день – 23 марта из контекстной рекламы на сайт пришел пользователь и купил смартфон. При таких условиях этот человек может быть включен одновременно в три разные когорты:</p>
+<ul>
+<li>покупатели товара «смартфон» – имеет значение при определении <a href="../../economy/chto-takoe-spros-v-ekonomike-i-ego-zavisimost-ot-predlozheniya/index.html">спроса</a> на продукт у разных групп ЦА;</li>
+<li>покупатели смартфонов в марте – помогает в выявлении фактора сезонности продаж;</li>
+<li>пользователи, пришедшие из контекстной рекламы – позволяет понять, насколько эффективен контекст в сравнении с другими каналами привлечения ЦА.</li>
+</ul>
+<p>Таким образом, когортный анализ – это объединение пользователей или клиентов по общему признаку с последующим отслеживанием их поведения в течение определенного времени.</p>
+<p>Метод лучше всего показывает себя, если в качестве клиентов выступают конечные потребители (частные лица) или малый бизнес. Суть: чтобы получить объективные результаты, когорты каждый месяц должны включать хотя бы несколько десятков объектов анализа.</p>
+</section> <section id="p1"> <p><a id="p1"> </a></p><h2>Для чего нужен когортный анализ</h2>
+<p>Когортный анализ – это не просто очередной способ глубже узнать, с кем вы работаете. С его помощью можно:</p>
+<p><a data-fancybox="gallery" href="../../../img/cohorts/dlya-chego-nuzhen-kogortnyy-analiz.png"><img alt="Для чего нужен когортный анализ" class="img-responsive sert-img" src="../../../img/cohorts/dlya-chego-nuzhen-kogortnyy-analiz.png" loading="lazy" /> </a></p>
+<ul>
+<li>находить и удерживать лояльных клиентов;</li>
+<li>прогнозировать пожизненную ценность клиента (LTV) и увеличивать ее;</li>
+<li>точно оценивать, насколько эффективна реклама, в т. ч. в перспективе;</li>
+<li>определять сроки окупаемости разных рекламных каналов, находить самые эффективные из них;</li>
+<li>проводить А/В тестирование и оценивать результаты;</li>
+<li>проверять эффективность мобильных приложений;</li>
+<li>отслеживать повторные посещения;</li>
+<li>детализировать профиль покупателя;</li>
+<li>находить узкие места в <a href="../../business/biznes-processy-kak-sposob-uluchshit-rabotu-predpriyatiya/index.html">бизнес-процессах</a>;</li>
+<li>определять способы минимизации оттока клиентов и повышения вовлеченности;</li>
+<li>повышать эффективность продаж, маркетинга и ее кампании, клиентского сервиса, оптимизировать цикл;</li>
+<li>оценивать <a href="../chto-takoe-roi-i-kogda-ego-nuzhno-schitat/index.html">ROI</a>;</li>
+<li>контролировать эффективность работы менеджеров по продажам;</li>
+<li>эффективно распределять маркетинговый бюджет и улучшать маркетинговую стратегию.</li>
+</ul>
+</section> <section id="p2"> <p><a id="p2"> </a></p><h2>Где применяют когортный анализ</h2>
+<p>Когортный анализ актуален для всех компаний, доход которых зависит от количества покупателей. Благодаря ему фирмы могут оптимизировать маркетинговую кампанию и значительно повысить <a href="../konversiya-chto-eto-i-pochemu-vazhno-ee-znaty/index.html">конверсию</a>. Далее в статье выделим основные сферы применения когортного анализа.</p>
+<p><a data-fancybox="gallery" href="../../../img/cohorts/gde-primenyayut-kogortnyy-analiz.png"><img alt="Где применяют когортный анализ" class="img-responsive sert-img" src="../../../img/cohorts/gde-primenyayut-kogortnyy-analiz.png" loading="lazy" /> </a></p>
+<h3>E-commerce</h3>
+<p>Сюда относятся все интернет-магазины и другие объекты электронной коммерции. Когортный анализ нужен им для контроля эффективности <a href="../../sales/vse-o-voronke-prodazh-ot-istorii-k-primeneniyu-v-sovremennom-biznese/index.html">воронки продаж</a>, отслеживания реакций на рекламу и закономерностей поведения пользователей.</p>
+<h3>Онлайн-игры</h3>
+<p>Данный сегмент подразумевает, что когортный анализ применяют для разделения игроков на новичков и опытных. Благодаря этому аналитики могут определить момент, когда игрок начинает приносить меньшую <a href="../../business/pribyl-kak-osnovnoj-pokazatel-ehffektivnosti-biznesa/index.html">прибыль</a>.</p>
+<h3>Мобильные приложения</h3>
+<p>С помощью когортного анализа разработчики могут отличить пользователей, зарегистрированных до обновления, от новых пользователей, а также распределить тарифы по популярности, обнаружить отток клиентов, выявить тип пользователей, которые чаще других меняют бесплатный тариф на платный.</p>
+<h3>SaaS</h3>
+<p>Аналитики облачных проектов используют когортный анализ с основной целью – оптимизировать цикл продаж. Для этого пользователей распределяют на когорты в зависимости от того, какой версией сервиса они пользуются: бесплатная пробная или триал. Затем определяют, какая группа чаще переходит на платные тарифы, фиксируют оттоки пользователей и имеют возможность получить другие данные, которые помогают в увеличении прибыли проекта.</p>
+<h3>Для улучшения конверсии</h3>
+<p>Когортный анализ позволит собрать такую информацию, которую не удастся получить по результатам сплит-тестов. В ходе изучения данных сплит-тестирования можно определить факт того или иного выбора пользователей, а когортный анализ предоставляет данные, по которым становится понятно, что подталкивает их к этому выбору.</p>
+<h3>Для составления портрета идеального клиента</h3>
+<p>Когортный анализ играет особую роль в составлении портрета клиента. Базу покупателей разделяют на разные сегменты и прорабатывают каждый из них по 7 параметрам. Предлагаем примеры таких параметров для <a href="../../marketing/segmentaciya-rynka-ee-celi-raznovidnosti-kriterii-i-vazhnost-dlya-vashego-biznesa/index.html">сегментации</a>:</p>
+<ol>
+<li>Клиент готов к покупкам.</li>
+<li>Заинтересованность.</li>
+<li>Покупательская способность.</li>
+<li>Возможности движения к успеху.</li>
+<li>Эффективность маркетинга.</li>
+<li>Перспективы расширения.</li>
+<li>Возможности продвижения бренда.</li>
+</ol>
+<p>Когортный анализ поможет собрать достаточно данных, чтобы составить портрет идеального покупателя.</p>
+</section> <section id="p3"> <p><a id="p3"> </a></p><h2>Что нужно для когортного анализа</h2>
+<p>Эффективность когортного анализа зависит от того, насколько грамотно была проведена подготовка к нему. Перед тем, как начать отслеживать действия пользователей, наблюдать за их поведением и оценивать результат разных маркетинговых каналов, нужно определить 4 ключевых параметра.</p>
+<ol>
+<li><strong>Признак когорты</strong>. То действие, по которому пользователи объединяются в группу. Например, покупка, первый визит на <a href="../../business/kak-sozdat-sayt-s-nulya-svoimi-silami-podrobnyy-gayd-dlya-novichkov/index.html">сайт</a>, регистрация, установка приложения, загрузка файла и т. д.</li>
+<li><strong>Размер когорты</strong>. Это промежуток времени, в течение которого выполнялось действие. Например, день, неделя, месяц.</li>
+<li><strong>Отчетный период</strong>. Срок исследования поведения когорты. Например, квартал, полгода, год.</li>
+<li><strong>Ключевой показатель</strong>. Та метрика, которую предстоит анализировать. Здесь может быть абсолютно любой показатель, который с течением времени может меняться. Например, <a href="../../business/sistema-kpi-uluchshaem-pokazateli-kompanii/index.html">KPI</a>, ROI, конверсия, LTV и др.</li>
+</ol>
+<p>Эти параметры лежат в основе когортного анализа независимо от системы, в которой вы работаете. Их достаточно, чтобы распределить пользователей по когортам, сравнить их и проанализировать результаты.</p>
+</section> <section id="p4"> <p><a id="p4"> </a></p><h2>Проведение когортного анализа</h2>
+<p>На основании данных, которые удалось получить на подготовительном этапе, проводится когортный анализ. Весь процесс условно делят на три шага:</p>
+<p><a data-fancybox="gallery" href="../../../img/cohorts/provedenie-kogortnogo-analiza.png"><img alt="Проведение когортного анализа" class="img-responsive sert-img" src="../../../img/cohorts/provedenie-kogortnogo-analiza.png" loading="lazy" /> </a></p>
+<ol>
+<li>Определение ключевых метрик.</li>
+<li>Формирование когорт.</li>
+<li>Сравнение и анализ.</li>
+</ol>
+<p>Далее в статье рассмотрим каждый шаг более подробно.</p>
+<h3>Шаг 1. Определение ключевых метрик</h3>
+<p>Ключевые метрики (показатели) определяют в зависимости от того, какова цель когортного анализа. Это могут быть заявки, покупки, регистрации, нажатия на кнопку, <a href="../../finance/vyruchka-vidy-raschet-otlichiya-ot-dohoda-i-pribyli/index.html">выручка</a>, средний чек и т. д.</p>
+<p>Допустим, если стоит цель определить самый эффективный канал продаж онлайн-сервиса, ключевой метрикой можно считать платную подписку на месяц его использования.</p>
+<p><img alt="dashboard" class="img-responsive sert-img" src="../../../img/dashboard/dashbord.png" draggable="false"></p>
+<p>Выделяют два вида метрик:</p>
+<ul>
+<li>метрики действия – это конкретные действия пользователей, которые позволяют бизнесу получить реальный результат, например, покупка, установка приложения, переход на полную версию сервиса и другие показатели, которые связаны с продуктом;</li>
+<li>метрики тщеславия – не влияют на финансовое положение фирмы, но отражают ее внешний успех, например, подписки на e-mail рассылку, расшаривание постов, лайки, просмотры, комментарии в социальных сетях.</li>
+</ul>
+<p>Метрики не бывают правильными или неправильными. При их выборе необходимо понимать, как можно использовать тот или иной параметр для развития бизнеса.</p>
+<h3>Шаг 2. Формирование когорт</h3>
+<p>На втором этапе нужно выделить группы пользователей, объединенных каким-либо общим признаком, который интересен для исследования. Это и будут когорты.</p>
+<p><img alt="Формирование когорт" class="img-responsive sert-img" src="../../../img/cohorts/formirovanie-kogort.png" loading="lazy" /></p>
+<p>Здесь есть два подхода:</p>
+<ol>
+<li>Формирование когорт по вовлечению, например:</li>
+</ol>
+<ul style="padding-left: 40px;">
+<li>регистрация;</li>
+<li>первый визит на сайт;</li>
+<li>установка приложения;</li>
+<li>открытие письма рассылки.</li>
+</ul>
+<ol start="2">
+<li>Формирование когорт по монетизации, например:</li>
+</ol>
+<ul style="padding-left: 40px;">
+<li>первая покупка;</li>
+<li>оформление заказа;</li>
+<li>оплата товара.</li>
+</ul>
+<blockquote class="blockquote-v2"><p>Важно выбирать объединяющие признаки так, чтобы после совершения действия появлялась возможность идентифицировать пользователя и отслеживать его поведение в дальнейшем.</p></blockquote>
+<p>Например, загрузка мобильного приложения – это действие, но оно не дает никаких данных о человеке. Если же он установит приложение, в системе отобразятся сведенья для идентификации (некоторые персональные данные, геолокация, IP-адрес).</p>
+<p>В когорту включаются все, кто в течение конкретного времени совершат заданное действие.</p>
+<p>При необходимости, например, можно ввести дополнительные критерии отбора и сузить группу, например, пол, возраст, место проживания, профессия, этап сделки, наличие скидки, тип <a href="../../sales/lidy-i-lidogeneratsiya-zachem-eto-nuzhno-biznesu/index.html">лида</a> и т. д.</p>
+<h3>Шаг 3. Сравнение и анализ</h3>
+<p>Третий этап предполагает сравнение полученных данных и анализ тенденций. Ручной когортный анализ предполагает:</p>
+<ol>
+<li>Сбор данных в том виде, который соответствует выбранному событию.</li>
+<li>Загрузку данных в любой табличный редактор (Excel, Google Таблицы), который позволяет создавать сводные таблицы.</li>
+<li>Анализ изменения поведения людей с течением времени.</li>
+</ol>
+<p>Для удобства и упрощения работы для проведения когортного анализа можно использовать разные специализированные сервисы и <a href="../skvoznaya-analitika-ot-vnedreniya-do-realnyh-kejsov/index.html">сквозную аналитику</a>.</p>
+</section> <section id="p5"> <p><a id="p5"> </a></p><h2>Ключевые метрики</h2>
+<p>Выбор метрик для когортного анализа определяется целями исследования, сферой деятельности и спецификой работы компании, особенностями вашего продукта, поэтому общего для всех перечня не существует. Вот популярные показатели когортного анализа, которые могут вам пригодиться.</p>
+<p><img alt="Ключевые метрики" class="img-responsive sert-img" src="../../../img/cohorts/klyuchevye-metriki.jpg" loading="lazy" /></p>
+<ul>
+<li>Прибыль с одного клиента за все время сотрудничества или его ценность (LTV).</li>
+<li>Средняя выручка на одного пользователя (ARPU).</li>
+<li>Средняя выручка на одного клиента (ARPPU).</li>
+<li>Конверсия (<a href="../cr-koehfficient-konversii-chto-ehto-takoe-primenenie-formula-rascheta/index.html">CR</a>).</li>
+<li>Удержание клиентов в течение заданного времени (RR).</li>
+<li>Стоимость привлечения клиента (CAC).</li>
+<li>Стоимость привлечения пользователя (<a href="../../marketing/cpa-model-v-marketinge-chto-ehto-takoe-i-kak-s-nej-rabotat/index.html">CPA</a>).</li>
+<li>Коэффициент окупаемости вложений (ROI, <a href="../../marketing/pokazatel-romi-chto-ehto-takoe-i-zachem-ego-schitat-formula-rascheta/index.html">ROMI</a>).</li>
+<li>Контрольная точка (Stick Point).</li>
+<li>Отток посетителей за месяц (churn).</li>
+<li>Статистика посещений.</li>
+<li>Время просмотра сайта.</li>
+<li>Просмотры страниц.</li>
+<li>Повторные покупки.</li>
+<li>Дата покупки.</li>
+<li>Число новых пользователей за заданный период.</li>
+<li>Количество подписчиков.</li>
+<li>Каналы привлечения целевой аудитории.</li>
+</ul>
+<p>Правильно выбранные ключевые метрики позволяют увидеть полную картину по результатам когортного анализа и улучшить маркетинговую стратегию компании.</p>
+</section> <section id="p6"> <p><a id="p6"> </a></p><h2>Примеры работы когортного анализа</h2>
+<p>Выше в статье мы разобрали процесс проведения когортного анализа в теории, а сейчас рассмотрим, как делается исследование на конкретных примерах.</p>
+<h3>Пример 1. Оценка эффективности подписки на рассылку.</h3>
+<p>Интернет-магазин запустил email рассылку. Подписаться на нее пользователи могут тремя способами:</p>
+<ul>
+<li>заполнив форму во всплывающем окне на сайте;</li>
+<li>оформив подписку для участия в конкурсе в ВК;</li>
+<li>перейдя по ссылке из статьи (блог) на другом сайте.</li>
+</ul>
+<p>В течение декабря форма на сайте привела 1200 человек, для участия в конкурсе подписалось 800, а со стороннего сайта пришло 200. Посмотрим, какое количество подписчиков оставалось с течением времени.</p>
+<table>
+<tbody>
+<tr>
+<td width="89">
+<p>Когорта</p>
+</td>
+<td width="89">
+<p>Подписчики</p>
+</td>
+<td width="89">
+<p>Январь</p>
+</td>
+<td width="89">
+<p>Февраль</p>
+</td>
+<td width="89">
+<p>Март</p>
+</td>
+<td width="89">
+<p>Апрель</p>
+</td>
+<td width="89">
+<p>Май</p>
+</td>
+</tr>
+<tr>
+<td width="89">
+<p>Форма на сайте</p>
+</td>
+<td width="89">
+<p>1200</p>
+</td>
+<td width="89">
+<p>12%</p>
+</td>
+<td width="89">
+<p>8%</p>
+</td>
+<td width="89">
+<p>6%</p>
+</td>
+<td width="89">
+<p>3%</p>
+</td>
+<td width="89">
+<p>2%</p>
+</td>
+</tr>
+<tr>
+<td width="89">
+<p>Конкурс в ВК</p>
+</td>
+<td width="89">
+<p>800</p>
+</td>
+<td width="89">
+<p>7%</p>
+</td>
+<td width="89">
+<p>3%</p>
+</td>
+<td width="89">
+<p>1%</p>
+</td>
+<td width="89">
+<p>0%</p>
+</td>
+<td width="89">
+<p>0%</p>
+</td>
+</tr>
+<tr>
+<td width="89">
+<p>Партнерская ссылка</p>
+</td>
+<td width="89">
+<p>200</p>
+</td>
+<td width="89">
+<p>26%</p>
+</td>
+<td width="89">
+<p>21%</p>
+</td>
+<td width="89">
+<p>18%</p>
+</td>
+<td width="89">
+<p>15%</p>
+</td>
+<td width="89">
+<p>12%</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Из таблицы видим, что партнерство принесло самых лояльных подписчиков, которые дольше всех читают письма рассылки. Конкурс в ВК оказался наиболее проигрышным вариантом, т. к. почти все отписались сразу после его окончания.</p>
+<p>По результатам когортного анализа можно сделать вывод, что тратить деньги на привлечение подписчиков через конкурсы в соцсетях бессмысленно. Наиболее эффективно и выгодно продвигать предложение с помощью партнеров.</p>
+<h3>Пример 2. Анализ затрат на привлечение клиентов.</h3>
+<p>Компания открылась в 2020 году и активно вкладывала деньги в привлечение новых клиентов. Однако время шло, но эти затраты не уменьшались, а, наоборот, росли. Фирма прибегла к когортному анализу, чтобы понять, почему так происходит.</p>
+<p>В качестве основной метрики был использован состав покупателей по годам в общей структуре выручки. Все данные были собраны в таблицу, а результат отобразился в виде графика:</p>
+<p><a data-fancybox="gallery" href="../../../img/cohorts/analiz-zatrat-na-privlechenie-klientov.png"><img alt="Анализ затрат на привлечение клиентов" class="img-responsive sert-img" src="../../../img/cohorts/analiz-zatrat-na-privlechenie-klientov.png" loading="lazy" /> </a></p>
+<p>В результате когортного анализа были даны следующие заключения:</p>
+<ul>
+<li>В течение первого года компания наработала клиентскую базу, но начиная с 4 квартала 2020 года количество ранее привлеченных клиентов стало уменьшаться.</li>
+<li>Поскольку старых покупателей становится все меньше, фирма вынуждена постоянно находиться в поиске и продавать свои услуги новыми клиентами.</li>
+<li>Из-за ухода старых клиентов, которые не вернулись, бизнес не может выстраивать стратегию повторных продаж.</li>
+<li>Лояльность покупателей низкая, поэтому компания тратит большие суммы на поиск новых клиентов.</li>
+</ul>
+<p>Можно сделать вывод, что компании необходимо проанализировать бизнес-процессы, связанные с оказанием услуги и обслуживанием клиентов, чтобы найти и устранить причину постоянного оттока покупателей.</p>
+<h3>Пример 3. Распределение по когортам.</h3>
+<p>Предположим, что житель Воронежа 24 июня нашел в поисковике Google сайт интернет-магазина электроники и купил беспроводные наушники, используя специальную форму быстрого заказа. При таких условиях он попадает сразу в несколько разных когорт:</p>
+<ul>
+<li>пользователи из Воронежа;</li>
+<li>трафик из Google;</li>
+<li>органическая выдача;</li>
+<li>клиенты из поисковой выдачи;</li>
+<li>июнь;</li>
+<li>24 июня;</li>
+<li>продукт «беспроводные наушники»;</li>
+<li>форма быстрого заказа.</li>
+</ul>
+<p>Этот пример когортного анализа показывает, что со всеми этими когортами можно полноценно работать в дальнейшем.</p>
+<h3>Пример 4. Отложенная покупка.</h3>
+<p>После запуска рекламы на сайт-одностраничник наблюдается большой приток трафика, компания получает множество запросов на прайс-лист. Но по итогам месяца видно, что при огромном количестве заявок, которые отправляют заказчики, продаж почти нет.</p>
+<p>Обратившись к аналитику, предприниматель узнал, что цикл сделки в рамках его бизнеса составляет несколько месяцев, поэтому ждать быстрых результатов не стоит. Наоборот, необходимо продолжать лить трафик на лендинг и отслеживать результат посредством когортного анализа в разрезе 3-6 месяцев, а то и больше.</p>
+<h3>Пример 5. Сравнение рекламных каналов.</h3>
+<p>Для привлечения клиентов фирма решила использовать два разных рекламных канала: контекстную рекламу и <a href="../../ads/targeting-osobennosti-principy-raboty-plyusy-i-minusy-rekomendacii-po-nastrojke-i-ispolzovaniyu/index.html">таргетированную рекламу</a> в ВКонтакте. В оба канала была вложена одинаковая сумма в течение 30 дней.</p>
+<p>По итогам месяца в <a href="../../automation/chto-takoe-crm-sistema-i-nuzhna-li-ona-vam/index.html">CRM</a> были зарегистрированы следующие результаты:</p>
+<ul>
+<li>контекстная реклама дала 320 пользователей;</li>
+<li>из ВК поступило 180 заявок.</li>
+</ul>
+<p>На первый взгляд кажется, что таргет проигрывает по эффективности контексту, но все не так просто. Цифры отображают количество заявок от пользователей, пришедших с рекламы за 30 дней, но сколько из них оплатили заказы, неизвестно.</p>
+<p>Даже если когортный анализ покажет, что большая часть оплаченных заказов за полгода были от пользователей из контекста, в долгосрочной перспективе все может поменяться. Если провести когортный анализ за 3 года, может оказаться, что те 180 клиентов из ВКонтакте стали постоянными и принесли фирме за весь период больше денег, чем покупатели из Google и Яндекс.</p>
+</section> <section id="p7"> <p><a id="p7"> </a></p><h2>Использование когортного анализа в маркетинге</h2>
+<p>Возможность когортного анализа показать, как меняется поведение группы пользователей в течение заданного времени, позволяет маркетологам использовать его в своих целях. Далее в статье рассмотрим тему того, чем когортный анализ может быть полезен в маркетинге.</p>
+<p><a data-fancybox="gallery" href="../../../img/cohorts/ispolzovanie-kogortnogo-analiza-v-marketinge.png"><img alt="Использование когортного анализа в маркетинге" class="img-responsive sert-img" src="../../../img/cohorts/ispolzovanie-kogortnogo-analiza-v-marketinge.png" loading="lazy" /> </a></p>
+<h3>Составление прогноза LTV</h3>
+<p>LTV – это важный показатель, когда вы хотите рассчитать инвестиции в маркетинг и рекламу. Прогнозировать LTV (lifetime value) с помощью когортного анализа можно следующим образом:</p>
+<ol>
+<li>Создаете когорту, в которую войдут клиенты, оплатившие покупку в определенном месяце.</li>
+<li>Отслеживаете продолжительность внесения оплат членами этой когорты.</li>
+<li>Данные собираете в таблицу и определяете значения за каждый месяц (общую сумму нужно разделить на количество членов когорты).</li>
+<li>Выводите медиану клиентов за предыдущие периоды, которые относятся к разным группам.</li>
+</ol>
+<p>Это поможет в том, чтобы ваша <a href="../../business/yunit-ehkonomika-kak-sposob-finansovoj-ocenki-biznesa/index.html">юнит-экономика</a> стала еще лучше.</p>
+<h3>Оценка ROI рекламы</h3>
+<p>Далеко не все новые клиенты оформляют заказ сразу же после того, как попали на сайт. Большинству людей нужно сначала изучить информацию, только после этого они принимают решение. Порой этот период сильно затягивается, что усложняет оценку эффективности рекламной кампании. Пользуясь когортным анализом можно точнее оценить ROI. Для этого:</p>
+<ol>
+<li>Создаете когорту, в которую входят люди, пришедшие с одной и той же рекламы.</li>
+<li>Рассчитываете коэффициент эффективности данного рекламного канала.</li>
+<li>Анализируете изменение показателя в течение нескольких месяцев.</li>
+</ol>
+<h3>Сравнение каналов привлечения клиентов</h3>
+<p>С помощью когортного анализа можно выяснить, откуда приходит больше всего клиентов. Делается это так:</p>
+<ol>
+<li>Создаете одну когорту, куда войдут все пользователи, посещавшие сайт в заданный период (например, за день или 2 недели).</li>
+<li>Сегментируете когорту по каналам привлечения клиентов.</li>
+<li>Сравниваете коэффициенты повторных заказов и удержания по месяцам.</li>
+<li>Проводите обработку данных и определяете наиболее перспективные в плане привлечения клиентов источники.</li>
+</ol>
+<p>Для расчета коэффициентов используют такие формулы:</p>
+<p>Коэффициент повторных покупок = Число клиентов, повторно совершивших покупку / Общее число клиентов</p>
+<p>Коэффициент удержания клиента = (Число клиентов в конце периода – Общее число клиентов, привлеченных за весь период) / Число клиентов в начале периода</p>
+<h3>Проведение А/В тестов</h3>
+<p>Классическое А/В тестирование предполагает внесение одного изменения на страницу (например, меняют цвет кнопки) и наблюдение за поведением людей до и после изменения. Когда нужно провести долгосрочный анализ, оптимально работать с когортами.</p>
+<p><a data-fancybox="gallery" href="../../../img/end-to-end/split.jpg"><img alt="Сплит-тестирование" class="img-responsive sert-img" src="../../../img/end-to-end/split.jpg" loading="lazy" draggable="false"> </a></p>
+<p>В этом случае:</p>
+<ol>
+<li>Определяете фиксированный период, в течение которого будет проводиться исследование.</li>
+<li>Формируете одну когорту, в которую входят пользователи, впервые перешедшие на обновленную страницу.</li>
+<li>Определяете вторую когорту, в которой будут пользователи, продолжившие пользоваться шаблоном сайта без изменений.</li>
+<li>Анализируете показатели эффективности.</li>
+</ol>
+<h3>Оценка эффективности медиаисточников</h3>
+<p>Определить, сколько людей скачало приложение, не составляет труда. Гораздо сложнее узнать, откуда пришли самые активные пользователи. Помогает в этом когортный анализ.</p>
+<ol>
+<li>Объединяете в когорту юзеров, которые скачали и используют нужную версию приложения.</li>
+<li>Разделяете эту когорту на подгруппы в зависимости от источника привлечения пользователей.</li>
+<li>Сравниваете результаты и делаете выводы.</li>
+</ol>
+<h3>«Подогрев» пользователей</h3>
+<p>Постоянное отслеживание поведения клиентов с помощью когортного анализа позволяет вовремя определить, когда и у кого начинает снижаться активность. В это время уместно напомнить о себе с помощью рассылки или бонуса, который сможет вернуть внимание и интерес к вашей компании.</p>
+</section> <section id="p8"> <p><a id="p8"> </a></p><h2>Сервисы для составления когортных отчетов</h2>
+<p>Существует множество сервисов, которые помогают упростить когортный анализ. Ниже в статье разберем самые распространенные из них.</p>
+<ul>
+<li><strong>Google Analytics</strong>.
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kogorty-google-analytics.jpg"><img alt="Когорты google analytics" class="img-responsive sert-img" src="../../../img/cohorts/kogorty-google-analytics.jpg" loading="lazy" /> </a></p>
+<p>Сервис имеет собственный встроенный когортный счет, который позволяет аналитикам и маркетологам эффективнее и проще тестировать эффективность рекламных объявлений, любой контент и прочие продукты. Здесь можно формировать когорты по таким параметрам, как первое посещение, первый сеанс, первая конверсия, первая транзакция.</p></li>
+<li><strong>AppMetrica</strong>.
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kogorty-v-appmetrica.png"><img alt="Когорты в AppMetrica" class="img-responsive sert-img" src="../../../img/cohorts/kogorty-v-appmetrica.png" loading="lazy" /> </a></p>
+<p>Это сервис <a href="../kak-polzovatsya-yandeks-metrikoj-podrobnaya-instrukciya-dlya-novichkov/index.html">Яндекс Метрики</a>, предназначенный для работы с мобильными приложениями. Он позволяет создавать когорты по дате установки, трекеру, партнерам, а также отслеживать, когда пользователи включают и пользуются приложением.</p></li>
+<li><strong>AppsFlyer</strong>.
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kogorty-appsflyer.jpg"><img alt="Когорты AppsFlyer" class="img-responsive sert-img" src="../../../img/cohorts/kogorty-appsflyer.jpg" loading="lazy" /> </a></p>
+<p>Сервис для мобильного маркетинга с более гибкими настройками, чем у <a href="../polnyj-gajd-po-google-analytics/index.html">Google Analytics</a>. Здесь в отчетах можно устанавливать одновременно несколько фильтров, а сэкономить время на анализ позволяет ограничение по числу пользователей.</p></li>
+<li><strong>Adjust</strong>.
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kogorty-adjust.jpg"><img alt="Когорты adjust" class="img-responsive sert-img" src="../../../img/cohorts/kogorty-adjust.jpg" loading="lazy" /> </a></p>
+<p>Еще один полезный сервис для разработчиков мобильных приложений. Дает возможность формировать отчет сразу по двум показателям.</p></li>
+<li><strong>Mixpanel</strong>.
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kogorty-v-mixpanel.png"><img alt="Когорты в Mixpanel" class="img-responsive sert-img" src="../../../img/cohorts/kogorty-v-mixpanel.png" loading="lazy" /> </a></p>
+<p>Может использоваться для анализа данных и с приложений, и с сайтов. Позволяет проводить А/B-тестирование, а также формировать и изучать подробные отчеты по рекламе.</p></li>
+<li><strong>Kissmetrics</strong>.
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kogorty-kissmetrics.jpg"><img alt="Когорты Kissmetrics" class="img-responsive sert-img" src="../../../img/cohorts/kogorty-kissmetrics.jpg" loading="lazy" /> </a></p>
+<p>Тоже подходит для аналитики данных с приложения и сайта. Сервис ориентирован на пользователя, а не на «сухой» подсчет числовых показателей.</p></li>
+<li><strong>Excel или Google Таблицы (Google Sheets)</strong>.
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kogorty-excel.jpg"><img alt="Когорты Excel" class="img-responsive sert-img" src="../../../img/cohorts/kogorty-excel.jpg" loading="lazy" /> </a></p>
+<p>Универсальный вариант формирования отчета, т. к. эти сервисы доступны всем. Помогают собирать исходные характеристики для аналитики и формировать отчет с помощью сводной таблицы. Ее не сложно «читать» и анализировать.</p></li>
+</ul>
+<p>Безусловно, есть и другие сервисы для создания отчетов когортного анализа. Каждый аналитик подбирает для себя самый удобный и подходящий под текущие задачи и знания софт.</p>
+</section> <section id="p9"> <p><a id="p9"> </a></p><h2>Как провести когортный анализ в Google Analytics 4</h2>
+<p>Google Analytics 4 предлагает пользователям усовершенствованную методику проведения когортного анализа. Изначально она появилась в 2015 году в Universal Analytics и была представлена отдельным отчетом.</p>
+<p>Чтобы провести когортное исследование в Google Analytics 4, нужно в боковой панели слева выбрать раздел «Исследования», затем методику «Когортное исследование». После этого отобразится панель «Настройки вкладок» с новыми функциями:</p>
+<ol>
+<li>Критерии включения в когорту – условие добавления пользователей:</li></ol>
+<ul style="padding-left: 40px;">
+<li>первый контакт;</li>
+<li>все события;</li>
+<li>любая транзакция;</li>
+<li>любая конверсия;</li>
+<li>прочие.</li>
+</ul>
+<ol start="2">
+<li>Критерии возврата – условие, при котором добавленный пользователь будет оставаться в когорте:</li></ol>
+<ul style="padding-left: 40px;">
+<li>все события;</li>
+<li>любая транзакция;</li>
+<li>любая конверсия;</li>
+<li>прочие.</li>
+</ul>
+<ol start="3">
+<li>Уровень детализации когорты – временной интервал, определяющий отдельную когорту, а также период включения и возврата в нее пользователей:</li></ol>
+<ul style="padding-left: 40px;">
+<li>день;</li>
+<li>неделя;</li>
+<li>месяц.</li>
+</ul>
+<ol start="4">
+<li>Расчеты когорты – влияние действий пользователей на расчет показателей за указанный период;</li></ol>
+<ul style="padding-left: 40px;">
+<li>стандартный;</li>
+<li>скользящий;</li>
+<li>кумулятивный.</li>
+</ul>
+<ol start="5">
+<li>Разбивка – дополнительный параметр для разбивки когорты на подгруппы, после чего можно сравнивать данные между ними.</li>
+<li>Значения – показатель, согласно которому будут отображаться данные в ячейках таблицы.</li>
+</ol>
+<p>Задав все настройки, можно сформировать отчет, полностью готовый к дальнейшему анализу.</p>
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kogorty-google-analytics-4.jpg"><img alt="Когорты google analytics 4" class="img-responsive sert-img" src="../../../img/cohorts/kogorty-google-analytics-4.jpg" loading="lazy" /> </a></p>
+<p>Есть в GA 4 некоторые ограничения при когортном анализе:</p>
+<ul>
+<li>максимальное количество когорт в отчете – 60;</li>
+<li>разбивка когорт ограничивает отчет 15 строками;</li>
+<li>есть пороговые значения для демографических параметров.</li>
+</ul>
+</section> <section id="p10"> <p><a id="p10"> </a></p><h2>Как сделать когортный анализ в Neiros</h2>
+<p>Когортный анализ предусмотрен функционалом сервиса сквозной аналитики Neiros. Мы разработали простой инструмент, который будет полезен маркетологам и аналитикам.</p>
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kogortnyy-analiz-v-neiros.jpg"><img alt="Когортный анализ в Neiros" class="img-responsive sert-img" src="../../../img/cohorts/kogortnyy-analiz-v-neiros.jpg" loading="lazy" /> </a></p>
+<p>Как им пользоваться:</p>
+<ol>
+<li>В личном кабинете в левом меню наведите курсор на пункт «Аналитика» и выберите «Когортный анализ».</li>
+<li>Укажите длительность интервала исследования: неделя, месяц, квартал.</li>
+<li>Определите начальную и конечную даты.</li>
+<li>Выберите тип периода: день, неделя, месяц.</li>
+<li>Выберите формат отображения данных: процент, количество, процент/количество.</li>
+</ol>
+<p>После того, как будут заданы все параметры, ниже отобразится график и сводная таблица, где каждый столбец содержит данные для дальнейшего когортного анализа.</p>
+</section> <section id="p11"> <p><a id="p11"> </a></p><h2>Как получить максимум от когортного анализа</h2>
+<p>Чтобы когортный анализ был максимально эффективным, помогал в развитии и продвижении бизнеса, советуем придерживаться следующих рекомендаций.</p>
+<p><a data-fancybox="gallery" href="../../../img/cohorts/kak-poluchit-maksimum-ot-kogortnogo-analiza.png"><img alt="Как получить максимум от когортного анализа" class="img-responsive sert-img" src="../../../img/cohorts/kak-poluchit-maksimum-ot-kogortnogo-analiza.png" loading="lazy" /> </a></p>
+<ul>
+<li>Изучайте тенденции в разрезе малых временных интервалов.</li>
+<li>Отслеживайте эффективность в динамике и оценивайте уровень.</li>
+<li>Контролируйте уровень интереса пользователей и вовремя исправляйте ситуацию в случае спада.</li>
+<li>Определяйте, приносят ли отдачу маркетинговые рассылки, оценивайте эффективность кампании.</li>
+<li>Сегментируйте аудиторию, чтобы лучше узнать своих клиентов.</li>
+<li>Изучайте, что любит ваша аудитория, какой путь она проходит, какие у нее привычки, чтобы эффективнее удерживать клиентов и получать прибыль.</li>
+<li>Учитывайте в когортном анализе факторы, которые могут на него повлиять.</li>
+<li>Сохраняйте отчеты, чтобы следить за идентичностью данных и настроек при анализе важных когорт.</li>
+</ul>
+</section> <section id="p12"> <p><a id="p12"> </a></p><h2>Часто задаваемые вопросы</h2>
+<div class="accordion faqAccordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="heading1"><a aria-controls="collapse1" aria-expanded="false" class="btn-link collapsed" data-target="#collapse1" data-toggle="collapse" href="index.html#">В чем суть когортного анализа?</a></div>
+<div aria-labelledby="heading1" class="collapse" data-parent="#faqAccordion" id="collapse1" style="">
+<div class="card-body">
+<p>В конкретный момент времени аудитория продукта состоит из людей, которые начали его использовать сегодня, вчера, неделю назад, месяц и даже год. Делать какие-то выводы без привязки к этим периодам бессмысленно. Суть когортного анализа заключается в разделении аудитории/пользователей/клиентов на группы по конкретным признакам и отслеживании поведения каждой группы во времени.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading2"><a aria-controls="collapse2" aria-expanded="false" class="btn-link collapsed" data-target="#collapse2" data-toggle="collapse" href="index.html#">Об анализе каких когорт нельзя забывать?</a></div>
+<div aria-labelledby="heading2" class="collapse" data-parent="#faqAccordion" id="collapse2">
+<div class="card-body">
+<p>Когортный анализ позволяет одновременно проводить несколько исследований, но на деле внимательно изучить все группы практически невозможно. Поэтому, чтобы добиться максимальной пользы для бизнеса, необходимо выбирать такие когорты, которые соответствуют поставленным целям.</p>
+<ol>
+<li>Значение контрольной точки (стоимость продукции, сроки, продолжительность пользования и т. д.).</li>
+<li>Здоровье представителей аудитории.</li>
+<li>Сфера деятельности клиента.</li>
+<li>Максимальный доход от продажи продукта.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading3"><a aria-controls="collapse3" aria-expanded="false" class="btn-link collapsed" data-target="#collapse3" data-toggle="collapse" href="index.html#">Почему метрики роста бессмысленны для аналитики продукта?</a></div>
+<div aria-labelledby="heading3" class="collapse" data-parent="#faqAccordion" id="collapse3">
+<div class="card-body">
+<p>Метрики роста зависят от двух составляющих: продвижения и продукта. В процессе мониторинга нельзя не учитывать эти два параметра. Именно поэтому метрики роста и продуктовая аналитика несовместимы.</p>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="heading4"><a aria-controls="collapse4" aria-expanded="false" class="btn-link collapsed" data-target="#collapse4" data-toggle="collapse" href="index.html#">Как метрики продукта влияют на LTV?</a></div>
+<div aria-labelledby="heading4" class="collapse" data-parent="#faqAccordion" id="collapse4">
+<div class="card-body">
+<p>Проще всего понять это на примере игры для смартфона.</p>
+<ul>
+<li>Активация в приложении. Отслеживаем пользователей, прошедших туториал и готовых играть дальше, а значит, и платить за игру.</li>
+<li>«Залипание» в приложении. Если приложение не увлекло пользователя, он не будет ни играть, ни платить. Поэтому важно измерить долю тех, кто «залип» и часто заходит в приложение.</li>
+<li>Первая покупка. Первую покупку можно сделать с определенного экрана в приложении, поэтому нужно отследить количество игроков, которые увидели данный экран.</li>
+<li>Повторные покупки. Это показатель успешных продуктов, поэтому стоит определить долю тех, кто покупал повторно и количество повторных покупок в среднем.</li>
+<li>Retention rate. Длительная игра способствует повторным покупкам, а значит, измерять этот показатель очень важно.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section> <section id="p13"> <p><a id="p13"> </a></p><h2>Заключение</h2>
+<p>Для маркетолога когортный анализ – один из главных инструментов. С его помощью можно оценивать влияние ранее запущенных рекламных кампаний на нынешнюю активность пользователей, а также прогнозировать важные показатели. Помогают в проведении когортного анализа специализированные сервисы, а также всем доступные программные инструменты.</p></section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="icon icon-tags"></span>
+
+
+                                        
+                                            <a href="../../tag/glossary/index.html">Словарь</a>
+                                        
+                                    </div>                                    <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p0">Что такое когортный анализ</a></li>
+	<li><a href="index.html#p1">Для чего нужен когортный анализ</a></li>
+	<li><a href="index.html#p2">Где применяют когортный анализ</a></li>
+	<li><a href="index.html#p3">Что нужно для когортного анализа</a></li>
+	<li><a href="index.html#p4">Проведение когортного анализа</a></li>
+	<li><a href="index.html#p5">Ключевые метрики</a></li>
+	<li><a href="index.html#p6">Примеры работы когортного анализа</a></li>
+	<li><a href="index.html#p7">Использование когорт в маркетинге</a></li>
+	<li><a href="index.html#p8">Сервисы для составления когортных отчетов</a></li>
+	<li><a href="index.html#p9">Как провести когортный анализ в Google Analytics 4</a></li>
+	<li><a href="index.html#p10">Как сделать когортный анализ в Neiros</a></li>
+	<li><a href="index.html#p11">Как получить максимум от когортного анализа</a></li>
+	<li><a href="index.html#p12">Часто задаваемые вопросы</a></li>
+	<li><a href="index.html#p13">Заключение</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>

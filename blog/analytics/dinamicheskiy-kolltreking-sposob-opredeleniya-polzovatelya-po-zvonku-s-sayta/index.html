@@ -1,0 +1,1063 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Динамический коллтрекинг что это такое и как работает, для чего нужен динамический call tracking</title>
+    <meta name="description" content="Основной способ определения пользователя по звонку с сайта - динамический коллтрекинг, рассказываем что это такое, для чего нужен и как работает call tracking">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7COpen+Sans:400,700,700i" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../../../template/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="../../../template/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/animate.css">
+    <link rel="stylesheet" href="../../../template/assets/css/iconfont.css">
+    <link rel="stylesheet" href="../../../template/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../template/assets/css/rev-settings.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="../../../template/assets/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="../../../template/assets/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="../../../template/assets/css/responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../../template/ct/build/content-tools.min.css">
+
+    <script src="../../../template/ct/build/content-tools.min.js"></script>
+    <script src="../../../template/ct/build/editor.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph" : [
+    {
+     "@type": "Article",
+     "@id": "https://neiros.ru/blog/analytics/dinamicheskiy-kolltreking-sposob-opredeleniya-polzovatelya-po-zvonku-s-sayta#cao",
+     "url": "https://neiros.ru/blog/analytics/dinamicheskiy-kolltreking-sposob-opredeleniya-polzovatelya-po-zvonku-s-sayta#cao",
+     "headline":"Динамический коллтрекинг что это такое и как работает, для чего нужен динамический call tracking",
+
+     "datePublished": "2021-04-20 00:00:00",
+
+     "author": [{"@type":"Person", "name":"Олег Вершинин"} ],
+     "about": [
+    {"@type": "Event", "name": "Аналитика"}
+]
+    }
+
+
+  ]
+}
+</script>
+</head>
+<body >
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- prelaoder -->
+<!-- <div id="preloader">
+<div class="preloader-wrapper">
+    <div class="spinner"></div>
+</div>
+<div class="preloader-cancel-btn">
+    <a href="#" class="btn btn-secondary prelaoder-btn">Cancel Preloader</a>
+</div>
+</div> -->
+<!-- END prelaoder -->
+<div class="header    nav-sticky">
+    <!-- topBar section -->
+   <header class="xs-header header-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3  d-none d-lg-block">
+                <div class="xs-logo-wraper">
+                    <a href="../../../index.html" class="xs-logo">
+                        <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6">
+                <nav class="xs-menus align-to-right">
+                    <div class="nav-header">
+                        <a class="nav-brand" href="../../../index.html"></a>
+                        <div class="nav-toggle"></div>
+                    </div>
+                    <div class="nav-menus-wrapper">
+                        <ul class="nav-menu align-to-right">
+
+            <li style="margin-right: 0px;"><a href="../../../product/index.html" style="color: black;">Решения</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/calltracking/index.html"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"> Коллтрекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/analytics/index.html"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"> Сквозная аналитика</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/callback/index.html"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"> Обратный звонок</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/online-chat/index.html"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"> Консультант</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/email/index.html"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"> E-mail трекинг</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/clients/index.html"><img src="../../../images/77da07f96dbef786ecb40b1ff653b0aa.svg"> Сделки</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../product/hunter-leads/index.html"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"> Ловец лидов</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../price/index.html" style="color: black;">Тарифы</a>
+                                        
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../info/index.html" style="color: black;">Информация</a>
+                            <div class="megamenu-panel xs-icon-menu" style="width: 650px;left: 0px">
+                    <div class="row">
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../index.html"><img src="../../../images/6219418557a35e9f5e22290e8a77a171.svg">   Блог</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../integration/index.html"><img src="../../../images/e961560cba0d3b07581a18409fc007b6.svg">   Интеграции</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../tools/index.html"><img src="../../../images/02b41317a7b0d6abf9bf80484464e86c.svg">   Инструменты</a>
+                                </div>
+
+                            </div>
+                                                    <div class="col-lg-4" style="margin-bottom: 20px;margin-top: 20px">
+                                <div class="single-menu-item">
+                                    <a href="../../../partners/index.html"><img src="../../../images/d1552981910cb0391fa07ba818b36189.svg">   Партнерская программа</a>
+                                </div>
+
+                            </div>
+                        
+
+
+
+
+                    </div>
+                </div>
+
+            
+        </li>
+            <li style="margin-right: 0px;"><a href="../../../contact/index.html" style="color: black;">Контакты</a>
+                                        
+        </li>
+        <li style="margin-left: 54px;" ><a href="https://neiros.cloud/login" style="color: black">Вход</a>
+    <li style="margin-right: 0px; "><a href="https://neiros.cloud/register" class="top-nav-registration" style="
+    padding: 10px;
+    color: #333;
+    border:1px solid #333;
+    background-color:transparent;
+    border-radius: 3px;">Регистрация</a>
+
+
+</ul>
+
+<style>
+.top-nav-registration:hover{
+	color: #fff !important;
+    background-color:#00BFFF!important;
+	border:1px solid #00BFFF!important;
+	}
+
+</style>                    </div>
+                </nav>
+            </div>
+            
+        </div><!-- .row END -->
+
+    </div><!-- .container END -->
+   </header></div>
+<!-- rev slider strart -->
+
+
+<!-- why choose section -->
+<!-- END why choose section -->
+
+
+    <section class="inner-banner-area " style="background-color: #0b59db">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-banner-content">
+                        <h1 class="inner-banner-title inner-banner-title-article">Динамический коллтрекинг – способ определения пользователя по звонку с сайта</h1>
+                                                    <ul itemscope class="breadcumbs list-inline" itemtype="https://schema.org/BreadcrumbList">
+                                                                                                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../../index.html" itemprop="item">
+                                                <span itemprop="name">Neiros</span>
+                                                <meta itemprop="position" content="0">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../../index.html" itemprop="item">
+                                                <span itemprop="name">Блог</span>
+                                                <meta itemprop="position" content="1">
+                                            </a></li>
+                                                                                                                                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                            <a href="../index.html" itemprop="item">
+                                                <span itemprop="name">Аналитика</span>
+                                                <meta itemprop="position" content="2">
+                                            </a></li>
+                                                                                                </ul>
+                            <span class="border-divider style-white"></span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-image" ></div>
+    </section>
+
+     <section class="shadow-block">
+        <div class="container">
+            <div class="row">
+            	<div class="col-xs-12">
+                <div class="shadow-img-block">
+                       <div class="shadow-img"></div>
+                 </div>
+             </div>
+       </div>
+    </section>
+
+
+    <section class="xs-section-padding blog-single-post-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+                <div class="author-img-h">
+                             <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" loading="eager" alt="" draggable="false">
+                      <p><a href="../../author/olegvershinin/index.html">Олег Вершинин</a></p>                 </div>
+
+
+                    <div class="single-blog-post post-list format-gallery">
+                        <!--<div class="post-image">
+                            <div class="gallery-slider owl-carousel">
+                                <div class="single-item">
+                                    <img src="../../../images/91693d720e77016f3071ee1f12478cc5.jpg" alt="">
+                                </div>
+
+                            </div>
+                        </div>  -->
+                        <div class="post-body">
+                            <div class="entry-header">
+                                <div class="entry-meta">
+
+                                    
+                                    <span class="post-publish-date"><a ><i class="icon icon-calendar-1"></i> 24.11.2021</a></span>
+
+                                </div>
+                                <div class="entry-content" id="cao">
+                                                                     
+
+
+
+                                   <p>Компании используют оффлайн- и онлайн-рекламу для привлечения клиентов разными способами. Однако получить статистику по трафику, повысить эффективность маркетинговых кампаний, найти и скорректировать слабые места в рекламе не удастся без аналитики.</p>
+
+<p><a data-fancybox="gallery" href="../../../images/91693d720e77016f3071ee1f12478cc5.jpg"><img alt="Динамический коллтрекинг источники" class="img-responsive sert-img" src="../../../images/91693d720e77016f3071ee1f12478cc5.jpg" loading="lazy" /> </a></p>
+
+<p>Но как понять, откуда пришел клиент, как он узнал о компании, какие действия совершил перед тем, как позвонить? Для этой цели предусмотрен специальный технико-маркетинговый инструмент – динамический коллтрекинг. Он актуален для всех сфер и бизнесов, где значительная часть клиентов предпочитает обращаться в компанию посредством звонков. Большая ошибка интернет-маркетинга – составлять статистику исключительно по онлайн-заявкам, не учитывая телефонные обращения.</p>
+
+<section id="p1">
+<p><a id="p1" name="p1"> </a></p>
+
+<h2>Что такое динамический коллтрекинг и для чего он нужен</h2>
+
+<p>Динамический коллтрекинг – это особая технология для определения эффективности различных типов рекламы. Функционал помогает идентифицировать разных пользователей и в комплексе с сервисами аналитики собирать подробную статистику по каждому из них. Все это делается ради получения отдачи от наиболее эффективных рекламных кампаний и правильного распределения бюджета.</p>
+
+<p><a data-fancybox="gallery" href="../../../img/calltracking/dinamicheskiy-kolltreking.jpg"><img alt="Динамический коллтрекинг" class="img-responsive sert-img" src="../../../img/calltracking/dinamicheskiy-kolltreking.jpg" loading="lazy" /> </a></p>
+
+<p>Большое преимущество динамического коллтрекинга – поддержка мультиканальной атрибуции. Технология присвоения подменных номеров позволяет отслеживать посещения сайта одним и тем же пользователем задолго до того, как он совершит звонок. При этом маркетолог получает все необходимые данные для статистики: регион клиента, запрос, по которому он перешел на сайт, объявление, рекламная кампания, источник перехода и т. д.</p>
+
+<p>В комплексе с сервисами аналитики, контекстной рекламы, корпоративной CRM динамическая система сбора данных посредством звонков помогает:</p>
+
+<ul>
+	<li>сосредоточить в одном месте статистику по всем <a href="../konversiya-chto-eto-i-pochemu-vazhno-ee-znaty/index.html">конверсиям с сайта</a>, в т. ч. прямые и обратные звонки, онлайн-заявки и чаты;</li>
+	<li>отслеживать число телефонных обращений по каждому каналу рекламы с учетом рекламных кампаний и поисковых запросов пользователей для понимания их эффективности;</li>
+	<li>составлять удобные, понятные отчеты с множеством показателей и возможностью структуризации по разным параметрам, включая периоды;</li>
+	<li>вести запись всех звонков для прослушивания, изучения клиентских потребностей, корректировки скриптов и работы менеджеров.</li>
+</ul>
+</section>
+
+<section id="p2">
+<p><a id="p2" name="p2"> </a></p>
+
+<h2>Чем динамический коллтрекинг отличается от статического</h2>
+
+<p>Особенность технологии коллтрекинга в способности фиксировать все целевые действия посетителя на сайте.</p>
+
+<p>Статический коллтрекинг лишь подсчитывает число входящих звонков на номер, привязанный к определенному рекламному каналу. Динамический работает сложнее и позволяет привязывать звонки к ключевым словам из различных источников, отслеживая весь путь клиента. В отличие от статического коллтрекинга, где достаточно нескольких номеров (в зависимости от числа рекламных каналов), динамическая технология требует задействования гораздо большего пула.</p>
+
+<p><img alt="" class="img-responsive sert-img" src="../../../images/6e30dc52f1131fbe86699243a48602a7.jpg" loading="lazy" /></p>
+
+<p>Динамический коллтрекинг подходит для бизнеса, использующего для продвижения любые виды интернет-рекламы: контекстную, медийную, таргетированную, соцсети и т. д. Статическую технологию есть смысл использовать для отслеживания эффективности таких рекламных каналов как биллборды, листовки, наружная реклама, реклама в лифтах, по радио, на ТВ, доски объявлений. Она не позволяет получить глубокую статистику, поскольку отображает данные по конкретным каналам без детализации.</p>
+
+<p>Чтобы уделить внимание значимым рекламным каналам, не упустив другие источники трафика, многие компании предпочитают использовать комбинированный коллтрекинг. В этом случае динамическая и статическая технологии сбора данных используются параллельно. При этом удается рационально распределить телефонные номера и получить необходимую детализацию по каналам, которые этого требуют.</p>
+</section>
+
+<section id="p3">
+<p><a id="p3" name="p3"> </a></p>
+
+<h2>Как работает динамический call tracking</h2>
+
+<p>После подключения услуги коллтрекинга компания получает собственный пул подменных номеров. Впоследствии они будут распределяться между посетителями сайта и показываться им вместо основного телефона организации.</p>
+
+<p>Работа сервиса начинается с размещения на сайте js-скрипта. Последний отвечает за идентификацию данных посетителя (регион, рекламная кампания, канал, источник), а также присвоение ему уникального телефонного номера.</p>
+
+<h3>Как это выглядит на сайте</h3>
+
+<p><a data-fancybox="gallery" href="../../../img/calltracking/podmena.jpg"><img alt="Подмена номера на сайте" class="img-responsive sert-img" src="../../../img/calltracking/podmena.jpg" loading="lazy" /> </a></p>
+
+<p>Чтобы понять, как работает динамический коллтрекинг, нужно представить сайт с указанным на нем номером телефона. Выглядит он абсолютно обычно. На самом деле каждому новому посетителю такого сайта показывается уникальный номер, который является подменным. Он закрепляется за пользователем на время сеанса и даже немного дольше. Если человек закрыл страницу случайно или вышел, но вскоре решил вернуться, запись информации о нем продолжится.</p>
+
+<h3>Как это работает изнутри</h3>
+
+<p>Когда на сайт заходит новый посетитель, скрипт коллтрекинга обращается к пулу уникальных номеров, берет свободный и показывает его пользователю все то время, что он находится на сайте. Затем этот номер освобождается и становится в конец очереди для показа другому посетителю.</p>
+
+<p>Если клиент звонит по подменному номеру, звонок переадресовывается сервисом на настоящий номер компании, и сотрудник берет трубку. При этом логика работы корпоративной телефонии никак не меняется.</p>
+
+<p><a data-fancybox="gallery" href="../../../img/calltracking/kak-rabotayet-dinamicheskiy-kolltreking.jpg"><img alt="Как работает динамический коллтрекинг" class="img-responsive sert-img" src="../../../img/calltracking/kak-rabotayet-dinamicheskiy-kolltreking.jpg" loading="lazy" /> </a></p>
+
+<p>Если на стороне компании на звонок никто не отвечает, сервис фиксирует пропущенный вызов, о чем также поступает информация в компанию.</p>
+
+<p>Сведенья о звонках могут передаваться в корпоративную CRM и сервисы интернет-аналитики (Яндекс Метрика, Google Analytics). Таким образом собирается статистика обращений по различным рекламным каналам для последующего анализа.</p>
+
+<h3>Что такое Freeze Time</h3>
+
+<p>Freeze Time – это время, в течение которого подменный номер остается закрепленным за пользователем после ухода с сайта. Рекомендованная продолжительность от 2 минут до 2 часов. Указать его можно в настройках коллтрекинга.</p>
+
+<p><a data-fancybox="gallery" href="../../../img/calltracking/freeze-time.jpg"><img alt="Freeze Time" class="img-responsive sert-img" src="../../../img/calltracking/freeze-time.jpg" loading="lazy" /> </a></p>
+
+<p>Время закрепления помогает получать достоверную статистику по клиентам, которые по каким-то причинам не позвонили сразу и закрыли сайт. Если такого запаса времени не будет, сервис не сможет распознать вернувшегося клиента. Новая сессия будет идентифицирована как уникальная, а клиент увидит другой номер телефона.</p>
+
+<h3>Как коллтрекинг фиксирует данные</h3>
+
+<p>Фиксация данных происходит при звонке на подменный телефон путем идентификации клиентского ID, к которому он привязан. История кликов клиента поднимается в момент набора номера. Сервис назначает нужный клик в зависимости от атрибуции.</p>
+
+<h3>Какие данные можно получить</h3>
+
+<p>Используя технологию сбора данных, можно получить следующие сведенья:</p>
+
+<ul>
+	<li>как пользователь узнал о продукте впервые;</li>
+	<li>по какому поисковому запросу был совершен переход на сайт;</li>
+	<li>какие целевые действия пользователь выполнял;</li>
+	<li>в каком рекламном блоке было показано объявление (спецразмещение, гарантированные или динамические показы);</li>
+	<li>общие сведенья о пользователе (браузер, устройство, ОС, регион);</li>
+	<li>данные по UTM-меткам;</li>
+	<li>сколько стоил звонок;</li>
+	<li>обращался ли клиент в компанию раньше.</li>
+</ul>
+
+<p>Все это помогает составить целостную картину эффективности каждой рекламной кампании, внести корректировки и рационально распределить средства.</p>
+</section>
+
+<section id="p4">
+<p><a id="p4" name="p4"> </a></p>
+
+<h2>Недостатки динамического коллтрекинга</h2>
+
+<p>Несмотря на эффект использования динамического коллтрекинга, эта технология сбора данных имеет некоторые недостатки.</p>
+
+<ul>
+	<li>Недостаточная точность. С этой проблемой могут столкнуться компании из-за неверной оценки открытых сессий в единицу времени и, как следствие, нехватки свободных номеров для подмены.</li>
+	<li>Высокая стоимость. Цена определяется количеством номеров, которое зависит от числа одновременно открытых сессий. Для крупных сайтов с высокой посещаемостью услуга может оказаться достаточно дорогой.</li>
+	<li>Потеря отложенного спроса при отказе от услуги. В этом случае все выделенные номера отключаются. Обращения клиентов, которые не позвонили сразу, выпадают из статистики.</li>
+	<li>Ограниченная доступность услуги. Несмотря на активное распространение сервисов, даже сейчас в отдельных странах и регионах есть сложности с подключением коллтрекинга.</li>
+</ul>
+
+<p>К счастью, постоянная модернизация технологии сводит к минимуму недостатки. Услуга постепенно дешевеет и распространяется, алгоритмы совершенствуются. Как итог, компании покрывают свои потребности с минимальными издержками.</p>
+</section>
+
+<section id="p5">
+<p><a id="p5" name="p5"> </a></p>
+
+<h2>Какая точность у динамического коллтрекинга и что на нее влияет</h2>
+
+<p>Как мы уже сказали, погрешность у технологии есть, и ожидать от сервиса 100% точности не приходится. Когда алгоритм связывает звонок не с тем клиентом, который его совершил, возникает погрешность.</p>
+
+<p>Простой пример. На сайте находится пользователь А, которому показывается подменный телефон, а в это время в компанию звонит пользователь Б, который заходил на сайт несколько дней назад и записал себе тот же подменный номер.</p>
+
+<p><a data-fancybox="gallery" href="../../../img/calltracking/tochnost-kolltrekinga.jpg"><img alt="Точность коллтрекинга" class="img-responsive sert-img" src="../../../img/calltracking/tochnost-kolltrekinga.jpg" loading="lazy" /> </a></p>
+
+<p>Факторы, влияющие на точность динамического коллтрекинга:</p>
+
+<ul>
+	<li>время, в течение которого уникальный телефон связан с пользователем, в т. ч. после завершения сессии;</li>
+	<li>число выделенных для подмены номеров;</li>
+	<li>интеграция с сервисами сквозной аналитики, корпоративной CRM, рекламными кабинетами;</li>
+	<li>посещаемость сайта;</li>
+	<li>специфика поведения клиентов на сайте.</li>
+</ul>
+
+<p>Нынешние сервисы коллтрекинга обладают точностью 90% и более, что позволяет получить сравнительно точные данные для статистики и проанализировать эффект рекламных кампаний.</p>
+</section>
+
+<section id="p6">
+<p><a id="p6" name="p6"> </a></p>
+
+<h2>Сколько нужно номеров и почему их может не хватать</h2>
+
+<p>Принцип технологии коллтрекинга основан на присвоении уникального телефона каждому посетителю на сайте. Для выбора подходящего тарифного плана нужно знать, сколько пользователей бывает на сайте одновременно. Если посещаемость ресурса выше пула выделенных номеров, часть трафика будет зафиксирована, но по ней не будет данных для аналитики, а точность статистики упадет.</p>
+
+<p>Стоит закупать больше номеров, чем количество людей, которые одновременно могут находиться на сайте. Есть два метода подсчета:</p>
+
+<ol>
+	<li>Упрощенный – пул телефонов рассчитывается по формуле: суточная посещаемость/100+1.</li>
+	<li>Точный – количество посетителей в момент пиковой нагрузки одновременно в статистике за неделю + 20%.</li>
+</ol>
+
+<p>Причиной нехватки телефонов чаще становится неверный выбор тарифа. Рекомендуется закупать подменные номера с запасом. Это поможет компенсировать возможные скачки посещаемости, связанные с запуском новой рекламы или сезонной активностью клиентов. Также нужно учесть среднесуточную длину сессии. Чем дольше пользователи находятся на сайте, тем больше номеров понадобится для сбора точной статистики.</p>
+
+<p>Устанавливая на сайт динамический коллтрекинг, нужно не только хорошо понимать, что это, но и уметь тщательно его настроить. К счастью, нынешние сервисы почти все автоматизированы и управляются роботом-аналитиком.</p>
+</section>
+
+<section id="p7">
+<p><a id="p7" name="p7"> </a></p>
+
+<h2>Видеоинструкция</h2>
+
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="100%" src="https://www.youtube.com/embed/7EZv58L8hGw?rel=0&showinfo=0" width="100%" loading="lazy" /></iframe></p>
+</section>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="divider">
+                                        <span class="border-divider"></span>
+                                    </div>
+                                                                     <div class="social-share">
+                                        <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                                        <script src="https://yastatic.net/share2/share.js"></script>
+                                        <div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div><!-- .post-body END -->
+                    </div><!-- .single-blog-post .post-list .format-gallery END -->
+
+
+					<div class="author-card">
+                    <div class="author-header">
+                        <h2 class="author-title">Автор</h2>
+                        <span class="border-divider style-white"></span>
+                    </div>
+                    <div class="author-details media">
+                        <div class="author-img">
+                            <img src="../../../images/a6445e048b41edb9ee39fd2474450d0e.jpg" alt="">
+                        </div>
+                        <div class="author-bio">
+                            <h3 class="author-name">Олег Вершинин</h3>
+                            <h4 class="authr-designation">Специалист по продукту</h4>
+                            <ul class="simple-social-list">
+                                <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/"><i class="fa fa-facebook"></i></a></li>
+								<li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .author-card END -->
+                         <!-- end blog comment area -->
+                                <!-- blog responsed area start -->
+                                 <div id="respond" class="comment-respond respond-style2">
+    <div class="respond-header">
+        <h4 class="comment-reply-title">Оставить комментарий</h4>
+        <span class="border-divider"></span>
+        <p class="comments-info">       Войти с помощью <a href="https://neiros.ru/login/vkontakte/"><img height="30" width="30" src="../../../img/icons/vk.svg" /></a>
+        </p>
+
+    </div>
+                        </div>                <!-- end blog responsed area -->
+
+
+
+
+
+                    
+                    <!-- blog comment area start -->
+                                <!-- end blog comment area -->
+
+                    <!-- blog responsed area start -->
+                                   <!-- end blog responsed area -->
+                </div>
+                <div class="col-md-3">
+                    <!-- blog sidebar start -->
+                    <div class="blog-sidebar-wraper right-sidebar">
+                        
+
+                        <div class="widget widget-categories">
+                            <div class="widget-header">
+                                <h3 class="xs-title">Содержание</h3>
+                                <span class="border-divider"></span>
+                            </div>
+                            <ul class="list-group">
+	<li><a href="index.html#p1">Что такое динамический коллтрекинг и для чего он нужен</a></li>
+	<li><a href="index.html#p2">Чем динамический коллтрекинг отличается от статического</a></li>
+	<li><a href="index.html#p3">Как работает динамический коллтрекинг</a></li>
+	<li><a href="index.html#p4">Недостатки динамического коллтрекинга</a></li>
+	<li><a href="index.html#p5">Какая точность у динамического коллтрекинга и что на нее влияет</a></li>
+	<li><a href="index.html#p6">Сколько нужно номеров и почему их может не хватать</a></li>
+	<li><a href="index.html#p7">Видеоинструкция</a></li>
+</ul>
+
+                        </div>
+
+                       <!-- .widget .widget-tag END -->
+                    </div>                 <!-- blog sidebar end -->
+                </div>
+            </div><!-- .row END -->
+        </div><!-- .container END -->
+    </section><!-- end single blog section -->
+
+
+
+
+
+
+
+<!-- language switcher strart -->
+<!-- xs modal -->
+
+<!-- footer section start -->
+<footer class="xs-footer-section ">
+    <div class="container" style="z-index:99999">
+        <div class="footer-top-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <a href="../../../index.html">
+                            <img src="../../../images/92dbba6da1a1d02701f2a81af348dac7.svg" alt="">
+                        </a>
+                    </div><!-- .footer-logo END -->
+                </div>
+                <div class="col-md-8">
+                    <ul class="address-info-list list-inline">
+                        <li>
+                            <div class="address-icon">
+                                <img src="../../../template/assets/images/pin.png" alt="">
+                            </div>
+                            <div class="address-info">г. Санкт-Петербург<br> ул. Белоостровская, д. 20</div>
+                        </li>
+                        <li>
+                            <div class="address-icon"><img src="../../../template/assets/images/massage.png" alt=""></div>
+                            <div class="address-info"><span class="neiros_email"><a href="mailto:mailbox@neiros.ru">mailbox@neiros.ru</a></span> <br><a href="tel:8(812)200-83-59">8(812)200-83-59</a>  </div>
+                        </li>
+                    </ul><!-- .address-info-list END -->
+                </div>
+            </div>
+        </div><!-- .footer-top-area END -->
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Компания</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../price/index.html">Цены</a></li>
+                            
+                                <li><a href="../../../contact/index.html">Контакты</a></li>
+                                                    </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Решения</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../../product/calltracking/index.html">Коллтрекинг</a></li>
+                                
+                                <li><a href="../../../product/analytics/index.html">Сквозная аналитика</a></li>
+                                
+                                <li><a href="../../../product/callback/index.html">Обратный звонок</a></li>
+                                
+                                <li><a href="../../../product/online-chat/index.html">Консультант</a></li>
+                                
+                                <li><a href="../../../product/email/index.html">E-mail трекинг</a></li>
+                                
+                                <li><a href="../../../product/clients/index.html">Сделки</a></li>
+                                
+                                <li><a href="../../../product/hunter-leads/index.html">Ловец лидов</a></li>
+                                                        </ul>
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Информация</h4>
+                        <ul class="xs-lsit">
+                            
+                                <li><a href="../../index.html">Статьи</a></li>
+                                
+                                <li><a href="../../../integration/index.html">Интеграции</a></li>
+                                
+                                <li><a href="../../../tools/index.html">Сервисы</a></li>
+                                
+                                <li><a href="../../../partners/index.html">Реферальная система</a></li>
+                                                        </ul><!-- .articles-list END -->
+                    </div><!-- .footer-widget END -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h4 class="xs-content-title">Напишите нам</h4>
+                        <form action="#" class="contact-form" method="post" id="form-footer">
+                            <input type="email" name="email" placeholder="Email" class="form-control">
+                            <textarea name="message" class="form-control" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <input type="submit" value="Отправить" class="submit-btn">
+                        </form>
+                    </div><!-- .footer-widget END -->
+                </div>
+            </div>
+        </div>
+    </div><!-- .footer-main END -->
+ <div class="partner-area-wraper">
+         <div class="container">
+             <div class="partner-area">
+                 <div class="row">
+                     <div class="col-md-8">
+                         <ul class="xs-lsit list-inline">
+                             <li class="title">Для компьютера</li>
+                             <li><a href="../../../files/SetupNeiros.msi"><img height="30" width="30" src="../../../img/icons/windows.png" /></a></li>
+                         </ul>
+                     </div>
+                    </div>
+             </div>
+             <!-- .partner-area END --></div>
+     </div>
+     <div class="copyright">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="copyright-text">
+                         <p>Все права защищены © 2021, Neiros</p>
+                     </div>
+                 </div>
+                 <div class="copyright-text col-md-4">
+                     <div class=><a href="../../../policy/index.html">Политика конфиденциальности</a></div>
+                 </div>
+                 <div class="col-md-5">
+                     <ul class="social-list">
+                         <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/neirosteam/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.instagram.com/neirosteam/" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.vk.com/neirosteam" class="linkedin"><i class="fa fa-vk"></i></a></li>
+                         <li><a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCUN5Oszf-UKVYE7CYH82Dbw/" class="googlePlus"><i class="fa fa-youtube-play"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+
+ <!-- .copyright END -->
+</footer>
+<script type="text/javascript" src="https://neiros.cloud/api/widget_site/get/ed291d64df30d549c565b4ea0cee0f41_22"></script><!-- Yandex.Metrika counter --> <script type="text/javascript" >    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");     ym(54026548, "init", {         clickmap:true,         trackLinks:true,         accurateTrackBounce:true,         webvisor:true    }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54026548" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144504881-1"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-144504881-1'); </script>
+<!-- footer section end -->
+<!-- js file start -->
+<script src="../../../template/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../../template/assets/js/plugins.js"></script>
+<script src="../../../template/assets/js/Popper.js"></script>
+<script src="../../../template/assets/js/jquery.fancybox.min.js"></script>
+
+<script src="../../../template/assets/js/bootstrap.min.js"></script>
+<script src="../../../template/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../../template/assets/js/owl.carousel.min.js"></script>
+<script src="../../../template/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="../../../template/assets/js/jquery.waypoints.min.js"></script>
+<script src="../../../template/assets/js/isotope.pkgd.min.js"></script>
+
+<script src="../../../template/assets/js/scrollax.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../../template/assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../../template/assets/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../../template/assets/js/jquery.easypiechart.min.js"></script>
+<script src="../../../template/assets/js/delighters.js"></script>
+<script src="../../../template/assets/js/main.js"></script>		<!-- End js file -->
+<script src="../../../1/production/jparticles.js"></script>
+<script src="../../../1/production/particle.js"></script>
+<script>
+    new  JParticles.particle('.myfooternew', {
+        color: '#25bfff',
+        lineShape: 'cube',
+        range: 2000,
+        proximity: 100,
+// Turn on parallax effect
+        parallax: true
+    });</script><!-- End js file -->
+   
+    <script>
+
+        $(document).ready(function(){
+            $('#m3').text('0 %');
+			$('#m4').text('0 %');
+            $('#m31').text('0 руб.');
+			$('#m32').text('0 руб.');
+            var a = $('#calc input');
+            $('#calc input').keyup(function () {
+                mass = [];
+                $(a).each(function () {
+                    var i = $(this).val();
+                    var b = 0;
+                    i = i.replace(/^0|[^\d\.\,]/g, '').replace(".", ',');
+                    $(this).val(i);
+                    b = parseFloat(i.replace(/^0|\s/g, "").replace(",", "."))
+                    mass.push(b);
+                });
+                var result = (mass[1] / mass[0]*100).toFixed(2);
+				var result4 = ((mass[1]-mass[0]) / mass[0]*100).toFixed(2);
+				var result32 = (mass[1] / mass[0]*1000).toFixed(2);
+                var result31 = (mass[1] / mass[0] ).toFixed(2);
+                if (isNaN(result)) {
+                    $('#m3').text('0 %');
+					$('#m4').text('0 %');
+                    $('#m31').text('0 руб.');
+					$('#m32').text('0 руб.');
+                } else
+                    $('#m3').text(result.replace('.',',') + ' %');
+				$('#m4').text(result4.replace('.',',') + ' %');
+                $('#m31').text(result31.replace('.',',') + ' руб.');
+				$('#m32').text(result32.replace('.',',') + ' руб.');
+
+            });
+
+
+        });
+
+    </script>
+
+
+   <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+   <script>
+     hljs.initHighlightingOnLoad( {language: 'javascript'});
+       hljs.initLineNumbersOnLoad( {language: 'javascript'})
+
+  </script>
+<style>
+    code, kbd, pre, samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 1em
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs-ln{
+        margin-bottom: 0px;
+
+    }
+    table.hljs-ln td, table.hljs-ln th{
+        border-top: 0px;
+    }
+    td.hljs-ln-numbers {
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #999 !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    td.hljs-ln-code {
+        padding-left: 10px !important;
+    }
+
+    .javascript.hljs{
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        overflow: auto;
+        -ms-overflow-style: scrollbar
+    }
+
+    pre {
+        display: block;
+        font-size: 87.5%;
+        color: #212529
+    }
+
+    pre code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal
+    }
+    code {
+        font-size: 87.5%;
+        color: #f3a4b5;
+        word-break: break-word
+    }
+
+    a > code {
+        color: inherit
+    }
+
+  /*  code  {
+        color: #000;
+        text-shadow: 0 1px #fff;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        line-height: 1.7;
+        font-size: 14px;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none
+    }*/
+    code {
+        border-top: 3px solid #03a9f4;
+        border-radius: 5px;
+    }
+    code {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+    .hljs {
+        color: #dcdcdc !important;
+    }
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+
+
+    /*dark*/
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+        background: #3f3f3f !important;
+        color: #dcdcdc;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-tag {
+        color: #e3ceab;
+    }
+
+    .hljs-template-tag {
+        color: #dcdcdc;
+    }
+
+    .hljs-number {
+        color: #8cd0d3;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute {
+        color: #efdcbc;
+    }
+
+    .hljs-literal {
+        color: #efefaf;
+    }
+
+    .hljs-subst {
+        color: #8f8f8f;
+    }
+
+    .hljs-title,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class,
+    .hljs-section,
+    .hljs-type {
+        color: #efef8f;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet,
+    .hljs-link {
+        color: #dca3a3;
+    }
+
+    .hljs-deletion,
+    .hljs-string,
+    .hljs-built_in,
+    .hljs-builtin-name {
+        color: #cc9393;
+    }
+
+    .hljs-addition,
+    .hljs-comment,
+    .hljs-quote,
+    .hljs-meta {
+        color: #7f9f7f;
+    }
+
+
+    .hljs-emphasis {
+        font-style: italic;
+    }
+
+    .hljs-strong {
+        font-weight: bold;
+    }
+    .hljs-tag .hljs-attr, .hljs-tag .hljs-name {
+        color: #fff;
+    }
+
+
+
+
+
+</style>
+    <script>
+        $( document ).ready(function() {
+
+        $('.lazy_pdf').each(function (i,s){
+$(this).attr('data',$(this).attr('lazy-data'));
+
+
+
+        });
+        });
+
+
+    </script>
+  
+ 
+</body>
+</html>
