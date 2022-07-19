@@ -91,14 +91,14 @@
   <header class="xs-header header-main">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3  d-none d-lg-block">
+        <div class="col-lg-3 d-none d-lg-block">
           <div class="xs-logo-wraper">
             <a href="../../../index.html" class="xs-logo">
               <img src="../../../images/7561e0cb5882fa6e24f679cd129689cb.svg" alt="">
             </a>
           </div>
         </div>
-        <div class="col-lg-9 col-md-6">
+        <div class="col-lg-9 col">
           <nav class="xs-menus align-to-right nav-menu-header">
             <div class="nav-header">
               <a class="nav-brand" href="../../../index.html"></a>
@@ -1693,7 +1693,7 @@
 
       </div><!-- .row END -->
 
-      <div class="col-md-3 col-additionally">
+      <div class="col-md-3 col-additionally d-none d-xl-block">
         <div class="subscribe-box additionally-box">
           <h3>Подписка на новости</h3>
           <div class="box-text">
@@ -2020,13 +2020,15 @@
             <h4>У вас есть интересный материал?</h4>
             <div class="text">
               <p>Вы можете опубликовать свою статью в нашем блоге!
-                </p>
+              </p>
               <p>Жмите на кнопку и присылайте свою статью</p>
             </div>
 
             <a href="#" class="btn-my btn-accent">Предложить статью</a>
 
-            <div class="consent">Ознакомьтесь с <a href="#" class="d-inline">условиями публикации гостевых статей</a> у нас в блоге</div>
+            <div class="consent">Ознакомьтесь с <a href="#" class="d-inline">условиями публикации гостевых статей</a> у
+              нас в блоге
+            </div>
           </div>
         </div>
       </div>
@@ -2049,7 +2051,7 @@
     <div class="row popular-services-row">
       <div class="col-12 col-lg-9">
         <div class="row">
-          <div class="col-12 col-sm-6 col-lg-3 mb-22">
+          <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-22">
             <a href="#" class="popular-services-box">
               <span class="popular-services-box__icon"><img src="../../../images/ca20b4e09becca4dbd9a870e27a55f8a.svg"
                                                             alt=""></span>
@@ -2059,7 +2061,7 @@
               </span>
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-lg-4 mb-22">
+          <div class="col-12 col-sm-6 col-md-4 col-xl-4 mb-22">
             <a href="#" class="popular-services-box">
               <span class="popular-services-box__icon"><img src="../../../images/4b9d9826199d0a6a549105cda38c4cfe.svg"
                                                             alt=""></span>
@@ -2072,7 +2074,7 @@
               </span>
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-lg-5 mb-22">
+          <div class="col-12 col-sm-6 col-md-4 col-xl-5 mb-22">
             <a href="#" class="popular-services-box">
               <span class="popular-services-box__icon"><img src="../../../images/dd746ed67814499e46c0eace5254aa44.svg"
                                                             alt=""></span>
@@ -2083,7 +2085,7 @@
               </span>
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3 mb-22">
+          <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-22">
             <a href="#" class="popular-services-box">
               <span class="popular-services-box__icon"><img src="../../../images/af00a82c777ec3f5bd31c86e35fe850d.svg"
                                                             alt=""></span>
@@ -2095,7 +2097,7 @@
             </a>
           </div>
 
-          <div class="col-12 col-sm-6 col-lg-5 mb-22">
+          <div class="col-12 col-sm-6 col-md-4 col-xl-5 mb-22">
             <a href="#" class="popular-services-box">
               <span class="popular-services-box__icon"><img src="../../../images/97c6833961ea4ef18842fd3188fffc4e.svg"
                                                             alt=""></span>
@@ -2106,7 +2108,7 @@
               </span>
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-lg-4 mb-22">
+          <div class="col-12 col-sm-6 col-md-4 col-xl-4 mb-22">
             <a href="#" class="popular-services-box">
               <span class="popular-services-box__icon"><img src="../../../images/97e61f8847e377e4642f6449dd55ecd5.svg"
                                                             alt=""></span>
@@ -2131,6 +2133,80 @@ e-mail с сайта.</span>
 
 <!-- language switcher strart -->
 <!-- xs modal -->
+
+<a href="#" class="btn-my btn-accent" data-toggle="modal" data-target="#exampleModal">Опечатка уже отправлена нашим
+  редакторам</a>
+<a href="#" class="btn-my btn-accent" data-toggle="modal" data-target="#exampleModal2">Статья отправлена вам на
+  почту</a>
+
+<a href="#" class="btn-my btn-accent" data-toggle="modal" data-target="#exampleModal3">Нажмите</a>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon">
+            <use xlink:href="../../../img/article/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-text">
+          <h5>Спасибо за внимательность</h5>
+          <p>Опечатка уже отправлена нашим редакторам</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon">
+            <use xlink:href="../../../img/article/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-text">
+          <h5>Статья отправлена вам на почту</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon">
+            <use xlink:href="../../../img/article/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-text">
+          <p>Нажмите
+            <span class="key">ctrl</span>
+            <span>+</span>
+            <span class="key">D</span>
+            чтобы добавить страницу в избранное</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- footer section start -->
 <footer class="xs-footer-section ">
