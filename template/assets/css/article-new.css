@@ -712,7 +712,6 @@ section.article-home {
 .widget .list-group li a {
     padding: 6px 0 6px 25px;
     font-size: 15px;
-    display: block;
     line-height: 1.2 !important;
     color: #595959;
     border-left: 2px solid #e0e0e0;
@@ -725,7 +724,7 @@ section.article-home {
 .widget .list-group li a.active-color-link {
     background-color: #f2f7fc;
     text-decoration: none;
-    color: #000;
+    color: #000 !important;
     border-left-color: #00b9ee;
 }
 
