@@ -389,14 +389,17 @@
                 </a>
               </div>
             </div>
-            <div class="favorite-box">
-              <div class="article-home-box__icon">
+            <a href="#" class="favorite-box my_red">
+              <span class="article-home-box__icon">
                 <svg class="svg-icon">
                   <use xlink:href="../../../img/article/sprite.svg#heart"></use>
                 </svg>
-              </div>
-              <p>19</p>
-            </div>
+                <svg class="svg-icon svg-icon-hover">
+                  <use xlink:href="../../../img/article/sprite.svg#heart2"></use>
+                </svg>
+              </span>
+              <span class="favorite_box_count">19</span>
+            </a>
           </div>
           <div class="article-home__image"><img src="../../../img/article/preview-article.png" alt=""></div>
         </div>
@@ -410,17 +413,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sidebar">
-
-        <ul class="list-social">
+        <ul class="list-social list-social-sidebar">
           <li><a href="#"><img src="../../../img/article/vk2.svg" alt=""></a></li>
           <li><a href="#"><img src="../../../img/article/telegram2.svg" alt=""></a></li>
           <li><a href="#"><img src="../../../img/article/twitter2.svg" alt=""></a></li>
         </ul>
+
         <!-- blog sidebar start -->
         <div class="blog-sidebar-wraper right-sidebar">
           <div class="widget widget-categories">
             <div class="widget-header">
-              <h3 class="xs-title">Содержание</h3>
+              <div class="xs-title">Содержание</div>
             </div>
             <ul class="list-group">
               <li><a href="#p2">Что такое сайт</a></li>
@@ -439,6 +442,7 @@
           <!-- .widget .widget-tag END -->
         </div> <!-- blog sidebar end -->
       </div>
+
       <div class="col-md-6 col-article">
 
         <div class="single-blog-post post-list format-gallery">
@@ -578,7 +582,7 @@
                   <div class="attention-box bg-light-green multitraking-box">
                     <div class="multitraking-box__icon"><img src="../../../img/article/article-img1.png" alt=""></div>
                     <div class="multitraking-box__text">
-                      <h4>МультиТрекинг</h4>
+                      <div class="multitraking-box__title">МультиТрекинг</div>
                       <ul class="list-check">
                         <li>повышение эффективности телефонных продаж</li>
                         <li>подсчёт звонков с каждой рекламы</li>
@@ -597,7 +601,7 @@
 
 
                   <div class="table-wrapper">
-                    <table class="table-my">
+                    <table class="thead-no text-center">
                       <tbody>
                       <tr>
                         <td>Мегаплан</td>
@@ -738,7 +742,9 @@
                     </div>
                   </div>
 
-                  <div class="window-box-name">Командная работа</div>
+                  <figure>
+                    <figcaption>Командная работа</figcaption>
+                  </figure>
                 </div>
 
 
@@ -772,13 +778,17 @@
                     </div>
                   </div>
 
-                  <div class="blockquote-my bg-white">
-                    <div class="blockquote-my__icon"><img src="../../../img/article/pin.svg" alt=""></div>
-                    <div class="blockquote-my__text">
-                      <p>У рекламы есть две главные цели: формирование осведомленности об объекте
-                        и положительного отношения к нему.</p>
-                    </div>
-                  </div>
+                  <!--                  <div class="blockquote-my bg-white">-->
+                  <!--                    <div class="blockquote-my__icon"><img src="../../../img/article/pin.svg" alt=""></div>-->
+                  <!--                    <div class="blockquote-my__text">-->
+                  <!--                      <p>У рекламы есть две главные цели: формирование осведомленности об объекте-->
+                  <!--                        и положительного отношения к нему.</p>-->
+                  <!--                    </div>-->
+                  <!--                  </div>-->
+
+                  <blockquote class="blockquote-v1"><p>У рекламы есть две главные цели: формирование осведомленности об
+                    объекте
+                    и положительного отношения к нему.</p></blockquote>
 
                 </div>
 
@@ -861,19 +871,24 @@
                     продумать нюансы, предусмотреть возможные трудности и пути их преодоления, просчитать
                     риски. Если всего этого не сделать на первоначальном этапе открытия и запуска своего дела,
                     фирма может прогореть и обанкротиться, а предприниматель – потерять деньги.</p>
-                  <div class="blockquote-my blockquote-my-v2 bg-light-green">
-                    <div class="blockquote-my__icon"><img src="../../../img/article/light.svg" alt=""></div>
-                    <div class="blockquote-my__text">
-                      <p>У рекламы есть две главные цели: формирование осведомленности об объекте
-                        и положительного отношения к нему.</p>
-                    </div>
-                  </div>
+
+                  <!--                  <div class="blockquote-my blockquote-my-v2 bg-light-green">-->
+                  <!--                    <div class="blockquote-my__icon"><img src="../../../img/article/light.svg" alt=""></div>-->
+                  <!--                    <div class="blockquote-my__text">-->
+                  <!--                      <p>У рекламы есть две главные цели: формирование осведомленности об объекте-->
+                  <!--                        и положительного отношения к нему.</p>-->
+                  <!--                    </div>-->
+                  <!--                  </div>-->
+
+                  <blockquote class="blockquote-v3"><p>У рекламы есть две главные цели: формирование осведомленности об
+                    объекте
+                    и положительного отношения к нему.</p></blockquote>
 
                   <div class="manager-box">
                     <div class="manager-box__photo">
                       <div class="photo"><img src="../../../img/article/photo-user2.png" alt=""></div>
                       <div class="manager-box__name">
-                        <h4>Виктор Иванов</h4>
+                        <div class="manager-box__name-author">Виктор Иванов</div>
                         <div class="position">Менеджер по
                           рекламе
                         </div>
@@ -910,7 +925,7 @@
                     информации. Эта точка зрения наиболее распространена в западной практике.</p>
 
                   <div class="subtitle-step">
-                    <h5>1. Определить слабые места в системе организации продаж</h5>
+                    <div class="subtitle-step__title">1. Определить слабые места в системе организации продаж</div>
                   </div>
 
                   <p>Успешный бизнес строится не только на интересной идее и стартовом капитале. Чтобы
@@ -929,7 +944,7 @@
 
                   <div class="example-box">
                     <div class="example-box__head">
-                      <h5>Пример 1. ООО «Альфа»</h5>
+                      <div class="example-box__title">Пример 1. ООО «Альфа»</div>
                     </div>
                     <div class="example-box__body">
                       <p>Компания производит мебельные щиты и заработала за отчетный год 800 тыс. рублей.
@@ -981,14 +996,12 @@
                     <li>Ненадлежащая реклама — реклама, не соответствующая требованиям закона РФ</li>
                   </ul>
 
-                  <pre>
-                    <code class="hljs language-xml">
-  programmers = ["I'm an expert Python Programmer",
-  <span class="hljs-tag"><span class="hljs-string">"I'm an expert Javascript Programmer",</span></span><span
-                        class="hljs-tag"><span class="hljs-string">"I'm a professional Python Programmer",</span>&gt;
-  <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-  </code>
-</pre>
+                  <pre><code>&lt;div class="result"&gt;&lt;/div&gt;
+&lt;script&gt;
+$(document).ready(function() {
+$(".result").load("/main.php");
+});
+&lt;/script&gt;</code></pre>
 
                   <p>Успешный бизнес строится не только на интересной идее и стартовом капитале. Чтобы
                     компания имела хорошие перспективы и в будущем получала прибыль, нужно тщательно
@@ -1010,7 +1023,7 @@
                     <div class="read-also__img"><img src="../../../img/article/article-img3.png" alt=""></div>
                     <div class="read-also__text">
                       <div class="read-also__head">
-                        <h4>Читайте так же</h4>
+                        <div class="read-also__title">Читайте так же</div>
                         <a href="#" class="label-category">Маркетинг</a>
                       </div>
                       <p>Таргетинг – особенности, принципы работы, плюсы и минусы,
@@ -1027,8 +1040,8 @@
                     риски.</p>
 
                   <div class="table-wrapper">
-                    <table class="table-my">
-                      <thead>
+                    <table class="text-center">
+                      <tbody>
                       <tr>
                         <td></td>
                         <td>Тестовый <br>
@@ -1053,8 +1066,6 @@
                           хранилище
                         </td>
                       </tr>
-                      </thead>
-                      <tbody>
                       <tr>
                         <td>Мегаплан</td>
                         <td>14 дней</td>
@@ -1153,7 +1164,6 @@
                       </tbody>
                     </table>
                   </div>
-
                 </div>
 
                 <div id="p7" class="entry-content__section">
@@ -1165,14 +1175,18 @@
                     риски. Если всего этого не сделать на первоначальном этапе открытия и запуска своего дела,
                     фирма может прогореть и обанкротиться, а предприниматель – потерять деньги.</p>
 
-                  <div class="blockquote-my bg-light-blue">
-                    <div class="blockquote-my__icon"><img src="../../../img/article/attention.svg" alt=""
-                                                          draggable="false"></div>
-                    <div class="blockquote-my__text">
-                      <p>У рекламы есть две главные цели: формирование осведомленности об объекте
-                        и положительного отношения к нему.</p>
-                    </div>
-                  </div>
+                  <!--                  <div class="blockquote-my bg-light-blue">-->
+                  <!--                    <div class="blockquote-my__icon"><img src="../../../img/article/attention.svg" alt=""-->
+                  <!--                                                          draggable="false"></div>-->
+                  <!--                    <div class="blockquote-my__text">-->
+                  <!--                      <p>У рекламы есть две главные цели: формирование осведомленности об объекте-->
+                  <!--                        и положительного отношения к нему.</p>-->
+                  <!--                    </div>-->
+                  <!--                  </div>-->
+
+                  <blockquote class="blockquote-v2"><p>У рекламы есть две главные цели: формирование осведомленности об
+                    объекте
+                    и положительного отношения к нему.</p></blockquote>
 
                   <p>К настоящему времени сложились два основных подхода к определению термина «реклама».
                     В узком смысле понятие «реклама» означает объявление в средствах распространения
@@ -1188,7 +1202,7 @@
                       <div class="end-to-end-analytics__icon"><img src="../../../img/article/chart-pie-alt.svg"
                                                                    alt=""></div>
                       <div class="end-to-end-analytics__title">
-                        <h4>Сквозная аналитика</h4>
+                        <div class="end-to-end-analytics__title-text">Сквозная аналитика</div>
                         <div class="price">от <strong>990</strong> рублей в месяц</div>
                       </div>
                     </div>
@@ -1237,8 +1251,8 @@
                     фирма может прогореть и обанкротиться, а предприниматель – потерять деньги.</p>
 
                   <div class="table-wrapper">
-                    <table class="plus-minus-block plus-minus-block-my">
-                      <thead>
+                    <table class="plus-minus-block">
+                      <tbody>
                       <tr>
                         <td class="plus-block" width="400">
                           <p>Плюсы</p>
@@ -1247,8 +1261,6 @@
                           <p>Минусы</p>
                         </td>
                       </tr>
-                      </thead>
-                      <tbody>
                       <tr>
                         <td width="400">
                           <ul>
@@ -1428,7 +1440,15 @@
                     </div>
                   </div>
 
-                  <div class="window-box-name">Командная работа</div>
+
+                  <figure>
+                    <span class="window-box window-box-no-head">
+                      <span class="window-box__body">
+                        <img src="../../../img/article/article-img2.png" alt="">
+                      </span>
+                    </span>
+                    <figcaption>Командная работа</figcaption>
+                  </figure>
                 </div>
 
 
@@ -1462,7 +1482,7 @@
                     <div class="connect-analitics__icon"><img src="../../../img/article/chat-arrow-grow.svg" alt="">
                     </div>
                     <div class="connect-analitics__text">
-                      <h4>Подключите сквозную аналитику Neiros</h4>
+                      <div class="connect-analitics__title">Подключите сквозную аналитику Neiros</div>
                       <p>Получайте больше клиентов, не увеличивая рекламный бюджет</p>
 
                       <a href="#" class="btn-my btn-accent">Подключить</a>
@@ -1476,7 +1496,7 @@
 
                 <div id="p9" class="entry-content__section">
                   <h2>Часто задаваемые вопросы</h2>
-                  <div class="accordion accordion-my faqAccordion" id="faqAccordion">
+                  <div class="accordion faqAccordion" id="faqAccordion">
                     <div class="card">
                       <div class="card-header" id="heading1"><a aria-controls="collapse1" aria-expanded="false"
                                                                 class="btn-link collapsed" data-target="#collapse1"
@@ -1563,6 +1583,9 @@
                   <ul class="list-tags">
                     <li><a href="#">#аналитика</a></li>
                     <li><a href="#">#трафик</a></li>
+                    <li><a href="#">#трафик</a></li>
+                    <li><a href="#">#трафик</a></li>
+                    <li><a href="#">#трафик</a></li>
                   </ul>
 
                   <div class="article-author">
@@ -1578,7 +1601,7 @@
                       <a href="#" class="links-blue color-blue">Все статьи автора</a>
                     </div>
                     <div class="article-author__text">
-                      <h4>Последние статьи автора</h4>
+                      <div class="article-author__title">Последние статьи автора</div>
                       <ul class="list-dots-gradient">
                         <li><a href="#">Что такое маркетплейс простыми словами, модели работы
                           и какому бизнесу подойдет</a>
@@ -1597,10 +1620,11 @@
                 </div>
 
                 <div class="found-mistake">
-                  <p>Нашли ошибку в тексте? Выделите нужный фрагмент и нажмите</p>
-                  <div class="key">ctrl</div>
-                  <span>+</span>
-                  <div class="key">enter</div>
+                  <p>Нашли ошибку в тексте? Выделите нужный фрагмент и нажмите
+                    <span class="key">ctrl</span>
+                    <span>+</span>
+                    <span class="key">enter</span>
+                  </p>
                 </div>
 
                 <div class="article-footer">
@@ -1696,7 +1720,7 @@
 
       <div class="col-md-3 col-additionally d-none d-xl-block">
         <div class="subscribe-box additionally-box">
-          <h3>Подписка на новости</h3>
+          <div class="additionally-box__title">Подписка на новости</div>
           <div class="box-text">
             <p>Только самое важное</p>
           </div>
@@ -1712,10 +1736,38 @@
         </div>
 
         <div class="additionally-box read-box">
-          <h3>Нет времени читать?</h3>
+          <div class="additionally-box__title">Нет времени читать?</div>
           <img src="../../../img/article/image1.png" alt="" class="additionally-box__img">
 
-          <a href="#" class="btn-my btn-black m-auto">Хочу статью на почту</a>
+          <a href="#" class="btn-my btn-black m-auto read-box-btn">Хочу статью на почту</a>
+
+          <div class="read-box-hidden">
+            <img src="../../../img/article/image1.png" alt="" class="read-box-hidden__bg">
+            <div class="additionally-box__title">Отправьте себе статью на
+              почту
+            </div>
+
+            <form method="post" class="form-subscribe">
+              <label><input type="text" placeholder="Email" name="mail"></label>
+              <button type="submit" class="btn-my">
+                <svg class="svg-icon">
+                  <use xlink:href="../../../img/article/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+
+              <label class="label-checkbox">
+                <input type="checkbox" class="inp-check" name="checkbox" checked="">
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-text">Хочу получать новости блога</span>
+              </label>
+              <div class="consent">Нажимая на кнопку “Отправить”,
+                я даю свое согласие на обработку
+                персональных данных
+              </div>
+            </form>
+
+
+          </div>
         </div>
 
         <div class="additionally-box">
@@ -1752,7 +1804,7 @@
 										первый шаг к
 										своему бизнесу</span>
               </a>
-              <a href="#" class="links-blue">Ко всем статьям</a>
+
             </div>
             <div class="tab-pane fade" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
               <a href="#" class="article-item">
@@ -1776,75 +1828,75 @@
 										первый шаг к
 										своему бизнесу</span>
               </a>
-              <a href="#" class="links-blue">Ко всем статьям</a>
+
             </div>
+            <a href="#" class="links-blue link-all-article">Ко всем статьям</a>
           </div>
         </div>
 
         <div class="additionally-box products-box">
-          <h3>Наши продукты</h3>
+          <div class="additionally-box__title">Наши продукты</div>
 
-          <div class="products-box-slider owl-carousel">
-            <div class="products-box-slider-item">
-              <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
-              <a href="#" class="products-box-slider-item__title">Название продукта</a>
-              <div class="box-text">
-                <p>Тут будет краткое описание
-                  данного продукта.</p>
+          <div class="products-box-slider-wrapper">
+            <div class="products-box-slider owl-carousel">
+              <div class="products-box-slider-item">
+                <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
+                <a href="#" class="products-box-slider-item__title">Название продукта</a>
+                <div class="box-text">
+                  <p>Тут будет краткое описание
+                    данного продукта.</p>
+                </div>
+
               </div>
+              <div class="products-box-slider-item">
+                <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
+                <a href="#" class="products-box-slider-item__title">Название продукта</a>
+                <div class="box-text">
+                  <p>Тут будет краткое описание
+                    данного продукта.</p>
+                </div>
 
-              <a href="#" class="btn-my btn-accent">Узнать подробнее</a>
-            </div>
-            <div class="products-box-slider-item">
-              <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
-              <a href="#" class="products-box-slider-item__title">Название продукта</a>
-              <div class="box-text">
-                <p>Тут будет краткое описание
-                  данного продукта.</p>
               </div>
+              <div class="products-box-slider-item">
+                <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
+                <a href="#" class="products-box-slider-item__title">Название продукта</a>
+                <div class="box-text">
+                  <p>Тут будет краткое описание
+                    данного продукта.</p>
+                </div>
 
-              <a href="#" class="btn-my btn-accent">Узнать подробнее</a>
-            </div>
-            <div class="products-box-slider-item">
-              <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
-              <a href="#" class="products-box-slider-item__title">Название продукта</a>
-              <div class="box-text">
-                <p>Тут будет краткое описание
-                  данного продукта.</p>
               </div>
+              <div class="products-box-slider-item">
+                <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
+                <a href="#" class="products-box-slider-item__title">Название продукта</a>
+                <div class="box-text">
+                  <p>Тут будет краткое описание
+                    данного продукта.</p>
+                </div>
 
-              <a href="#" class="btn-my btn-accent">Узнать подробнее</a>
-            </div>
-            <div class="products-box-slider-item">
-              <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
-              <a href="#" class="products-box-slider-item__title">Название продукта</a>
-              <div class="box-text">
-                <p>Тут будет краткое описание
-                  данного продукта.</p>
               </div>
+              <div class="products-box-slider-item">
+                <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
+                <a href="#" class="products-box-slider-item__title">Название продукта</a>
+                <div class="box-text">
+                  <p>Тут будет краткое описание
+                    данного продукта.</p>
+                </div>
 
-              <a href="#" class="btn-my btn-accent">Узнать подробнее</a>
-            </div>
-            <div class="products-box-slider-item">
-              <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
-              <a href="#" class="products-box-slider-item__title">Название продукта</a>
-              <div class="box-text">
-                <p>Тут будет краткое описание
-                  данного продукта.</p>
               </div>
+              <div class="products-box-slider-item">
+                <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
+                <a href="#" class="products-box-slider-item__title">Название продукта</a>
+                <div class="box-text">
+                  <p>Тут будет краткое описание
+                    данного продукта.</p>
+                </div>
 
-              <a href="#" class="btn-my btn-accent">Узнать подробнее</a>
-            </div>
-            <div class="products-box-slider-item">
-              <div class="products-box-slider-item__img"><img src="../../../img/article/image2.png" alt=""></div>
-              <a href="#" class="products-box-slider-item__title">Название продукта</a>
-              <div class="box-text">
-                <p>Тут будет краткое описание
-                  данного продукта.</p>
+
               </div>
-
-              <a href="#" class="btn-my btn-accent">Узнать подробнее</a>
             </div>
+
+            <a href="#" class="btn-my btn-accent">Узнать подробнее</a>
           </div>
         </div>
 
@@ -1880,7 +1932,7 @@
                 </div>
 
                 <div class="box-text">
-                  <p>Анализ конкурентов – чек-лист</p>
+                  <a href="#" class="recommended-article-card__title">Анализ конкурентов – чек-лист</a>
                 </div>
               </div>
 
@@ -1907,9 +1959,9 @@
                 </div>
 
                 <div class="box-text">
-                  <p>Коммерческое предложение - первый
+                  <a href="#" class="recommended-article-card__title">Коммерческое предложение - первый
                     шаг к сотрудничеству в B2B
-                  </p>
+                  </a>
                 </div>
               </div>
 
@@ -1936,9 +1988,9 @@
                 </div>
 
                 <div class="box-text">
-                  <p>Что такое маркетплейс простыми
+                  <a href="#" class="recommended-article-card__title">Что такое маркетплейс простыми
                     словами, модели работы и какому
-                    бизнесу подойдет</p>
+                    бизнесу подойдет</a>
                 </div>
               </div>
 
@@ -1965,9 +2017,9 @@
                 </div>
 
                 <div class="box-text">
-                  <p>Откуда берется погрешность в
+                  <a href="#" class="recommended-article-card__title">Откуда берется погрешность в
                     динамическом коллтрекинге и как ее
-                    повысить</p>
+                    повысить</a>
                 </div>
               </div>
 
@@ -1990,7 +2042,7 @@
             <img src="../../../img/article/image3.png" alt="">
           </div>
           <div class="new-marketing__text">
-            <h4>Что нового в интернет-маркетинге?</h4>
+            <div class="new-marketing__title">Что нового в интернет-маркетинге?</div>
             <div class="text">
               <p>Подпишись на рассылку и будь в курсе новых событий!
               </p>
@@ -2018,7 +2070,7 @@
       <div class="col-12 col-lg-5">
         <div class="new-material box-border-gradient">
           <div class="box-border-gradient__wrapper">
-            <h4>У вас есть интересный материал?</h4>
+            <div class="new-marketing__title">У вас есть интересный материал?</div>
             <div class="text">
               <p>Вы можете опубликовать свою статью в нашем блоге!
               </p>
@@ -2125,7 +2177,9 @@ e-mail с сайта.</span>
       <div class="col-12 col-lg-3 mb-22">
         <a href="#" class="all-services">
           <span>Смотреть все
-продукты</span>
+продукты <svg class="svg-icon">
+                  <use xlink:href="../../../img/article/sprite.svg#arrow-right"></use>
+                </svg></span>
         </a>
       </div>
     </div>
@@ -2741,6 +2795,28 @@ gtag('config', 'UA-144504881-1'); </script>
 
 <!-- my script -->
 <script>
+
+    // fixed sidebar
+    $(window).on('load resize', function () {
+        if ($(window).width() > 1100) {
+            $(function () {
+                var topPos = $('.list-social-sidebar').offset().top;
+                $(window).scroll(function () {
+                    var top = $(document).scrollTop(),
+                        pip = $('.blog-sidebar-wraper').offset().top,
+                        height = $('.list-social-sidebar').outerHeight();
+                    if (top > topPos && top < pip - height) {
+                        $('.list-social-sidebar').addClass('sticky').removeAttr("style");
+                    } else if (top > pip - height) {
+                        $('.list-social-sidebar').removeClass('sticky').css({'position': 'relative'});
+                    } else {
+                        $('.list-social-sidebar').removeClass('sticky');
+                    }
+                });
+            });
+        }
+    });
+
     $('.share-box-toggle').on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active').siblings('.schare-box-dropdown').fadeToggle();
@@ -2783,27 +2859,59 @@ gtag('config', 'UA-144504881-1'); </script>
 
         var
             $this = $(this),
-            content = $(this).parent().find('.keep-menu >li');
+            content = $(this).parent().find('.keep-menu');
 
 
         if (!$this.hasClass('trigger')) {
             $this.addClass('trigger');
             $this.html('Скрыть');
 
-            content.slideDown();
+            content.addClass('open');
         } else {
             $this.removeClass('trigger');
             $this.html('Раскрыть полностью');
 
 
-            content.slice(6).slideUp();
+            content.removeClass('open');
             $this.parents('.keep-post__body').removeClass('show').prev('.keep-post__head').addClass('collapsed');
         }
     });
 
-    $(window).scroll (function () {
-        var ratio = $(document).scrollTop () / (($(document).height () - $(window).height ()) / 100);
-        $(".header-progressbar").width (ratio + "%");
+    // hidden list > 6
+    $('.plus-minus-block tbody tr td > ul').each(function () {
+        if ($(this).find('li').length > 6) {
+            $(this).find('li').slice(6).hide();
+            $(this).parent('td').append('<a href="#" class="table-toggle">+ Раскрыть</a>');
+        }
+
+    });
+
+    $('.table-toggle').on('click', function (e) {
+        e.preventDefault();
+
+        var
+            $this = $(this),
+            content = $(this).parent().find('ul > li');
+
+
+        if (!$this.hasClass('trigger')) {
+            $this.addClass('trigger');
+            $this.html('- Свернуть');
+
+            content.slideDown();
+        } else {
+            $this.removeClass('trigger');
+            $this.html('+ Раскрыть');
+
+
+            content.slice(6).slideUp();
+        }
+    });
+
+
+    $(window).scroll(function () {
+        var ratio = $(document).scrollTop() / (($(document).height() - $(window).height()) / 100);
+        $(".header-progressbar").width(ratio + "%");
     });
 
 
@@ -2814,13 +2922,18 @@ gtag('config', 'UA-144504881-1'); </script>
 
             //забираем идентификатор бока с атрибута href
             var id = $(this).attr('href'),
-          headerHeight = $('.header').height(),
+                headerHeight = $('.header').height(),
                 //узнаем высоту от начала страницы до блока на который ссылается якорь
                 top = $(id).offset().top;
 
             //анимируем переход на расстояние - top за 500 мс
             $('body,html').animate({scrollTop: top - headerHeight}, 500);
         });
+    });
+
+    $('.read-box-btn').on('click', function (e) {
+        e.preventDefault();
+        $('.read-box-hidden').fadeIn();
     });
 
     function setNavigationWidget() {
