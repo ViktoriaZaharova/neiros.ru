@@ -211,9 +211,9 @@
                 </li>
 
 
-                <li style="margin-left: 35px;" class="d-block d-lg-none"><a href="https://neiros.cloud/login"
+                <li style="margin-left: 35px;" class="d-none d-lg-block"><a href="https://neiros.cloud/login"
                                                                             style="color: black">Вход</a>
-                <li style="margin-right: 0px;" class="d-block d-lg-none"><a href="https://neiros.cloud/register"
+                <li style="margin-right: 0px;" class="d-none d-lg-block"><a href="https://neiros.cloud/register"
                                                                             class="top-nav-registration" style="
     padding: 10px;
     color: #333;
@@ -244,7 +244,7 @@
                 </form>
               </div>
 
-              <ul class="user-navigation-header d-none d-lg-flex">
+              <ul class="user-navigation-header d-flex d-lg-none">
                 <li style="margin-left: 35px;"><a href="https://neiros.cloud/login" style="color: black">Вход</a>
                 <li style="margin-right: 0px;"><a href="https://neiros.cloud/register" class="top-nav-registration"
                                                   style="
@@ -1295,7 +1295,9 @@ $(".result").load("/main.php");
                               предпринимательской активности и
                               повышению уровня жизни.
                             </li>
-
+                            <li class="table-toggle-item">
+                              <a href="#" class="table-toggle">+ Раскрыть</a>
+                            </li>
                             <li>С помощью рекламы люди узнают о новых
                               технологиях, познают что-то новое. То есть
                               самообразовываются.
@@ -1308,10 +1310,12 @@ $(".result").load("/main.php");
                               она спобствует повышению общего
                               культурного уровня населения.
                             </li>
+
                           </ul>
+
                         </td>
                         <td width="400">
-                          <ul>
+                          <ol>
                             <li>Позволяет увеличить доход предприятий.</li>
 
                             <li>Социальная реклама побуждает людей
@@ -1343,7 +1347,22 @@ $(".result").load("/main.php");
                               предпринимательской активности и
                               повышению уровня жизни.
                             </li>
-                          </ul>
+                            <li class="table-toggle-item">
+                              <a href="#" class="table-toggle">+ Раскрыть</a>
+                            </li>
+                            <li>С помощью рекламы люди узнают о новых
+                              технологиях, познают что-то новое. То есть
+                              самообразовываются.
+                            </li>
+
+                            <li>Поскольку реклама использует накопленный
+                              культурный багаж цивилизации,
+                              традиционные ценности, яркие визуальные
+                              образы и сюжеты, мифы различных культур,
+                              она спобствует повышению общего
+                              культурного уровня населения.
+                            </li>
+                          </ol>
                         </td>
                       </tr>
                       </tbody>
@@ -1404,41 +1423,45 @@ $(".result").load("/main.php");
                     </li>
                   </ol>
 
-                  <div class="window-box">
-                    <div class="window-box__head">
-                      <div class="window-box-nav">
-                        <div class="window-box-nav__it"></div>
-                        <div class="window-box-nav__it"></div>
-                        <div class="window-box-nav__it"></div>
-                      </div>
+                  <figure>
+                    <span class="window-box">
+                      <span class="window-box__head">
+                        <span class="window-box-nav">
+                          <span class="window-box-nav__it"></span>
+                          <span class="window-box-nav__it"></span>
+                          <span class="window-box-nav__it"></span>
+                        </span>
 
-                      <div class="window-box-arrows">
-                        <div class="window-box-arrows__it"><img src="../../../img/article/arrow-small-left.svg"
-                                                                alt=""></div>
-                        <div class="window-box-arrows__it"><img src="../../../img/article/arrow-small-right.svg"
-                                                                alt=""></div>
-                      </div>
+                        <span class="window-box-arrows">
+                          <span class="window-box-arrows__it"><img src="../../../img/article/arrow-small-left.svg"
+                                                                   alt=""></span>
+                          <span class="window-box-arrows__it"><img src="../../../img/article/arrow-small-right.svg"
+                                                                   alt=""></span>
+                        </span>
 
-                      <div class="window-box-search">
-                        <div class="window-box-search__input"></div>
-                        <div class="window-box-search__btn">
-                          <svg class="svg-icon">
-                            <use xlink:href="../../../img/article/sprite.svg#search"></use>
-                          </svg>
-                        </div>
-                      </div>
+                        <span class="window-box-search">
+                          <span class="window-box-search__input"></span>
+                          <span class="window-box-search__btn">
+                            <svg class="svg-icon">
+                              <use xlink:href="../../../img/article/sprite.svg#search"></use>
+                            </svg>
+                          </span>
+                        </span>
 
-                      <div class="window-box-dots">
-                        <div class="window-box-dots__dot"></div>
-                        <div class="window-box-dots__dot"></div>
-                        <div class="window-box-dots__dot"></div>
-                      </div>
-                    </div>
+                        <span class="window-box-dots">
+                          <span class="window-box-dots__dot"></span>
+                          <span class="window-box-dots__dot"></span>
+                          <span class="window-box-dots__dot"></span>
+                        </span>
+                      </span>
 
-                    <div class="window-box__body">
-                      <img src="../../../img/article/article-img2.png" alt="">
-                    </div>
-                  </div>
+                      <span class="window-box__body">
+                        <img src="../../../img/article/article-img2.png" alt="">
+                      </span>
+                    </span>
+
+                    <figcaption>Командная работа</figcaption>
+                  </figure>
 
 
                   <figure>
@@ -1707,6 +1730,39 @@ $(".result").load("/main.php");
 
                 <div class="comments" id="comments">
                   <h3>Комментарии (211)</h3>
+                </div>
+
+                <div class="rating-wrapper">
+                  <fieldset class="rating">
+                    <input type="radio" id="star5" name="rating" value="5"/><label class="full" for="star5"
+                                                                                   title="Awesome - 5 stars"></label>
+                    <input type="radio" id="star4half" name="rating" value="4 and a half"/><label class="half"
+                                                                                                  for="star4half"
+                                                                                                  title="Pretty good - 4.5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4"/><label class="full" for="star4"
+                                                                                   title="Pretty good - 4 stars"></label>
+                    <input type="radio" id="star3half" name="rating" value="3 and a half"/><label class="half"
+                                                                                                  for="star3half"
+                                                                                                  title="Meh - 3.5 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3"/><label class="full" for="star3"
+                                                                                   title="Meh - 3 stars"></label>
+                    <input type="radio" id="star2half" name="rating" value="2 and a half"/><label class="half"
+                                                                                                  for="star2half"
+                                                                                                  title="Kinda bad - 2.5 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2"/><label class="full" for="star2"
+                                                                                   title="Kinda bad - 2 stars"></label>
+                    <input type="radio" id="star1half" name="rating" value="1 and a half"/><label class="half"
+                                                                                                  for="star1half"
+                                                                                                  title="Meh - 1.5 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1"/><label class="full" for="star1"
+                                                                                   title="Sucks big time - 1 star"></label>
+                    <input type="radio" id="starhalf" name="rating" value="half"/><label class="half" for="starhalf"
+                                                                                         title="Sucks big time - 0.5 stars"></label>
+                  </fieldset>
+
+                  <div class="rating-wrapper__val">
+                    Средняя оценка: <span>4</span>
+                  </div>
                 </div>
               </div>
 
@@ -2878,12 +2934,8 @@ gtag('config', 'UA-144504881-1'); </script>
     });
 
     // hidden list > 6
-    $('.plus-minus-block tbody tr td > ul').each(function () {
-        if ($(this).find('li').length > 6) {
-            $(this).find('li').slice(6).hide();
-            $(this).parent('td').append('<a href="#" class="table-toggle">+ Раскрыть</a>');
-        }
-
+    $('.plus-minus-block tbody tr td > ul, .plus-minus-block tbody tr td > ol').each(function () {
+        $(this).find('.table-toggle-item ~ li').hide();
     });
 
     $('.table-toggle').on('click', function (e) {
@@ -2891,21 +2943,12 @@ gtag('config', 'UA-144504881-1'); </script>
 
         var
             $this = $(this),
-            content = $(this).parent().find('ul > li');
+            content = $(this).parents('ul, ol').find('li');
 
+        content.slideDown();
 
-        if (!$this.hasClass('trigger')) {
-            $this.addClass('trigger');
-            $this.html('- Свернуть');
+        $this.parent().hide();
 
-            content.slideDown();
-        } else {
-            $this.removeClass('trigger');
-            $this.html('+ Раскрыть');
-
-
-            content.slice(6).slideUp();
-        }
     });
 
 

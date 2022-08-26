@@ -724,7 +724,7 @@ a.article-home-box:hover .article-home-box__icon {
     padding: 13px;
 }
 
-.list-social-sidebar {
+.list-social-sidebar{
     top: 80px;
 }
 
@@ -957,7 +957,6 @@ a.article-home-box:hover .article-home-box__icon {
     padding: 25px 25px 18px;
     display: none;
 }
-
 .read-box-hidden .additionally-box__title {
     margin: 0 0 11px;
     line-height: 1.13;
@@ -967,7 +966,7 @@ a.article-home-box:hover .article-home-box__icon {
     margin: 0;
 }
 
-.read-box-hidden form .consent {
+.read-box-hidden form .consent{
     margin: 14px 0 0;
     color: rgba(254, 254, 254, 0.46);
     font-size: 12px;
@@ -1001,7 +1000,7 @@ a.article-home-box:hover .article-home-box__icon {
 .read-box-hidden__bg {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%,0);
     top: 0;
     max-width: 224px;
     z-index: -1;
@@ -1455,8 +1454,8 @@ pre .hljs {
     /*text-align: center;*/
     font-family: 'Roboto', sans-serif;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
     border-spacing: 0;
     border-collapse: separate;
 }
@@ -1516,7 +1515,7 @@ pre .hljs {
 
 .table-my tbody tr:hover,
 .table-my tbody tr:nth-child(even):hover,
-.entry-content table tbody tr:hover, .entry-content table tbody tr:nth-child(even):hover {
+.entry-content table tbody tr:hover, .entry-content table tbody tr:nth-child(even):hover{
     background: #cdeff9;
 }
 
@@ -1716,8 +1715,6 @@ pre .hljs {
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
-
-
 
 .box-border-gradient .new-marketing__title {
     color: #000;
@@ -2262,7 +2259,6 @@ a.label-category:hover {
     background-color: #f7f7f7;
 }
 
-
 .plus-minus-block tbody tr .table-toggle-item {
     padding: 0;
 }
@@ -2768,7 +2764,7 @@ a.label-category:hover {
     font-size: 14px;
 }
 
-.recommended-article-card .box-text {
+.recommended-article-card .box-text  {
     color: #010101;
     font-size: 15px;
     min-height: 53px;
@@ -2854,7 +2850,7 @@ a.label-category:hover {
 }
 
 .all-services:hover {
-    box-shadow: 0 13px 24px rgba(48, 60, 187, .35);
+    box-shadow: 0 13px 24px rgba(48,60,187, .35);
 }
 
 .all-services:hover .svg-icon {
@@ -3168,165 +3164,6 @@ a.label-category:hover {
 .article-home-box:hover a {
     color: #4196f1;
 }
-
-/*css блока Комментарии*/
-.image_logo_class {
-    opacity: .3;
-    transition: .3s ease;
-}
-
-.image_logo_class:hover {
-    opacity: 1;
-}
-
-.social .social-list li {
-    padding: 0;
-}
-
-.social .social-list li:before {
-    display: none;
-}
-
-.share-box > a {
-    color: #c8c8c8;
-}
-
-#neiros_likes, #neiros_dislikes {
-    color: #c8c8c8 !important;
-}
-
-.s-review-meta a {
-    font-size: 14px;
-}
-
-.s-review-meta .neiros_page_view_count {
-    font-size: 14px;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_like:hover {
-    background: #ECF7EE;
-    border-color: #ECF7EE;
-    color: #3CA561;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_like:hover #neiros_likes {
-    color: #3CA561 !important;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_like:hover .icon {
-    color: #3CA561;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_like:focus, .share-box .s-review-meta-btn.s-review-meta_like:active {
-    background: #3CA561;
-    border-color: #3CA561;
-    color: #fff;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_like:focus #neiros_likes, .share-box .s-review-meta-btn.s-review-meta_like:active #neiros_likes {
-    color: #ffffff !important;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_like:focus .icon, .share-box .s-review-meta-btn.s-review-meta_like:active .icon {
-    color: #fff;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_dislike:hover {
-    background: #ffb0b085;
-    border-color: #ffb0b085;
-    color: #dd1d1d;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_dislike:hover #neiros_dislikes {
-    color: #dd1d1d !important;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_dislike:hover .icon {
-    color: #dd1d1d;
-}
-
-
-.share-box .s-review-meta-btn.s-review-meta_dislike:focus, .share-box .s-review-meta-btn.s-review-meta_dislike:active {
-    background: #dd1d1d;
-    border-color: #dd1d1d;
-    color: #fff;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_dislike:focus #neiros_dislikes, .share-box .s-review-meta-btn.s-review-meta_dislike:active #neiros_dislikes {
-    color: #fff !important;
-}
-
-.share-box .s-review-meta-btn.s-review-meta_dislike:focus .icon, .share-box .s-review-meta-btn.s-review-meta_dislike:active .icon {
-    color: #fff;
-}
-
-/*css блока Комментарии*/
-
-
-/*rating star*/
-@import url('https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
-
-.rating-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: fit-content;
-}
-
-.rating-wrapper__val {
-    font-size: 14px;
-    padding-left: 5px;
-}
-
-.rating-wrapper__val span {
-    font-weight: bold;
-    display: inline-block;
-}
-
-.rating {
-    border: none;
-    float: left;
-}
-
-.rating > input {
-    display: none;
-}
-
-.rating > label:before {
-    margin: 0 5px;
-    font-size: 1.25em;
-    font-family: FontAwesome;
-    display: inline-block;
-    content: "\f005";
-}
-
-.rating > .half:before {
-    content: "\f089";
-    position: absolute;
-}
-
-.rating > label {
-    color: #ddd;
-    float: right;
-    margin: 0;
-}
-
-
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label {
-    color: #FFD700;
-}
-
-/* hover previous stars in list */
-
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label {
-    color: #FFED85;
-}
-
 
 /*media*/
 @media (max-width: 1300px) {
@@ -3949,6 +3786,7 @@ a.label-category:hover {
     /*.share-box-toggle {*/
     /*    margin: 0 auto;*/
     /*}*/
+
     .article-home__footer .favorite-box {
         justify-content: flex-start;
     }
@@ -3960,6 +3798,7 @@ a.label-category:hover {
     /*.post-body .box-border-gradient {*/
     /*    border-radius: 0;*/
     /*}*/
+
     .rating_star {
         flex-direction: column;
         align-items: flex-start;
